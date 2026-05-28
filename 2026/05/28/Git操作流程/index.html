@@ -153,7 +153,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-29 04:18:59
+          2026-05-29 04:23:08
         </span>
         
               <span class="post-categories">
@@ -186,16 +186,27 @@
           
       </div>
       <div class="markdown-body">
-        <h2 id="如果是首次推送远程仓库："><a href="#如果是首次推送远程仓库：" class="headerlink" title="如果是首次推送远程仓库："></a>如果是首次推送远程仓库：</h2><p>​1. <strong>本地Git配置（已配可跳过）</strong>：<br>终端执行 git config –global user.name “你的名字” 、 git config –global user.email “你的邮箱” 。<br>2. <strong>初始化</strong>：<br>打开项目文件夹，终端执行 git init <strong>初始化本地库</strong>；已初始化可跳过。<br>3. <strong>暂存并提交文件</strong>：<br>git add . 、 git commit -m “首次提交说明” 。<br>4. <strong>关联远程仓库</strong>（终端执行）： <br>git remote add origin 远程仓库地址 ，通常用 origin 作远程别名。<br>5. <strong>验证关联</strong>：<br>git remote -v ，显示fetch&#x2F;push地址即成功。<br>6. <strong>统一分支名</strong>（可选但推荐）：<br>git branch -M main （将默认master改为main，适配多数平台默认分支）。</p>
-<h2 id="日常开发"><a href="#日常开发" class="headerlink" title="日常开发"></a>日常开发</h2><p>1.<strong>配置Git</strong><br>打开终端执行  git config –global user.name “你的名字”  和  git config –global user.email “你的邮箱”<br>2.<strong>初始化本地仓库或克隆远程仓库</strong><br>初始化本地仓库：git init<br><strong>克隆远程仓库</strong><br>1. 点击VS Code左侧源代码管理图标（分支图标）。<br>2. 点击克隆仓库，输入远程仓库的HTTPS&#x2F;SSH地址，选择本地保存路径，完成克隆。</p>
-<h3 id="3-日常开发操作（暂存、提交、拉取、推送）"><a href="#3-日常开发操作（暂存、提交、拉取、推送）" class="headerlink" title="3.日常开发操作（暂存、提交、拉取、推送）"></a>3.<strong>日常开发操作（暂存、提交、拉取、推送</strong>）</h3><p>1. <strong>暂存文件</strong>：git add<br>开发完成后，在源代码管理面板中，点击文件右侧的 + 号，将修改暂存到暂存区<br>2. <strong>提交更改</strong>：git commit<br>在暂存区下方的输入框中填写提交信息（必填，描述本次修改内容），点击输入框右侧的对勾按钮，完成本地提交。<br>3. <strong>拉取远程最新代码</strong>：git pull<br>点击源代码管理面板右上角的 ··· ，选择拉取，或在终端执行  git pull ，避免本地代码与远程冲突。<br>4. <strong>推送本地提交到远程</strong>：git push<br>确认本地提交无误后，点击源代码管理面板右上角的 ··· ，选择推送，或在终端执行  git push ；首次推送需关联远程分支，执行  git push -u origin 分支名 <br>5.<strong>设置远程仓库</strong><br>git remote add &lt;远端名称&gt; &lt;仓库路径&gt;</p>
+        <h2 id="如果是首次推送远程仓库："><a href="#如果是首次推送远程仓库：" class="headerlink" title="如果是首次推送远程仓库："></a>如果是首次推送远程仓库：</h2><h3 id="​1-本地Git配置（已配可跳过）："><a href="#​1-本地Git配置（已配可跳过）：" class="headerlink" title="​1. 本地Git配置（已配可跳过）："></a>​1. <strong>本地Git配置（已配可跳过）</strong>：</h3><p>终端执行 git config –global user.name “你的名字” 、 git config –global user.email “你的邮箱” 。</p>
+<h3 id="2-初始化："><a href="#2-初始化：" class="headerlink" title="2. 初始化："></a>2. <strong>初始化</strong>：</h3><p>打开项目文件夹，终端执行 git init <strong>初始化本地库</strong>；已初始化可跳过。</p>
+<h3 id="3-暂存并提交文件："><a href="#3-暂存并提交文件：" class="headerlink" title="3. 暂存并提交文件："></a>3. <strong>暂存并提交文件</strong>：</h3><p>git add . 、 git commit -m “首次提交说明” 。</p>
+<h3 id="4-关联远程仓库（终端执行）："><a href="#4-关联远程仓库（终端执行）：" class="headerlink" title="4. 关联远程仓库（终端执行）："></a>4. <strong>关联远程仓库</strong>（终端执行）：</h3><p>git remote add origin 远程仓库地址 ，通常用 origin 作远程别名。</p>
+<h3 id="5-验证关联："><a href="#5-验证关联：" class="headerlink" title="5. 验证关联："></a>5. <strong>验证关联</strong>：</h3><p>git remote -v ，显示fetch&#x2F;push地址即成功。</p>
+<h3 id="6-统一分支名（可选但推荐）："><a href="#6-统一分支名（可选但推荐）：" class="headerlink" title="6. 统一分支名（可选但推荐）："></a>6. <strong>统一分支名</strong>（可选但推荐）：</h3><p>git branch -M main （将默认master改为main，适配多数平台默认分支）。</p>
+<h2 id="日常开发"><a href="#日常开发" class="headerlink" title="日常开发"></a>日常开发</h2><h3 id="1-配置Git"><a href="#1-配置Git" class="headerlink" title="1.配置Git"></a>1.<strong>配置Git</strong></h3><p>打开终端执行  git config –global user.name “你的名字”  和  git config –global user.email “你的邮箱”</p>
+<h3 id="2-初始化本地仓库或克隆远程仓库"><a href="#2-初始化本地仓库或克隆远程仓库" class="headerlink" title="2.初始化本地仓库或克隆远程仓库"></a>2.<strong>初始化本地仓库或克隆远程仓库</strong></h3><p>初始化本地仓库：git init</p>
+<h4 id="克隆远程仓库"><a href="#克隆远程仓库" class="headerlink" title="克隆远程仓库"></a><strong>克隆远程仓库</strong></h4><p>1. 点击VS Code左侧源代码管理图标（分支图标）。<br>2. 点击克隆仓库，输入远程仓库的HTTPS&#x2F;SSH地址，选择本地保存路径，完成克隆。</p>
+<h3 id="3-日常开发操作（暂存、提交、拉取、推送）"><a href="#3-日常开发操作（暂存、提交、拉取、推送）" class="headerlink" title="3.日常开发操作（暂存、提交、拉取、推送）"></a>3.<strong>日常开发操作（暂存、提交、拉取、推送</strong>）</h3><h4 id="1-暂存文件：git-add"><a href="#1-暂存文件：git-add" class="headerlink" title="1. 暂存文件：git add"></a>1. <strong>暂存文件</strong>：git add</h4><p>开发完成后，在源代码管理面板中，点击文件右侧的 + 号，将修改暂存到暂存区</p>
+<h4 id="2-提交更改：git-commit"><a href="#2-提交更改：git-commit" class="headerlink" title="2. 提交更改：git commit"></a>2. <strong>提交更改</strong>：git commit</h4><p>在暂存区下方的输入框中填写提交信息（必填，描述本次修改内容），点击输入框右侧的对勾按钮，完成本地提交。</p>
+<h4 id="3-拉取远程最新代码：git-pull"><a href="#3-拉取远程最新代码：git-pull" class="headerlink" title="3. 拉取远程最新代码：git pull"></a>3. <strong>拉取远程最新代码</strong>：git pull</h4><p>点击源代码管理面板右上角的 ··· ，选择拉取，或在终端执行  git pull ，避免本地代码与远程冲突。</p>
+<h4 id="4-推送本地提交到远程：git-push"><a href="#4-推送本地提交到远程：git-push" class="headerlink" title="4. 推送本地提交到远程：git push"></a>4. <strong>推送本地提交到远程</strong>：git push</h4><p>确认本地提交无误后，点击源代码管理面板右上角的 ··· ，选择推送，或在终端执行  git push ；首次推送需关联远程分支，执行  git push -u origin 分支名 </p>
+<h4 id="5-设置远程仓库"><a href="#5-设置远程仓库" class="headerlink" title="5.设置远程仓库"></a>5.<strong>设置远程仓库</strong></h4><p>git remote add &lt;远端名称&gt; &lt;仓库路径&gt;</p>
 
       </div>
       
         <div class="prev-or-next">
           <div class="post-foot-prev">
             
-              <a href="/2026/05/28/Git%E5%9F%BA%E7%A1%80/" target="_self">
+              <a href="/2026/05/28/Typora%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
                 <span>上一篇</span>
               </a>
@@ -204,7 +215,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-29 04:18:59
+              2026-05-29 04:23:08
             </span>
             
                   <span class="post-categories">
@@ -238,7 +249,7 @@
           </div>
           <div class="post-foot-next">
             
-              <a href="/2026/05/28/html%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E5%8F%8A%E6%93%8D%E4%BD%9C/" target="_self">
+              <a href="/2026/05/28/Git%E5%9F%BA%E7%A1%80/" target="_self">
                 <span>下一篇</span>
                 <i class="iconfont icon-chevronright"></i>
               </a>
@@ -252,10 +263,10 @@
     <i class="iconfont icon-catalog"></i>
   </div>
   <div class="post-catalog hidden" id="catalog">
-    <div class="title">Contents</div>
+    <div class="title">目录</div>
     <div class="catalog-content">
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E6%98%AF%E9%A6%96%E6%AC%A1%E6%8E%A8%E9%80%81%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%EF%BC%9A"><span class="toc-text">如果是首次推送远程仓库：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E5%B8%B8%E5%BC%80%E5%8F%91"><span class="toc-text">日常开发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%97%A5%E5%B8%B8%E5%BC%80%E5%8F%91%E6%93%8D%E4%BD%9C%EF%BC%88%E6%9A%82%E5%AD%98%E3%80%81%E6%8F%90%E4%BA%A4%E3%80%81%E6%8B%89%E5%8F%96%E3%80%81%E6%8E%A8%E9%80%81%EF%BC%89"><span class="toc-text">3.日常开发操作（暂存、提交、拉取、推送）</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E6%98%AF%E9%A6%96%E6%AC%A1%E6%8E%A8%E9%80%81%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%EF%BC%9A"><span class="toc-text">如果是首次推送远程仓库：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%80%8B1-%E6%9C%AC%E5%9C%B0Git%E9%85%8D%E7%BD%AE%EF%BC%88%E5%B7%B2%E9%85%8D%E5%8F%AF%E8%B7%B3%E8%BF%87%EF%BC%89%EF%BC%9A"><span class="toc-text">​1. 本地Git配置（已配可跳过）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%88%9D%E5%A7%8B%E5%8C%96%EF%BC%9A"><span class="toc-text">2. 初始化：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%9A%82%E5%AD%98%E5%B9%B6%E6%8F%90%E4%BA%A4%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="toc-text">3. 暂存并提交文件：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%85%B3%E8%81%94%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%EF%BC%88%E7%BB%88%E7%AB%AF%E6%89%A7%E8%A1%8C%EF%BC%89%EF%BC%9A"><span class="toc-text">4. 关联远程仓库（终端执行）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E9%AA%8C%E8%AF%81%E5%85%B3%E8%81%94%EF%BC%9A"><span class="toc-text">5. 验证关联：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E7%BB%9F%E4%B8%80%E5%88%86%E6%94%AF%E5%90%8D%EF%BC%88%E5%8F%AF%E9%80%89%E4%BD%86%E6%8E%A8%E8%8D%90%EF%BC%89%EF%BC%9A"><span class="toc-text">6. 统一分支名（可选但推荐）：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E5%B8%B8%E5%BC%80%E5%8F%91"><span class="toc-text">日常开发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%85%8D%E7%BD%AEGit"><span class="toc-text">1.配置Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%88%9D%E5%A7%8B%E5%8C%96%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E6%88%96%E5%85%8B%E9%9A%86%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-text">2.初始化本地仓库或克隆远程仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%8B%E9%9A%86%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-text">克隆远程仓库</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%97%A5%E5%B8%B8%E5%BC%80%E5%8F%91%E6%93%8D%E4%BD%9C%EF%BC%88%E6%9A%82%E5%AD%98%E3%80%81%E6%8F%90%E4%BA%A4%E3%80%81%E6%8B%89%E5%8F%96%E3%80%81%E6%8E%A8%E9%80%81%EF%BC%89"><span class="toc-text">3.日常开发操作（暂存、提交、拉取、推送）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%9A%82%E5%AD%98%E6%96%87%E4%BB%B6%EF%BC%9Agit-add"><span class="toc-text">1. 暂存文件：git add</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E6%8F%90%E4%BA%A4%E6%9B%B4%E6%94%B9%EF%BC%9Agit-commit"><span class="toc-text">2. 提交更改：git commit</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E6%8B%89%E5%8F%96%E8%BF%9C%E7%A8%8B%E6%9C%80%E6%96%B0%E4%BB%A3%E7%A0%81%EF%BC%9Agit-pull"><span class="toc-text">3. 拉取远程最新代码：git pull</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E6%8E%A8%E9%80%81%E6%9C%AC%E5%9C%B0%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8B%EF%BC%9Agit-push"><span class="toc-text">4. 推送本地提交到远程：git push</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E8%AE%BE%E7%BD%AE%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-text">5.设置远程仓库</span></a></li></ol></li></ol></li></ol>
       
     </div>
   </div>
@@ -396,7 +407,7 @@
       'use strict';
       var $input = document.getElementById(search_id);
       var $resultContent = document.getElementById(content_id);
-      $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>输入想要搜索的内容：<span></ul>";
       $.ajax({
         // 0x01. load xml file
         url: path,

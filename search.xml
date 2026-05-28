@@ -99,9 +99,23 @@
       <link href="/2026/05/29/CSS-%E8%83%8C%E6%99%AF%E5%B1%9E%E6%80%A7/"/>
       <url>/2026/05/29/CSS-%E8%83%8C%E6%99%AF%E5%B1%9E%E6%80%A7/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<table><thead><tr><th>描述</th><th>属性</th></tr></thead><tbody><tr><td>背景色</td><td>background-color</td></tr><tr><td>背景图</td><td>background-image</td></tr><tr><td>背景图平铺方式</td><td>background-repeat</td></tr><tr><td>背景图位置</td><td>background-position</td></tr><tr><td>背景图缩放</td><td>background-size</td></tr><tr><td>背景图固定</td><td>background-attachment</td></tr><tr><td>背景复合属性</td><td>background</td></tr></tbody></table><h2 id="1-背景图"><a href="#1-背景图" class="headerlink" title="1.背景图"></a>1.背景图</h2><p>使用背景图实现装饰性图片效果<br>属性名：background-image（bgi）<br>属性值：url（背景图URL）<br>背景图默认平铺</p><h2 id="2-背景图平铺方式background-repeat"><a href="#2-背景图平铺方式background-repeat" class="headerlink" title="2.背景图平铺方式background-repeat"></a>2.背景图平铺方式background-repeat</h2><p><strong>缩写bgr</strong><br>属性值      效果<br>no-repeat   不平铺<br>repeat      平铺（默认）<br>repeat-x    水平方向平铺<br>repeat-y    垂直方向平铺</p><h2 id="3-背景图位置background-position"><a href="#3-背景图位置background-position" class="headerlink" title="3.背景图位置background-position"></a>3.背景图位置background-position</h2><p><strong>缩写：bgp</strong><br>属性值：水平方向位置 垂直方向位置</p><table><thead><tr><th>关键字</th><th>位置</th></tr></thead><tbody><tr><td>left</td><td>左侧</td></tr><tr><td>right</td><td>右侧</td></tr><tr><td>center</td><td>居中</td></tr><tr><td>top</td><td>顶部</td></tr><tr><td>bottom</td><td>底部</td></tr></tbody></table><p>坐标（数字+px，正负都可以）</p><ul><li>水平方向，正是向右移动，负数向左移动</li><li>垂直方向：正数向下移动，负数向上移动</li></ul><p>关键字可以只写一个，另一个方向默认居中<br>只写一个数字表示水平方向，垂直方向居中<br>关键字取值写法可以颠倒</p><h2 id="4-背景图缩放background-size"><a href="#4-背景图缩放background-size" class="headerlink" title="4.背景图缩放background-size"></a>4.背景图缩放background-size</h2><p>设置背景图大小<br><strong>缩写bgz</strong><br>常用属性值：<br>关键字 </p><ul><li>cover：等比例缩放完全覆盖背景区域，可能部分图片看不见</li><li>contain：等比例缩放完全装入背景区，可能部分空白</li><li>百分百：根据盒子尺寸计算图片大小（100%图片宽度与盒子宽度一样，高度等比例缩放）</li></ul><p>数字+单位</p><h2 id="5-背景图固定background-attachment"><a href="#5-背景图固定background-attachment" class="headerlink" title="5.背景图固定background-attachment"></a>5.背景图固定background-attachment</h2><p>背景图不会随着元素的内容滚动<br><strong>缩写bga</strong><br>属性值：fixed</p><h2 id="6-背景复合属性background"><a href="#6-背景复合属性background" class="headerlink" title="6.背景复合属性background"></a>6.背景复合属性background</h2><p>属性值：背景色 背景图 背景平铺方式 背景图位置&#x2F;背景图缩放 背景图固定（各个属性值用空格隔开，不分顺序）</p>]]></content>
       
       
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+            <tag> css背景属性 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -112,9 +126,23 @@
       <link href="/2026/05/29/CSS-Emmet%E5%86%99%E6%B3%95/"/>
       <url>/2026/05/29/CSS-Emmet%E5%86%99%E6%B3%95/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>代码的简写方式，输入缩写vscode会自动生成对应的代码                                                                        </p><table><thead><tr><th>说明</th><th>标签结构</th><th>Emmet</th></tr></thead><tbody><tr><td>类选择器</td><td>标签名.类选择器</td><td><code>&lt;p class=&quot;css&quot;&gt;&lt;/p&gt;</code></td></tr><tr><td>id选择器</td><td>标签名#id名</td><td><code>&lt;p id=&quot;css3&quot;&gt;&lt;/p&gt;</code></td></tr><tr><td>同级选择器</td><td>div+p</td><td><code>&lt;div&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;</code></td></tr><tr><td>父子级选择器</td><td>div&gt;p</td><td><code>&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;</code></td></tr><tr><td>多个相同标签</td><td>span*3</td><td><code>&lt;span&gt;1&lt;/span&gt;&lt;span&gt;2&lt;/span&gt;&lt;span&gt;3&lt;/span&gt;</code></td></tr><tr><td>有内容的标签</td><td>div{内容}</td><td><code>&lt;div&gt;内容&lt;/div&gt;</code></td></tr></tbody></table><p>​css：大多数简写方式为属性单词首字母<br>如果需要生成多个带有顺序的数字可以用$,如：ul&gt;li{$}*4</p>]]></content>
       
       
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+            <tag> Emmet写法 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -125,9 +153,21 @@
       <link href="/2026/05/29/CSS%E7%89%B9%E6%80%A7/"/>
       <url>/2026/05/29/CSS%E7%89%B9%E6%80%A7/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="1-继承性"><a href="#1-继承性" class="headerlink" title="1.继承性"></a>1.继承性</h2><p>子级默认继承父级文字控制属性<br>直接样式大于继承样式，标签有自己的样式时，不会继承而是之间标签自己的样式</p><h2 id="2-层叠性"><a href="#2-层叠性" class="headerlink" title="2.层叠性"></a>2.层叠性</h2><p>相同属性覆盖：后面的css属性覆盖前面的css属性<br>不同属性叠加：不同css属性都生效</p><h2 id="3-优先级"><a href="#3-优先级" class="headerlink" title="3.优先级"></a>3.优先级</h2><p>优先级也叫权重，当一个标签使用了多种选择器时，基于不同种类的选择器的匹配规则</p><p><strong>规则</strong>：选择器优先级高的生效</p><p><strong>公式</strong>：通配符&lt;标签&lt;类&lt;id&lt;行内&lt;!important(提权功能，提高优先级最高，慎用)<br>(选中标签范围越大，优先级越低)</p><p><strong>复合选择器叠加计算规则</strong>：<br>行内样式，id，类，标签</p><p><strong>规则</strong>：<br>从左向右依次比较选择器个数，同一级个数多的优先级高，个数相同向后比较<br>如有行内样式则行内样式生效，没有比较下一级，id多的优先级更高，以此类推<br>！important权重最高（虽然可以将权重提到最高，但是要看作用在哪个元素，对于他的子级，是继承，权重最低）<br>继承权重最低<br>(判断步骤：首先看是否有继承及！important的情况，然后根据计算规则计算权重)</p>]]></content>
       
       
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css特性，继承性，层叠性，优先级 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -141,6 +181,18 @@
         <content type="html"><![CDATA[<h2 id="复合选择器"><a href="#复合选择器" class="headerlink" title="复合选择器"></a>复合选择器</h2><p>两个或多个基础选择器通过不同方式组合成<br>作用：更准确、更高效的选择目标元素</p><h3 id="1-后代选择器"><a href="#1-后代选择器" class="headerlink" title="1.后代选择器"></a>1.后代选择器</h3><p>选择某元素的后代元素，包括所有后代，儿子、孙子、曾孙都是后代元素<br>写法：<br>父选择器 子选择器{css属性}，父子选择器之间用空格隔开</p><h3 id="2-子代选择器"><a href="#2-子代选择器" class="headerlink" title="2.子代选择器"></a>2.子代选择器</h3><p>作用：选中某元素的子代元素（最近的子级）<br>写法：父选择器&gt;子选择器{css属性}，父子选择器之间用&gt;隔开</p><h3 id="3-并集选择器"><a href="#3-并集选择器" class="headerlink" title="3.并集选择器"></a>3.并集选择器</h3><p>选中多组标签设置相同的样式<br>写法：选择器1，选择器2，…，选择器n{css属性}，选择器之间用，隔开</p><h3 id="4-交集选择器"><a href="#4-交集选择器" class="headerlink" title="4.交集选择器"></a>4.交集选择器</h3><p>选中同时满足多个条件的元素<br>写法：<br>选择器1选择器2{css属性}，选择器之间连写，没有任何符号<br>注意：如果交集选择器中有标签选择器，标签选择器必须书写在最前面；</p><h2 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h2><p>伪类表示元素状态，选中元素的某个状态设置样式</p><h3 id="1-鼠标悬停状态："><a href="#1-鼠标悬停状态：" class="headerlink" title="1.鼠标悬停状态："></a>1.鼠标悬停状态：</h3><p>选择器：hover{css属性}</p><h3 id="2-伪类-超链接"><a href="#2-伪类-超链接" class="headerlink" title="2.伪类-超链接"></a>2.伪类-超链接</h3><p>选择器      作用<br>：link      访问前<br>：visited    访问后<br>：hover     鼠标悬停<br>：active    点击时（激活）<br>如果给超链接设置以上四个状态，需要按lvha的顺序写</p>]]></content>
       
       
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html，css复合选择器，伪类选择器 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -154,6 +206,18 @@
         <content type="html"><![CDATA[<h2 id="1-字体大小font-size"><a href="#1-字体大小font-size" class="headerlink" title="1.字体大小font-size"></a>1.字体大小font-size</h2><p>单位必须用px，不能没有单位，不然不生效</p><h2 id="2-字体粗细font-weight"><a href="#2-字体粗细font-weight" class="headerlink" title="2.字体粗细font-weight"></a>2.字体粗细font-weight</h2><p>属性值可以用数字和关键字<br>数字（开发使用）不能加单位px<br>正常：400<br>加粗：700<br>关键字<br>正常：normal<br>加粗：bold</p><h2 id="3-字体倾斜font-style"><a href="#3-字体倾斜font-style" class="headerlink" title="3.字体倾斜font-style"></a>3.字体倾斜font-style</h2><p>清除文字默认的倾斜效果<br>属性值：<br>正常：normal<br>倾斜：italic</p><h2 id="4-行高line-height"><a href="#4-行高line-height" class="headerlink" title="4.行高line-height"></a>4.行高line-height</h2><p>属性值两种：<br>数字+px<br>数字（当前标签font-size属性值的倍数<br>行高是上间距+文本高度+下间距&#x3D;行高<br>行高测量方法：一行文字的最顶端到下一行文字的最顶端<br>垂直居中技巧：行高和盒子高度一致</p><h2 id="5-字体族font-family"><a href="#5-字体族font-family" class="headerlink" title="5.字体族font-family"></a>5.字体族font-family</h2><p>属性值可以书写多个字体名，各个字体名用逗号隔开，执行顺序从左往右依次查找<br>属性最后设置一个字体族名，网页开发建议使用无衬线字体</p><h2 id="6-字体复合属性font"><a href="#6-字体复合属性font" class="headerlink" title="6.字体复合属性font"></a>6.字体复合属性font</h2><p>属性的简写方式，一个属性对应多个值的写法，各个属性值用空格隔开<br>必须按顺序写:<br>font：是否倾斜 是否加粗 字号&#x2F;行高 字体<br>字号和字体值必须书写，否则font属性不生效</p><h2 id="7-文本缩进text-indent"><a href="#7-文本缩进text-indent" class="headerlink" title="7.文本缩进text-indent"></a>7.文本缩进text-indent</h2><p>行内元素（特点不独占一行）img，em，input，label，a,span,strong等无效<br>必须是块级元素或者行内块，且有文本内容，只对第一行文本缩进<br>属性值：<br>数字+px<br>数字+em（推荐：1em&#x3D;当前标签字号大小）</p><h2 id="8-文本对齐text-align"><a href="#8-文本对齐text-align" class="headerlink" title="8.文本对齐text-align"></a>8.文本对齐text-align</h2><p>本质是控制内容的对齐方式，属性要设置给内容的父级,对其内的行内及行内块元素生效</p><h2 id="9-修饰线text-decoration"><a href="#9-修饰线text-decoration" class="headerlink" title="9.修饰线text-decoration"></a>9.修饰线text-decoration</h2><p>可删除修饰线，添加修饰线，下划线，删除线等，如删除超链接的下划线<br>属性值           效果<br>none            无<br>underline       下划线<br>line-through    删除线<br>overline        上划线</p><h2 id="10-颜色color"><a href="#10-颜色color" class="headerlink" title="10.颜色color"></a>10.颜色color</h2><p>color: rgba(red, green, blue, alpha);</p><table><thead><tr><th>颜色表示方式</th><th>属性值</th><th>说明</th><th>使用场景</th></tr></thead><tbody><tr><td>颜色关键字</td><td>颜色英文单词</td><td>red，green</td><td>学习测试</td></tr><tr><td>rgb表示法</td><td>rgb(r ,g,b)</td><td>rgb表示红绿蓝，取值0-255</td><td>了解</td></tr><tr><td>rgba表示法</td><td>rgba（r，g，b，a）</td><td>a表示透明度，取值0-1</td><td>开发使用，实现透明色</td></tr><tr><td>十六进制表示法</td><td>#rrggbb</td><td>#000000，#ffcc00，简写#000，#fc0</td><td>开发使用（从设计稿复制）</td></tr></tbody></table><p>颜色表示方式        属性值              说明                                使用场景<br>颜色关键字          颜色英文单词        red，green                          学习测试<br>rgb表示法           rgb(r ,g,b)        rgb表示红绿蓝，取值0-255             了解<br>rgba表示法          rgba（r，g，b，a）  a表示透明度，取值0-1                 开发使用，实现透明色<br>十六进制表示法       #rrggbb            #000000，#ffcc00，简写#000，#fc0    开发使用（从设计稿复制）</p>]]></content>
       
       
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html，css文字控制属性 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -178,9 +242,9 @@
       
         <tags>
             
-            <tag> html </tag>
-            
             <tag> css </tag>
+            
+            <tag> html </tag>
             
             <tag> 标签选择器，类选择器，id选择器，通配符选择器 </tag>
             
@@ -240,9 +304,9 @@
       
         <tags>
             
-            <tag> html </tag>
-            
             <tag> css </tag>
+            
+            <tag> html </tag>
             
             <tag> 列表表单 </tag>
             
@@ -278,11 +342,11 @@
     
     
     <entry>
-      <title>Git操作流程</title>
-      <link href="/2026/05/28/Git%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B/"/>
-      <url>/2026/05/28/Git%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B/</url>
+      <title>Git基础</title>
+      <link href="/2026/05/28/Git%E5%9F%BA%E7%A1%80/"/>
+      <url>/2026/05/28/Git%E5%9F%BA%E7%A1%80/</url>
       
-        <content type="html"><![CDATA[<h2 id="如果是首次推送远程仓库："><a href="#如果是首次推送远程仓库：" class="headerlink" title="如果是首次推送远程仓库："></a>如果是首次推送远程仓库：</h2><p>​1. <strong>本地Git配置（已配可跳过）</strong>：<br>终端执行 git config –global user.name “你的名字” 、 git config –global user.email “你的邮箱” 。<br>2. <strong>初始化</strong>：<br>打开项目文件夹，终端执行 git init <strong>初始化本地库</strong>；已初始化可跳过。<br>3. <strong>暂存并提交文件</strong>：<br>git add . 、 git commit -m “首次提交说明” 。<br>4. <strong>关联远程仓库</strong>（终端执行）： <br>git remote add origin 远程仓库地址 ，通常用 origin 作远程别名。<br>5. <strong>验证关联</strong>：<br>git remote -v ，显示fetch&#x2F;push地址即成功。<br>6. <strong>统一分支名</strong>（可选但推荐）：<br>git branch -M main （将默认master改为main，适配多数平台默认分支）。</p><h2 id="日常开发"><a href="#日常开发" class="headerlink" title="日常开发"></a>日常开发</h2><p>1.<strong>配置Git</strong><br>打开终端执行  git config –global user.name “你的名字”  和  git config –global user.email “你的邮箱”<br>2.<strong>初始化本地仓库或克隆远程仓库</strong><br>初始化本地仓库：git init<br><strong>克隆远程仓库</strong><br>1. 点击VS Code左侧源代码管理图标（分支图标）。<br>2. 点击克隆仓库，输入远程仓库的HTTPS&#x2F;SSH地址，选择本地保存路径，完成克隆。</p><h3 id="3-日常开发操作（暂存、提交、拉取、推送）"><a href="#3-日常开发操作（暂存、提交、拉取、推送）" class="headerlink" title="3.日常开发操作（暂存、提交、拉取、推送）"></a>3.<strong>日常开发操作（暂存、提交、拉取、推送</strong>）</h3><p>1. <strong>暂存文件</strong>：git add<br>开发完成后，在源代码管理面板中，点击文件右侧的 + 号，将修改暂存到暂存区<br>2. <strong>提交更改</strong>：git commit<br>在暂存区下方的输入框中填写提交信息（必填，描述本次修改内容），点击输入框右侧的对勾按钮，完成本地提交。<br>3. <strong>拉取远程最新代码</strong>：git pull<br>点击源代码管理面板右上角的 ··· ，选择拉取，或在终端执行  git pull ，避免本地代码与远程冲突。<br>4. <strong>推送本地提交到远程</strong>：git push<br>确认本地提交无误后，点击源代码管理面板右上角的 ··· ，选择推送，或在终端执行  git push ；首次推送需关联远程分支，执行  git push -u origin 分支名 <br>5.<strong>设置远程仓库</strong><br>git remote add &lt;远端名称&gt; &lt;仓库路径&gt;</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="vscode中有关Git的字母含义"><a href="#vscode中有关Git的字母含义" class="headerlink" title="vscode中有关Git的字母含义"></a>vscode中有关Git的字母含义</h2><p>M表示修改，对文件进行了更改但尚未暂存或提交(使用git add)<br>U表示新文件，Git还未跟踪，文件不在之前的提交中<br>A表示新文件已添加<br>D表示已删除<br>R表示已重命名<br>C合并时发生冲突</p><h2 id="GIT基本命令"><a href="#GIT基本命令" class="headerlink" title="GIT基本命令"></a>GIT基本命令</h2><p><strong>ll&#x2F;ls</strong>：查看当前目录<br><strong>cat</strong>：查看文件内容<br><strong>touch</strong>：创建文件<br>如创建.bashrc文件命令如下： touch ~&#x2F;.bashrc<br>可在该文件中配置指令别名，如下所示：<br><strong>用于输出git提交日志</strong>：alias git-log&#x3D;’git log –pretty&#x3D;oneline –all –graph –abbrev-commit’</p><p><strong>该命令可以输出当前目录所有文件及基本信息</strong>：alias ll&#x3D;’ls -al’</p><p>配置完成后，使用如下命令，执行修改：source ~&#x2F;.bashrc</p><p><strong>git init</strong>：在当前目录中创建一个新的空的Git仓库&#x2F;&#x2F;告诉GIT：从这个文件夹开始，帮我管理这里所有文件的版本历史</p><p><strong>git add 单个文件名|通配符</strong>：</p><p>​添加工作区一个或多个文件的修改到暂存区<br>将所有修改加入暂存区：git add .</p><h4 id="git-commit-m”你的提交说明信息”："><a href="#git-commit-m”你的提交说明信息”：" class="headerlink" title="git commit -m”你的提交说明信息”："></a><strong>git commit -m”你的提交说明信息”：</strong></h4><p>提交暂存区内容到本地仓库的当前分支<br>（1）git add (工作区&lt;在工作区修改或创建新文件&gt; –&gt; 暂存区)<br>（2）git commit (暂存区 –&gt; 本地仓库)</p><p><strong>git status</strong>：查看的修改的状态（暂存区、工作区）</p><h4 id="git-log-查看历史提交记录"><a href="#git-log-查看历史提交记录" class="headerlink" title="git log 查看历史提交记录"></a><strong>git log</strong> 查看历史提交记录</h4><p>​作用:查看提交记录<br>命令形式：git log [option]<br>options<br>–all 显示所有分支<br>–pretty&#x3D;oneline 将提交信息显示为一行<br>–abbrev-commit 使得输出的commitId更简短<br>–graph 以图的形式</p><h4 id="版本回退：git-reset-–hard-commitID"><a href="#版本回退：git-reset-–hard-commitID" class="headerlink" title="版本回退：git reset –hard commitID"></a><strong>版本回退</strong>：git reset –hard commitID</h4><p>​（commitID 可以使用git-log 或git log指令查看）</p><h4 id="git-reflog-查看历史提交记录"><a href="#git-reflog-查看历史提交记录" class="headerlink" title="git reflog 查看历史提交记录"></a><strong>git reflog</strong> 查看历史提交记录</h4><h4 id="gitignore列出不被操作的文件"><a href="#gitignore列出不被操作的文件" class="headerlink" title=".gitignore列出不被操作的文件"></a><strong>.gitignore</strong>列出不被操作的文件</h4><p>​在工作目录中创建一个名为 .gitignore 的文件（文件名称固定），列出要忽略的文件模式</p><h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><p>​<strong>git branch</strong> 查看分支<br><strong>git branch branchname</strong>创建分支<br><strong>git checkout branchname</strong>切换分支<br><strong>git chechout -b branchname</strong>创建并切换分支<br><strong>git merge branchname</strong>合并分支<br><strong>git branch -d b1</strong> 删除分支时，需要做各种检查<br><strong>git branch -D b1</strong> 不做任何检查，强制删除</p><h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><p>当两个分支上对文件的修改可能会存在冲突，例如同时修改了同一个文件的同一行，这时就需要手动解决冲突，解决冲突步骤如下：</p><ol><li>处理文件中冲突的地方</li><li>将解决完冲突的文件加入暂存区(add)</li><li>提交到仓库(commit)</li></ol><h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><h3 id="1-配置SSH公钥"><a href="#1-配置SSH公钥" class="headerlink" title="1.配置SSH公钥"></a>1.<strong>配置SSH公钥</strong></h3><p>生成SSH公钥：ssh-keygen -t rsa不断回车，如果公钥已经存在，则自动覆盖</p><h3 id="2-Gitee设置账户共公钥"><a href="#2-Gitee设置账户共公钥" class="headerlink" title="2.Gitee设置账户共公钥"></a>2.<strong>Gitee设置账户共公钥</strong></h3><p>​获取公钥<br>cat ~&#x2F;.ssh&#x2F;id_rsa.pub<br>验证是否配置成功<br>ssh -T <a href="mailto:&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#116;&#101;&#x65;&#46;&#99;&#111;&#x6d;">git@gitee.com</a></p><h3 id="3-操作远程仓库"><a href="#3-操作远程仓库" class="headerlink" title="3.操作远程仓库"></a>3.<strong>操作远程仓库</strong></h3><h4 id="1-添加远程仓库"><a href="#1-添加远程仓库" class="headerlink" title="1.添加远程仓库"></a>1.<strong>添加远程仓库</strong></h4><p>​此操作是先初始化本地库，然后与已创建的远程库进行对接<br>命令： git remote add &lt;远端名称&gt; &lt;仓库路径&gt;<br>远端名称，默认是origin，取决于远端服务器设置<br>仓库路径，从远端服务器获取此URL</p><h4 id="2-查看远程仓库"><a href="#2-查看远程仓库" class="headerlink" title="2.查看远程仓库"></a>2.<strong>查看远程仓库</strong></h4><p>git remote</p><h4 id="3-推送到远程仓库"><a href="#3-推送到远程仓库" class="headerlink" title="3.推送到远程仓库"></a>3.<strong>推送到远程仓库</strong></h4><p>命令：git push [-f] [–set-upstream] [远端名称 [本地分支名][:远端分支名]]<br>如果远程分支名和本地分支名称相同，则可以只写本地分支<br>git push origin master<br>-f 表示强制覆盖<br>–set-upstream 推送同时建立起和远端分支的关联关系。<br>git push –set-upstream origin master<br>如果当前分支已经和远端分支关联，则可以省略分支名和远端名。<br>git push 将master分支推送到已关联的远端分支<br>查看关联关系：<br>git branch -vv</p><h3 id="4-从远程仓库克隆（克隆到本地后是本地仓库）"><a href="#4-从远程仓库克隆（克隆到本地后是本地仓库）" class="headerlink" title="4.从远程仓库克隆（克隆到本地后是本地仓库）"></a>4.<strong>从远程仓库克隆（克隆到本地后是本地仓库）</strong></h3><p>​git clone &lt;仓库路径&gt; [本地目录]<br>​本地目录可以省略，会自动生成一个目录</p><h3 id="5-从远程仓库中抓取和拉取"><a href="#5-从远程仓库中抓取和拉取" class="headerlink" title="5.从远程仓库中抓取和拉取"></a>5.<strong>从远程仓库中抓取和拉取</strong></h3><h4 id="抓取-命令：git-fetch-remote-name-branch-name"><a href="#抓取-命令：git-fetch-remote-name-branch-name" class="headerlink" title="抓取 命令：git fetch [remote name][branch name]"></a><strong>抓取</strong> 命令：git fetch [remote name][branch name]</h4><p>抓取指令就是将仓库里的更新都抓取到本地，不会进行合并<br>如果不指定远端名称和分支名，则抓取所有分支</p><h4 id="拉取-命令：git-pull-remote-name-branch-name"><a href="#拉取-命令：git-pull-remote-name-branch-name" class="headerlink" title="拉取 命令：git pull [remote name][branch name]"></a><strong>拉取</strong> 命令：git pull [remote name][branch name]</h4><p>拉取指令就是将远端仓库的修改拉到本地并自动进行合并，等同于fetch+merge<br>如果不指定远端名称和分支名，则抓取所有并更新当前分支</p><h3 id="6-解决合并冲突"><a href="#6-解决合并冲突" class="headerlink" title="6.解决合并冲突"></a>6.<strong>解决合并冲突</strong></h3><p>​在一段时间，A、B用户修改了同一个文件，且修改了同一行位置的代码，此时会发生合并冲突。<br>A用户在本地修改代码后优先推送到远程仓库，此时B用户在本地修订代码，提交到本地仓库后，也需要<br>推送到远程仓库，此时B用户晚于A用户，故需要先拉取远程仓库的提交，经过合并后才能推送到远端分<br>支</p>]]></content>
       
       
       <categories>
@@ -305,11 +369,11 @@
     
     
     <entry>
-      <title>Git基础</title>
-      <link href="/2026/05/28/Git%E5%9F%BA%E7%A1%80/"/>
-      <url>/2026/05/28/Git%E5%9F%BA%E7%A1%80/</url>
+      <title>Git操作流程</title>
+      <link href="/2026/05/28/Git%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B/"/>
+      <url>/2026/05/28/Git%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B/</url>
       
-        <content type="html"><![CDATA[<h2 id="vscode中有关Git的字母含义"><a href="#vscode中有关Git的字母含义" class="headerlink" title="vscode中有关Git的字母含义"></a>vscode中有关Git的字母含义</h2><p>M表示修改，对文件进行了更改但尚未暂存或提交(使用git add)<br>U表示新文件，Git还未跟踪，文件不在之前的提交中<br>A表示新文件已添加<br>D表示已删除<br>R表示已重命名<br>C合并时发生冲突</p><h2 id="GIT基本命令"><a href="#GIT基本命令" class="headerlink" title="GIT基本命令"></a>GIT基本命令</h2><p><strong>ll&#x2F;ls</strong>：查看当前目录<br><strong>cat</strong>：查看文件内容<br><strong>touch</strong>：创建文件<br>如创建.bashrc文件命令如下： touch ~&#x2F;.bashrc<br>可在该文件中配置指令别名，如下所示：<br><strong>用于输出git提交日志</strong>：alias git-log&#x3D;’git log –pretty&#x3D;oneline –all –graph –abbrev-commit’</p><p><strong>该命令可以输出当前目录所有文件及基本信息</strong>：alias ll&#x3D;’ls -al’</p><p>配置完成后，使用如下命令，执行修改：source ~&#x2F;.bashrc</p><p><strong>git init</strong>：在当前目录中创建一个新的空的Git仓库&#x2F;&#x2F;告诉GIT：从这个文件夹开始，帮我管理这里所有文件的版本历史</p><p><strong>git add 单个文件名|通配符</strong>：</p><p>​添加工作区一个或多个文件的修改到暂存区<br>将所有修改加入暂存区：git add .</p><h4 id="git-commit-m”你的提交说明信息”："><a href="#git-commit-m”你的提交说明信息”：" class="headerlink" title="git commit -m”你的提交说明信息”："></a><strong>git commit -m”你的提交说明信息”：</strong></h4><p>提交暂存区内容到本地仓库的当前分支<br>（1）git add (工作区&lt;在工作区修改或创建新文件&gt; –&gt; 暂存区)<br>（2）git commit (暂存区 –&gt; 本地仓库)</p><p><strong>git status</strong>：查看的修改的状态（暂存区、工作区）</p><h4 id="git-log-查看历史提交记录"><a href="#git-log-查看历史提交记录" class="headerlink" title="git log 查看历史提交记录"></a><strong>git log</strong> 查看历史提交记录</h4><p>​作用:查看提交记录<br>命令形式：git log [option]<br>options<br>–all 显示所有分支<br>–pretty&#x3D;oneline 将提交信息显示为一行<br>–abbrev-commit 使得输出的commitId更简短<br>–graph 以图的形式</p><h4 id="版本回退：git-reset-–hard-commitID"><a href="#版本回退：git-reset-–hard-commitID" class="headerlink" title="版本回退：git reset –hard commitID"></a><strong>版本回退</strong>：git reset –hard commitID</h4><p>​（commitID 可以使用git-log 或git log指令查看）</p><h4 id="git-reflog-查看历史提交记录"><a href="#git-reflog-查看历史提交记录" class="headerlink" title="git reflog 查看历史提交记录"></a><strong>git reflog</strong> 查看历史提交记录</h4><h4 id="gitignore列出不被操作的文件"><a href="#gitignore列出不被操作的文件" class="headerlink" title=".gitignore列出不被操作的文件"></a><strong>.gitignore</strong>列出不被操作的文件</h4><p>​在工作目录中创建一个名为 .gitignore 的文件（文件名称固定），列出要忽略的文件模式</p><h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><p>​<strong>git branch</strong> 查看分支<br><strong>git branch branchname</strong>创建分支<br><strong>git checkout branchname</strong>切换分支<br><strong>git chechout -b branchname</strong>创建并切换分支<br><strong>git merge branchname</strong>合并分支<br><strong>git branch -d b1</strong> 删除分支时，需要做各种检查<br><strong>git branch -D b1</strong> 不做任何检查，强制删除</p><h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><p>当两个分支上对文件的修改可能会存在冲突，例如同时修改了同一个文件的同一行，这时就需要手动解决冲突，解决冲突步骤如下：</p><ol><li>处理文件中冲突的地方</li><li>将解决完冲突的文件加入暂存区(add)</li><li>提交到仓库(commit)</li></ol><h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><h3 id="1-配置SSH公钥"><a href="#1-配置SSH公钥" class="headerlink" title="1.配置SSH公钥"></a>1.<strong>配置SSH公钥</strong></h3><p>生成SSH公钥：ssh-keygen -t rsa不断回车，如果公钥已经存在，则自动覆盖</p><h3 id="2-Gitee设置账户共公钥"><a href="#2-Gitee设置账户共公钥" class="headerlink" title="2.Gitee设置账户共公钥"></a>2.<strong>Gitee设置账户共公钥</strong></h3><p>​获取公钥<br>cat ~&#x2F;.ssh&#x2F;id_rsa.pub<br>验证是否配置成功<br>ssh -T <a href="mailto:&#103;&#105;&#116;&#64;&#103;&#x69;&#x74;&#101;&#101;&#46;&#99;&#x6f;&#109;">git@gitee.com</a></p><h3 id="3-操作远程仓库"><a href="#3-操作远程仓库" class="headerlink" title="3.操作远程仓库"></a>3.<strong>操作远程仓库</strong></h3><h4 id="1-添加远程仓库"><a href="#1-添加远程仓库" class="headerlink" title="1.添加远程仓库"></a>1.<strong>添加远程仓库</strong></h4><p>​此操作是先初始化本地库，然后与已创建的远程库进行对接<br>命令： git remote add &lt;远端名称&gt; &lt;仓库路径&gt;<br>远端名称，默认是origin，取决于远端服务器设置<br>仓库路径，从远端服务器获取此URL</p><h4 id="2-查看远程仓库"><a href="#2-查看远程仓库" class="headerlink" title="2.查看远程仓库"></a>2.<strong>查看远程仓库</strong></h4><p>git remote</p><h4 id="3-推送到远程仓库"><a href="#3-推送到远程仓库" class="headerlink" title="3.推送到远程仓库"></a>3.<strong>推送到远程仓库</strong></h4><p>命令：git push [-f] [–set-upstream] [远端名称 [本地分支名][:远端分支名]]<br>如果远程分支名和本地分支名称相同，则可以只写本地分支<br>git push origin master<br>-f 表示强制覆盖<br>–set-upstream 推送同时建立起和远端分支的关联关系。<br>git push –set-upstream origin master<br>如果当前分支已经和远端分支关联，则可以省略分支名和远端名。<br>git push 将master分支推送到已关联的远端分支<br>查看关联关系：<br>git branch -vv</p><h3 id="4-从远程仓库克隆（克隆到本地后是本地仓库）"><a href="#4-从远程仓库克隆（克隆到本地后是本地仓库）" class="headerlink" title="4.从远程仓库克隆（克隆到本地后是本地仓库）"></a>4.<strong>从远程仓库克隆（克隆到本地后是本地仓库）</strong></h3><p>​git clone &lt;仓库路径&gt; [本地目录]<br>​本地目录可以省略，会自动生成一个目录</p><h3 id="5-从远程仓库中抓取和拉取"><a href="#5-从远程仓库中抓取和拉取" class="headerlink" title="5.从远程仓库中抓取和拉取"></a>5.<strong>从远程仓库中抓取和拉取</strong></h3><h4 id="抓取-命令：git-fetch-remote-name-branch-name"><a href="#抓取-命令：git-fetch-remote-name-branch-name" class="headerlink" title="抓取 命令：git fetch [remote name][branch name]"></a><strong>抓取</strong> 命令：git fetch [remote name][branch name]</h4><p>抓取指令就是将仓库里的更新都抓取到本地，不会进行合并<br>如果不指定远端名称和分支名，则抓取所有分支</p><h4 id="拉取-命令：git-pull-remote-name-branch-name"><a href="#拉取-命令：git-pull-remote-name-branch-name" class="headerlink" title="拉取 命令：git pull [remote name][branch name]"></a><strong>拉取</strong> 命令：git pull [remote name][branch name]</h4><p>拉取指令就是将远端仓库的修改拉到本地并自动进行合并，等同于fetch+merge<br>如果不指定远端名称和分支名，则抓取所有并更新当前分支</p><h3 id="6-解决合并冲突"><a href="#6-解决合并冲突" class="headerlink" title="6.解决合并冲突"></a>6.<strong>解决合并冲突</strong></h3><p>​在一段时间，A、B用户修改了同一个文件，且修改了同一行位置的代码，此时会发生合并冲突。<br>A用户在本地修改代码后优先推送到远程仓库，此时B用户在本地修订代码，提交到本地仓库后，也需要<br>推送到远程仓库，此时B用户晚于A用户，故需要先拉取远程仓库的提交，经过合并后才能推送到远端分<br>支</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="如果是首次推送远程仓库："><a href="#如果是首次推送远程仓库：" class="headerlink" title="如果是首次推送远程仓库："></a>如果是首次推送远程仓库：</h2><h3 id="​1-本地Git配置（已配可跳过）："><a href="#​1-本地Git配置（已配可跳过）：" class="headerlink" title="​1. 本地Git配置（已配可跳过）："></a>​1. <strong>本地Git配置（已配可跳过）</strong>：</h3><p>终端执行 git config –global user.name “你的名字” 、 git config –global user.email “你的邮箱” 。</p><h3 id="2-初始化："><a href="#2-初始化：" class="headerlink" title="2. 初始化："></a>2. <strong>初始化</strong>：</h3><p>打开项目文件夹，终端执行 git init <strong>初始化本地库</strong>；已初始化可跳过。</p><h3 id="3-暂存并提交文件："><a href="#3-暂存并提交文件：" class="headerlink" title="3. 暂存并提交文件："></a>3. <strong>暂存并提交文件</strong>：</h3><p>git add . 、 git commit -m “首次提交说明” 。</p><h3 id="4-关联远程仓库（终端执行）："><a href="#4-关联远程仓库（终端执行）：" class="headerlink" title="4. 关联远程仓库（终端执行）："></a>4. <strong>关联远程仓库</strong>（终端执行）：</h3><p>git remote add origin 远程仓库地址 ，通常用 origin 作远程别名。</p><h3 id="5-验证关联："><a href="#5-验证关联：" class="headerlink" title="5. 验证关联："></a>5. <strong>验证关联</strong>：</h3><p>git remote -v ，显示fetch&#x2F;push地址即成功。</p><h3 id="6-统一分支名（可选但推荐）："><a href="#6-统一分支名（可选但推荐）：" class="headerlink" title="6. 统一分支名（可选但推荐）："></a>6. <strong>统一分支名</strong>（可选但推荐）：</h3><p>git branch -M main （将默认master改为main，适配多数平台默认分支）。</p><h2 id="日常开发"><a href="#日常开发" class="headerlink" title="日常开发"></a>日常开发</h2><h3 id="1-配置Git"><a href="#1-配置Git" class="headerlink" title="1.配置Git"></a>1.<strong>配置Git</strong></h3><p>打开终端执行  git config –global user.name “你的名字”  和  git config –global user.email “你的邮箱”</p><h3 id="2-初始化本地仓库或克隆远程仓库"><a href="#2-初始化本地仓库或克隆远程仓库" class="headerlink" title="2.初始化本地仓库或克隆远程仓库"></a>2.<strong>初始化本地仓库或克隆远程仓库</strong></h3><p>初始化本地仓库：git init</p><h4 id="克隆远程仓库"><a href="#克隆远程仓库" class="headerlink" title="克隆远程仓库"></a><strong>克隆远程仓库</strong></h4><p>1. 点击VS Code左侧源代码管理图标（分支图标）。<br>2. 点击克隆仓库，输入远程仓库的HTTPS&#x2F;SSH地址，选择本地保存路径，完成克隆。</p><h3 id="3-日常开发操作（暂存、提交、拉取、推送）"><a href="#3-日常开发操作（暂存、提交、拉取、推送）" class="headerlink" title="3.日常开发操作（暂存、提交、拉取、推送）"></a>3.<strong>日常开发操作（暂存、提交、拉取、推送</strong>）</h3><h4 id="1-暂存文件：git-add"><a href="#1-暂存文件：git-add" class="headerlink" title="1. 暂存文件：git add"></a>1. <strong>暂存文件</strong>：git add</h4><p>开发完成后，在源代码管理面板中，点击文件右侧的 + 号，将修改暂存到暂存区</p><h4 id="2-提交更改：git-commit"><a href="#2-提交更改：git-commit" class="headerlink" title="2. 提交更改：git commit"></a>2. <strong>提交更改</strong>：git commit</h4><p>在暂存区下方的输入框中填写提交信息（必填，描述本次修改内容），点击输入框右侧的对勾按钮，完成本地提交。</p><h4 id="3-拉取远程最新代码：git-pull"><a href="#3-拉取远程最新代码：git-pull" class="headerlink" title="3. 拉取远程最新代码：git pull"></a>3. <strong>拉取远程最新代码</strong>：git pull</h4><p>点击源代码管理面板右上角的 ··· ，选择拉取，或在终端执行  git pull ，避免本地代码与远程冲突。</p><h4 id="4-推送本地提交到远程：git-push"><a href="#4-推送本地提交到远程：git-push" class="headerlink" title="4. 推送本地提交到远程：git push"></a>4. <strong>推送本地提交到远程</strong>：git push</h4><p>确认本地提交无误后，点击源代码管理面板右上角的 ··· ，选择推送，或在终端执行  git push ；首次推送需关联远程分支，执行  git push -u origin 分支名 </p><h4 id="5-设置远程仓库"><a href="#5-设置远程仓库" class="headerlink" title="5.设置远程仓库"></a>5.<strong>设置远程仓库</strong></h4><p>git remote add &lt;远端名称&gt; &lt;仓库路径&gt;</p>]]></content>
       
       
       <categories>

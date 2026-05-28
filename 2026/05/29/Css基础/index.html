@@ -286,7 +286,7 @@
     <i class="iconfont icon-catalog"></i>
   </div>
   <div class="post-catalog hidden" id="catalog">
-    <div class="title">Contents</div>
+    <div class="title">目录</div>
     <div class="catalog-content">
       
         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#css%E4%B9%A6%E5%86%99%E9%A1%BA%E5%BA%8F%EF%BC%9A"><span class="toc-text">css书写顺序：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%88%9D%E4%BD%93%E9%AA%8C"><span class="toc-text">1、初体验</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81css%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="toc-text">2、css引入方式</span></a></li></ol>
@@ -430,7 +430,7 @@
       'use strict';
       var $input = document.getElementById(search_id);
       var $resultContent = document.getElementById(content_id);
-      $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>输入想要搜索的内容：<span></ul>";
       $.ajax({
         // 0x01. load xml file
         url: path,

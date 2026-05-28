@@ -153,12 +153,81 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-29 03:02:12
+          2026-05-29 04:49:33
         </span>
         
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="Categories"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/CSS/" title="CSS">
+                    <b>#</b> CSS
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/css/" title="css">
+                    #css
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/Emmet%E5%86%99%E6%B3%95/" title="Emmet写法">
+                    #Emmet写法
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
       <div class="markdown-body">
-        
+        <p>代码的简写方式，输入缩写vscode会自动生成对应的代码                                                                        </p>
+<table>
+<thead>
+<tr>
+<th>说明</th>
+<th>标签结构</th>
+<th>Emmet</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>类选择器</td>
+<td>标签名.类选择器</td>
+<td><code>&lt;p class=&quot;css&quot;&gt;&lt;/p&gt;</code></td>
+</tr>
+<tr>
+<td>id选择器</td>
+<td>标签名#id名</td>
+<td><code>&lt;p id=&quot;css3&quot;&gt;&lt;/p&gt;</code></td>
+</tr>
+<tr>
+<td>同级选择器</td>
+<td>div+p</td>
+<td><code>&lt;div&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;</code></td>
+</tr>
+<tr>
+<td>父子级选择器</td>
+<td>div&gt;p</td>
+<td><code>&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;</code></td>
+</tr>
+<tr>
+<td>多个相同标签</td>
+<td>span*3</td>
+<td><code>&lt;span&gt;1&lt;/span&gt;&lt;span&gt;2&lt;/span&gt;&lt;span&gt;3&lt;/span&gt;</code></td>
+</tr>
+<tr>
+<td>有内容的标签</td>
+<td>div{内容}</td>
+<td><code>&lt;div&gt;内容&lt;/div&gt;</code></td>
+</tr>
+</tbody></table>
+<p>​css：大多数简写方式为属性单词首字母<br>如果需要生成多个带有顺序的数字可以用$,如：ul&gt;li{$}*4</p>
+
       </div>
       
         <div class="prev-or-next">
@@ -173,9 +242,37 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-29 03:02:12
+              2026-05-29 04:49:33
             </span>
             
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="Categories"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/CSS/" title="CSS">
+                        <b>#</b> CSS
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/css/" title="css">
+                        #css
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Emmet%E5%86%99%E6%B3%95/" title="Emmet写法">
+                        #Emmet写法
+                      </a>
+                    </span>
+                    
+                  </span>
+              
           </div>
           <div class="post-foot-next">
             
@@ -320,7 +417,7 @@
       'use strict';
       var $input = document.getElementById(search_id);
       var $resultContent = document.getElementById(content_id);
-      $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>输入想要搜索的内容：<span></ul>";
       $.ajax({
         // 0x01. load xml file
         url: path,

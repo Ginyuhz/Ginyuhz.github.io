@@ -153,12 +153,122 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-29 03:02:24
+          2026-05-29 05:07:26
         </span>
         
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="Categories"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/CSS/" title="CSS">
+                    <b>#</b> CSS
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/css/" title="css">
+                    #css
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/css%E8%83%8C%E6%99%AF%E5%B1%9E%E6%80%A7/" title="css背景属性">
+                    #css背景属性
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
       <div class="markdown-body">
-        
+        <table>
+<thead>
+<tr>
+<th>描述</th>
+<th>属性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>背景色</td>
+<td>background-color</td>
+</tr>
+<tr>
+<td>背景图</td>
+<td>background-image</td>
+</tr>
+<tr>
+<td>背景图平铺方式</td>
+<td>background-repeat</td>
+</tr>
+<tr>
+<td>背景图位置</td>
+<td>background-position</td>
+</tr>
+<tr>
+<td>背景图缩放</td>
+<td>background-size</td>
+</tr>
+<tr>
+<td>背景图固定</td>
+<td>background-attachment</td>
+</tr>
+<tr>
+<td>背景复合属性</td>
+<td>background</td>
+</tr>
+</tbody></table>
+<h2 id="1-背景图"><a href="#1-背景图" class="headerlink" title="1.背景图"></a>1.背景图</h2><p>使用背景图实现装饰性图片效果<br>属性名：background-image（bgi）<br>属性值：url（背景图URL）<br>背景图默认平铺</p>
+<h2 id="2-背景图平铺方式background-repeat"><a href="#2-背景图平铺方式background-repeat" class="headerlink" title="2.背景图平铺方式background-repeat"></a>2.背景图平铺方式background-repeat</h2><p><strong>缩写bgr</strong><br>属性值      效果<br>no-repeat   不平铺<br>repeat      平铺（默认）<br>repeat-x    水平方向平铺<br>repeat-y    垂直方向平铺</p>
+<h2 id="3-背景图位置background-position"><a href="#3-背景图位置background-position" class="headerlink" title="3.背景图位置background-position"></a>3.背景图位置background-position</h2><p><strong>缩写：bgp</strong><br>属性值：水平方向位置 垂直方向位置</p>
+<table>
+<thead>
+<tr>
+<th>关键字</th>
+<th>位置</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>left</td>
+<td>左侧</td>
+</tr>
+<tr>
+<td>right</td>
+<td>右侧</td>
+</tr>
+<tr>
+<td>center</td>
+<td>居中</td>
+</tr>
+<tr>
+<td>top</td>
+<td>顶部</td>
+</tr>
+<tr>
+<td>bottom</td>
+<td>底部</td>
+</tr>
+</tbody></table>
+<p>坐标（数字+px，正负都可以）</p>
+<ul>
+<li>水平方向，正是向右移动，负数向左移动</li>
+<li>垂直方向：正数向下移动，负数向上移动</li>
+</ul>
+<p>关键字可以只写一个，另一个方向默认居中<br>只写一个数字表示水平方向，垂直方向居中<br>关键字取值写法可以颠倒</p>
+<h2 id="4-背景图缩放background-size"><a href="#4-背景图缩放background-size" class="headerlink" title="4.背景图缩放background-size"></a>4.背景图缩放background-size</h2><p>设置背景图大小<br><strong>缩写bgz</strong><br>常用属性值：<br>关键字 </p>
+<ul>
+<li>cover：等比例缩放完全覆盖背景区域，可能部分图片看不见</li>
+<li>contain：等比例缩放完全装入背景区，可能部分空白</li>
+<li>百分百：根据盒子尺寸计算图片大小（100%图片宽度与盒子宽度一样，高度等比例缩放）</li>
+</ul>
+<p>数字+单位</p>
+<h2 id="5-背景图固定background-attachment"><a href="#5-背景图固定background-attachment" class="headerlink" title="5.背景图固定background-attachment"></a>5.背景图固定background-attachment</h2><p>背景图不会随着元素的内容滚动<br><strong>缩写bga</strong><br>属性值：fixed</p>
+<h2 id="6-背景复合属性background"><a href="#6-背景复合属性background" class="headerlink" title="6.背景复合属性background"></a>6.背景复合属性background</h2><p>属性值：背景色 背景图 背景平铺方式 背景图位置&#x2F;背景图缩放 背景图固定（各个属性值用空格隔开，不分顺序）</p>
+
       </div>
       
         <div class="prev-or-next">
@@ -173,9 +283,37 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-29 03:02:24
+              2026-05-29 05:07:26
             </span>
             
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="Categories"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/CSS/" title="CSS">
+                        <b>#</b> CSS
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/css/" title="css">
+                        #css
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/css%E8%83%8C%E6%99%AF%E5%B1%9E%E6%80%A7/" title="css背景属性">
+                        #css背景属性
+                      </a>
+                    </span>
+                    
+                  </span>
+              
           </div>
           <div class="post-foot-next">
             
@@ -189,6 +327,23 @@
       
     </div>
     
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%83%8C%E6%99%AF%E5%9B%BE"><span class="toc-text">1.背景图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E8%83%8C%E6%99%AF%E5%9B%BE%E5%B9%B3%E9%93%BA%E6%96%B9%E5%BC%8Fbackground-repeat"><span class="toc-text">2.背景图平铺方式background-repeat</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%83%8C%E6%99%AF%E5%9B%BE%E4%BD%8D%E7%BD%AEbackground-position"><span class="toc-text">3.背景图位置background-position</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E8%83%8C%E6%99%AF%E5%9B%BE%E7%BC%A9%E6%94%BEbackground-size"><span class="toc-text">4.背景图缩放background-size</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E8%83%8C%E6%99%AF%E5%9B%BE%E5%9B%BA%E5%AE%9Abackground-attachment"><span class="toc-text">5.背景图固定background-attachment</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E8%83%8C%E6%99%AF%E5%A4%8D%E5%90%88%E5%B1%9E%E6%80%A7background"><span class="toc-text">6.背景复合属性background</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
 
     
       <div class="comments-container">
@@ -320,7 +475,7 @@
       'use strict';
       var $input = document.getElementById(search_id);
       var $resultContent = document.getElementById(content_id);
-      $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>输入想要搜索的内容：<span></ul>";
       $.ajax({
         // 0x01. load xml file
         url: path,

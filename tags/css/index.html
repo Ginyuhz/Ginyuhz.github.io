@@ -114,6 +114,24 @@
   </div>
   
     <div class="post-list">
+      <div class="post-item" title="CSS-背景属性">
+        <span class="time-m-d">2026-05-29</span>
+        <a href="/2026/05/29/CSS-%E8%83%8C%E6%99%AF%E5%B1%9E%E6%80%A7/">
+          <span>CSS-背景属性</span>
+        </a>
+      </div>
+    </div>
+  
+    <div class="post-list">
+      <div class="post-item" title="CSS-Emmet写法">
+        <span class="time-m-d">2026-05-29</span>
+        <a href="/2026/05/29/CSS-Emmet%E5%86%99%E6%B3%95/">
+          <span>CSS-Emmet写法</span>
+        </a>
+      </div>
+    </div>
+  
+    <div class="post-list">
       <div class="post-item" title="Css基础选择器">
         <span class="time-m-d">2026-05-29</span>
         <a href="/2026/05/29/Css%E5%9F%BA%E7%A1%80%E9%80%89%E6%8B%A9%E5%99%A8/">
@@ -253,7 +271,7 @@
       'use strict';
       var $input = document.getElementById(search_id);
       var $resultContent = document.getElementById(content_id);
-      $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>输入想要搜索的内容：<span></ul>";
       $.ajax({
         // 0x01. load xml file
         url: path,

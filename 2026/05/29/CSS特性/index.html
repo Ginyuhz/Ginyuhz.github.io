@@ -153,12 +153,41 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-29 03:01:43
+          2026-05-29 04:44:41
         </span>
         
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="Categories"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/CSS/" title="CSS">
+                    <b>#</b> CSS
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/css%E7%89%B9%E6%80%A7%EF%BC%8C%E7%BB%A7%E6%89%BF%E6%80%A7%EF%BC%8C%E5%B1%82%E5%8F%A0%E6%80%A7%EF%BC%8C%E4%BC%98%E5%85%88%E7%BA%A7/" title="css特性，继承性，层叠性，优先级">
+                    #css特性，继承性，层叠性，优先级
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
       <div class="markdown-body">
-        
+        <h2 id="1-继承性"><a href="#1-继承性" class="headerlink" title="1.继承性"></a>1.继承性</h2><p>子级默认继承父级文字控制属性<br>直接样式大于继承样式，标签有自己的样式时，不会继承而是之间标签自己的样式</p>
+<h2 id="2-层叠性"><a href="#2-层叠性" class="headerlink" title="2.层叠性"></a>2.层叠性</h2><p>相同属性覆盖：后面的css属性覆盖前面的css属性<br>不同属性叠加：不同css属性都生效</p>
+<h2 id="3-优先级"><a href="#3-优先级" class="headerlink" title="3.优先级"></a>3.优先级</h2><p>优先级也叫权重，当一个标签使用了多种选择器时，基于不同种类的选择器的匹配规则</p>
+<p><strong>规则</strong>：选择器优先级高的生效</p>
+<p><strong>公式</strong>：通配符&lt;标签&lt;类&lt;id&lt;行内&lt;!important(提权功能，提高优先级最高，慎用)<br>(选中标签范围越大，优先级越低)</p>
+<p><strong>复合选择器叠加计算规则</strong>：<br>行内样式，id，类，标签</p>
+<p><strong>规则</strong>：<br>从左向右依次比较选择器个数，同一级个数多的优先级高，个数相同向后比较<br>如有行内样式则行内样式生效，没有比较下一级，id多的优先级更高，以此类推<br>！important权重最高（虽然可以将权重提到最高，但是要看作用在哪个元素，对于他的子级，是继承，权重最低）<br>继承权重最低<br>(判断步骤：首先看是否有继承及！important的情况，然后根据计算规则计算权重)</p>
+
       </div>
       
         <div class="prev-or-next">
@@ -173,9 +202,31 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-29 03:01:43
+              2026-05-29 04:44:41
             </span>
             
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="Categories"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/CSS/" title="CSS">
+                        <b>#</b> CSS
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/css%E7%89%B9%E6%80%A7%EF%BC%8C%E7%BB%A7%E6%89%BF%E6%80%A7%EF%BC%8C%E5%B1%82%E5%8F%A0%E6%80%A7%EF%BC%8C%E4%BC%98%E5%85%88%E7%BA%A7/" title="css特性，继承性，层叠性，优先级">
+                        #css特性，继承性，层叠性，优先级
+                      </a>
+                    </span>
+                    
+                  </span>
+              
           </div>
           <div class="post-foot-next">
             
@@ -189,6 +240,23 @@
       
     </div>
     
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%BB%A7%E6%89%BF%E6%80%A7"><span class="toc-text">1.继承性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%B1%82%E5%8F%A0%E6%80%A7"><span class="toc-text">2.层叠性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-text">3.优先级</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
 
     
       <div class="comments-container">
@@ -320,7 +388,7 @@
       'use strict';
       var $input = document.getElementById(search_id);
       var $resultContent = document.getElementById(content_id);
-      $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>输入想要搜索的内容：<span></ul>";
       $.ajax({
         // 0x01. load xml file
         url: path,

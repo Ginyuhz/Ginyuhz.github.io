@@ -114,19 +114,19 @@
   </div>
   
     <div class="post-list">
-      <div class="post-item" title="Git操作流程">
+      <div class="post-item" title="Git基础">
         <span class="time-m-d">2026-05-28</span>
-        <a href="/2026/05/28/Git%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B/">
-          <span>Git操作流程</span>
+        <a href="/2026/05/28/Git%E5%9F%BA%E7%A1%80/">
+          <span>Git基础</span>
         </a>
       </div>
     </div>
   
     <div class="post-list">
-      <div class="post-item" title="Git基础">
+      <div class="post-item" title="Git操作流程">
         <span class="time-m-d">2026-05-28</span>
-        <a href="/2026/05/28/Git%E5%9F%BA%E7%A1%80/">
-          <span>Git基础</span>
+        <a href="/2026/05/28/Git%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B/">
+          <span>Git操作流程</span>
         </a>
       </div>
     </div>
@@ -253,7 +253,7 @@
       'use strict';
       var $input = document.getElementById(search_id);
       var $resultContent = document.getElementById(content_id);
-      $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>输入想要搜索的内容：<span></ul>";
       $.ajax({
         // 0x01. load xml file
         url: path,

@@ -153,9 +153,31 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-29 03:57:42
+          2026-05-29 04:40:51
         </span>
         
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="Categories"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/CSS/" title="CSS">
+                    <b>#</b> CSS
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/html%EF%BC%8Ccss%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%8C%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8/" title="html，css复合选择器，伪类选择器">
+                    #html，css复合选择器，伪类选择器
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
       <div class="markdown-body">
         <h2 id="复合选择器"><a href="#复合选择器" class="headerlink" title="复合选择器"></a>复合选择器</h2><p>两个或多个基础选择器通过不同方式组合成<br>作用：更准确、更高效的选择目标元素</p>
@@ -181,9 +203,31 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-29 03:57:42
+              2026-05-29 04:40:51
             </span>
             
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="Categories"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/CSS/" title="CSS">
+                        <b>#</b> CSS
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/html%EF%BC%8Ccss%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%8C%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8/" title="html，css复合选择器，伪类选择器">
+                        #html，css复合选择器，伪类选择器
+                      </a>
+                    </span>
+                    
+                  </span>
+              
           </div>
           <div class="post-foot-next">
             
@@ -201,7 +245,7 @@
     <i class="iconfont icon-catalog"></i>
   </div>
   <div class="post-catalog hidden" id="catalog">
-    <div class="title">Contents</div>
+    <div class="title">目录</div>
     <div class="catalog-content">
       
         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">复合选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%90%8E%E4%BB%A3%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">1.后代选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AD%90%E4%BB%A3%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">2.子代选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%B9%B6%E9%9B%86%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">3.并集选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%BA%A4%E9%9B%86%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">4.交集选择器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">伪类选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%BC%A0%E6%A0%87%E6%82%AC%E5%81%9C%E7%8A%B6%E6%80%81%EF%BC%9A"><span class="toc-text">1.鼠标悬停状态：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BC%AA%E7%B1%BB-%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="toc-text">2.伪类-超链接</span></a></li></ol></li></ol>
@@ -345,7 +389,7 @@
       'use strict';
       var $input = document.getElementById(search_id);
       var $resultContent = document.getElementById(content_id);
-      $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>输入想要搜索的内容：<span></ul>";
       $.ajax({
         // 0x01. load xml file
         url: path,
