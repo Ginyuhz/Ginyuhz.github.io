@@ -4,42 +4,16 @@
   
     
     <entry>
-      <title>postmd文件</title>
-      <link href="/2026/05/28/postmd%E6%96%87%E4%BB%B6/"/>
-      <url>/2026/05/28/postmd%E6%96%87%E4%BB%B6/</url>
+      <title>html基础命令及操作</title>
+      <link href="/2026/05/28/html%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E5%8F%8A%E6%93%8D%E4%BD%9C/"/>
+      <url>/2026/05/28/html%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E5%8F%8A%E6%93%8D%E4%BD%9C/</url>
       
-        <content type="html"><![CDATA[<p>111</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>typora使用</title>
-      <link href="/2026/05/28/md%E6%96%87%E4%BB%B6/"/>
-      <url>/2026/05/28/md%E6%96%87%E4%BB%B6/</url>
-      
-        <content type="html"><![CDATA[<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    dddd</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>我的第一篇博客</title>
-      <link href="/2026/05/28/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
-      <url>/2026/05/28/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
-      
-        <content type="html"><![CDATA[<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    llll</span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><p>var isMatch &#x3D; true;<br>              var content_index &#x3D; [];<br>              if (!data.title || data.title.trim() &#x3D;&#x3D;&#x3D; ‘’) {<br>                data.title &#x3D; “Untitled”;<br>              }<br>              var orig_data_title &#x3D; data.title.trim();<br>              var data_title &#x3D; orig_data_title.toLowerCase();<br>              var orig_data_content &#x3D; data.content.trim().replace(&#x2F;&lt;[^&gt;]+&gt;&#x2F;g, “”);<br>              var data_content &#x3D; orig_data_content.toLowerCase();<br>              var data_url &#x3D; data.url;<br>              var index_title &#x3D; -1;<br>              var index_content &#x3D; -1;<br>              var first_occur &#x3D; -1;<br>              &#x2F;&#x2F; only match artiles with not empty contents<br>              if (data_content !&#x3D;&#x3D; ‘’) {<br>                keywords.forEach(function (keyword, i) {<br>                  index_title &#x3D; data_title.indexOf(keyword);<br>                  index_content &#x3D; data_content.indexOf(keyword);</p><pre><code>              if (index_title &lt; 0 &amp;&amp; index_content &lt; 0) &#123;                isMatch = false;              &#125; else &#123;                if (index_content &lt; 0) &#123;                  index_content = 0;                &#125;                if (i == 0) &#123;                  first_occur = index_content;                &#125;                // content_index.push(&#123;index_content:index_content, keyword_len:keyword_len&#125;);              &#125;            &#125;);          &#125; else &#123;            isMatch = false;</code></pre>]]></content>
+        <content type="html"><![CDATA[<p>1、<strong>HTML基本骨架</strong><br>            html标签里的内容是整个网页<br>            head标签里用来存放给浏览器看的信息，如css<br>            body标签里的是网页主体，给用户看的<br>            title标签在head里面，是网页标题<br>2、<strong>注释</strong><br>            在要注释那行的任意一个位置按Ctrl加斜杠<br>            变成注释浏览器不显示<br>            取消注释仍然是Ctrl加斜杠<br>3、<strong>标题标签h（双标签）</strong><br>    h1到h6字号文字加粗逐渐减小，且独占一行<br>    h1一个网页只用一次，是一级标题，用来方标题和logo<br>4、<strong>段落标签p（双标签）</strong><br>    独占一行，段落间有空隙<br>    不管标签里的内容是否分段，在同一标签都显示成一段<br>5、<strong>换行<code>&lt;br&gt;</code>与水平线标签<code>&lt;hr&gt;</code>(单标签)</strong><br>    不需要包裹内容的就是单标签<br>    浏览器不识别代码当中enter键换行，要使用<br>换行<br>6、<strong>文本格式化标签</strong><br>    一般使用左边标签，具有强调意义，显示没有区别<br>    strong  加粗    b<br>    em      倾斜    i<br>    ins     下划线  u<br>    del     删除线  s<br>7、<strong>图像标签<code>&lt;img&gt;</code>单标签</strong><br>    （1）<strong>src 用于指定图像的位置和名称</strong><br>        <code>&lt;img src =&#39;图像的url&#39;&gt;</code><br>        输入.&#x2F;可以在当前路径寻找图片，vscode有提示功能<br>        且图片在同一行<br>    （2）<strong>图片属性</strong><br>        alt     替换文本    图片无法显示的时候显示的文字<br>        title   提示文本    鼠标悬停在图片上面时显示的文字<br>        width   图片宽度    值为数字，没有单位<br>        heigh   图片高度    值为数字，没有单位<br>        浏览器是等比例缩放<br>        src alt title等是属性名，其后是属性值，属性写在尖括号理标签名后，标签名和属性之间用空格隔开<br>8、<strong>路径</strong><br>        路径指的是从起点到终点经历的路线<br>        <strong>路径分类</strong><br>            <strong>相对路径</strong>：从当前文件位置出发查找目标文件<br>                找自己电脑内的文件，一般使用相对路径<br>            <strong>绝对路径</strong>：从盘符出发查找文件<br>                Windows从盘符出发，默认是反斜线(),但是斜线也可以用<br>                Mac从根目录（&#x2F;）出发<br>                文件不在自己电脑，复制在线网址<br>            &#x2F;表示<strong>进入某个文件夹</strong>里面，格式是 <strong>文件名&#x2F;</strong><br>            .&#x2F;表示<strong>当前</strong>文件所在的文件夹<br>            ..表示上一级文件， ..&#x2F;表示进入上一级，..&#x2F;..&#x2F;表示进入上上一级<br>9、<strong>超链接a（双标签）</strong><br>    a标签包含的内容是可以点击跳转的内容，可以是文字，也可以是图片<br>    属性target&#x3D;”_blank”在新窗口跳转页面<br>    href属性值是跳转地址，是必须属性，开发初期不知道超链接跳转地址，属性值写#，表示空链接，不会跳转<br>    跳转到本地文件：相对路径查找<br>10、<strong>音频标签audio（双标签）</strong><br>    <code>&lt;audio src=&quot;音频的URL&quot;&gt;&lt;/audio&gt;</code></p><table><thead><tr><th>属性</th><th>作用</th><th>特殊说明</th></tr></thead><tbody><tr><td>src（必须属性）</td><td>音频URL</td><td>支持格式：MP3 Ogg Wav</td></tr><tr><td>controls</td><td>显示音频控制面板</td><td>是布尔型属性，只要出现就表示true，不写则该属性&#x3D;false，所有HTML布尔属性都遵循这个规则</td></tr><tr><td>loop</td><td>循环播放</td><td></td></tr><tr><td>autoplay</td><td>自动播放</td><td>为了提示用户体验，浏览器一般会禁止使用自动播放功能</td></tr></tbody></table><p>11、视频标签video<br>   <code> &lt;video src=&quot;视频的URL&quot;&gt;&lt;/video&gt;</code></p><table><thead><tr><th>属性</th><th>作用</th><th>特殊说明</th></tr></thead><tbody><tr><td>src（必须属性）</td><td>视频URL</td><td>支持格式：MP4 Ogg WeBM</td></tr><tr><td>controls</td><td>显示音频控制面板</td><td>是布尔型属性，只要出现就表示true，不写则该属性&#x3D;false，所有HTML布尔属性都遵循这个规则</td></tr><tr><td>loop</td><td>循环播放</td><td></td></tr><tr><td>muted</td><td>静音播放</td><td></td></tr><tr><td>autoplay</td><td>自动播放</td><td>为了提示用户体验，浏览器支持在静音状态下自动播放功能</td></tr></tbody></table>]]></content>
       
       
       <categories>
           
-          <category> 前端开发 </category>
+          <category> Html </category>
           
       </categories>
       
@@ -55,13 +29,104 @@
     
     
     <entry>
-      <title>Hello World</title>
-      <link href="/2026/05/27/hello-world/"/>
-      <url>/2026/05/27/hello-world/</url>
+      <title>Git基础</title>
+      <link href="/2026/05/28/Git%E5%9F%BA%E7%A1%80/"/>
+      <url>/2026/05/28/Git%E5%9F%BA%E7%A1%80/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="vscode中有关Git的字母含义"><a href="#vscode中有关Git的字母含义" class="headerlink" title="vscode中有关Git的字母含义"></a>vscode中有关Git的字母含义</h2><p>M表示修改，对文件进行了更改但尚未暂存或提交(使用git add)<br>U表示新文件，Git还未跟踪，文件不在之前的提交中<br>A表示新文件已添加<br>D表示已删除<br>R表示已重命名<br>C合并时发生冲突</p><h2 id="GIT基本命令"><a href="#GIT基本命令" class="headerlink" title="GIT基本命令"></a>GIT基本命令</h2><p><strong>ll&#x2F;ls</strong>：查看当前目录<br><strong>cat</strong>：查看文件内容<br><strong>touch</strong>：创建文件<br>如创建.bashrc文件命令如下： touch ~&#x2F;.bashrc<br>可在该文件中配置指令别名，如下所示：<br> <strong>用于输出git提交日志</strong>：alias git-log&#x3D;’git log –pretty&#x3D;oneline –all –graph –abbrev-commit’</p><p><strong>该命令可以输出当前目录所有文件及基本信息</strong>：alias ll&#x3D;’ls -al’</p><p>配置完成后，使用如下命令，执行修改：source ~&#x2F;.bashrc</p><p><strong>git init</strong>：在当前目录中创建一个新的空的Git仓库&#x2F;&#x2F;告诉GIT：从这个文件夹开始，帮我管理这里所有文件的版本历史<br><strong>git add 单个文件名|通配符</strong>：<br>    添加工作区一个或多个文件的修改到暂存区<br>    将所有修改加入暂存区：git add .<br><strong>git commit -m”你的提交说明信息”：</strong><br>    提交暂存区内容到本地仓库的当前分支<br>（1）git add (工作区&lt;在工作区修改或创建新文件&gt; –&gt; 暂存区)<br>（2）git commit (暂存区 –&gt; 本地仓库)<br><strong>git status</strong>：查看的修改的状态（暂存区、工作区）<br><strong>git log</strong> 查看历史提交记录<br>    作用:查看提交记录<br>    命令形式：git log [option]<br>    options<br>    –all 显示所有分支<br>    –pretty&#x3D;oneline 将提交信息显示为一行<br>    –abbrev-commit 使得输出的commitId更简短<br>    –graph 以图的形式<br><strong>版本回退</strong>：git reset –hard commitID<br>    （commitID 可以使用git-log 或git log指令查看）<br><strong>git reflog</strong> 查看历史提交记录<br><strong>.gitignore</strong>列出不被操作的文件<br>    在工作目录中创建一个名为 .gitignore 的文件（文件名称固定），列出要忽略的文件模式</p><h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><p>​     <strong>git branch</strong> 查看分支<br>     <strong>git branch branchname</strong>创建分支<br>     <strong>git checkout branchname</strong>切换分支<br>     <strong>git chechout -b branchname</strong>创建并切换分支<br>     <strong>git merge branchname</strong>合并分支<br>     <strong>git branch -d b1</strong> 删除分支时，需要做各种检查<br>     <strong>git branch -D b1</strong> 不做任何检查，强制删除</p><h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><p>​     当两个分支上对文件的修改可能会存在冲突，例如同时修改了同一个文件的同一行，这时就需要手动解决冲突，解决冲突步骤如下：<br>     1. 处理文件中冲突的地方<br>     2. 将解决完冲突的文件加入暂存区(add)<br>     3. 提交到仓库(commit)</p><h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><p>1.<strong>配置SSH公钥</strong><br>  生成SSH公钥：ssh-keygen -t rsa不断回车，如果公钥已经存在，则自动覆盖</p><p>2.<strong>Gitee设置账户共公钥</strong><br>    获取公钥<br>    cat ~&#x2F;.ssh&#x2F;id_rsa.pub<br>    验证是否配置成功<br>    ssh -T <a href="mailto:&#103;&#105;&#116;&#x40;&#x67;&#x69;&#x74;&#101;&#101;&#46;&#x63;&#x6f;&#x6d;">git@gitee.com</a><br>3.<strong>操作远程仓库</strong><br>    1.<strong>添加远程仓库</strong><br>        此操作是先初始化本地库，然后与已创建的远程库进行对接<br>        命令： git remote add &lt;远端名称&gt; &lt;仓库路径&gt;<br>        远端名称，默认是origin，取决于远端服务器设置<br>        仓库路径，从远端服务器获取此URL<br>    2.<strong>查看远程仓库</strong><br>        git remote<br>    3.<strong>推送到远程仓库</strong><br>        命令：git push [-f] [–set-upstream] [远端名称 [本地分支名][:远端分支名]]<br>        如果远程分支名和本地分支名称相同，则可以只写本地分支<br>        git push origin master<br>        -f 表示强制覆盖<br>        –set-upstream 推送同时建立起和远端分支的关联关系。<br>            git push –set-upstream origin master<br>        如果当前分支已经和远端分支关联，则可以省略分支名和远端名。<br>            git push 将master分支推送到已关联的远端分支<br>        查看关联关系：<br>            git branch -vv<br>4.<strong>从远程仓库克隆（克隆到本地后是本地仓库）</strong><br>        git clone &lt;仓库路径&gt; [本地目录]<br>​        本地目录可以省略，会自动生成一个目录</p><p>5.<strong>从远程仓库中抓取和拉取</strong><br>    <strong>抓取</strong> 命令：git fetch [remote name][branch name]<br>    抓取指令就是将仓库里的更新都抓取到本地，不会进行合并<br>    如果不指定远端名称和分支名，则抓取所有分支<br>    <strong>拉取</strong> 命令：git pull [remote name][branch name]<br>    拉取指令就是将远端仓库的修改拉到本地并自动进行合并，等同于fetch+merge<br>    如果不指定远端名称和分支名，则抓取所有并更新当前分支<br>6.<strong>解决合并冲突</strong><br>    在一段时间，A、B用户修改了同一个文件，且修改了同一行位置的代码，此时会发生合并冲突。<br>    A用户在本地修改代码后优先推送到远程仓库，此时B用户在本地修订代码，提交到本地仓库后，也需要<br>    推送到远程仓库，此时B用户晚于A用户，故需要先拉取远程仓库的提交，经过合并后才能推送到远端分<br>    支</p>]]></content>
       
       
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git基础 </tag>
+            
+            <tag> 工具使用 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Typora基础使用</title>
+      <link href="/2026/05/28/Typora%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/"/>
+      <url>/2026/05/28/Typora%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/../img/Typora%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具使用 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Typora </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>日常小知识点</title>
+      <link href="/2026/05/28/%E6%97%A5%E5%B8%B8%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+      <url>/2026/05/28/%E6%97%A5%E5%B8%B8%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+      
+        <content type="html"><![CDATA[<h2 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h2><p>​1.vue中取名为单个单词时会报错<br>在export default给name取个符合取名规范的名字，如小驼峰命名</p><h2 id="一些缩写含义"><a href="#一些缩写含义" class="headerlink" title="一些缩写含义"></a>一些缩写含义</h2><p>​<strong>CLI</strong>：全称（Command-Line Interface）<strong>命令行界面</strong>，常称命令行工具，如git、npm、node、volta，都是通过命令行操作 </p><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p><strong>​ctrl+d表示</strong>：向后选中所有<br>英文！加回车或tab键可直接<strong>生成html骨架</strong><br>Ctrl键加enter键可以直接到下一行<br>标签不需要自己打括号、自己会生成<br>输入.&#x2F;可以在当前路径寻找图片，vscode有提示功能</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 小知识 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 快捷键，缩写，报错 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Git操作流程</title>
+      <link href="/2026/05/28/Git%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B/"/>
+      <url>/2026/05/28/Git%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Git操作流程"><a href="#Git操作流程" class="headerlink" title="Git操作流程"></a>Git操作流程</h2><h3 id="如果是首次推送远程仓库："><a href="#如果是首次推送远程仓库：" class="headerlink" title="如果是首次推送远程仓库："></a>如果是首次推送远程仓库：</h3><p>​            1. <strong>本地Git配置（已配可跳过）</strong>：终端执行 git config –global user.name “你的名字” 、 git config –global user.email “你的邮箱” 。<br>            2. 打开项目文件夹，终端执行 git init <strong>初始化本地库</strong>；已初始化可跳过。<br>            3. <strong>暂存并提交文件</strong>： git add . 、 git commit -m “首次提交说明” 。<br>            4. <strong>关联远程仓库</strong>（终端执行）： git remote add origin 远程仓库地址 ，通常用 origin 作远程别名。<br>            5. <strong>验证关联</strong>： git remote -v ，显示fetch&#x2F;push地址即成功。<br>            6. <strong>统一分支名</strong>（可选但推荐）： git branch -M main （将默认master改为main，适配多数平台默认分支）。</p><h3 id="日常开发"><a href="#日常开发" class="headerlink" title="日常开发"></a>日常开发</h3><p>1.<strong>配置Git</strong><br> 打开终端执行  git config –global user.name “你的名字”  和  git config –global user.email “你的邮箱”<br>2.<strong>初始化本地仓库或克隆远程仓库</strong><br>     初始化本地仓库：git init<br>     克隆远程仓库<br>         1. 点击VS Code左侧源代码管理图标（分支图标）。<br>         2. 点击克隆仓库，输入远程仓库的HTTPS&#x2F;SSH地址，选择本地保存路径，完成克隆。<br>3.<strong>日常开发操作（暂存、提交、拉取、推送</strong>）<br>     1. <strong>暂存文件</strong>：git add<br>     开发完成后，在源代码管理面板中，点击文件右侧的 + 号，将修改暂存到暂存区<br>     2. <strong>提交更改</strong>：git commit<br>     在暂存区下方的输入框中填写提交信息（必填，描述本次修改内容），点击输入框右侧的对勾按钮，完成本地提交。<br>     3. <strong>拉取远程最新代码</strong>：git pull<br>     点击源代码管理面板右上角的 ··· ，选择拉取，或在终端执行  git pull ，避免本地代码与远程冲突。<br>     4. <strong>推送本地提交到远程</strong>：git push<br>     确认本地提交无误后，点击源代码管理面板右上角的 ··· ，选择推送，或在终端执行  git push ；首次推送需关联远程分支，执行  git push -u origin 分支名 <br>4.<strong>设置远程仓库</strong><br>     git remote add &lt;远端名称&gt; &lt;仓库路径&gt;</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git基础 </tag>
+            
+            <tag> 工具使用 </tag>
+            
+        </tags>
       
     </entry>
     

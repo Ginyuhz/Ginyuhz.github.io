@@ -13,7 +13,7 @@
   
   <title>
     
-      我的第一篇博客 
+      html基础命令及操作 
       
       
       |
@@ -149,19 +149,19 @@
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">我的第一篇博客</div>
+      <div class="post-title">html基础命令及操作</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-28 20:21:18
+          2026-05-28 23:51:44
         </span>
         
               <span class="post-categories">
                 <i class="iconfont icon-bookmark" title="Categories"></i>
                 
                 <span class="span--category">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" title="前端开发">
-                    <b>#</b> 前端开发
+                  <a href="/categories/Html/" title="Html">
+                    <b>#</b> Html
                   </a>
                 </span>
                 
@@ -180,31 +180,78 @@
           
       </div>
       <div class="markdown-body">
-        <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    llll</span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>var isMatch &#x3D; true;<br>              var content_index &#x3D; [];<br>              if (!data.title || data.title.trim() &#x3D;&#x3D;&#x3D; ‘’) {<br>                data.title &#x3D; “Untitled”;<br>              }<br>              var orig_data_title &#x3D; data.title.trim();<br>              var data_title &#x3D; orig_data_title.toLowerCase();<br>              var orig_data_content &#x3D; data.content.trim().replace(&#x2F;&lt;[^&gt;]+&gt;&#x2F;g, “”);<br>              var data_content &#x3D; orig_data_content.toLowerCase();<br>              var data_url &#x3D; data.url;<br>              var index_title &#x3D; -1;<br>              var index_content &#x3D; -1;<br>              var first_occur &#x3D; -1;<br>              &#x2F;&#x2F; only match artiles with not empty contents<br>              if (data_content !&#x3D;&#x3D; ‘’) {<br>                keywords.forEach(function (keyword, i) {<br>                  index_title &#x3D; data_title.indexOf(keyword);<br>                  index_content &#x3D; data_content.indexOf(keyword);</p>
-<pre><code>              if (index_title &lt; 0 &amp;&amp; index_content &lt; 0) &#123;
-                isMatch = false;
-              &#125; else &#123;
-                if (index_content &lt; 0) &#123;
-                  index_content = 0;
-                &#125;
-                if (i == 0) &#123;
-                  first_occur = index_content;
-                &#125;
-                // content_index.push(&#123;index_content:index_content, keyword_len:keyword_len&#125;);
-              &#125;
-            &#125;);
-          &#125; else &#123;
-            isMatch = false;
-</code></pre>
+        <p>1、<strong>HTML基本骨架</strong><br>            html标签里的内容是整个网页<br>            head标签里用来存放给浏览器看的信息，如css<br>            body标签里的是网页主体，给用户看的<br>            title标签在head里面，是网页标题<br>2、<strong>注释</strong><br>            在要注释那行的任意一个位置按Ctrl加斜杠<br>            变成注释浏览器不显示<br>            取消注释仍然是Ctrl加斜杠<br>3、<strong>标题标签h（双标签）</strong><br>    h1到h6字号文字加粗逐渐减小，且独占一行<br>    h1一个网页只用一次，是一级标题，用来方标题和logo<br>4、<strong>段落标签p（双标签）</strong><br>    独占一行，段落间有空隙<br>    不管标签里的内容是否分段，在同一标签都显示成一段<br>5、<strong>换行<code>&lt;br&gt;</code>与水平线标签<code>&lt;hr&gt;</code>(单标签)</strong><br>    不需要包裹内容的就是单标签<br>    浏览器不识别代码当中enter键换行，要使用<br>换行<br>6、<strong>文本格式化标签</strong><br>    一般使用左边标签，具有强调意义，显示没有区别<br>    strong  加粗    b<br>    em      倾斜    i<br>    ins     下划线  u<br>    del     删除线  s<br>7、<strong>图像标签<code>&lt;img&gt;</code>单标签</strong><br>    （1）<strong>src 用于指定图像的位置和名称</strong><br>        <code>&lt;img src =&#39;图像的url&#39;&gt;</code><br>        输入.&#x2F;可以在当前路径寻找图片，vscode有提示功能<br>        且图片在同一行<br>    （2）<strong>图片属性</strong><br>        alt     替换文本    图片无法显示的时候显示的文字<br>        title   提示文本    鼠标悬停在图片上面时显示的文字<br>        width   图片宽度    值为数字，没有单位<br>        heigh   图片高度    值为数字，没有单位<br>        浏览器是等比例缩放<br>        src alt title等是属性名，其后是属性值，属性写在尖括号理标签名后，标签名和属性之间用空格隔开<br>8、<strong>路径</strong><br>        路径指的是从起点到终点经历的路线<br>        <strong>路径分类</strong><br>            <strong>相对路径</strong>：从当前文件位置出发查找目标文件<br>                找自己电脑内的文件，一般使用相对路径<br>            <strong>绝对路径</strong>：从盘符出发查找文件<br>                Windows从盘符出发，默认是反斜线(),但是斜线也可以用<br>                Mac从根目录（&#x2F;）出发<br>                文件不在自己电脑，复制在线网址<br>            &#x2F;表示<strong>进入某个文件夹</strong>里面，格式是 <strong>文件名&#x2F;</strong><br>            .&#x2F;表示<strong>当前</strong>文件所在的文件夹<br>            ..表示上一级文件， ..&#x2F;表示进入上一级，..&#x2F;..&#x2F;表示进入上上一级<br>9、<strong>超链接a（双标签）</strong><br>    a标签包含的内容是可以点击跳转的内容，可以是文字，也可以是图片<br>    属性target&#x3D;”_blank”在新窗口跳转页面<br>    href属性值是跳转地址，是必须属性，开发初期不知道超链接跳转地址，属性值写#，表示空链接，不会跳转<br>    跳转到本地文件：相对路径查找<br>10、<strong>音频标签audio（双标签）</strong><br>    <code>&lt;audio src=&quot;音频的URL&quot;&gt;&lt;/audio&gt;</code></p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>作用</th>
+<th>特殊说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>src（必须属性）</td>
+<td>音频URL</td>
+<td>支持格式：MP3 Ogg Wav</td>
+</tr>
+<tr>
+<td>controls</td>
+<td>显示音频控制面板</td>
+<td>是布尔型属性，只要出现就表示true，不写则该属性&#x3D;false，所有HTML布尔属性都遵循这个规则</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>循环播放</td>
+<td></td>
+</tr>
+<tr>
+<td>autoplay</td>
+<td>自动播放</td>
+<td>为了提示用户体验，浏览器一般会禁止使用自动播放功能</td>
+</tr>
+</tbody></table>
+<p>11、视频标签video<br>   <code> &lt;video src=&quot;视频的URL&quot;&gt;&lt;/video&gt;</code></p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>作用</th>
+<th>特殊说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>src（必须属性）</td>
+<td>视频URL</td>
+<td>支持格式：MP4 Ogg WeBM</td>
+</tr>
+<tr>
+<td>controls</td>
+<td>显示音频控制面板</td>
+<td>是布尔型属性，只要出现就表示true，不写则该属性&#x3D;false，所有HTML布尔属性都遵循这个规则</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>循环播放</td>
+<td></td>
+</tr>
+<tr>
+<td>muted</td>
+<td>静音播放</td>
+<td></td>
+</tr>
+<tr>
+<td>autoplay</td>
+<td>自动播放</td>
+<td>为了提示用户体验，浏览器支持在静音状态下自动播放功能</td>
+</tr>
+</tbody></table>
 
       </div>
       
         <div class="prev-or-next">
           <div class="post-foot-prev">
             
-              <a href="/2026/05/27/hello-world/" target="_self">
+              <a href="/2026/05/28/Git%E5%9F%BA%E7%A1%80/" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
                 <span>上一篇</span>
               </a>
@@ -213,15 +260,15 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-28 20:21:18
+              2026-05-28 23:51:44
             </span>
             
                   <span class="post-categories">
                     <i class="iconfont icon-bookmark" title="Categories"></i>
                     
                     <span class="span--category">
-                      <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" title="前端开发">
-                        <b>#</b> 前端开发
+                      <a href="/categories/Html/" title="Html">
+                        <b>#</b> Html
                       </a>
                     </span>
                     
@@ -240,11 +287,6 @@
               
           </div>
           <div class="post-foot-next">
-            
-              <a href="/2026/05/28/md%E6%96%87%E4%BB%B6/" target="_self">
-                <span>下一篇</span>
-                <i class="iconfont icon-chevronright"></i>
-              </a>
             
           </div>
         </div>
@@ -522,29 +564,6 @@
 
 
         
-  
-    <div class="share-icon tools-bar-item">
-      <a href="javascript: void(0)" id="share-icon">
-        <i class="iconfont iconshare"></i>
-      </a>
-      <div class="share-content hidden">
-        
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + %E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2 + '&url=' + http%3A%2F%2Fexample.com%2F2026%2F05%2F28%2F%25E6%2588%2591%25E7%259A%2584%25E7%25AC%25AC%25E4%25B8%2580%25E7%25AF%2587%25E5%258D%259A%25E5%25AE%25A2%2F + '" target="_blank" title="Twitter">
-            <i class="iconfont icon-twitter"></i>
-          </a>
-        
-        
-          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2026/05/28/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" target="_blank" title="Facebook">
-            <i class="iconfont icon-facebooksquare"></i>
-          </a>
-        
-      </div>
-    </div>
-  
-  
-<script src="/js/shares.js"></script>
-
-
 
       </div>
     </div>
