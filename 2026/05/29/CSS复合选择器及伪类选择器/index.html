@@ -13,7 +13,7 @@
   
   <title>
     
-      Git操作流程 
+      CSS复合选择器及伪类选择器 
       
       
       |
@@ -149,52 +149,30 @@
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">Git操作流程</div>
+      <div class="post-title">CSS复合选择器及伪类选择器</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-28 23:21:48
+          2026-05-29 03:57:42
         </span>
         
-              <span class="post-categories">
-                <i class="iconfont icon-bookmark" title="Categories"></i>
-                
-                <span class="span--category">
-                  <a href="/categories/Git/" title="Git">
-                    <b>#</b> Git
-                  </a>
-                </span>
-                
-              </span>
-          
-              <span class="post-tags">
-                <i class="iconfont icon-tags mr-10" title="Tags"></i>
-                
-                <span class="span--tag mr-8">
-                  <a href="/tags/Git%E5%9F%BA%E7%A1%80/" title="Git基础">
-                    #Git基础
-                  </a>
-                </span>
-                
-                <span class="span--tag mr-8">
-                  <a href="/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" title="工具使用">
-                    #工具使用
-                  </a>
-                </span>
-                
-              </span>
-          
       </div>
       <div class="markdown-body">
-        <h2 id="Git操作流程"><a href="#Git操作流程" class="headerlink" title="Git操作流程"></a>Git操作流程</h2><h3 id="如果是首次推送远程仓库："><a href="#如果是首次推送远程仓库：" class="headerlink" title="如果是首次推送远程仓库："></a>如果是首次推送远程仓库：</h3><p>​            1. <strong>本地Git配置（已配可跳过）</strong>：终端执行 git config –global user.name “你的名字” 、 git config –global user.email “你的邮箱” 。<br>            2. 打开项目文件夹，终端执行 git init <strong>初始化本地库</strong>；已初始化可跳过。<br>            3. <strong>暂存并提交文件</strong>： git add . 、 git commit -m “首次提交说明” 。<br>            4. <strong>关联远程仓库</strong>（终端执行）： git remote add origin 远程仓库地址 ，通常用 origin 作远程别名。<br>            5. <strong>验证关联</strong>： git remote -v ，显示fetch&#x2F;push地址即成功。<br>            6. <strong>统一分支名</strong>（可选但推荐）： git branch -M main （将默认master改为main，适配多数平台默认分支）。</p>
-<h3 id="日常开发"><a href="#日常开发" class="headerlink" title="日常开发"></a>日常开发</h3><p>1.<strong>配置Git</strong><br> 打开终端执行  git config –global user.name “你的名字”  和  git config –global user.email “你的邮箱”<br>2.<strong>初始化本地仓库或克隆远程仓库</strong><br>     初始化本地仓库：git init<br>     克隆远程仓库<br>         1. 点击VS Code左侧源代码管理图标（分支图标）。<br>         2. 点击克隆仓库，输入远程仓库的HTTPS&#x2F;SSH地址，选择本地保存路径，完成克隆。<br>3.<strong>日常开发操作（暂存、提交、拉取、推送</strong>）<br>     1. <strong>暂存文件</strong>：git add<br>     开发完成后，在源代码管理面板中，点击文件右侧的 + 号，将修改暂存到暂存区<br>     2. <strong>提交更改</strong>：git commit<br>     在暂存区下方的输入框中填写提交信息（必填，描述本次修改内容），点击输入框右侧的对勾按钮，完成本地提交。<br>     3. <strong>拉取远程最新代码</strong>：git pull<br>     点击源代码管理面板右上角的 ··· ，选择拉取，或在终端执行  git pull ，避免本地代码与远程冲突。<br>     4. <strong>推送本地提交到远程</strong>：git push<br>     确认本地提交无误后，点击源代码管理面板右上角的 ··· ，选择推送，或在终端执行  git push ；首次推送需关联远程分支，执行  git push -u origin 分支名 <br>4.<strong>设置远程仓库</strong><br>     git remote add &lt;远端名称&gt; &lt;仓库路径&gt;</p>
+        <h2 id="复合选择器"><a href="#复合选择器" class="headerlink" title="复合选择器"></a>复合选择器</h2><p>两个或多个基础选择器通过不同方式组合成<br>作用：更准确、更高效的选择目标元素</p>
+<h3 id="1-后代选择器"><a href="#1-后代选择器" class="headerlink" title="1.后代选择器"></a>1.后代选择器</h3><p>选择某元素的后代元素，包括所有后代，儿子、孙子、曾孙都是后代元素<br>写法：<br>父选择器 子选择器{css属性}，父子选择器之间用空格隔开</p>
+<h3 id="2-子代选择器"><a href="#2-子代选择器" class="headerlink" title="2.子代选择器"></a>2.子代选择器</h3><p>作用：选中某元素的子代元素（最近的子级）<br>写法：父选择器&gt;子选择器{css属性}，父子选择器之间用&gt;隔开</p>
+<h3 id="3-并集选择器"><a href="#3-并集选择器" class="headerlink" title="3.并集选择器"></a>3.并集选择器</h3><p>选中多组标签设置相同的样式<br>写法：选择器1，选择器2，…，选择器n{css属性}，选择器之间用，隔开</p>
+<h3 id="4-交集选择器"><a href="#4-交集选择器" class="headerlink" title="4.交集选择器"></a>4.交集选择器</h3><p>选中同时满足多个条件的元素<br>写法：<br>选择器1选择器2{css属性}，选择器之间连写，没有任何符号<br>注意：如果交集选择器中有标签选择器，标签选择器必须书写在最前面；</p>
+<h2 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h2><p>伪类表示元素状态，选中元素的某个状态设置样式</p>
+<h3 id="1-鼠标悬停状态："><a href="#1-鼠标悬停状态：" class="headerlink" title="1.鼠标悬停状态："></a>1.鼠标悬停状态：</h3><p>选择器：hover{css属性}</p>
+<h3 id="2-伪类-超链接"><a href="#2-伪类-超链接" class="headerlink" title="2.伪类-超链接"></a>2.伪类-超链接</h3><p>选择器      作用<br>：link      访问前<br>：visited    访问后<br>：hover     鼠标悬停<br>：active    点击时（激活）<br>如果给超链接设置以上四个状态，需要按lvha的顺序写</p>
 
       </div>
       
         <div class="prev-or-next">
           <div class="post-foot-prev">
             
-              <a href="/2026/05/28/%E6%97%A5%E5%B8%B8%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9/" target="_self">
+              <a href="/2026/05/29/CSS%E6%96%87%E5%AD%97%E6%8E%A7%E5%88%B6%E5%B1%9E%E6%80%A7/" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
                 <span>上一篇</span>
               </a>
@@ -203,41 +181,13 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-28 23:21:48
+              2026-05-29 03:57:42
             </span>
             
-                  <span class="post-categories">
-                    <i class="iconfont icon-bookmark" title="Categories"></i>
-                    
-                    <span class="span--category">
-                      <a href="/categories/Git/" title="Git">
-                        <b>#</b> Git
-                      </a>
-                    </span>
-                    
-                  </span>
-              
-                  <span class="post-tags">
-                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
-                    
-                    <span class="span--tag mr-8">
-                      <a href="/tags/Git%E5%9F%BA%E7%A1%80/" title="Git基础">
-                        #Git基础
-                      </a>
-                    </span>
-                    
-                    <span class="span--tag mr-8">
-                      <a href="/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" title="工具使用">
-                        #工具使用
-                      </a>
-                    </span>
-                    
-                  </span>
-              
           </div>
           <div class="post-foot-next">
             
-              <a href="/2026/05/28/Typora%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/" target="_self">
+              <a href="/2026/05/29/CSS%E7%89%B9%E6%80%A7/" target="_self">
                 <span>下一篇</span>
                 <i class="iconfont icon-chevronright"></i>
               </a>
@@ -254,7 +204,7 @@
     <div class="title">Contents</div>
     <div class="catalog-content">
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-text">Git操作流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E6%98%AF%E9%A6%96%E6%AC%A1%E6%8E%A8%E9%80%81%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%EF%BC%9A"><span class="toc-text">如果是首次推送远程仓库：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A5%E5%B8%B8%E5%BC%80%E5%8F%91"><span class="toc-text">日常开发</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">复合选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%90%8E%E4%BB%A3%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">1.后代选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AD%90%E4%BB%A3%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">2.子代选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%B9%B6%E9%9B%86%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">3.并集选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%BA%A4%E9%9B%86%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">4.交集选择器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">伪类选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%BC%A0%E6%A0%87%E6%82%AC%E5%81%9C%E7%8A%B6%E6%80%81%EF%BC%9A"><span class="toc-text">1.鼠标悬停状态：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BC%AA%E7%B1%BB-%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="toc-text">2.伪类-超链接</span></a></li></ol></li></ol>
       
     </div>
   </div>

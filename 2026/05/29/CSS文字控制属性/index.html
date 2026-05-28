@@ -13,7 +13,7 @@
   
   <title>
     
-      Git操作流程 
+      CSS文字控制属性 
       
       
       |
@@ -149,52 +149,67 @@
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">Git操作流程</div>
+      <div class="post-title">CSS文字控制属性</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-28 23:21:48
+          2026-05-29 03:55:59
         </span>
         
-              <span class="post-categories">
-                <i class="iconfont icon-bookmark" title="Categories"></i>
-                
-                <span class="span--category">
-                  <a href="/categories/Git/" title="Git">
-                    <b>#</b> Git
-                  </a>
-                </span>
-                
-              </span>
-          
-              <span class="post-tags">
-                <i class="iconfont icon-tags mr-10" title="Tags"></i>
-                
-                <span class="span--tag mr-8">
-                  <a href="/tags/Git%E5%9F%BA%E7%A1%80/" title="Git基础">
-                    #Git基础
-                  </a>
-                </span>
-                
-                <span class="span--tag mr-8">
-                  <a href="/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" title="工具使用">
-                    #工具使用
-                  </a>
-                </span>
-                
-              </span>
-          
       </div>
       <div class="markdown-body">
-        <h2 id="Git操作流程"><a href="#Git操作流程" class="headerlink" title="Git操作流程"></a>Git操作流程</h2><h3 id="如果是首次推送远程仓库："><a href="#如果是首次推送远程仓库：" class="headerlink" title="如果是首次推送远程仓库："></a>如果是首次推送远程仓库：</h3><p>​            1. <strong>本地Git配置（已配可跳过）</strong>：终端执行 git config –global user.name “你的名字” 、 git config –global user.email “你的邮箱” 。<br>            2. 打开项目文件夹，终端执行 git init <strong>初始化本地库</strong>；已初始化可跳过。<br>            3. <strong>暂存并提交文件</strong>： git add . 、 git commit -m “首次提交说明” 。<br>            4. <strong>关联远程仓库</strong>（终端执行）： git remote add origin 远程仓库地址 ，通常用 origin 作远程别名。<br>            5. <strong>验证关联</strong>： git remote -v ，显示fetch&#x2F;push地址即成功。<br>            6. <strong>统一分支名</strong>（可选但推荐）： git branch -M main （将默认master改为main，适配多数平台默认分支）。</p>
-<h3 id="日常开发"><a href="#日常开发" class="headerlink" title="日常开发"></a>日常开发</h3><p>1.<strong>配置Git</strong><br> 打开终端执行  git config –global user.name “你的名字”  和  git config –global user.email “你的邮箱”<br>2.<strong>初始化本地仓库或克隆远程仓库</strong><br>     初始化本地仓库：git init<br>     克隆远程仓库<br>         1. 点击VS Code左侧源代码管理图标（分支图标）。<br>         2. 点击克隆仓库，输入远程仓库的HTTPS&#x2F;SSH地址，选择本地保存路径，完成克隆。<br>3.<strong>日常开发操作（暂存、提交、拉取、推送</strong>）<br>     1. <strong>暂存文件</strong>：git add<br>     开发完成后，在源代码管理面板中，点击文件右侧的 + 号，将修改暂存到暂存区<br>     2. <strong>提交更改</strong>：git commit<br>     在暂存区下方的输入框中填写提交信息（必填，描述本次修改内容），点击输入框右侧的对勾按钮，完成本地提交。<br>     3. <strong>拉取远程最新代码</strong>：git pull<br>     点击源代码管理面板右上角的 ··· ，选择拉取，或在终端执行  git pull ，避免本地代码与远程冲突。<br>     4. <strong>推送本地提交到远程</strong>：git push<br>     确认本地提交无误后，点击源代码管理面板右上角的 ··· ，选择推送，或在终端执行  git push ；首次推送需关联远程分支，执行  git push -u origin 分支名 <br>4.<strong>设置远程仓库</strong><br>     git remote add &lt;远端名称&gt; &lt;仓库路径&gt;</p>
+        <h2 id="1-字体大小font-size"><a href="#1-字体大小font-size" class="headerlink" title="1.字体大小font-size"></a>1.字体大小font-size</h2><p>单位必须用px，不能没有单位，不然不生效</p>
+<h2 id="2-字体粗细font-weight"><a href="#2-字体粗细font-weight" class="headerlink" title="2.字体粗细font-weight"></a>2.字体粗细font-weight</h2><p>属性值可以用数字和关键字<br>数字（开发使用）不能加单位px<br>正常：400<br>加粗：700<br>关键字<br>正常：normal<br>加粗：bold</p>
+<h2 id="3-字体倾斜font-style"><a href="#3-字体倾斜font-style" class="headerlink" title="3.字体倾斜font-style"></a>3.字体倾斜font-style</h2><p>清除文字默认的倾斜效果<br>属性值：<br>正常：normal<br>倾斜：italic</p>
+<h2 id="4-行高line-height"><a href="#4-行高line-height" class="headerlink" title="4.行高line-height"></a>4.行高line-height</h2><p>属性值两种：<br>数字+px<br>数字（当前标签font-size属性值的倍数<br>行高是上间距+文本高度+下间距&#x3D;行高<br>行高测量方法：一行文字的最顶端到下一行文字的最顶端<br>垂直居中技巧：行高和盒子高度一致</p>
+<h2 id="5-字体族font-family"><a href="#5-字体族font-family" class="headerlink" title="5.字体族font-family"></a>5.字体族font-family</h2><p>属性值可以书写多个字体名，各个字体名用逗号隔开，执行顺序从左往右依次查找<br>属性最后设置一个字体族名，网页开发建议使用无衬线字体</p>
+<h2 id="6-字体复合属性font"><a href="#6-字体复合属性font" class="headerlink" title="6.字体复合属性font"></a>6.字体复合属性font</h2><p>属性的简写方式，一个属性对应多个值的写法，各个属性值用空格隔开<br>必须按顺序写:<br>font：是否倾斜 是否加粗 字号&#x2F;行高 字体<br>字号和字体值必须书写，否则font属性不生效</p>
+<h2 id="7-文本缩进text-indent"><a href="#7-文本缩进text-indent" class="headerlink" title="7.文本缩进text-indent"></a>7.文本缩进text-indent</h2><p>行内元素（特点不独占一行）img，em，input，label，a,span,strong等无效<br>必须是块级元素或者行内块，且有文本内容，只对第一行文本缩进<br>属性值：<br>数字+px<br>数字+em（推荐：1em&#x3D;当前标签字号大小）</p>
+<h2 id="8-文本对齐text-align"><a href="#8-文本对齐text-align" class="headerlink" title="8.文本对齐text-align"></a>8.文本对齐text-align</h2><p>本质是控制内容的对齐方式，属性要设置给内容的父级,对其内的行内及行内块元素生效</p>
+<h2 id="9-修饰线text-decoration"><a href="#9-修饰线text-decoration" class="headerlink" title="9.修饰线text-decoration"></a>9.修饰线text-decoration</h2><p>可删除修饰线，添加修饰线，下划线，删除线等，如删除超链接的下划线<br>属性值           效果<br>none            无<br>underline       下划线<br>line-through    删除线<br>overline        上划线</p>
+<h2 id="10-颜色color"><a href="#10-颜色color" class="headerlink" title="10.颜色color"></a>10.颜色color</h2><p>color: rgba(red, green, blue, alpha);</p>
+<table>
+<thead>
+<tr>
+<th>颜色表示方式</th>
+<th>属性值</th>
+<th>说明</th>
+<th>使用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>颜色关键字</td>
+<td>颜色英文单词</td>
+<td>red，green</td>
+<td>学习测试</td>
+</tr>
+<tr>
+<td>rgb表示法</td>
+<td>rgb(r ,g,b)</td>
+<td>rgb表示红绿蓝，取值0-255</td>
+<td>了解</td>
+</tr>
+<tr>
+<td>rgba表示法</td>
+<td>rgba（r，g，b，a）</td>
+<td>a表示透明度，取值0-1</td>
+<td>开发使用，实现透明色</td>
+</tr>
+<tr>
+<td>十六进制表示法</td>
+<td>#rrggbb</td>
+<td>#000000，#ffcc00，简写#000，#fc0</td>
+<td>开发使用（从设计稿复制）</td>
+</tr>
+</tbody></table>
+<p>颜色表示方式        属性值              说明                                使用场景<br>颜色关键字          颜色英文单词        red，green                          学习测试<br>rgb表示法           rgb(r ,g,b)        rgb表示红绿蓝，取值0-255             了解<br>rgba表示法          rgba（r，g，b，a）  a表示透明度，取值0-1                 开发使用，实现透明色<br>十六进制表示法       #rrggbb            #000000，#ffcc00，简写#000，#fc0    开发使用（从设计稿复制）</p>
 
       </div>
       
         <div class="prev-or-next">
           <div class="post-foot-prev">
             
-              <a href="/2026/05/28/%E6%97%A5%E5%B8%B8%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9/" target="_self">
+              <a href="/2026/05/29/Css%E5%9F%BA%E7%A1%80%E9%80%89%E6%8B%A9%E5%99%A8/" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
                 <span>上一篇</span>
               </a>
@@ -203,41 +218,13 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-28 23:21:48
+              2026-05-29 03:55:59
             </span>
             
-                  <span class="post-categories">
-                    <i class="iconfont icon-bookmark" title="Categories"></i>
-                    
-                    <span class="span--category">
-                      <a href="/categories/Git/" title="Git">
-                        <b>#</b> Git
-                      </a>
-                    </span>
-                    
-                  </span>
-              
-                  <span class="post-tags">
-                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
-                    
-                    <span class="span--tag mr-8">
-                      <a href="/tags/Git%E5%9F%BA%E7%A1%80/" title="Git基础">
-                        #Git基础
-                      </a>
-                    </span>
-                    
-                    <span class="span--tag mr-8">
-                      <a href="/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" title="工具使用">
-                        #工具使用
-                      </a>
-                    </span>
-                    
-                  </span>
-              
           </div>
           <div class="post-foot-next">
             
-              <a href="/2026/05/28/Typora%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/" target="_self">
+              <a href="/2026/05/29/CSS%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8%E5%8F%8A%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8/" target="_self">
                 <span>下一篇</span>
                 <i class="iconfont icon-chevronright"></i>
               </a>
@@ -254,7 +241,7 @@
     <div class="title">Contents</div>
     <div class="catalog-content">
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-text">Git操作流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E6%98%AF%E9%A6%96%E6%AC%A1%E6%8E%A8%E9%80%81%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%EF%BC%9A"><span class="toc-text">如果是首次推送远程仓库：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A5%E5%B8%B8%E5%BC%80%E5%8F%91"><span class="toc-text">日常开发</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8Ffont-size"><span class="toc-text">1.字体大小font-size</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AD%97%E4%BD%93%E7%B2%97%E7%BB%86font-weight"><span class="toc-text">2.字体粗细font-weight</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%AD%97%E4%BD%93%E5%80%BE%E6%96%9Cfont-style"><span class="toc-text">3.字体倾斜font-style</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E8%A1%8C%E9%AB%98line-height"><span class="toc-text">4.行高line-height</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%AD%97%E4%BD%93%E6%97%8Ffont-family"><span class="toc-text">5.字体族font-family</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%AD%97%E4%BD%93%E5%A4%8D%E5%90%88%E5%B1%9E%E6%80%A7font"><span class="toc-text">6.字体复合属性font</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E6%96%87%E6%9C%AC%E7%BC%A9%E8%BF%9Btext-indent"><span class="toc-text">7.文本缩进text-indent</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E6%96%87%E6%9C%AC%E5%AF%B9%E9%BD%90text-align"><span class="toc-text">8.文本对齐text-align</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E4%BF%AE%E9%A5%B0%E7%BA%BFtext-decoration"><span class="toc-text">9.修饰线text-decoration</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E9%A2%9C%E8%89%B2color"><span class="toc-text">10.颜色color</span></a></li></ol>
       
     </div>
   </div>

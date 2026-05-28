@@ -13,7 +13,7 @@
   
   <title>
     
-      Git操作流程 
+      Css基础 
       
       
       |
@@ -149,19 +149,25 @@
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">Git操作流程</div>
+      <div class="post-title">Css基础</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-28 23:21:48
+          2026-05-29 03:44:27
         </span>
         
               <span class="post-categories">
                 <i class="iconfont icon-bookmark" title="Categories"></i>
                 
                 <span class="span--category">
-                  <a href="/categories/Git/" title="Git">
-                    <b>#</b> Git
+                  <a href="/categories/Html/" title="Html">
+                    <b>#</b> Html
+                  </a>
+                </span>
+                
+                <span class="span--category">
+                  <a href="/categories/Html/CSS/" title="CSS">
+                    <b>#</b> CSS
                   </a>
                 </span>
                 
@@ -171,14 +177,20 @@
                 <i class="iconfont icon-tags mr-10" title="Tags"></i>
                 
                 <span class="span--tag mr-8">
-                  <a href="/tags/Git%E5%9F%BA%E7%A1%80/" title="Git基础">
-                    #Git基础
+                  <a href="/tags/html/" title="html">
+                    #html
                   </a>
                 </span>
                 
                 <span class="span--tag mr-8">
-                  <a href="/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" title="工具使用">
-                    #工具使用
+                  <a href="/tags/css%E4%B9%A6%E5%86%99%E4%BD%8D%E7%BD%AE/" title="css书写位置">
+                    #css书写位置
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/css%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F/" title="css引入方式">
+                    #css引入方式
                   </a>
                 </span>
                 
@@ -186,15 +198,26 @@
           
       </div>
       <div class="markdown-body">
-        <h2 id="Git操作流程"><a href="#Git操作流程" class="headerlink" title="Git操作流程"></a>Git操作流程</h2><h3 id="如果是首次推送远程仓库："><a href="#如果是首次推送远程仓库：" class="headerlink" title="如果是首次推送远程仓库："></a>如果是首次推送远程仓库：</h3><p>​            1. <strong>本地Git配置（已配可跳过）</strong>：终端执行 git config –global user.name “你的名字” 、 git config –global user.email “你的邮箱” 。<br>            2. 打开项目文件夹，终端执行 git init <strong>初始化本地库</strong>；已初始化可跳过。<br>            3. <strong>暂存并提交文件</strong>： git add . 、 git commit -m “首次提交说明” 。<br>            4. <strong>关联远程仓库</strong>（终端执行）： git remote add origin 远程仓库地址 ，通常用 origin 作远程别名。<br>            5. <strong>验证关联</strong>： git remote -v ，显示fetch&#x2F;push地址即成功。<br>            6. <strong>统一分支名</strong>（可选但推荐）： git branch -M main （将默认master改为main，适配多数平台默认分支）。</p>
-<h3 id="日常开发"><a href="#日常开发" class="headerlink" title="日常开发"></a>日常开发</h3><p>1.<strong>配置Git</strong><br> 打开终端执行  git config –global user.name “你的名字”  和  git config –global user.email “你的邮箱”<br>2.<strong>初始化本地仓库或克隆远程仓库</strong><br>     初始化本地仓库：git init<br>     克隆远程仓库<br>         1. 点击VS Code左侧源代码管理图标（分支图标）。<br>         2. 点击克隆仓库，输入远程仓库的HTTPS&#x2F;SSH地址，选择本地保存路径，完成克隆。<br>3.<strong>日常开发操作（暂存、提交、拉取、推送</strong>）<br>     1. <strong>暂存文件</strong>：git add<br>     开发完成后，在源代码管理面板中，点击文件右侧的 + 号，将修改暂存到暂存区<br>     2. <strong>提交更改</strong>：git commit<br>     在暂存区下方的输入框中填写提交信息（必填，描述本次修改内容），点击输入框右侧的对勾按钮，完成本地提交。<br>     3. <strong>拉取远程最新代码</strong>：git pull<br>     点击源代码管理面板右上角的 ··· ，选择拉取，或在终端执行  git pull ，避免本地代码与远程冲突。<br>     4. <strong>推送本地提交到远程</strong>：git push<br>     确认本地提交无误后，点击源代码管理面板右上角的 ··· ，选择推送，或在终端执行  git push ；首次推送需关联远程分支，执行  git push -u origin 分支名 <br>4.<strong>设置远程仓库</strong><br>     git remote add &lt;远端名称&gt; &lt;仓库路径&gt;</p>
+        <h2 id="css书写顺序："><a href="#css书写顺序：" class="headerlink" title="css书写顺序："></a>css书写顺序：</h2><p>1.盒子模型属性<br>2.文字样式<br>3.圆角、阴影等修饰属性</p>
+<h2 id="1、初体验"><a href="#1、初体验" class="headerlink" title="1、初体验"></a>1、初体验</h2><p>层叠样式表缩写为css，是一种样式表语言<br>书写位置：head里面，title标签下方添加style双标签，style标签里写css代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">选择器&#123;</span><br><span class="line">属性名：属性值；</span><br><span class="line">&#125;</span><br><span class="line">p &#123;</span><br><span class="line">/* 文字颜色 */</span><br><span class="line">color: red;</span><br><span class="line">/* 字号 */</span><br><span class="line">font-size: 30px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+
+<p>属性名和属性值成对出现可以叫做–键值对</p>
+<h2 id="2、css引入方式"><a href="#2、css引入方式" class="headerlink" title="2、css引入方式"></a>2、css引入方式</h2><p><strong>内部样式表</strong>：学习使用<br>css代码写在style标签里面</p>
+<p><strong>外部样式表</strong>：开发使用<br>css代码写在单独的css文件（.css）<br>在html使用link标签引用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+
+<p>属性值stylesheet就是样式表的意思</p>
+<p><strong>行内样式</strong>：配合JavaScript使用<br>css写在标签的style属性值里</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&quot;color: green; font-size: 30px;&quot;&gt;这是DIV标签&lt;/div&gt;</span><br></pre></td></tr></table></figure>
       </div>
       
         <div class="prev-or-next">
           <div class="post-foot-prev">
             
-              <a href="/2026/05/28/%E6%97%A5%E5%B8%B8%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9/" target="_self">
+              <a href="/2026/05/29/%E5%88%97%E8%A1%A8%E8%A1%A8%E6%A0%BC%E8%A1%A8%E5%8D%95/" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
                 <span>上一篇</span>
               </a>
@@ -203,15 +226,21 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-28 23:21:48
+              2026-05-29 03:44:27
             </span>
             
                   <span class="post-categories">
                     <i class="iconfont icon-bookmark" title="Categories"></i>
                     
                     <span class="span--category">
-                      <a href="/categories/Git/" title="Git">
-                        <b>#</b> Git
+                      <a href="/categories/Html/" title="Html">
+                        <b>#</b> Html
+                      </a>
+                    </span>
+                    
+                    <span class="span--category">
+                      <a href="/categories/Html/CSS/" title="CSS">
+                        <b>#</b> CSS
                       </a>
                     </span>
                     
@@ -221,14 +250,20 @@
                     <i class="iconfont icon-tags mr-10" title="Tags"></i>
                     
                     <span class="span--tag mr-8">
-                      <a href="/tags/Git%E5%9F%BA%E7%A1%80/" title="Git基础">
-                        #Git基础
+                      <a href="/tags/html/" title="html">
+                        #html
                       </a>
                     </span>
                     
                     <span class="span--tag mr-8">
-                      <a href="/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" title="工具使用">
-                        #工具使用
+                      <a href="/tags/css%E4%B9%A6%E5%86%99%E4%BD%8D%E7%BD%AE/" title="css书写位置">
+                        #css书写位置
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/css%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F/" title="css引入方式">
+                        #css引入方式
                       </a>
                     </span>
                     
@@ -237,7 +272,7 @@
           </div>
           <div class="post-foot-next">
             
-              <a href="/2026/05/28/Typora%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/" target="_self">
+              <a href="/2026/05/29/Css%E5%9F%BA%E7%A1%80%E9%80%89%E6%8B%A9%E5%99%A8/" target="_self">
                 <span>下一篇</span>
                 <i class="iconfont icon-chevronright"></i>
               </a>
@@ -254,7 +289,7 @@
     <div class="title">Contents</div>
     <div class="catalog-content">
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-text">Git操作流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E6%98%AF%E9%A6%96%E6%AC%A1%E6%8E%A8%E9%80%81%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%EF%BC%9A"><span class="toc-text">如果是首次推送远程仓库：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A5%E5%B8%B8%E5%BC%80%E5%8F%91"><span class="toc-text">日常开发</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#css%E4%B9%A6%E5%86%99%E9%A1%BA%E5%BA%8F%EF%BC%9A"><span class="toc-text">css书写顺序：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%88%9D%E4%BD%93%E9%AA%8C"><span class="toc-text">1、初体验</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81css%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="toc-text">2、css引入方式</span></a></li></ol>
       
     </div>
   </div>

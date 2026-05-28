@@ -13,8 +13,8 @@
   
   <title>
     
-      Git操作流程 
-      
+      Tag 
+       : 快捷键，缩写，报错，调试工具
       
       |
     
@@ -104,181 +104,30 @@
 
 
       <div class="flex-container">
-        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
-<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+        <!-- 标签详情页，展示某个标签下的文章列表，url形式：https://yoursite/tags/某个标签/ -->
 
-
-  <!-- LaTex Display -->
-
+<div class="container tag-details">
+  <div class="content-title">
+    <h2>
+      <span>快捷键，缩写，报错，调试工具</span>
+    </h2>
+  </div>
   
-    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
-  
-  <script>
-    MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
-      }
-    }
-  </script>
-
-
-
-
-
-  <!-- clipboard -->
-
-  
-    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
-  
-  
-<script src="/js/codeCopy.js"></script>
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
-  <div class="container post-details" id="post-details">
-    <div class="post-content">
-      <div class="post-title">Git操作流程</div>
-      <div class="post-attach">
-        <span class="post-pubtime">
-          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-28 23:21:48
-        </span>
-        
-              <span class="post-categories">
-                <i class="iconfont icon-bookmark" title="Categories"></i>
-                
-                <span class="span--category">
-                  <a href="/categories/Git/" title="Git">
-                    <b>#</b> Git
-                  </a>
-                </span>
-                
-              </span>
-          
-              <span class="post-tags">
-                <i class="iconfont icon-tags mr-10" title="Tags"></i>
-                
-                <span class="span--tag mr-8">
-                  <a href="/tags/Git%E5%9F%BA%E7%A1%80/" title="Git基础">
-                    #Git基础
-                  </a>
-                </span>
-                
-                <span class="span--tag mr-8">
-                  <a href="/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" title="工具使用">
-                    #工具使用
-                  </a>
-                </span>
-                
-              </span>
-          
+    <div class="post-list">
+      <div class="post-item" title="日常小知识点">
+        <span class="time-m-d">2026-05-28</span>
+        <a href="/2026/05/28/%E6%97%A5%E5%B8%B8%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9/">
+          <span>日常小知识点</span>
+        </a>
       </div>
-      <div class="markdown-body">
-        <h2 id="Git操作流程"><a href="#Git操作流程" class="headerlink" title="Git操作流程"></a>Git操作流程</h2><h3 id="如果是首次推送远程仓库："><a href="#如果是首次推送远程仓库：" class="headerlink" title="如果是首次推送远程仓库："></a>如果是首次推送远程仓库：</h3><p>​            1. <strong>本地Git配置（已配可跳过）</strong>：终端执行 git config –global user.name “你的名字” 、 git config –global user.email “你的邮箱” 。<br>            2. 打开项目文件夹，终端执行 git init <strong>初始化本地库</strong>；已初始化可跳过。<br>            3. <strong>暂存并提交文件</strong>： git add . 、 git commit -m “首次提交说明” 。<br>            4. <strong>关联远程仓库</strong>（终端执行）： git remote add origin 远程仓库地址 ，通常用 origin 作远程别名。<br>            5. <strong>验证关联</strong>： git remote -v ，显示fetch&#x2F;push地址即成功。<br>            6. <strong>统一分支名</strong>（可选但推荐）： git branch -M main （将默认master改为main，适配多数平台默认分支）。</p>
-<h3 id="日常开发"><a href="#日常开发" class="headerlink" title="日常开发"></a>日常开发</h3><p>1.<strong>配置Git</strong><br> 打开终端执行  git config –global user.name “你的名字”  和  git config –global user.email “你的邮箱”<br>2.<strong>初始化本地仓库或克隆远程仓库</strong><br>     初始化本地仓库：git init<br>     克隆远程仓库<br>         1. 点击VS Code左侧源代码管理图标（分支图标）。<br>         2. 点击克隆仓库，输入远程仓库的HTTPS&#x2F;SSH地址，选择本地保存路径，完成克隆。<br>3.<strong>日常开发操作（暂存、提交、拉取、推送</strong>）<br>     1. <strong>暂存文件</strong>：git add<br>     开发完成后，在源代码管理面板中，点击文件右侧的 + 号，将修改暂存到暂存区<br>     2. <strong>提交更改</strong>：git commit<br>     在暂存区下方的输入框中填写提交信息（必填，描述本次修改内容），点击输入框右侧的对勾按钮，完成本地提交。<br>     3. <strong>拉取远程最新代码</strong>：git pull<br>     点击源代码管理面板右上角的 ··· ，选择拉取，或在终端执行  git pull ，避免本地代码与远程冲突。<br>     4. <strong>推送本地提交到远程</strong>：git push<br>     确认本地提交无误后，点击源代码管理面板右上角的 ··· ，选择推送，或在终端执行  git push ；首次推送需关联远程分支，执行  git push -u origin 分支名 <br>4.<strong>设置远程仓库</strong><br>     git remote add &lt;远端名称&gt; &lt;仓库路径&gt;</p>
-
-      </div>
-      
-        <div class="prev-or-next">
-          <div class="post-foot-prev">
-            
-              <a href="/2026/05/28/%E6%97%A5%E5%B8%B8%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9/" target="_self">
-                <i class="iconfont icon-chevronleft"></i>
-                <span>上一篇</span>
-              </a>
-            
-          </div>
-          <div class="post-attach">
-            <span class="post-pubtime">
-              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-28 23:21:48
-            </span>
-            
-                  <span class="post-categories">
-                    <i class="iconfont icon-bookmark" title="Categories"></i>
-                    
-                    <span class="span--category">
-                      <a href="/categories/Git/" title="Git">
-                        <b>#</b> Git
-                      </a>
-                    </span>
-                    
-                  </span>
-              
-                  <span class="post-tags">
-                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
-                    
-                    <span class="span--tag mr-8">
-                      <a href="/tags/Git%E5%9F%BA%E7%A1%80/" title="Git基础">
-                        #Git基础
-                      </a>
-                    </span>
-                    
-                    <span class="span--tag mr-8">
-                      <a href="/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" title="工具使用">
-                        #工具使用
-                      </a>
-                    </span>
-                    
-                  </span>
-              
-          </div>
-          <div class="post-foot-next">
-            
-              <a href="/2026/05/28/Typora%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/" target="_self">
-                <span>下一篇</span>
-                <i class="iconfont icon-chevronright"></i>
-              </a>
-            
-          </div>
-        </div>
-      
     </div>
-    
-  <div id="btn-catalog" class="btn-catalog">
-    <i class="iconfont icon-catalog"></i>
-  </div>
-  <div class="post-catalog hidden" id="catalog">
-    <div class="title">Contents</div>
-    <div class="catalog-content">
-      
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-text">Git操作流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E6%98%AF%E9%A6%96%E6%AC%A1%E6%8E%A8%E9%80%81%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%EF%BC%9A"><span class="toc-text">如果是首次推送远程仓库：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A5%E5%B8%B8%E5%BC%80%E5%8F%91"><span class="toc-text">日常开发</span></a></li></ol></li></ol>
-      
-    </div>
-  </div>
-
   
-<script src="/js/catalog.js"></script>
-
-
-
-
+  <nav class="post-navigation">
     
-      <div class="comments-container">
-        
-
-
-
-
-
-
-
-      </div>
+    <span class="page-num">1 / 1</span>
     
-  </div>
-
+  </nav>
+</div>
 
         
 <div class="footer">
