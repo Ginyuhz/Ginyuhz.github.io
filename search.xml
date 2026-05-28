@@ -278,11 +278,38 @@
     
     
     <entry>
+      <title>Git操作流程</title>
+      <link href="/2026/05/28/Git%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B/"/>
+      <url>/2026/05/28/Git%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h2 id="如果是首次推送远程仓库："><a href="#如果是首次推送远程仓库：" class="headerlink" title="如果是首次推送远程仓库："></a>如果是首次推送远程仓库：</h2><p>​1. <strong>本地Git配置（已配可跳过）</strong>：<br>终端执行 git config –global user.name “你的名字” 、 git config –global user.email “你的邮箱” 。<br>2. <strong>初始化</strong>：<br>打开项目文件夹，终端执行 git init <strong>初始化本地库</strong>；已初始化可跳过。<br>3. <strong>暂存并提交文件</strong>：<br>git add . 、 git commit -m “首次提交说明” 。<br>4. <strong>关联远程仓库</strong>（终端执行）： <br>git remote add origin 远程仓库地址 ，通常用 origin 作远程别名。<br>5. <strong>验证关联</strong>：<br>git remote -v ，显示fetch&#x2F;push地址即成功。<br>6. <strong>统一分支名</strong>（可选但推荐）：<br>git branch -M main （将默认master改为main，适配多数平台默认分支）。</p><h2 id="日常开发"><a href="#日常开发" class="headerlink" title="日常开发"></a>日常开发</h2><p>1.<strong>配置Git</strong><br>打开终端执行  git config –global user.name “你的名字”  和  git config –global user.email “你的邮箱”<br>2.<strong>初始化本地仓库或克隆远程仓库</strong><br>初始化本地仓库：git init<br><strong>克隆远程仓库</strong><br>1. 点击VS Code左侧源代码管理图标（分支图标）。<br>2. 点击克隆仓库，输入远程仓库的HTTPS&#x2F;SSH地址，选择本地保存路径，完成克隆。</p><h3 id="3-日常开发操作（暂存、提交、拉取、推送）"><a href="#3-日常开发操作（暂存、提交、拉取、推送）" class="headerlink" title="3.日常开发操作（暂存、提交、拉取、推送）"></a>3.<strong>日常开发操作（暂存、提交、拉取、推送</strong>）</h3><p>1. <strong>暂存文件</strong>：git add<br>开发完成后，在源代码管理面板中，点击文件右侧的 + 号，将修改暂存到暂存区<br>2. <strong>提交更改</strong>：git commit<br>在暂存区下方的输入框中填写提交信息（必填，描述本次修改内容），点击输入框右侧的对勾按钮，完成本地提交。<br>3. <strong>拉取远程最新代码</strong>：git pull<br>点击源代码管理面板右上角的 ··· ，选择拉取，或在终端执行  git pull ，避免本地代码与远程冲突。<br>4. <strong>推送本地提交到远程</strong>：git push<br>确认本地提交无误后，点击源代码管理面板右上角的 ··· ，选择推送，或在终端执行  git push ；首次推送需关联远程分支，执行  git push -u origin 分支名 <br>5.<strong>设置远程仓库</strong><br>git remote add &lt;远端名称&gt; &lt;仓库路径&gt;</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git基础 </tag>
+            
+            <tag> 工具使用 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Git基础</title>
       <link href="/2026/05/28/Git%E5%9F%BA%E7%A1%80/"/>
       <url>/2026/05/28/Git%E5%9F%BA%E7%A1%80/</url>
       
-        <content type="html"><![CDATA[<h2 id="vscode中有关Git的字母含义"><a href="#vscode中有关Git的字母含义" class="headerlink" title="vscode中有关Git的字母含义"></a>vscode中有关Git的字母含义</h2><p>M表示修改，对文件进行了更改但尚未暂存或提交(使用git add)<br>U表示新文件，Git还未跟踪，文件不在之前的提交中<br>A表示新文件已添加<br>D表示已删除<br>R表示已重命名<br>C合并时发生冲突</p><h2 id="GIT基本命令"><a href="#GIT基本命令" class="headerlink" title="GIT基本命令"></a>GIT基本命令</h2><p><strong>ll&#x2F;ls</strong>：查看当前目录<br><strong>cat</strong>：查看文件内容<br><strong>touch</strong>：创建文件<br>如创建.bashrc文件命令如下： touch ~&#x2F;.bashrc<br>可在该文件中配置指令别名，如下所示：<br> <strong>用于输出git提交日志</strong>：alias git-log&#x3D;’git log –pretty&#x3D;oneline –all –graph –abbrev-commit’</p><p><strong>该命令可以输出当前目录所有文件及基本信息</strong>：alias ll&#x3D;’ls -al’</p><p>配置完成后，使用如下命令，执行修改：source ~&#x2F;.bashrc</p><p><strong>git init</strong>：在当前目录中创建一个新的空的Git仓库&#x2F;&#x2F;告诉GIT：从这个文件夹开始，帮我管理这里所有文件的版本历史<br><strong>git add 单个文件名|通配符</strong>：<br>    添加工作区一个或多个文件的修改到暂存区<br>    将所有修改加入暂存区：git add .<br><strong>git commit -m”你的提交说明信息”：</strong><br>    提交暂存区内容到本地仓库的当前分支<br>（1）git add (工作区&lt;在工作区修改或创建新文件&gt; –&gt; 暂存区)<br>（2）git commit (暂存区 –&gt; 本地仓库)<br><strong>git status</strong>：查看的修改的状态（暂存区、工作区）<br><strong>git log</strong> 查看历史提交记录<br>    作用:查看提交记录<br>    命令形式：git log [option]<br>    options<br>    –all 显示所有分支<br>    –pretty&#x3D;oneline 将提交信息显示为一行<br>    –abbrev-commit 使得输出的commitId更简短<br>    –graph 以图的形式<br><strong>版本回退</strong>：git reset –hard commitID<br>    （commitID 可以使用git-log 或git log指令查看）<br><strong>git reflog</strong> 查看历史提交记录<br><strong>.gitignore</strong>列出不被操作的文件<br>    在工作目录中创建一个名为 .gitignore 的文件（文件名称固定），列出要忽略的文件模式</p><h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><p>​     <strong>git branch</strong> 查看分支<br>     <strong>git branch branchname</strong>创建分支<br>     <strong>git checkout branchname</strong>切换分支<br>     <strong>git chechout -b branchname</strong>创建并切换分支<br>     <strong>git merge branchname</strong>合并分支<br>     <strong>git branch -d b1</strong> 删除分支时，需要做各种检查<br>     <strong>git branch -D b1</strong> 不做任何检查，强制删除</p><h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><p>​     当两个分支上对文件的修改可能会存在冲突，例如同时修改了同一个文件的同一行，这时就需要手动解决冲突，解决冲突步骤如下：<br>     1. 处理文件中冲突的地方<br>     2. 将解决完冲突的文件加入暂存区(add)<br>     3. 提交到仓库(commit)</p><h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><p>1.<strong>配置SSH公钥</strong><br>  生成SSH公钥：ssh-keygen -t rsa不断回车，如果公钥已经存在，则自动覆盖</p><p>2.<strong>Gitee设置账户共公钥</strong><br>    获取公钥<br>    cat ~&#x2F;.ssh&#x2F;id_rsa.pub<br>    验证是否配置成功<br>    ssh -T <a href="mailto:&#x67;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#x65;&#x65;&#x2e;&#x63;&#x6f;&#109;">git@gitee.com</a><br>3.<strong>操作远程仓库</strong><br>    1.<strong>添加远程仓库</strong><br>        此操作是先初始化本地库，然后与已创建的远程库进行对接<br>        命令： git remote add &lt;远端名称&gt; &lt;仓库路径&gt;<br>        远端名称，默认是origin，取决于远端服务器设置<br>        仓库路径，从远端服务器获取此URL<br>    2.<strong>查看远程仓库</strong><br>        git remote<br>    3.<strong>推送到远程仓库</strong><br>        命令：git push [-f] [–set-upstream] [远端名称 [本地分支名][:远端分支名]]<br>        如果远程分支名和本地分支名称相同，则可以只写本地分支<br>        git push origin master<br>        -f 表示强制覆盖<br>        –set-upstream 推送同时建立起和远端分支的关联关系。<br>            git push –set-upstream origin master<br>        如果当前分支已经和远端分支关联，则可以省略分支名和远端名。<br>            git push 将master分支推送到已关联的远端分支<br>        查看关联关系：<br>            git branch -vv<br>4.<strong>从远程仓库克隆（克隆到本地后是本地仓库）</strong><br>        git clone &lt;仓库路径&gt; [本地目录]<br>​        本地目录可以省略，会自动生成一个目录</p><p>5.<strong>从远程仓库中抓取和拉取</strong><br>    <strong>抓取</strong> 命令：git fetch [remote name][branch name]<br>    抓取指令就是将仓库里的更新都抓取到本地，不会进行合并<br>    如果不指定远端名称和分支名，则抓取所有分支<br>    <strong>拉取</strong> 命令：git pull [remote name][branch name]<br>    拉取指令就是将远端仓库的修改拉到本地并自动进行合并，等同于fetch+merge<br>    如果不指定远端名称和分支名，则抓取所有并更新当前分支<br>6.<strong>解决合并冲突</strong><br>    在一段时间，A、B用户修改了同一个文件，且修改了同一行位置的代码，此时会发生合并冲突。<br>    A用户在本地修改代码后优先推送到远程仓库，此时B用户在本地修订代码，提交到本地仓库后，也需要<br>    推送到远程仓库，此时B用户晚于A用户，故需要先拉取远程仓库的提交，经过合并后才能推送到远端分<br>    支</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="vscode中有关Git的字母含义"><a href="#vscode中有关Git的字母含义" class="headerlink" title="vscode中有关Git的字母含义"></a>vscode中有关Git的字母含义</h2><p>M表示修改，对文件进行了更改但尚未暂存或提交(使用git add)<br>U表示新文件，Git还未跟踪，文件不在之前的提交中<br>A表示新文件已添加<br>D表示已删除<br>R表示已重命名<br>C合并时发生冲突</p><h2 id="GIT基本命令"><a href="#GIT基本命令" class="headerlink" title="GIT基本命令"></a>GIT基本命令</h2><p><strong>ll&#x2F;ls</strong>：查看当前目录<br><strong>cat</strong>：查看文件内容<br><strong>touch</strong>：创建文件<br>如创建.bashrc文件命令如下： touch ~&#x2F;.bashrc<br>可在该文件中配置指令别名，如下所示：<br><strong>用于输出git提交日志</strong>：alias git-log&#x3D;’git log –pretty&#x3D;oneline –all –graph –abbrev-commit’</p><p><strong>该命令可以输出当前目录所有文件及基本信息</strong>：alias ll&#x3D;’ls -al’</p><p>配置完成后，使用如下命令，执行修改：source ~&#x2F;.bashrc</p><p><strong>git init</strong>：在当前目录中创建一个新的空的Git仓库&#x2F;&#x2F;告诉GIT：从这个文件夹开始，帮我管理这里所有文件的版本历史</p><p><strong>git add 单个文件名|通配符</strong>：</p><p>​添加工作区一个或多个文件的修改到暂存区<br>将所有修改加入暂存区：git add .</p><h4 id="git-commit-m”你的提交说明信息”："><a href="#git-commit-m”你的提交说明信息”：" class="headerlink" title="git commit -m”你的提交说明信息”："></a><strong>git commit -m”你的提交说明信息”：</strong></h4><p>提交暂存区内容到本地仓库的当前分支<br>（1）git add (工作区&lt;在工作区修改或创建新文件&gt; –&gt; 暂存区)<br>（2）git commit (暂存区 –&gt; 本地仓库)</p><p><strong>git status</strong>：查看的修改的状态（暂存区、工作区）</p><h4 id="git-log-查看历史提交记录"><a href="#git-log-查看历史提交记录" class="headerlink" title="git log 查看历史提交记录"></a><strong>git log</strong> 查看历史提交记录</h4><p>​作用:查看提交记录<br>命令形式：git log [option]<br>options<br>–all 显示所有分支<br>–pretty&#x3D;oneline 将提交信息显示为一行<br>–abbrev-commit 使得输出的commitId更简短<br>–graph 以图的形式</p><h4 id="版本回退：git-reset-–hard-commitID"><a href="#版本回退：git-reset-–hard-commitID" class="headerlink" title="版本回退：git reset –hard commitID"></a><strong>版本回退</strong>：git reset –hard commitID</h4><p>​（commitID 可以使用git-log 或git log指令查看）</p><h4 id="git-reflog-查看历史提交记录"><a href="#git-reflog-查看历史提交记录" class="headerlink" title="git reflog 查看历史提交记录"></a><strong>git reflog</strong> 查看历史提交记录</h4><h4 id="gitignore列出不被操作的文件"><a href="#gitignore列出不被操作的文件" class="headerlink" title=".gitignore列出不被操作的文件"></a><strong>.gitignore</strong>列出不被操作的文件</h4><p>​在工作目录中创建一个名为 .gitignore 的文件（文件名称固定），列出要忽略的文件模式</p><h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><p>​<strong>git branch</strong> 查看分支<br><strong>git branch branchname</strong>创建分支<br><strong>git checkout branchname</strong>切换分支<br><strong>git chechout -b branchname</strong>创建并切换分支<br><strong>git merge branchname</strong>合并分支<br><strong>git branch -d b1</strong> 删除分支时，需要做各种检查<br><strong>git branch -D b1</strong> 不做任何检查，强制删除</p><h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><p>当两个分支上对文件的修改可能会存在冲突，例如同时修改了同一个文件的同一行，这时就需要手动解决冲突，解决冲突步骤如下：</p><ol><li>处理文件中冲突的地方</li><li>将解决完冲突的文件加入暂存区(add)</li><li>提交到仓库(commit)</li></ol><h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><h3 id="1-配置SSH公钥"><a href="#1-配置SSH公钥" class="headerlink" title="1.配置SSH公钥"></a>1.<strong>配置SSH公钥</strong></h3><p>生成SSH公钥：ssh-keygen -t rsa不断回车，如果公钥已经存在，则自动覆盖</p><h3 id="2-Gitee设置账户共公钥"><a href="#2-Gitee设置账户共公钥" class="headerlink" title="2.Gitee设置账户共公钥"></a>2.<strong>Gitee设置账户共公钥</strong></h3><p>​获取公钥<br>cat ~&#x2F;.ssh&#x2F;id_rsa.pub<br>验证是否配置成功<br>ssh -T <a href="mailto:&#103;&#105;&#116;&#64;&#103;&#x69;&#x74;&#101;&#101;&#46;&#99;&#x6f;&#109;">git@gitee.com</a></p><h3 id="3-操作远程仓库"><a href="#3-操作远程仓库" class="headerlink" title="3.操作远程仓库"></a>3.<strong>操作远程仓库</strong></h3><h4 id="1-添加远程仓库"><a href="#1-添加远程仓库" class="headerlink" title="1.添加远程仓库"></a>1.<strong>添加远程仓库</strong></h4><p>​此操作是先初始化本地库，然后与已创建的远程库进行对接<br>命令： git remote add &lt;远端名称&gt; &lt;仓库路径&gt;<br>远端名称，默认是origin，取决于远端服务器设置<br>仓库路径，从远端服务器获取此URL</p><h4 id="2-查看远程仓库"><a href="#2-查看远程仓库" class="headerlink" title="2.查看远程仓库"></a>2.<strong>查看远程仓库</strong></h4><p>git remote</p><h4 id="3-推送到远程仓库"><a href="#3-推送到远程仓库" class="headerlink" title="3.推送到远程仓库"></a>3.<strong>推送到远程仓库</strong></h4><p>命令：git push [-f] [–set-upstream] [远端名称 [本地分支名][:远端分支名]]<br>如果远程分支名和本地分支名称相同，则可以只写本地分支<br>git push origin master<br>-f 表示强制覆盖<br>–set-upstream 推送同时建立起和远端分支的关联关系。<br>git push –set-upstream origin master<br>如果当前分支已经和远端分支关联，则可以省略分支名和远端名。<br>git push 将master分支推送到已关联的远端分支<br>查看关联关系：<br>git branch -vv</p><h3 id="4-从远程仓库克隆（克隆到本地后是本地仓库）"><a href="#4-从远程仓库克隆（克隆到本地后是本地仓库）" class="headerlink" title="4.从远程仓库克隆（克隆到本地后是本地仓库）"></a>4.<strong>从远程仓库克隆（克隆到本地后是本地仓库）</strong></h3><p>​git clone &lt;仓库路径&gt; [本地目录]<br>​本地目录可以省略，会自动生成一个目录</p><h3 id="5-从远程仓库中抓取和拉取"><a href="#5-从远程仓库中抓取和拉取" class="headerlink" title="5.从远程仓库中抓取和拉取"></a>5.<strong>从远程仓库中抓取和拉取</strong></h3><h4 id="抓取-命令：git-fetch-remote-name-branch-name"><a href="#抓取-命令：git-fetch-remote-name-branch-name" class="headerlink" title="抓取 命令：git fetch [remote name][branch name]"></a><strong>抓取</strong> 命令：git fetch [remote name][branch name]</h4><p>抓取指令就是将仓库里的更新都抓取到本地，不会进行合并<br>如果不指定远端名称和分支名，则抓取所有分支</p><h4 id="拉取-命令：git-pull-remote-name-branch-name"><a href="#拉取-命令：git-pull-remote-name-branch-name" class="headerlink" title="拉取 命令：git pull [remote name][branch name]"></a><strong>拉取</strong> 命令：git pull [remote name][branch name]</h4><p>拉取指令就是将远端仓库的修改拉到本地并自动进行合并，等同于fetch+merge<br>如果不指定远端名称和分支名，则抓取所有并更新当前分支</p><h3 id="6-解决合并冲突"><a href="#6-解决合并冲突" class="headerlink" title="6.解决合并冲突"></a>6.<strong>解决合并冲突</strong></h3><p>​在一段时间，A、B用户修改了同一个文件，且修改了同一行位置的代码，此时会发生合并冲突。<br>A用户在本地修改代码后优先推送到远程仓库，此时B用户在本地修订代码，提交到本地仓库后，也需要<br>推送到远程仓库，此时B用户晚于A用户，故需要先拉取远程仓库的提交，经过合并后才能推送到远端分<br>支</p>]]></content>
       
       
       <categories>
@@ -322,33 +349,6 @@
         <tags>
             
             <tag> Typora </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Git操作流程</title>
-      <link href="/2026/05/28/Git%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B/"/>
-      <url>/2026/05/28/Git%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B/</url>
-      
-        <content type="html"><![CDATA[<h2 id="Git操作流程"><a href="#Git操作流程" class="headerlink" title="Git操作流程"></a>Git操作流程</h2><h3 id="如果是首次推送远程仓库："><a href="#如果是首次推送远程仓库：" class="headerlink" title="如果是首次推送远程仓库："></a>如果是首次推送远程仓库：</h3><p>​            1. <strong>本地Git配置（已配可跳过）</strong>：终端执行 git config –global user.name “你的名字” 、 git config –global user.email “你的邮箱” 。<br>            2. 打开项目文件夹，终端执行 git init <strong>初始化本地库</strong>；已初始化可跳过。<br>            3. <strong>暂存并提交文件</strong>： git add . 、 git commit -m “首次提交说明” 。<br>            4. <strong>关联远程仓库</strong>（终端执行）： git remote add origin 远程仓库地址 ，通常用 origin 作远程别名。<br>            5. <strong>验证关联</strong>： git remote -v ，显示fetch&#x2F;push地址即成功。<br>            6. <strong>统一分支名</strong>（可选但推荐）： git branch -M main （将默认master改为main，适配多数平台默认分支）。</p><h3 id="日常开发"><a href="#日常开发" class="headerlink" title="日常开发"></a>日常开发</h3><p>1.<strong>配置Git</strong><br> 打开终端执行  git config –global user.name “你的名字”  和  git config –global user.email “你的邮箱”<br>2.<strong>初始化本地仓库或克隆远程仓库</strong><br>     初始化本地仓库：git init<br>     克隆远程仓库<br>         1. 点击VS Code左侧源代码管理图标（分支图标）。<br>         2. 点击克隆仓库，输入远程仓库的HTTPS&#x2F;SSH地址，选择本地保存路径，完成克隆。<br>3.<strong>日常开发操作（暂存、提交、拉取、推送</strong>）<br>     1. <strong>暂存文件</strong>：git add<br>     开发完成后，在源代码管理面板中，点击文件右侧的 + 号，将修改暂存到暂存区<br>     2. <strong>提交更改</strong>：git commit<br>     在暂存区下方的输入框中填写提交信息（必填，描述本次修改内容），点击输入框右侧的对勾按钮，完成本地提交。<br>     3. <strong>拉取远程最新代码</strong>：git pull<br>     点击源代码管理面板右上角的 ··· ，选择拉取，或在终端执行  git pull ，避免本地代码与远程冲突。<br>     4. <strong>推送本地提交到远程</strong>：git push<br>     确认本地提交无误后，点击源代码管理面板右上角的 ··· ，选择推送，或在终端执行  git push ；首次推送需关联远程分支，执行  git push -u origin 分支名 <br>4.<strong>设置远程仓库</strong><br>     git remote add &lt;远端名称&gt; &lt;仓库路径&gt;</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Git </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Git基础 </tag>
-            
-            <tag> 工具使用 </tag>
             
         </tags>
       
