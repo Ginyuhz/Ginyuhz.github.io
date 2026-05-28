@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>postmd文件</title>
+      <link href="/2026/05/28/postmd%E6%96%87%E4%BB%B6/"/>
+      <url>/2026/05/28/postmd%E6%96%87%E4%BB%B6/</url>
+      
+        <content type="html"><![CDATA[<p>111</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>typora使用</title>
+      <link href="/2026/05/28/md%E6%96%87%E4%BB%B6/"/>
+      <url>/2026/05/28/md%E6%96%87%E4%BB%B6/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    dddd</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我的第一篇博客</title>
+      <link href="/2026/05/28/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
+      <url>/2026/05/28/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    llll</span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><p>var isMatch &#x3D; true;<br>              var content_index &#x3D; [];<br>              if (!data.title || data.title.trim() &#x3D;&#x3D;&#x3D; ‘’) {<br>                data.title &#x3D; “Untitled”;<br>              }<br>              var orig_data_title &#x3D; data.title.trim();<br>              var data_title &#x3D; orig_data_title.toLowerCase();<br>              var orig_data_content &#x3D; data.content.trim().replace(&#x2F;&lt;[^&gt;]+&gt;&#x2F;g, “”);<br>              var data_content &#x3D; orig_data_content.toLowerCase();<br>              var data_url &#x3D; data.url;<br>              var index_title &#x3D; -1;<br>              var index_content &#x3D; -1;<br>              var first_occur &#x3D; -1;<br>              &#x2F;&#x2F; only match artiles with not empty contents<br>              if (data_content !&#x3D;&#x3D; ‘’) {<br>                keywords.forEach(function (keyword, i) {<br>                  index_title &#x3D; data_title.indexOf(keyword);<br>                  index_content &#x3D; data_content.indexOf(keyword);</p><pre><code>              if (index_title &lt; 0 &amp;&amp; index_content &lt; 0) &#123;                isMatch = false;              &#125; else &#123;                if (index_content &lt; 0) &#123;                  index_content = 0;                &#125;                if (i == 0) &#123;                  first_occur = index_content;                &#125;                // content_index.push(&#123;index_content:index_content, keyword_len:keyword_len&#125;);              &#125;            &#125;);          &#125; else &#123;            isMatch = false;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2026/05/27/hello-world/"/>
+      <url>/2026/05/27/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
