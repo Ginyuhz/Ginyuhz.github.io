@@ -153,12 +153,65 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-29 22:11:31
+          2026-05-29 23:42:38
         </span>
         
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="Categories"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/Node/" title="Node">
+                    <b>#</b> Node
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/" title="模块化">
+                    #模块化
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
       <div class="markdown-body">
-        
+        <p>在node.js中，每个文件都视为一个单独的模块<br>好处：按需加载，独立作用域</p>
+<h2 id="1、CommonJs标准"><a href="#1、CommonJs标准" class="headerlink" title="1、CommonJs标准"></a>1、CommonJs标准</h2><p>使用：<br>导出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">module.export = &#123;</span><br><span class="line">对外属性名1：baseURL（内置模块变量名），</span><br><span class="line">对外属性名2：内置模块变量名</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>导入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const obj = require（‘模块或路径’）</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2、ECMAScript标准"><a href="#2、ECMAScript标准" class="headerlink" title="2、ECMAScript标准"></a>2、ECMAScript标准</h2><p>1.默认导出和导入<br>使用：<br>导出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export.default &#123;</span><br><span class="line">对外属性名1：baseURL（内置模块变量名），</span><br><span class="line">对外属性名2：内置模块变量名</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>导入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import obj from ‘模块名或路径’</span><br></pre></td></tr></table></figure>
+
+
+<p>node.js默认使用commmonjs标准，在package.json设置{‘type’:’module’}</p>
+<p>2.命名导入导出<br>命名标准<br>导出：export修饰定义语句<br>导入：import{同名变量}from‘模块名或路径’</p>
+<h2 id="3、包的概念"><a href="#3、包的概念" class="headerlink" title="3、包的概念"></a>3、包的概念</h2><p>定义：包，将模块，代码、其他资料聚合成一个文件夹</p>
+<p>包分类：</p>
+<p>项目包：主要用于编写项目和业务逻辑<br>软件包：封装工具和方法进行使用</p>
+<p>根目录必须有package.json文件（记录包的清单信息），如下所示</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">&quot;name&quot;: &quot;cz_utils&quot;,     软件包名称</span><br><span class="line">&quot;version&quot;: &quot;1.0.0&quot;,     软件包当前版本</span><br><span class="line">&quot;description&quot;: &quot;一个数组和字符串常用工具方法的包&quot;,      软件包简短描述</span><br><span class="line">&quot;main&quot;: &quot;index.js&quot;,     软件包入口点</span><br><span class="line">&quot;author&quot;: &quot;itheima&quot;,    软件包作者</span><br><span class="line">&quot;license&quot;: &quot;MIT&quot;        软件包许可证（商用后可以用作者名字宣传）</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>导入软件包时，引入默认是index.js模块文件&#x2F;main属性指定的模块文件 </p>
+<h2 id="4、npm-软件包"><a href="#4、npm-软件包" class="headerlink" title="4、npm-软件包"></a>4、npm-软件包</h2><p>1、初始化清单文件：npm init -y<br>2、下载软件包：npm i 软件包名称<br>3、使用软件包</p>
+<h2 id="5、npm-安装所有依赖"><a href="#5、npm-安装所有依赖" class="headerlink" title="5、npm-安装所有依赖"></a>5、npm-安装所有依赖</h2><p>项目终端输入命令：npm i<br>下载package.json记录的所有软件包</p>
+<h2 id="6、npm-全局软件包nodemon"><a href="#6、npm-全局软件包nodemon" class="headerlink" title="6、npm-全局软件包nodemon"></a>6、npm-全局软件包nodemon</h2><p>软件包区别：</p>
+<p>本地软件包：当前项目内使用，封装属性和方法，存在于node_modules<br>全局软件包：本机所有项目使用，封装命令和工具，存在于系统设置的位置</p>
+<p>nodemon作用：替代node命令，检测代码更改，自动重启程序<br>使用：<br>安装：npm i nodemon -g<br>运行：nodemon待执行的目标js文件</p>
+
       </div>
       
         <div class="prev-or-next">
@@ -173,9 +226,31 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-29 22:11:31
+              2026-05-29 23:42:38
             </span>
             
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="Categories"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/Node/" title="Node">
+                        <b>#</b> Node
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/" title="模块化">
+                        #模块化
+                      </a>
+                    </span>
+                    
+                  </span>
+              
           </div>
           <div class="post-foot-next">
             
@@ -189,6 +264,23 @@
       
     </div>
     
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81CommonJs%E6%A0%87%E5%87%86"><span class="toc-text">1、CommonJs标准</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81ECMAScript%E6%A0%87%E5%87%86"><span class="toc-text">2、ECMAScript标准</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%8C%85%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-text">3、包的概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81npm-%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-text">4、npm-软件包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81npm-%E5%AE%89%E8%A3%85%E6%89%80%E6%9C%89%E4%BE%9D%E8%B5%96"><span class="toc-text">5、npm-安装所有依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81npm-%E5%85%A8%E5%B1%80%E8%BD%AF%E4%BB%B6%E5%8C%85nodemon"><span class="toc-text">6、npm-全局软件包nodemon</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
 
     
       <div class="comments-container">

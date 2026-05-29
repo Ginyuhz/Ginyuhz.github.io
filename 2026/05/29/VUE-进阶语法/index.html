@@ -153,12 +153,87 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-29 22:18:59
+          2026-05-30 00:25:22
         </span>
         
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="Categories"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/VUE/" title="VUE">
+                    <b>#</b> VUE
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/v-model%E5%8E%9F%E7%90%86/" title="v-model原理">
+                    #v-model原理
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/sync%E4%BF%AE%E9%A5%B0%E7%AC%A6/" title=".sync修饰符">
+                    #.sync修饰符
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/ref%E5%92%8C-refs/" title="ref和$refs">
+                    #ref和$refs
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/ECharts-JS%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%9B%BE%E8%A1%A8%E5%BA%93/" title="ECharts JS数据可视化图表库">
+                    #ECharts JS数据可视化图表库
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/nextTick/" title="$nextTick">
+                    #$nextTick
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
       <div class="markdown-body">
-        
+        <h2 id="1、v-model原理"><a href="#1、v-model原理" class="headerlink" title="1、v-model原理"></a>1、v-model原理</h2><h3 id="1-原理"><a href="#1-原理" class="headerlink" title="1.原理"></a>1.原理</h3><p>v-model本质上是语法糖，例如应用在数据框就是value属性和input数据的合写、复选框就是checked和change事件合写<br>：value&#x3D;“message” @input&#x3D;“message&#x3D;$e.taget.vlaue”</p>
+<h3 id="2-作用"><a href="#2-作用" class="headerlink" title="2.作用"></a>2.作用</h3><p>提供数据的双向绑定<br>1.数据变，视图跟着变：value<br>2.视图变，数据跟着变@input<br>注意：$event用于在模板中，获取事件形参</p>
+<h2 id="2、表单类组件封装-v-model简化代码"><a href="#2、表单类组件封装-v-model简化代码" class="headerlink" title="2、表单类组件封装&amp;v-model简化代码"></a>2、表单类组件封装&amp;v-model简化代码</h2><h3 id="1-表单类组件封装"><a href="#1-表单类组件封装" class="headerlink" title="1.表单类组件封装"></a>1.表单类组件封装</h3><p>1.父传子：数据从父组件props传递过来，v-model拆解绑定数据<br>将v-model拆解成：value和@change事件，因为v-model会直接在子组件中更改数据，但是子组件中无法更改父组件传递过来的数据</p>
+<p>2.子传父：监听输入，子传父传值父组件修改<br>使用$event传递事件形参</p>
+<h3 id="2-父组件v-model简化代码，实现子组件和父组件数据双向绑定"><a href="#2-父组件v-model简化代码，实现子组件和父组件数据双向绑定" class="headerlink" title="2.父组件v-model简化代码，实现子组件和父组件数据双向绑定"></a>2.父组件v-model简化代码，实现子组件和父组件数据双向绑定</h3><p>1.子组件中：通过props通过value接收，事件触发input<br>2.父组件中：v-model给组件直接绑定数据（：value+@input）</p>
+<h2 id="3、-sync修饰符"><a href="#3、-sync修饰符" class="headerlink" title="3、.sync修饰符"></a>3、.sync修饰符</h2><h3 id="1-作用："><a href="#1-作用：" class="headerlink" title="1.作用："></a>1.作用：</h3><p>可以实现子组件和父组件数据的双向绑定，简化代码</p>
+<h3 id="2-特点："><a href="#2-特点：" class="headerlink" title="2.特点："></a>2.特点：</h3><p>prop属性名可以自定义，非固定为value</p>
+<h3 id="3-场景："><a href="#3-场景：" class="headerlink" title="3.场景："></a>3.场景：</h3><p>封装弹框类的基础组件，visible属性true显示，flase隐藏<br>本质就是：属性名和@update：属性名合写<br>：visible.sync &#x3D;&gt; :visible + @update:visible</p>
+<h2 id="4、ref和-refs"><a href="#4、ref和-refs" class="headerlink" title="4、ref和$refs"></a>4、ref和$refs</h2><h3 id="1-作用：-1"><a href="#1-作用：-1" class="headerlink" title="1.作用："></a>1.作用：</h3><p>利用ref和$refs可以用于获取dom元素，或组件实例</p>
+<h3 id="2-特点：-1"><a href="#2-特点：-1" class="headerlink" title="2.特点："></a>2.特点：</h3><p>查找范围-&gt;当前组件内（更精确稳定）<br>使用方法：<br>1.给需要获取的dom元素添加ref&#x3D;‘mychart’属性，属性值根据需要取名<br>2.通过this.$refs.mychart获取dom元素</p>
+<h3 id="3-获取组件实例"><a href="#3-获取组件实例" class="headerlink" title="3.获取组件实例"></a>3.获取组件实例</h3><p>步骤：<br>1.给目标组件添加ref属性<br>2.通过this.$refs.xxx.组件方法调用方法，xxx为ref属性值</p>
+<h2 id="5、ECharts-JS数据可视化图表库"><a href="#5、ECharts-JS数据可视化图表库" class="headerlink" title="5、ECharts JS数据可视化图表库"></a>5、ECharts JS数据可视化图表库</h2><p>初始化：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const MyChart = echarts.init(document.querySelector(&#x27;main&#x27;))</span><br></pre></td></tr></table></figure>
+
+
+<p>配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const option = &#123;</span><br><span class="line">title:&#123;&#125;,</span><br><span class="line">xAxis:&#123;&#125;,//x轴</span><br><span class="line">yAxis：&#123;&#125;,//y轴 </span><br><span class="line">series:[&#123;</span><br><span class="line">type:&#x27;bar&#x27;,//柱状图</span><br><span class="line">data：[]</span><br><span class="line">&#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>组件内使用：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">npm install echarts</span><br><span class="line">import*as echarts from &#x27;echarts&#x27;</span><br><span class="line">onMounted(()=&gt;&#123;</span><br><span class="line">const MyChart = echarts.init(document.querySelector(&#x27;#main&#x27;))</span><br><span class="line">chart.setOption(&#123;配置&#125;)</span><br><span class="line">&#125;)</span><br><span class="line">//vue2中用mouted（）&#123;&#125;,上面为vue3写法</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="6、vue异步更新、-nextTick"><a href="#6、vue异步更新、-nextTick" class="headerlink" title="6、vue异步更新、$nextTick"></a>6、vue异步更新、$nextTick</h2><h3 id="1-需求：编辑标题，编辑框自动聚焦"><a href="#1-需求：编辑标题，编辑框自动聚焦" class="headerlink" title="1.需求：编辑标题，编辑框自动聚焦"></a>1.需求：编辑标题，编辑框自动聚焦</h3><p>1.点击编辑，显示编辑框<br>2.让编辑框，立刻获取焦点</p>
+<h3 id="2-原因"><a href="#2-原因" class="headerlink" title="2.原因"></a>2.原因</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">this.isShowEdit=true //显示输入框</span><br><span class="line">this.$refs.inp.focus()//获取焦点</span><br></pre></td></tr></table></figure>
+
+
+<p>问题：显示之后，立刻获取焦点不能成功<br>vue是异步更新DOM（提升性能）</p>
+<h3 id="3-nextTick"><a href="#3-nextTick" class="headerlink" title="3.$nextTick"></a>3.$nextTick</h3><p>作用：等DOM更新完后，执行此方法的函数体<br>语法：<br>this.$nextTick(函数体)</p>
+
       </div>
       
         <div class="prev-or-next">
@@ -173,9 +248,55 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-29 22:18:59
+              2026-05-30 00:25:22
             </span>
             
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="Categories"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/VUE/" title="VUE">
+                        <b>#</b> VUE
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/v-model%E5%8E%9F%E7%90%86/" title="v-model原理">
+                        #v-model原理
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/sync%E4%BF%AE%E9%A5%B0%E7%AC%A6/" title=".sync修饰符">
+                        #.sync修饰符
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/ref%E5%92%8C-refs/" title="ref和$refs">
+                        #ref和$refs
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/ECharts-JS%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%9B%BE%E8%A1%A8%E5%BA%93/" title="ECharts JS数据可视化图表库">
+                        #ECharts JS数据可视化图表库
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/nextTick/" title="$nextTick">
+                        #$nextTick
+                      </a>
+                    </span>
+                    
+                  </span>
+              
           </div>
           <div class="post-foot-next">
             
@@ -189,6 +310,23 @@
       
     </div>
     
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81v-model%E5%8E%9F%E7%90%86"><span class="toc-text">1、v-model原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8E%9F%E7%90%86"><span class="toc-text">1.原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BD%9C%E7%94%A8"><span class="toc-text">2.作用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E8%A1%A8%E5%8D%95%E7%B1%BB%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85-v-model%E7%AE%80%E5%8C%96%E4%BB%A3%E7%A0%81"><span class="toc-text">2、表单类组件封装&amp;v-model简化代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%A1%A8%E5%8D%95%E7%B1%BB%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85"><span class="toc-text">1.表单类组件封装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%88%B6%E7%BB%84%E4%BB%B6v-model%E7%AE%80%E5%8C%96%E4%BB%A3%E7%A0%81%EF%BC%8C%E5%AE%9E%E7%8E%B0%E5%AD%90%E7%BB%84%E4%BB%B6%E5%92%8C%E7%88%B6%E7%BB%84%E4%BB%B6%E6%95%B0%E6%8D%AE%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A"><span class="toc-text">2.父组件v-model简化代码，实现子组件和父组件数据双向绑定</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81-sync%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-text">3、.sync修饰符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BD%9C%E7%94%A8%EF%BC%9A"><span class="toc-text">1.作用：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%89%B9%E7%82%B9%EF%BC%9A"><span class="toc-text">2.特点：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%9C%BA%E6%99%AF%EF%BC%9A"><span class="toc-text">3.场景：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81ref%E5%92%8C-refs"><span class="toc-text">4、ref和$refs</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BD%9C%E7%94%A8%EF%BC%9A-1"><span class="toc-text">1.作用：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%89%B9%E7%82%B9%EF%BC%9A-1"><span class="toc-text">2.特点：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%8E%B7%E5%8F%96%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B"><span class="toc-text">3.获取组件实例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81ECharts-JS%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%9B%BE%E8%A1%A8%E5%BA%93"><span class="toc-text">5、ECharts JS数据可视化图表库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81vue%E5%BC%82%E6%AD%A5%E6%9B%B4%E6%96%B0%E3%80%81-nextTick"><span class="toc-text">6、vue异步更新、$nextTick</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%9C%80%E6%B1%82%EF%BC%9A%E7%BC%96%E8%BE%91%E6%A0%87%E9%A2%98%EF%BC%8C%E7%BC%96%E8%BE%91%E6%A1%86%E8%87%AA%E5%8A%A8%E8%81%9A%E7%84%A6"><span class="toc-text">1.需求：编辑标题，编辑框自动聚焦</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%8E%9F%E5%9B%A0"><span class="toc-text">2.原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-nextTick"><span class="toc-text">3.$nextTick</span></a></li></ol></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
 
     
       <div class="comments-container">

@@ -153,12 +153,51 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-29 22:19:49
+          2026-05-30 00:34:08
         </span>
         
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="Categories"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/VUE/" title="VUE">
+                    <b>#</b> VUE
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E5%AE%9E%E6%88%98/" title="实战">
+                    #实战
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E5%95%86%E5%93%81%E5%88%97%E8%A1%A8/" title="商品列表">
+                    #商品列表
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
       <div class="markdown-body">
-        
+        <h2 id="1-my-tag标签组件的封装"><a href="#1-my-tag标签组件的封装" class="headerlink" title="1. my-tag标签组件的封装"></a>1. my-tag标签组件的封装</h2><h3 id="1-创建组件-初始化"><a href="#1-创建组件-初始化" class="headerlink" title="1.创建组件-初始化"></a>1.创建组件-初始化</h3><h3 id="2-实现功能"><a href="#2-实现功能" class="headerlink" title="2.实现功能"></a>2.实现功能</h3><h4 id="1-双击显示，并且自动聚焦"><a href="#1-双击显示，并且自动聚焦" class="headerlink" title="1.双击显示，并且自动聚焦"></a>1.双击显示，并且自动聚焦</h4><p>通过v-if和v-else来控制显示隐藏<br>通过click事件，当点击时，给v-if赋值true，显示<br>vue是异步更新DOM，通过nextTick，来获取焦点<br>将获取焦点封装成自定义指令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vue.directive(&#x27;focus&#x27;,&#123;</span><br><span class="line">inserted(el)&#123;</span><br><span class="line">el.focus()</span><br><span class="line">&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-失去焦点，隐藏输入框"><a href="#2-失去焦点，隐藏输入框" class="headerlink" title="2.失去焦点，隐藏输入框"></a>2.失去焦点，隐藏输入框</h4><p>注册失去焦点事件，当失去焦点时，给isEdit赋值false</p>
+<h4 id="3-回显标签信息"><a href="#3-回显标签信息" class="headerlink" title="3.回显标签信息"></a>3.回显标签信息</h4><p>回显标签信息是父组件传递过来的<br>v-model实现功能（简化代码）<br>父组件使用v-model绑定数据，子组件props用value接收，并插值到子组件，通过：value&#x3D;“value”来赋值                           </p>
+<h4 id="4-内容修改了，回车-修改标签信息"><a href="#4-内容修改了，回车-修改标签信息" class="headerlink" title="4.内容修改了，回车&#x3D;&gt;修改标签信息"></a>4.内容修改了，回车&#x3D;&gt;修改标签信息</h4><p>子组件通过注册事件，子传父，事件名要为input事件，通过this.$emit(‘input’,e.tatgrt.value)&#x2F;&#x2F;通过事件对象e.tatgrt.value获得当前值，并将值返回给父组件</p>
+<p>因为父组件使用v-model，父组件数据也会更改，回显标签也会更改<br>并改isEdit&#x3D;false </p>
+<p>可以加判断e.tatgrt.value.trim() &#x3D;&#x3D;&#x3D; ‘’,返回不能为空</p>
+<h2 id="2-my-table表格组件封装"><a href="#2-my-table表格组件封装" class="headerlink" title="2.my-table表格组件封装"></a>2.my-table表格组件封装</h2><p>1.动态传递表格数据渲染，数据不能写死<br>父组件通过props传递数据给子组件，子组件利用渲染数据，通过v-for渲染</p>
+<p>2.结构不能写死，表头支持用户自定义<br>使用具名插槽slot，哪里不能写死，就哪里使用</p>
+<p>3.结构不能写死，主体支持用户自定义<br>通过作用域插槽传值，给slot属性赋值，在template中，通过“#插槽名&#x3D;‘obj’”接收，默认插槽名为default</p>
+
       </div>
       
         <div class="prev-or-next">
@@ -173,9 +212,37 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-29 22:19:49
+              2026-05-30 00:34:08
             </span>
             
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="Categories"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/VUE/" title="VUE">
+                        <b>#</b> VUE
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E5%AE%9E%E6%88%98/" title="实战">
+                        #实战
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E5%95%86%E5%93%81%E5%88%97%E8%A1%A8/" title="商品列表">
+                        #商品列表
+                      </a>
+                    </span>
+                    
+                  </span>
+              
           </div>
           <div class="post-foot-next">
             
@@ -189,6 +256,23 @@
       
     </div>
     
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-my-tag%E6%A0%87%E7%AD%BE%E7%BB%84%E4%BB%B6%E7%9A%84%E5%B0%81%E8%A3%85"><span class="toc-text">1. my-tag标签组件的封装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%88%9B%E5%BB%BA%E7%BB%84%E4%BB%B6-%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-text">1.创建组件-初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AE%9E%E7%8E%B0%E5%8A%9F%E8%83%BD"><span class="toc-text">2.实现功能</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%8F%8C%E5%87%BB%E6%98%BE%E7%A4%BA%EF%BC%8C%E5%B9%B6%E4%B8%94%E8%87%AA%E5%8A%A8%E8%81%9A%E7%84%A6"><span class="toc-text">1.双击显示，并且自动聚焦</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%A4%B1%E5%8E%BB%E7%84%A6%E7%82%B9%EF%BC%8C%E9%9A%90%E8%97%8F%E8%BE%93%E5%85%A5%E6%A1%86"><span class="toc-text">2.失去焦点，隐藏输入框</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%9B%9E%E6%98%BE%E6%A0%87%E7%AD%BE%E4%BF%A1%E6%81%AF"><span class="toc-text">3.回显标签信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E5%86%85%E5%AE%B9%E4%BF%AE%E6%94%B9%E4%BA%86%EF%BC%8C%E5%9B%9E%E8%BD%A6-%E4%BF%AE%E6%94%B9%E6%A0%87%E7%AD%BE%E4%BF%A1%E6%81%AF"><span class="toc-text">4.内容修改了，回车&#x3D;&gt;修改标签信息</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-my-table%E8%A1%A8%E6%A0%BC%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85"><span class="toc-text">2.my-table表格组件封装</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
 
     
       <div class="comments-container">

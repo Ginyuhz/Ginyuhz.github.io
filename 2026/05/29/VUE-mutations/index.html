@@ -153,12 +153,60 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-29 22:23:47
+          2026-05-30 01:08:47
         </span>
         
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="Categories"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/VUE/" title="VUE">
+                    <b>#</b> VUE
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/mutations/" title="mutations">
+                    #mutations
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
       <div class="markdown-body">
-        
+        <p>目标：<br>明确vuex同样遵循单向数据流，组件中不能直接修改仓库数据<br>掌握mutations的操作流程，来修改state数据（state数据只能通过mutations修改）</p>
+<h2 id="1-定义mutations对象，对象中存放修改state的方法"><a href="#1-定义mutations对象，对象中存放修改state的方法" class="headerlink" title="1.定义mutations对象，对象中存放修改state的方法"></a>1.定义mutations对象，对象中存放修改state的方法</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const store = new Vuex.Store(&#123;</span><br><span class="line">// 严格模式 (有利于初学者，检测不规范的代码 =&gt; 上线时需要关闭)</span><br><span class="line">strict: true,</span><br><span class="line">mutations: &#123;</span><br><span class="line">// 所有mutation函数，第一个参数，都是 state</span><br><span class="line">// 注意点：mutation参数有且只能有一个，如果需要多个参数，包装成一个对象</span><br><span class="line">addCount (state) &#123;</span><br><span class="line">// 修改数据</span><br><span class="line">state.count += 1</span><br><span class="line">&#125;,</span><br><span class="line">&#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="2-组件中提交调用mutations"><a href="#2-组件中提交调用mutations" class="headerlink" title="2.组件中提交调用mutations"></a>2.组件中提交调用mutations</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.$store.commit(&#x27;addCount&#x27;)</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="3-mutations传参语法"><a href="#3-mutations传参语法" class="headerlink" title="3.mutations传参语法"></a>3.mutations传参语法</h2><p>提交mutation可以传递参数‘this.$store.commit(‘xxx’,参数)’&#x2F;&#x2F;不支持多个参数，可以通过对象传递</p>
+<p>1.提供mutation函数（带参数-提交载荷payload）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mutations: &#123;</span><br><span class="line">addCount (state,n) &#123;</span><br><span class="line">// 修改数据</span><br><span class="line">state.count += n </span><br><span class="line">&#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>2.页面中提交调用mutation</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.$store.commit(&#x27;addCount&#x27;，10)</span><br></pre></td></tr></table></figure>
+
+
+<p>3.不支持多个参数，可以通过对象传递</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">this.$store.commit(&#x27;addCount&#x27;，&#123;count:10,msg:&#x27;hh&#x27;&#125;)</span><br><span class="line">addCount (state, obj) &#123;</span><br><span class="line">// 修改数据</span><br><span class="line">state.count += obj.count</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+
+<p>注意点：mutation参数有且只能有一个，如果需要多个参数，包装成一个对象</p>
+<h2 id="4-mutations-练习"><a href="#4-mutations-练习" class="headerlink" title="4.mutations-练习"></a>4.mutations-练习</h2><p>1.封装mutation函数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">subCount（state，n）&#123;</span><br><span class="line">state.count -= n</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>2.页面中commit调用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.$store.commit(&#x27;subCount&#x27;，n)</span><br></pre></td></tr></table></figure>
       </div>
       
         <div class="prev-or-next">
@@ -173,9 +221,31 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-29 22:23:47
+              2026-05-30 01:08:47
             </span>
             
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="Categories"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/VUE/" title="VUE">
+                        <b>#</b> VUE
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/mutations/" title="mutations">
+                        #mutations
+                      </a>
+                    </span>
+                    
+                  </span>
+              
           </div>
           <div class="post-foot-next">
             
@@ -189,6 +259,23 @@
       
     </div>
     
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%9A%E4%B9%89mutations%E5%AF%B9%E8%B1%A1%EF%BC%8C%E5%AF%B9%E8%B1%A1%E4%B8%AD%E5%AD%98%E6%94%BE%E4%BF%AE%E6%94%B9state%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">1.定义mutations对象，对象中存放修改state的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%BB%84%E4%BB%B6%E4%B8%AD%E6%8F%90%E4%BA%A4%E8%B0%83%E7%94%A8mutations"><span class="toc-text">2.组件中提交调用mutations</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-mutations%E4%BC%A0%E5%8F%82%E8%AF%AD%E6%B3%95"><span class="toc-text">3.mutations传参语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-mutations-%E7%BB%83%E4%B9%A0"><span class="toc-text">4.mutations-练习</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
 
     
       <div class="comments-container">

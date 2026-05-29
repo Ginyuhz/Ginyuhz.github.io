@@ -153,12 +153,81 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-29 22:20:36
+          2026-05-30 00:58:51
         </span>
         
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="Categories"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/VUE/" title="VUE">
+                    <b>#</b> VUE
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E5%AE%9E%E6%88%98/" title="实战">
+                    #实战
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E9%9D%A2%E7%BB%8F%E5%9F%BA%E7%A1%80%E7%89%88/" title="面经基础版">
+                    #面经基础版
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
       <div class="markdown-body">
-        
+        <h1 id="1-分析：配路由-实现功能"><a href="#1-分析：配路由-实现功能" class="headerlink" title="1.分析：配路由+实现功能"></a>1.分析：配路由+实现功能</h1><h2 id="1-配路由"><a href="#1-配路由" class="headerlink" title="1.配路由"></a>1.配路由</h2><h3 id="1-首页和面经详情，两个一级路由"><a href="#1-首页和面经详情，两个一级路由" class="headerlink" title="1.首页和面经详情，两个一级路由"></a>1.首页和面经详情，两个一级路由</h3><h3 id="2-首页内嵌四个可切换页面（嵌套二级路由）"><a href="#2-首页内嵌四个可切换页面（嵌套二级路由）" class="headerlink" title="2.首页内嵌四个可切换页面（嵌套二级路由）"></a>2.首页内嵌四个可切换页面（嵌套二级路由）</h3><p>通过children配置项，可以嵌套子路由</p>
+<p>1.在children配置项中，配规则</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const router = new VueRouter(&#123;</span><br><span class="line">    routes：[</span><br><span class="line">        &#123;</span><br><span class="line">            path:&#x27;/search/:words&#x27;,component:Search，</span><br><span class="line">            children：[</span><br><span class="line">            &#123;</span><br><span class="line">                path:&#x27;/path/xxx&#x27;,component:xxx</span><br><span class="line">            &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    ]，</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>2.准备二级路由出口<br>在父组件准备二级路由出口</p>
+<h2 id="2-实现功能"><a href="#2-实现功能" class="headerlink" title="2.实现功能"></a>2.实现功能</h2><h3 id="1-首页请求渲染"><a href="#1-首页请求渲染" class="headerlink" title="1.首页请求渲染"></a>1.首页请求渲染</h3><p>1.安装axios</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i axios --save</span><br></pre></td></tr></table></figure>
+
+<p>2.看接口文档，确认请求方式，请求地址，请求参数<br>请求地址: <a target="_blank" rel="noopener" href="https://mock.boxuegu.com/mock/3083/articles">https://mock.boxuegu.com/mock/3083/articles</a><br>&#x2F;&#x2F; 请求方式: get</p>
+<p>3.created中发请求，获取数据，存起来</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import axios from &#x27;axios&#x27;</span><br><span class="line">expoer default&#123;</span><br><span class="line">name:&#x27;ArticlePage&#x27;,</span><br><span class="line">data()&#123;</span><br><span class="line">return&#123;</span><br><span class="line">    articles:[]</span><br><span class="line">&#125;</span><br><span class="line">&#125;,</span><br><span class="line">async created()&#123;</span><br><span class="line">const res = await axios.get(&#x27;https://mock.boxuegu.com/mock/3083/articles&#x27;)</span><br><span class="line">this.articles = res.data.result.rows </span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>4.页面动态渲染</p>
+<h3 id="2-跳转传参到详情页，详情页渲染"><a href="#2-跳转传参到详情页，详情页渲染" class="headerlink" title="2.跳转传参到详情页，详情页渲染"></a>2.跳转传参到详情页，详情页渲染</h3><p>注册点击事件</p>
+<p>1.查询参数传参</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@click=‘$router.push(`/deatail?id=$&#123;item.id&#125;`’)</span><br></pre></td></tr></table></figure>
+
+
+<p>接收：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$route.query.参数名</span><br></pre></td></tr></table></figure>
+
+<p>2.动态路由传参<br>配置动态路由</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const router = new VueRouter(&#123;</span><br><span class="line">    routes：[</span><br><span class="line">        &#123;path:&#x27;/路径/:参数名&#x27;,component：组件&#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;)</span><br><span class="line">@click=‘$router.push(`/deatail/$&#123;item.id&#125;`’)</span><br></pre></td></tr></table></figure>
+
+
+<p>接收：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$route.params.参数名</span><br></pre></td></tr></table></figure>
+
+<p>3.问题解决<br>返回上一页$router.back()<br>访问&#x2F;重定向到&#x2F;article (redirect)<br>渲染判断，当获取到article时再做渲染v-if&#x3D;’article.id’</p>
+<h3 id="3-组件缓存，优化性能"><a href="#3-组件缓存，优化性能" class="headerlink" title="3.组件缓存，优化性能"></a>3.组件缓存，优化性能</h3><p>问题：从面经点的详情页，有点返回，数据重新加载了，希望返回到原来位置</p>
+<p>原因：路由跳转后，组件被销毁了，返回回来的组件又被重建，所以数据重新被加载</p>
+<p>解决：利用keep-alive将组件缓存</p>
+<p>1.keep-alive是什么<br>keep-alive是Vue内置组件，当它包裹动态组件时，会缓存不活动的组件实例，而不是销毁它们</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;keep-alive&gt;</span><br><span class="line">&lt;router-view&gt;&lt;/router-view&gt;</span><br><span class="line">&lt;/keep-alive&gt;</span><br></pre></td></tr></table></figure>
+
+
+<p>是一个抽象组件：它自身不会渲染成一个dom元素，也不会出现在父组件链中</p>
+<p>2.keep-alive优点<br>组件切换中，把切换的组件保留在内存，防止重复渲染DOM<br>减少加载时间及性能消耗，提高用户体验性</p>
+<p>3.问题：缓存了所有被切换的组件</p>
+<p>当包裹后，一级路由匹配的组件都会被缓存<br>解决：keep-alive三个属性</p>
+<p>1.include:组件名数组，只有匹配的组件会被缓存<br>2.exclude：组件名数组，然后匹配的组件都不会被缓存<br>3.max：最多缓存多少组件实例<br>组件被缓存后多两个生命周期钩子，组件缓存后不会执行created，mounted<br>-actived 激活时，组件被看到时触发<br>-deactived 失活时，立刻页面组件看不见触发</p>
+
       </div>
       
         <div class="prev-or-next">
@@ -173,9 +242,37 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-29 22:20:36
+              2026-05-30 00:58:51
             </span>
             
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="Categories"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/VUE/" title="VUE">
+                        <b>#</b> VUE
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E5%AE%9E%E6%88%98/" title="实战">
+                        #实战
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E9%9D%A2%E7%BB%8F%E5%9F%BA%E7%A1%80%E7%89%88/" title="面经基础版">
+                        #面经基础版
+                      </a>
+                    </span>
+                    
+                  </span>
+              
           </div>
           <div class="post-foot-next">
             
@@ -189,6 +286,23 @@
       
     </div>
     
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E5%88%86%E6%9E%90%EF%BC%9A%E9%85%8D%E8%B7%AF%E7%94%B1-%E5%AE%9E%E7%8E%B0%E5%8A%9F%E8%83%BD"><span class="toc-text">1.分析：配路由+实现功能</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%85%8D%E8%B7%AF%E7%94%B1"><span class="toc-text">1.配路由</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%A6%96%E9%A1%B5%E5%92%8C%E9%9D%A2%E7%BB%8F%E8%AF%A6%E6%83%85%EF%BC%8C%E4%B8%A4%E4%B8%AA%E4%B8%80%E7%BA%A7%E8%B7%AF%E7%94%B1"><span class="toc-text">1.首页和面经详情，两个一级路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%A6%96%E9%A1%B5%E5%86%85%E5%B5%8C%E5%9B%9B%E4%B8%AA%E5%8F%AF%E5%88%87%E6%8D%A2%E9%A1%B5%E9%9D%A2%EF%BC%88%E5%B5%8C%E5%A5%97%E4%BA%8C%E7%BA%A7%E8%B7%AF%E7%94%B1%EF%BC%89"><span class="toc-text">2.首页内嵌四个可切换页面（嵌套二级路由）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%9E%E7%8E%B0%E5%8A%9F%E8%83%BD"><span class="toc-text">2.实现功能</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%A6%96%E9%A1%B5%E8%AF%B7%E6%B1%82%E6%B8%B2%E6%9F%93"><span class="toc-text">1.首页请求渲染</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%B7%B3%E8%BD%AC%E4%BC%A0%E5%8F%82%E5%88%B0%E8%AF%A6%E6%83%85%E9%A1%B5%EF%BC%8C%E8%AF%A6%E6%83%85%E9%A1%B5%E6%B8%B2%E6%9F%93"><span class="toc-text">2.跳转传参到详情页，详情页渲染</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%BB%84%E4%BB%B6%E7%BC%93%E5%AD%98%EF%BC%8C%E4%BC%98%E5%8C%96%E6%80%A7%E8%83%BD"><span class="toc-text">3.组件缓存，优化性能</span></a></li></ol></li></ol></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
 
     
       <div class="comments-container">

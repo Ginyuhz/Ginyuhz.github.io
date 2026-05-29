@@ -153,12 +153,45 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-29 22:18:30
+          2026-05-30 00:15:25
         </span>
         
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="Categories"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/VUE/" title="VUE">
+                    <b>#</b> VUE
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E5%AE%9E%E6%88%98/" title="实战">
+                    #实战
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E5%B0%8F%E9%BB%91%E8%AE%B0%E4%BA%8B%E6%9C%AC/" title="小黑记事本">
+                    #小黑记事本
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
       <div class="markdown-body">
-        
+        <h2 id="1-拆分组件"><a href="#1-拆分组件" class="headerlink" title="1.拆分组件"></a>1.拆分组件</h2><h2 id="2-渲染代办任务"><a href="#2-渲染代办任务" class="headerlink" title="2.渲染代办任务"></a>2.渲染代办任务</h2><p>1.提供数据，放在公共的父组件App.vue<br>2.通过父传子，将数据传递给TodoMain<br>3.利用v-for渲染</p>
+<h2 id="3-添加任务"><a href="#3-添加任务" class="headerlink" title="3.添加任务"></a>3.添加任务</h2><p>1.收集表单数据-&gt; v-model<br>2.监听数据（回车 @keyup.enter +点击 @click，都要进行添加）<br>3.子传父，将任务名称传递给父组件<br>4.进行添加，unshift将一个或多个元素添加到数组开头（自己的数据自己添加）<br>trim（）方法：去除字符串左右的空格</p>
+<h2 id="4-删除功能"><a href="#4-删除功能" class="headerlink" title="4.删除功能"></a>4.删除功能</h2><p>1.监听事件（监听删除的点击）携带id<br>2.子传父，将删除的id传给父组件<br>3.进行删除filter<br>filter，筛选，返回新数组,将不于id的数据保留</p>
+<h2 id="5-底部合计和清空功能"><a href="#5-底部合计和清空功能" class="headerlink" title="5.底部合计和清空功能"></a>5.底部合计和清空功能</h2><p>底部合计：父传子，传list-&gt;渲染<br>清空功能：父传子，通过父组件清空</p>
+<h2 id="6-持久化存储"><a href="#6-持久化存储" class="headerlink" title="6.持久化存储"></a>6.持久化存储</h2><p>watch深度监视list的变化-&gt;往本地存储-&gt;一进入页面优先读取本地存储</p>
+
       </div>
       
         <div class="prev-or-next">
@@ -173,9 +206,37 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-29 22:18:30
+              2026-05-30 00:15:25
             </span>
             
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="Categories"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/VUE/" title="VUE">
+                        <b>#</b> VUE
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E5%AE%9E%E6%88%98/" title="实战">
+                        #实战
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E5%B0%8F%E9%BB%91%E8%AE%B0%E4%BA%8B%E6%9C%AC/" title="小黑记事本">
+                        #小黑记事本
+                      </a>
+                    </span>
+                    
+                  </span>
+              
           </div>
           <div class="post-foot-next">
             
@@ -189,6 +250,23 @@
       
     </div>
     
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6"><span class="toc-text">1.拆分组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%B8%B2%E6%9F%93%E4%BB%A3%E5%8A%9E%E4%BB%BB%E5%8A%A1"><span class="toc-text">2.渲染代办任务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%B7%BB%E5%8A%A0%E4%BB%BB%E5%8A%A1"><span class="toc-text">3.添加任务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%88%A0%E9%99%A4%E5%8A%9F%E8%83%BD"><span class="toc-text">4.删除功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%BA%95%E9%83%A8%E5%90%88%E8%AE%A1%E5%92%8C%E6%B8%85%E7%A9%BA%E5%8A%9F%E8%83%BD"><span class="toc-text">5.底部合计和清空功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E6%8C%81%E4%B9%85%E5%8C%96%E5%AD%98%E5%82%A8"><span class="toc-text">6.持久化存储</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
 
     
       <div class="comments-container">

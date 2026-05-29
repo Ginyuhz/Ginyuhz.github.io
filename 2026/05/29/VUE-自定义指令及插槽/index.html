@@ -153,12 +153,72 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-29 22:19:36
+          2026-05-30 00:29:50
         </span>
         
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="Categories"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/VUE/" title="VUE">
+                    <b>#</b> VUE
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/" title="自定义指令">
+                    #自定义指令
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E6%8F%92%E6%A7%BD/" title="插槽">
+                    #插槽
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
       <div class="markdown-body">
-        
+        <h2 id="1、自定义指令"><a href="#1、自定义指令" class="headerlink" title="1、自定义指令"></a>1、自定义指令</h2><h3 id="1-定义："><a href="#1-定义：" class="headerlink" title="1.定义："></a>1.定义：</h3><p>自己定义的指令，可以封装一些dom操作，扩展额外功能</p>
+<h3 id="2-全局注册"><a href="#2-全局注册" class="headerlink" title="2.全局注册"></a>2.全局注册</h3><p>语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Vue.directive(&#x27;指令名&#x27;，&#123;</span><br><span class="line">//inserted会在 指令所在的元素，被插入到页面时触发</span><br><span class="line">&quot;inserted&quot;(el)&#123;</span><br><span class="line">//可以对el标签，扩展额外功能</span><br><span class="line">el.focus()</span><br><span class="line">&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-局部注册"><a href="#3-局部注册" class="headerlink" title="3.局部注册"></a>3.局部注册</h3><p>只在当前组件可使用<br>语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">directive：&#123;</span><br><span class="line">&#x27;指令名&#x27;:&#123;</span><br><span class="line">inserted(el)&#123;</span><br><span class="line">//可以对el标签，扩展额外功能</span><br><span class="line">el.focus()</span><br><span class="line">&#125;，</span><br><span class="line">update(el)&#123;</span><br><span class="line">//inserted只触发一次，可以通过update函数，当数据更新后进行触发</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-指令的值"><a href="#4-指令的值" class="headerlink" title="4.指令的值"></a>4.指令的值</h3><p>在绑定指令时，可以通过‘等号’的形式为指令绑定具体的参数值<br>通过binding.vlaue可以拿到指令值，指令修改会触发update函数</p>
+<h3 id="5、自定义指令-v-loading指令封装"><a href="#5、自定义指令-v-loading指令封装" class="headerlink" title="5、自定义指令-v-loading指令封装"></a>5、自定义指令-v-loading指令封装</h3><p>分析：<br>1.本质loading效果就是一个蒙层，盖在了盒子上<br>2.数据请求中，开启loading状态，添加蒙层<br>3.数据请求结束，关闭loading状态，移除蒙层</p>
+<p>实现：<br>1.准备一个loading类，通过伪元素定位，设置宽高，实现蒙层<br>2.开启关闭loading状态，本质添加移除类<br>3.结合自定义指令语法进行封装</p>
+<h2 id="2、插槽"><a href="#2、插槽" class="headerlink" title="2、插槽"></a>2、插槽</h2><h3 id="1-作用"><a href="#1-作用" class="headerlink" title="1.作用"></a>1.作用</h3><p>让组件内部的一些结构支持自定义</p>
+<h3 id="2-语法"><a href="#2-语法" class="headerlink" title="2.语法"></a>2.语法</h3><p>1.组件内部需要定制的结构部分，改用<slot></slot>占位<br>2.使用组件时，标签内部传入结构替换<slot></slot></p>
+<h3 id="3-后备内容（默认值）"><a href="#3-后备内容（默认值）" class="headerlink" title="3.后备内容（默认值）"></a>3.后备内容（默认值）</h3><p>语法：<br>在<slot>标签内，放置内容，作为默认显示内容<br>组件标签内容没有内容时，显示默认内容</p>
+<h3 id="4-具名插槽"><a href="#4-具名插槽" class="headerlink" title="4.具名插槽"></a>4.具名插槽</h3><p>一个组件内有多处结构需要外部标签传入，进行定制，默认插槽只有一个定制位置<br>具名插槽可以多个slot，且只支持定向分发<br>语法：<br>1.多个slot使用name属性区分名字</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;slot name=&#x27;head&#x27;&gt;&lt;/slot&gt;</span><br></pre></td></tr></table></figure>
+
+
+<p>3.在使用组件的时，标签内部使用template配合v-slot：名字来分发对应标签</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;组件名&gt;</span><br><span class="line">&lt;template v-slot:head&gt;&lt;/template&gt;</span><br><span class="line">//可以简写成 &lt;template #head&gt;&lt;/template&gt;</span><br><span class="line">&lt;/组件名&gt;</span><br></pre></td></tr></table></figure>
+
+
+<p>插槽分类：默认插槽、具名插槽</p>
+<h3 id="5-作用域插槽"><a href="#5-作用域插槽" class="headerlink" title="5.作用域插槽"></a>5.作用域插槽</h3><p>是插槽的一个传参语法<br>作用：定义slot插槽的同时，可以传值。给插槽绑定数据，将来使用组件时可以使用</p>
+<p>步骤：<br>1.给slot标签，以添加属性的方式传值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;slot :id=&#x27;item.id&#x27; msg=&quot;测试文本&quot;&gt;&lt;/slot&gt;</span><br></pre></td></tr></table></figure>
+
+
+<p>2.所有添加的属性，都会被收集到一个对象中<br>3.在template中，通过“#插槽名&#x3D;‘obj’”接收，默认插槽名为default</p>
+
       </div>
       
         <div class="prev-or-next">
@@ -173,9 +233,37 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-29 22:19:36
+              2026-05-30 00:29:50
             </span>
             
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="Categories"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/VUE/" title="VUE">
+                        <b>#</b> VUE
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/" title="自定义指令">
+                        #自定义指令
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E6%8F%92%E6%A7%BD/" title="插槽">
+                        #插槽
+                      </a>
+                    </span>
+                    
+                  </span>
+              
           </div>
           <div class="post-foot-next">
             
@@ -189,6 +277,23 @@
       
     </div>
     
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4"><span class="toc-text">1、自定义指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="toc-text">1.定义：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%85%A8%E5%B1%80%E6%B3%A8%E5%86%8C"><span class="toc-text">2.全局注册</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%B1%80%E9%83%A8%E6%B3%A8%E5%86%8C"><span class="toc-text">3.局部注册</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%8C%87%E4%BB%A4%E7%9A%84%E5%80%BC"><span class="toc-text">4.指令的值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4-v-loading%E6%8C%87%E4%BB%A4%E5%B0%81%E8%A3%85"><span class="toc-text">5、自定义指令-v-loading指令封装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E6%8F%92%E6%A7%BD"><span class="toc-text">2、插槽</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BD%9C%E7%94%A8"><span class="toc-text">1.作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%AF%AD%E6%B3%95"><span class="toc-text">2.语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%90%8E%E5%A4%87%E5%86%85%E5%AE%B9%EF%BC%88%E9%BB%98%E8%AE%A4%E5%80%BC%EF%BC%89"><span class="toc-text">3.后备内容（默认值）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%85%B7%E5%90%8D%E6%8F%92%E6%A7%BD"><span class="toc-text">4.具名插槽</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%8F%92%E6%A7%BD"><span class="toc-text">5.作用域插槽</span></a></li></ol></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
 
     
       <div class="comments-container">

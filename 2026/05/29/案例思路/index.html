@@ -153,12 +153,69 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-29 22:24:33
+          2026-05-30 01:19:51
         </span>
         
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="Categories"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/%E6%A1%88%E4%BE%8B%E6%80%9D%E8%B7%AF/" title="案例思路">
+                    <b>#</b> 案例思路
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E6%A1%88%E4%BE%8B%E6%80%9D%E8%B7%AF/" title="案例思路">
+                    #案例思路
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
       <div class="markdown-body">
-        
+        <h2 id="案例："><a href="#案例：" class="headerlink" title="案例："></a>案例：</h2><h3 id="1、点击小模块，跳转大模块"><a href="#1、点击小模块，跳转大模块" class="headerlink" title="1、点击小模块，跳转大模块"></a>1、点击小模块，跳转大模块</h3><p>原来不存在active类，可以加一个判断：<br>当不存在active类时，不执行去除旧的active，当存在时，才执行去除代码</p>
+<h3 id="2、滚动大模块，选中小模块"><a href="#2、滚动大模块，选中小模块" class="headerlink" title="2、滚动大模块，选中小模块"></a>2、滚动大模块，选中小模块</h3><p>先移除类，消除小模块点击的效果，也要进行判断</p>
+<h3 id="3、补0"><a href="#3、补0" class="headerlink" title="3、补0"></a>3、补0</h3><p>h &#x3D; h &gt;10 ? h :’0’ + h</p>
+<h3 id="4、表单"><a href="#4、表单" class="headerlink" title="4、表单"></a>4、表单</h3><h4 id="1-首先阻止默认提交事件"><a href="#1-首先阻止默认提交事件" class="headerlink" title="1.首先阻止默认提交事件"></a>1.首先阻止默认提交事件</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">e.preventDefault（）</span><br></pre></td></tr></table></figure>
+<h4 id="2-创建新对象，存储表单获取的数据"><a href="#2-创建新对象，存储表单获取的数据" class="headerlink" title="2.创建新对象，存储表单获取的数据"></a>2.创建新对象，存储表单获取的数据</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const obj&#123;</span><br><span class="line">name:name.value,</span><br><span class="line">age:age.value,</span><br><span class="line">gender:gender.value</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>添加arr.push(obj)<br>重置：表单.reset()&#x2F;&#x2F;可以用this替代表单</p>
+<h4 id="3-渲染"><a href="#3-渲染" class="headerlink" title="3.渲染"></a>3.渲染</h4><p>渲染函数：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function render()&#123;</span><br><span class="line">for(let i = 0;i &lt; arr.length; i++)&#123;</span><br><span class="line">const tr = document.querySelector(&#x27;tr&#x27;)</span><br><span class="line">tr.innerHTML = ``</span><br><span class="line">tbody.appendChild(tr)</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>再次添加数据的时候，先清空tbody，再次渲染</p>
+<h4 id="4-删除模块"><a href="#4-删除模块" class="headerlink" title="4.删除模块"></a>4.删除模块</h4><p>自定义属性给a<br>删除对应数据</p>
+<h4 id="5-进行表单验证"><a href="#5-进行表单验证" class="headerlink" title="5.进行表单验证"></a>5.进行表单验证</h4><h3 id="5、本地存储"><a href="#5、本地存储" class="headerlink" title="5、本地存储"></a>5、本地存储</h3><p>数据进行本地存储：localStorage.setItem(‘date’，JSON.stringify（）)<br>将本地存储数据转为对象且没数据时放入空数组：arr&#x3D;JSON.parse(localStorage.getItem（’date’）)||[]</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function render()&#123;</span><br><span class="line">arr.map(function(ele)&#123;</span><br><span class="line">return 渲染的数据</span><br><span class="line">&#125;)</span><br><span class="line">&#125;</span><br><span class="line">tbody.innerHTML=map返回的数组.join(&#x27;&#x27;)</span><br></pre></td></tr></table></figure>
+<p>新增业务：<br>非空判断</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">if(!uname.value||!uname.age||!uname.salsry)&#123;</span><br><span class="line"></span><br><span class="line">return alert(&#x27;输入不能为空)</span><br><span class="line">&#125;</span><br><span class="line">arr.push(</span><br><span class="line">&#123;</span><br><span class="line">name = name.value</span><br><span class="line">city = city.value</span><br><span class="line">&#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>删除业务：<br>当map遍历时可以返回一个索引号，通过自定义属性绑定a<br>获得自定义属性来删除对应数据，并且重新存储数据<br>confirm（）确定框<br>stuId处理<br>新增加序号应该是最后一条数据的stuId+1</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stuId:arr.length ? arr[arr.length-1].stuId+1 : 1</span><br></pre></td></tr></table></figure>
+<h3 id="6、表单验证"><a href="#6、表单验证" class="headerlink" title="6、表单验证"></a>6、表单验证</h3><p>1.防重复点击，先设置一个变量，用于判断，通过判断后变量取反，等倒计时结束，再次更改变量</p>
+<h3 id="7、渲染数据"><a href="#7、渲染数据" class="headerlink" title="7、渲染数据"></a>7、渲染数据</h3><p>用map变量，返回的数组用join拼接返回字符串写入页面</p>
+<h2 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h2><h3 id="一、项目管理"><a href="#一、项目管理" class="headerlink" title="一、项目管理"></a>一、项目管理</h3><p>assets：资源文件夹（图片，字体）<br>lib:资料文件夹（第三方插件：例如：form-serialize）<br>page：页面文件夹<br>utils：实用程序文件（工具插件，自己封装的工具）</p>
+<h3 id="二、验证码登录"><a href="#二、验证码登录" class="headerlink" title="二、验证码登录"></a>二、验证码登录</h3><p>在每一块代码时，想一下是否有复用代码，有要封装</p>
+<p>1、在utils&#x2F;request.js配置axios请求基地址<br>作用：提前公共前缀地址，配置后axios请求时都会baseURL+url </p>
+<p>2.收集手机号和验证码<br>访问权限控制</p>
+<p>1.判断无 token 令牌字符串，则强制跳转到登录页<br>强制跳转：location.href &#x3D;’..&#x2F;login&#x2F;index.htmlj’<br>2.登录成功后，保存 token 令牌字符串到本地，并跳转到内容列表页面</p>
+<p>3.基于axios调用验证码登录接口</p>
+<p>4.使用booststrap的alert警告框反馈结果给用户</p>
+<p>5.axios拦截器<br>请求拦截器：在发送请求前做些处理</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 添加请求拦截器</span><br><span class="line">axios.interceptors.request.use(function (config) &#123;</span><br><span class="line">// 在发送请求之前做些什么</span><br><span class="line">// 统一携带 token 令牌字符串在请求头上</span><br><span class="line">const token = localStorage.getItem(&#x27;token&#x27;)</span><br><span class="line">token &amp;&amp; (config.headers.Authorization = `Bearer $&#123;token&#125;`)</span><br><span class="line">return config;</span><br><span class="line">&#125;, function (error) &#123;</span><br><span class="line">// 对请求错误做些什么</span><br><span class="line">return Promise.reject(error);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+<p>​响应拦截器：响应回到then&#x2F;catch之前，触发的拦截函数，对响应结果统一处理</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">// 添加响应拦截器</span><br><span class="line">axios.interceptors.response.use(function (response) &#123;</span><br><span class="line">// 2xx 范围内的状态码都会触发该函数。</span><br><span class="line">// 对响应数据做点什么，例如：直接返回服务器的响应结果对象</span><br><span class="line">const result = response.data</span><br><span class="line">return result;</span><br><span class="line">&#125;, function (error) &#123;</span><br><span class="line">// 超出 2xx 范围的状态码都会触发该函数。</span><br><span class="line">// 对响应错误做点什么，例如：统一对 401 身份验证失败情况做出处理</span><br><span class="line">console.dir(error)</span><br><span class="line">if (error?.response?.status === 401) &#123;</span><br><span class="line">alert(&#x27;身份验证失败，请重新登录&#x27;)</span><br><span class="line">localStorage.clear()</span><br><span class="line">location.href = &#x27;../login/index.html&#x27;</span><br><span class="line">&#125;</span><br><span class="line">return Promise.reject(error);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="3、富文本编辑器"><a href="#3、富文本编辑器" class="headerlink" title="3、富文本编辑器"></a>3、富文本编辑器</h2><p>使用：wangEditor插件<br>步骤：<br>1.引入css定义样式<br>2.定义HTML结构<br>3.引入JS创建编辑器<br>4.监听内容改变，保存在隐藏文本域（便于后期采集）<br>e.target.classList.contains(‘del’):表示包含class为del的类</p>
+
       </div>
       
         <div class="prev-or-next">
@@ -173,9 +230,31 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-29 22:24:33
+              2026-05-30 01:19:51
             </span>
             
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="Categories"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/%E6%A1%88%E4%BE%8B%E6%80%9D%E8%B7%AF/" title="案例思路">
+                        <b>#</b> 案例思路
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E6%A1%88%E4%BE%8B%E6%80%9D%E8%B7%AF/" title="案例思路">
+                        #案例思路
+                      </a>
+                    </span>
+                    
+                  </span>
+              
           </div>
           <div class="post-foot-next">
             
@@ -189,6 +268,23 @@
       
     </div>
     
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B%EF%BC%9A"><span class="toc-text">案例：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E7%82%B9%E5%87%BB%E5%B0%8F%E6%A8%A1%E5%9D%97%EF%BC%8C%E8%B7%B3%E8%BD%AC%E5%A4%A7%E6%A8%A1%E5%9D%97"><span class="toc-text">1、点击小模块，跳转大模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%BB%9A%E5%8A%A8%E5%A4%A7%E6%A8%A1%E5%9D%97%EF%BC%8C%E9%80%89%E4%B8%AD%E5%B0%8F%E6%A8%A1%E5%9D%97"><span class="toc-text">2、滚动大模块，选中小模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E8%A1%A50"><span class="toc-text">3、补0</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E8%A1%A8%E5%8D%95"><span class="toc-text">4、表单</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E9%A6%96%E5%85%88%E9%98%BB%E6%AD%A2%E9%BB%98%E8%AE%A4%E6%8F%90%E4%BA%A4%E4%BA%8B%E4%BB%B6"><span class="toc-text">1.首先阻止默认提交事件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%88%9B%E5%BB%BA%E6%96%B0%E5%AF%B9%E8%B1%A1%EF%BC%8C%E5%AD%98%E5%82%A8%E8%A1%A8%E5%8D%95%E8%8E%B7%E5%8F%96%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="toc-text">2.创建新对象，存储表单获取的数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E6%B8%B2%E6%9F%93"><span class="toc-text">3.渲染</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E5%88%A0%E9%99%A4%E6%A8%A1%E5%9D%97"><span class="toc-text">4.删除模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E8%BF%9B%E8%A1%8C%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81"><span class="toc-text">5.进行表单验证</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8"><span class="toc-text">5、本地存储</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81"><span class="toc-text">6、表单验证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81%E6%B8%B2%E6%9F%93%E6%95%B0%E6%8D%AE"><span class="toc-text">7、渲染数据</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE"><span class="toc-text">项目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86"><span class="toc-text">一、项目管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%AA%8C%E8%AF%81%E7%A0%81%E7%99%BB%E5%BD%95"><span class="toc-text">二、验证码登录</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-text">3、富文本编辑器</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
 
     
       <div class="comments-container">

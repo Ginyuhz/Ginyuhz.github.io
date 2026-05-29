@@ -153,12 +153,63 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-29 22:15:42
+          2026-05-29 23:59:13
         </span>
         
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="Categories"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/VUE/" title="VUE">
+                    <b>#</b> VUE
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/computed%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7/" title="computed计算属性">
+                    #computed计算属性
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/watch%E7%9B%91%E5%90%AC%E5%99%A8/" title="watch监听器">
+                    #watch监听器
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
       <div class="markdown-body">
-        
+        <h2 id="1、计算属性"><a href="#1、计算属性" class="headerlink" title="1、计算属性"></a>1、计算属性</h2><p>概念：基于现有数据，计算出新的新属性。依赖的数据变化，自动重新计算<br>语法：  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">computed：&#123;</span><br><span class="line">计算属性名（）&#123;</span><br><span class="line">一段代码逻辑（计算逻辑）</span><br><span class="line">return 结果 </span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>1.声明在computed配置项中，一个计算属性对应一个函数<br>2.使用起来和普通属性一样使用</p>
+<h2 id="2、computed和methods比较"><a href="#2、computed和methods比较" class="headerlink" title="2、computed和methods比较"></a>2、computed和methods比较</h2><p>computed计算属性：<br>封装了一段对于数据的处理，求得一个结果</p>
+<p>缓存特性（提升性能）：<br>有缓存，一旦计算出结果，就会立刻缓存下一次读取，直接读缓存，性能特别高</p>
+<p>methods方法：<br>给实例提供一个方法，调用以处理业务逻辑</p>
+<h2 id="3、计算属性完整写法"><a href="#3、计算属性完整写法" class="headerlink" title="3、计算属性完整写法"></a>3、计算属性完整写法</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">computed：&#123;</span><br><span class="line">计算属性名：&#123;</span><br><span class="line">get()&#123;</span><br><span class="line">一段代码逻辑（计算逻辑）</span><br><span class="line">return 结果 </span><br><span class="line">&#125;，</span><br><span class="line">set（修改的值）&#123;</span><br><span class="line">一段代码逻辑（修改逻辑）</span><br><span class="line">&#125; </span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4、watch监听器（监视器）"><a href="#4、watch监听器（监视器）" class="headerlink" title="4、watch监听器（监视器）"></a>4、watch监听器（监视器）</h2><p>作用：监视数据变化，执行一些业务逻辑或异步操作<br>语法:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">words: &#x27;&#x27;</span><br><span class="line">&#125;，</span><br><span class="line">watch: &#123;</span><br><span class="line">deep:true，//对复杂类型深度监视</span><br><span class="line">immediate：true,//初始化立刻执行一次handler方法</span><br><span class="line">该方法会在数据变化时调用执行</span><br><span class="line">newValue新值, oldValue老值（一般不用）</span><br><span class="line">words (newValue,oldValue) &#123;</span><br><span class="line">console.log(&#x27;变化了&#x27;, newValue)</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-deep-true"><a href="#1-deep-true" class="headerlink" title="1.deep:true"></a>1.deep:true</h3><p>对复杂类型深度监视<br>在简单简单监视中，words相当于handler，配了deep&#x2F;immediate时，必须用handler来放逻辑，handler是watch里真正执行逻辑的固定方法名<br>语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">watch:&#123;</span><br><span class="line">words:&#123;</span><br><span class="line">deep:true，</span><br><span class="line">immediate：true,</span><br><span class="line">handler (newValue,oldValue) &#123;</span><br><span class="line">console.log(&#x27;变化了&#x27;, newValue)</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-immediate：true"><a href="#2-immediate：true" class="headerlink" title="2.immediate：true"></a>2.immediate：true</h3><p>初始化立刻执行一次handler方法</p>
+
       </div>
       
         <div class="prev-or-next">
@@ -173,9 +224,37 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-29 22:15:42
+              2026-05-29 23:59:13
             </span>
             
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="Categories"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/VUE/" title="VUE">
+                        <b>#</b> VUE
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/computed%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7/" title="computed计算属性">
+                        #computed计算属性
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/watch%E7%9B%91%E5%90%AC%E5%99%A8/" title="watch监听器">
+                        #watch监听器
+                      </a>
+                    </span>
+                    
+                  </span>
+              
           </div>
           <div class="post-foot-next">
             
@@ -189,6 +268,23 @@
       
     </div>
     
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7"><span class="toc-text">1、计算属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81computed%E5%92%8Cmethods%E6%AF%94%E8%BE%83"><span class="toc-text">2、computed和methods比较</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E5%AE%8C%E6%95%B4%E5%86%99%E6%B3%95"><span class="toc-text">3、计算属性完整写法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81watch%E7%9B%91%E5%90%AC%E5%99%A8%EF%BC%88%E7%9B%91%E8%A7%86%E5%99%A8%EF%BC%89"><span class="toc-text">4、watch监听器（监视器）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-deep-true"><span class="toc-text">1.deep:true</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-immediate%EF%BC%9Atrue"><span class="toc-text">2.immediate：true</span></a></li></ol></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
 
     
       <div class="comments-container">
