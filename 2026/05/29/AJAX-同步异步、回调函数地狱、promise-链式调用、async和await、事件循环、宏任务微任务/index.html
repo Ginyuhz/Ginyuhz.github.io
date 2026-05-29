@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="zn-CN" color-mode="light">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="John Doe" />
+  <!-- Open Graph Description 简短摘要-->
+  
+  <!-- 用于搜索引擎的文章摘要 -->
+  
+  
+  
+  <title>
+    
+      AJAX-同步异步、回调函数地狱、promise-链式调用、async和await、事件循环、宏任务微任务 
+      
+      
+      |
+    
+     GINYUHZ
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
+  <!-- 代码块风格 -->
+  
+
+  <!-- jquery3.3.1 -->
+  
+    <script defer type="text/javascript" src="/plugins/jquery.min.js"></script>
+  
+
+  <!-- fancybox -->
+  
+    <link href="/plugins/jquery.fancybox.min.css" rel="stylesheet">
+    <script defer type="text/javascript" src="/plugins/jquery.fancybox.min.js"></script>
+  
+  
+<script src="/js/fancybox.js"></script>
+
+
+  
+
+  
+
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
+    }
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img src="/images/avatar.png" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">Ginyuhz</a></div>
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">首页</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">归档</a>
+        </li>
+      
+        <li class="nav-item" data-path="/categories/">
+          <a href="/categories/">分类</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">标签</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<script src="/js/activeNav.js"></script>
+
+
+
+      <div class="flex-container">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">AJAX-同步异步、回调函数地狱、promise-链式调用、async和await、事件循环、宏任务微任务</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+          2026-05-29 22:51:25
+        </span>
+        
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="Categories"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/AJAX/" title="AJAX">
+                    <b>#</b> AJAX
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E5%90%8C%E6%AD%A5%E5%BC%82%E6%AD%A5/" title="同步异步">
+                    #同步异步
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%9C%B0%E7%8B%B1/" title="回调函数地狱">
+                    #回调函数地狱
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/promise-%E9%93%BE%E5%BC%8F%E8%B0%83%E7%94%A8/" title="promise-链式调用">
+                    #promise-链式调用
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/async%E5%92%8Cawait/" title="async和await">
+                    #async和await
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/" title="事件循环">
+                    #事件循环
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E5%AE%8F%E4%BB%BB%E5%8A%A1%E5%BE%AE%E4%BB%BB%E5%8A%A1/" title="宏任务微任务">
+                    #宏任务微任务
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h2 id="1、同步代码和异步代码"><a href="#1、同步代码和异步代码" class="headerlink" title="1、同步代码和异步代码"></a>1、同步代码和异步代码</h2><p>同步代码：浏览器按照我们书写代码的顺序一行行执行，上一行完成才执行下一行（逐行执行，原地等待结果后才继续执行）</p>
+<p>异步代码：程序可能执行一个长期运行的任务的同时继续对其他事件做出反应，不必等待任务完成，与此同时，你的程序也将在任务完成后显示结果（调用后耗时，不阻塞代码继续执行，将来完成后触发一个回调函数）</p>
+<p>异步代码：<br>setTimeout&#x2F;setInterval<br>事件<br>AJAX </p>
+<h2 id="2、回调函数地狱"><a href="#2、回调函数地狱" class="headerlink" title="2、回调函数地狱"></a>2、回调函数地狱</h2><p>概念：在回调函数中嵌套回调函数，一直嵌套下去就形成了回调函数地狱</p>
+<p>缺点：可读性差，异常无法捕获，耦合性差，牵一发动全身</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">axios(&#123;url: &#x27;http://hmajax.itheima.net/api/province&#x27;&#125;).then(result =&gt; &#123;</span><br><span class="line">const pname = result.data.list[0]</span><br><span class="line">document.querySelector(&#x27;.province&#x27;).innerHTML = pname</span><br><span class="line">// 2. 获取默认第一个城市的名字</span><br><span class="line">axios(&#123;url: &#x27;http://hmajax.itheima.net/api/city&#x27;, params: &#123; pname &#125;&#125;).then(result =&gt; &#123;</span><br><span class="line">const cname = result.data.list[0]</span><br><span class="line">document.querySelector(&#x27;.city&#x27;).innerHTML = cname</span><br><span class="line">// 3. 获取默认第一个地区的名字</span><br><span class="line">axios(&#123;url: &#x27;http://hmajax.itheima.net/api/area&#x27;, params: &#123; pname, cname &#125;&#125;).then(result =&gt; &#123;</span><br><span class="line">console.log(result)</span><br><span class="line">const areaName = result.data.list[0]</span><br><span class="line">document.querySelector(&#x27;.area&#x27;).innerHTML = areaName</span><br><span class="line">&#125;)</span><br><span class="line">&#125;)</span><br><span class="line">&#125;).catch(error =&gt; &#123;</span><br><span class="line">console.dir(error)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3、promise-链式调用"><a href="#3、promise-链式调用" class="headerlink" title="3、promise-链式调用"></a>3、promise-链式调用</h2><p>概念：依靠then（）方法会返回一个新生成的promise对象特性，继续串联下一环任务，直到结束</p>
+<p>细节：then（）回调函数中的返回值，会影响新生成的promise对象最终状态和结果</p>
+<p>好处：通过链式调用解决回调函数嵌套问题</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">axios(&#123;url: &#x27;http://hmajax.itheima.net/api/province&#x27;&#125;).then(result =&gt; &#123;</span><br><span class="line">pname = result.data.list[0]</span><br><span class="line">document.querySelector(&#x27;.province&#x27;).innerHTML = pname</span><br><span class="line">// 2. 得到-获取城市Promise对象</span><br><span class="line">return axios(&#123;url: &#x27;http://hmajax.itheima.net/api/city&#x27;, params: &#123; pname &#125;&#125;)</span><br><span class="line">&#125;).then(result =&gt; &#123;</span><br><span class="line">const cname = result.data.list[0]</span><br><span class="line">document.querySelector(&#x27;.city&#x27;).innerHTML = cname</span><br><span class="line">// 3. 得到-获取地区Promise对象</span><br><span class="line">return axios(&#123;url: &#x27;http://hmajax.itheima.net/api/area&#x27;, params: &#123; pname, cname &#125;&#125;)</span><br><span class="line">&#125;).then(result =&gt; &#123;</span><br><span class="line">console.log(result)</span><br><span class="line">const areaName = result.data.list[0]</span><br><span class="line">document.querySelector(&#x27;.area&#x27;).innerHTML = areaName</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4、async函数和await"><a href="#4、async函数和await" class="headerlink" title="4、async函数和await"></a>4、async函数和await</h2><p>定义：async函数是使用async关键字声明的函数，是AsyncFunction构造函数的实例，并且其中允许使用await关键字。async和await关键字让我们可以用一种更加简洁的方式写出基于promise的异步行为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">async function getData() &#123;</span><br><span class="line">// 2. await等待Promise对象成功的结果</span><br><span class="line">const pObj = await axios(&#123;url: &#x27;http://hmajax.itheima.net/api/province&#x27;&#125;)</span><br><span class="line">const pname = pObj.data.list[0]</span><br><span class="line">const cObj = await axios(&#123;url: &#x27;http://hmajax.itheima.net/api/city&#x27;, params: &#123; pname &#125;&#125;)</span><br><span class="line">const cname = cObj.data.list[0]</span><br><span class="line">const aObj = await axios(&#123;url: &#x27;http://hmajax.itheima.net/api/area&#x27;, params: &#123; pname, cname &#125;&#125;)</span><br><span class="line">const areaName = aObj.data.list[0]</span><br><span class="line"></span><br><span class="line">document.querySelector(&#x27;.province&#x27;).innerHTML = pname</span><br><span class="line">document.querySelector(&#x27;.city&#x27;).innerHTML = cname</span><br><span class="line">document.querySelector(&#x27;.area&#x27;).innerHTML = areaName</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">getData()</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="5、async函数和await-捕获错误"><a href="#5、async函数和await-捕获错误" class="headerlink" title="5、async函数和await_捕获错误"></a>5、async函数和await_捕获错误</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">async function getData() &#123;</span><br><span class="line">// 1. try包裹可能产生错误的代码</span><br><span class="line">try &#123;</span><br><span class="line">const pObj = await axios(&#123; url: &#x27;http://hmajax.itheima.net/api/province&#x27; &#125;)</span><br><span class="line">const pname = pObj.data.list[0]</span><br><span class="line">const cObj = await axios(&#123; url: &#x27;http://hmajax.itheima.net/api/city&#x27;, params: &#123; pname &#125; &#125;)</span><br><span class="line">const cname = cObj.data.list[0]</span><br><span class="line">const aObj = await axios(&#123; url: &#x27;http://hmajax.itheima.net/api/area&#x27;, params: &#123; pname, cname &#125; &#125;)</span><br><span class="line">const areaName = aObj.data.list[0]</span><br><span class="line"></span><br><span class="line">document.querySelector(&#x27;.province&#x27;).innerHTML = pname</span><br><span class="line">document.querySelector(&#x27;.city&#x27;).innerHTML = cname</span><br><span class="line">document.querySelector(&#x27;.area&#x27;).innerHTML = areaName</span><br><span class="line">&#125; catch (error) &#123;</span><br><span class="line">// 2. 接着调用catch块，接收错误信息</span><br><span class="line">// 如果try里某行代码报错后，try中剩余的代码不会执行了</span><br><span class="line">console.dir(error)</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">getData()           </span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="6、事件循环"><a href="#6、事件循环" class="headerlink" title="6、事件循环"></a>6、事件循环</h2><p>概念：js有一个基于事件循环的并发模型，事件循环负责执行代码、收集和处理事件以及执行队列中的子任务</p>
+<p>js单线程，为了让耗时代码不阻塞其他代码运行，设计了事件循环</p>
+<p>调用栈：先执行同步代码</p>
+<p>浏览器：执行异步代码，到时间推到任务队列</p>
+<p>任务队列：当调用栈空闲，执行任务队列的任务</p>
+<h2 id="7、宏任务和微任务"><a href="#7、宏任务和微任务" class="headerlink" title="7、宏任务和微任务"></a>7、宏任务和微任务</h2><p>1.宏任务：由浏览器环境执行的异步代码<br>2.微任务：由js引擎环境执行的异步任务<br>3.调用栈优先执行微任务队列</p>
+<p>promise对象.then()</p>
+<p>promise本身是同步，而then和catch回调函数是异步</p>
+<h2 id="8、promise-all静态方法"><a href="#8、promise-all静态方法" class="headerlink" title="8、promise.all静态方法"></a>8、promise.all静态方法</h2><p>概念：合并多个promise对象，等待所有同时成功完成（或一个失败），做后续逻辑</p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-prev">
+            
+              <a href="/2026/05/29/AJAX-Promise/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一篇</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+              2026-05-29 22:51:25
+            </span>
+            
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="Categories"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/AJAX/" title="AJAX">
+                        <b>#</b> AJAX
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E5%90%8C%E6%AD%A5%E5%BC%82%E6%AD%A5/" title="同步异步">
+                        #同步异步
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%9C%B0%E7%8B%B1/" title="回调函数地狱">
+                        #回调函数地狱
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/promise-%E9%93%BE%E5%BC%8F%E8%B0%83%E7%94%A8/" title="promise-链式调用">
+                        #promise-链式调用
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/async%E5%92%8Cawait/" title="async和await">
+                        #async和await
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/" title="事件循环">
+                        #事件循环
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E5%AE%8F%E4%BB%BB%E5%8A%A1%E5%BE%AE%E4%BB%BB%E5%8A%A1/" title="宏任务微任务">
+                        #宏任务微任务
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-next">
+            
+              <a href="/2026/05/29/Node/" target="_self">
+                <span>下一篇</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%90%8C%E6%AD%A5%E4%BB%A3%E7%A0%81%E5%92%8C%E5%BC%82%E6%AD%A5%E4%BB%A3%E7%A0%81"><span class="toc-text">1、同步代码和异步代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%9C%B0%E7%8B%B1"><span class="toc-text">2、回调函数地狱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81promise-%E9%93%BE%E5%BC%8F%E8%B0%83%E7%94%A8"><span class="toc-text">3、promise-链式调用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81async%E5%87%BD%E6%95%B0%E5%92%8Cawait"><span class="toc-text">4、async函数和await</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81async%E5%87%BD%E6%95%B0%E5%92%8Cawait-%E6%8D%95%E8%8E%B7%E9%94%99%E8%AF%AF"><span class="toc-text">5、async函数和await_捕获错误</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF"><span class="toc-text">6、事件循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E3%80%81%E5%AE%8F%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%BE%AE%E4%BB%BB%E5%8A%A1"><span class="toc-text">7、宏任务和微任务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8%E3%80%81promise-all%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95"><span class="toc-text">8、promise.all静态方法</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
+    
+      <div class="comments-container">
+        
+
+
+
+
+
+
+
+      </div>
+    
+  </div>
+
+
+        
+<div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          
+              <a title="github" target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">
+                <i class="iconfont icon-github"></i>
+              </a>
+              
+        </li>
+        
+    </ul>
+  </div>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Copyright © 2026 Ginyuhz</a>
+        
+    </div>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Ginyuhz | Powered by Hexo</a>
+        
+    </div>
+  
+  
+</div>
+
+      </div>
+
+      <div class="tools-bar">
+        <div class="back-to-top tools-bar-item hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+        
+  <div class="search-icon tools-bar-item" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-title">
+        <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-search"></i>
+          </a>
+        </span>
+        
+          <input type="text" class="search-input" id="search-input" placeholder="搜索文章...">
+        
+        <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-close"></i>
+          </a>
+        </span>
+      </div>
+      <div class="search-result" id="search-result"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    inputArea.onclick = function() {
+      getSearchFile()
+      this.onclick = null
+    }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        // inputArea.focus()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>输入想要搜索的内容：<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'>" + orig_data_title + "</a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<p class=\"search-result-abstract\">" + match_content + "...</p>"
+                }
+                str += "</li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>未找到...<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The search.xml file was not found, please refer to：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The request failed, Try to refresh the page or try again later.<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
+        
+  <div class="tools-bar-item theme-icon" id="switch-color-scheme">
+    <a href="javascript: void(0)">
+      <i id="theme-icon" class="iconfont icon-moon"></i>
+    </a>
+  </div>
+
+  
+<script src="/js/colorscheme.js"></script>
+
+
+
+
+
+        
+
+      </div>
+    </div>
+  </body>
+</html>

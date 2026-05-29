@@ -153,12 +153,98 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-29 03:03:14
+          2026-05-29 19:20:32
         </span>
         
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="Categories"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/CSS/" title="CSS">
+                    <b>#</b> CSS
+                  </a>
+                </span>
+                
+                <span class="span--category">
+                  <a href="/categories/CSS/%E9%80%89%E6%8B%A9%E5%99%A8/" title="选择器">
+                    <b>#</b> 选择器
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E7%BB%93%E6%9E%84%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8/" title="结构伪类选择器">
+                    #结构伪类选择器
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8/" title="伪元素选择器">
+                    #伪元素选择器
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
       <div class="markdown-body">
-        
+        <h2 id="1、结构伪类选择器"><a href="#1、结构伪类选择器" class="headerlink" title="1、结构伪类选择器"></a>1、结构伪类选择器</h2><p>不要有空格<br>根据元素的结果关系找元素</p>
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>E:first-child</td>
+<td>查找第一个E元素</td>
+</tr>
+<tr>
+<td>E:last-child</td>
+<td>查找最后一个E元素</td>
+</tr>
+<tr>
+<td>E:nth-child（N）</td>
+<td>查找第N个E元素（第一个E元素的N值为1）</td>
+</tr>
+</tbody></table>
+<p>:nth-child(公式)<br>根据元素的结构关系查找多个元素</p>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>偶数标签</td>
+<td>2n</td>
+</tr>
+<tr>
+<td>奇数标签</td>
+<td>2n+1，2n-1</td>
+</tr>
+<tr>
+<td>找到5的倍数的标签</td>
+<td>5n</td>
+</tr>
+<tr>
+<td>找到第五个以后的标签</td>
+<td>n+5</td>
+</tr>
+<tr>
+<td>找到第五个以前的标签</td>
+<td>-n+5</td>
+</tr>
+</tbody></table>
+<p>(n从0开始算，不能换顺序，n要在前面，否则无效)</p>
+<h2 id="2、伪元素选择器"><a href="#2、伪元素选择器" class="headerlink" title="2、伪元素选择器"></a>2、伪元素选择器</h2><p>不要有空格<br>作用：创建虚拟元素（伪元素），用来摆放装饰性的内容<br>E::before    在E元素里面最前面添加一个伪元素<br>E::after     在E元素里面最后面添加一个伪元素<br>1.必须设置content：”内容”属性，否则不生效，用来设置伪元素的内容，如果没有内容，则引号留空即可<br>2.伪元素默认行内显示模式<br>3.权重和标签选择器相同</p>
+
       </div>
       
         <div class="prev-or-next">
@@ -173,9 +259,43 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-29 03:03:14
+              2026-05-29 19:20:32
             </span>
             
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="Categories"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/CSS/" title="CSS">
+                        <b>#</b> CSS
+                      </a>
+                    </span>
+                    
+                    <span class="span--category">
+                      <a href="/categories/CSS/%E9%80%89%E6%8B%A9%E5%99%A8/" title="选择器">
+                        <b>#</b> 选择器
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E7%BB%93%E6%9E%84%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8/" title="结构伪类选择器">
+                        #结构伪类选择器
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8/" title="伪元素选择器">
+                        #伪元素选择器
+                      </a>
+                    </span>
+                    
+                  </span>
+              
           </div>
           <div class="post-foot-next">
             
@@ -189,6 +309,23 @@
       
     </div>
     
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E7%BB%93%E6%9E%84%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">1、结构伪类选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">2、伪元素选择器</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
 
     
       <div class="comments-container">

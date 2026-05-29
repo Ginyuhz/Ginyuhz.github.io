@@ -206,7 +206,7 @@
 <li>提交到仓库(commit)</li>
 </ol>
 <h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><h3 id="1-配置SSH公钥"><a href="#1-配置SSH公钥" class="headerlink" title="1.配置SSH公钥"></a>1.<strong>配置SSH公钥</strong></h3><p>生成SSH公钥：ssh-keygen -t rsa不断回车，如果公钥已经存在，则自动覆盖</p>
-<h3 id="2-Gitee设置账户共公钥"><a href="#2-Gitee设置账户共公钥" class="headerlink" title="2.Gitee设置账户共公钥"></a>2.<strong>Gitee设置账户共公钥</strong></h3><p>​获取公钥<br>cat ~&#x2F;.ssh&#x2F;id_rsa.pub<br>验证是否配置成功<br>ssh -T <a href="mailto:&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#116;&#101;&#x65;&#46;&#99;&#111;&#x6d;">git@gitee.com</a></p>
+<h3 id="2-Gitee设置账户共公钥"><a href="#2-Gitee设置账户共公钥" class="headerlink" title="2.Gitee设置账户共公钥"></a>2.<strong>Gitee设置账户共公钥</strong></h3><p>​获取公钥<br>cat ~&#x2F;.ssh&#x2F;id_rsa.pub<br>验证是否配置成功<br>ssh -T <a href="mailto:&#103;&#x69;&#116;&#x40;&#x67;&#105;&#x74;&#101;&#x65;&#x2e;&#99;&#111;&#x6d;">git@gitee.com</a></p>
 <h3 id="3-操作远程仓库"><a href="#3-操作远程仓库" class="headerlink" title="3.操作远程仓库"></a>3.<strong>操作远程仓库</strong></h3><h4 id="1-添加远程仓库"><a href="#1-添加远程仓库" class="headerlink" title="1.添加远程仓库"></a>1.<strong>添加远程仓库</strong></h4><p>​此操作是先初始化本地库，然后与已创建的远程库进行对接<br>命令： git remote add &lt;远端名称&gt; &lt;仓库路径&gt;<br>远端名称，默认是origin，取决于远端服务器设置<br>仓库路径，从远端服务器获取此URL</p>
 <h4 id="2-查看远程仓库"><a href="#2-查看远程仓库" class="headerlink" title="2.查看远程仓库"></a>2.<strong>查看远程仓库</strong></h4><p>git remote</p>
 <h4 id="3-推送到远程仓库"><a href="#3-推送到远程仓库" class="headerlink" title="3.推送到远程仓库"></a>3.<strong>推送到远程仓库</strong></h4><p>命令：git push [-f] [–set-upstream] [远端名称 [本地分支名][:远端分支名]]<br>如果远程分支名和本地分支名称相同，则可以只写本地分支<br>git push origin master<br>-f 表示强制覆盖<br>–set-upstream 推送同时建立起和远端分支的关联关系。<br>git push –set-upstream origin master<br>如果当前分支已经和远端分支关联，则可以省略分支名和远端名。<br>git push 将master分支推送到已关联的远端分支<br>查看关联关系：<br>git branch -vv</p>
@@ -220,7 +220,7 @@
         <div class="prev-or-next">
           <div class="post-foot-prev">
             
-              <a href="/2026/05/28/Git%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B/" target="_self">
+              <a href="/2026/05/28/Typora%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
                 <span>上一篇</span>
               </a>
@@ -263,7 +263,7 @@
           </div>
           <div class="post-foot-next">
             
-              <a href="/2026/05/28/html%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E5%8F%8A%E6%93%8D%E4%BD%9C/" target="_self">
+              <a href="/2026/05/28/Git%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B/" target="_self">
                 <span>下一篇</span>
                 <i class="iconfont icon-chevronright"></i>
               </a>

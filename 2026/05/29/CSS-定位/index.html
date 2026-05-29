@@ -153,12 +153,47 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-29 03:05:15
+          2026-05-29 19:42:07
         </span>
         
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="Categories"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/CSS/" title="CSS">
+                    <b>#</b> CSS
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E5%AE%9A%E4%BD%8D/" title="定位">
+                    #定位
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/css%E7%B2%BE%E7%81%B5/" title="css精灵">
+                    #css精灵
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
       <div class="markdown-body">
-        
+        <h2 id="1、定位"><a href="#1、定位" class="headerlink" title="1、定位"></a>1、定位</h2><p>作用：灵活的改变盒子在网页中的位置<br>实现方法：</p>
+<h3 id="1-相对定位position：relative"><a href="#1-相对定位position：relative" class="headerlink" title="1.相对定位position：relative"></a>1.相对定位position：relative</h3><p>1.改变位置的参照物是自己原来的位置（top：100px，相对原来位置的上面，向下移动100px）<br>2.不投标，占位<br>3.标签显示模式不变</p>
+<h3 id="2-绝对定位position：absolute"><a href="#2-绝对定位position：absolute" class="headerlink" title="2.绝对定位position：absolute"></a>2.绝对定位position：absolute</h3><p>使用场景：子级绝对定位，父级相对定位（子决父相）<br>1.脱标，不占位置<br>2.参照物：先找最近的已经定位的祖先元素，如果所有祖先元素都没有定位，参照浏览器可视区改位置<br>3.显示模式改变，改变成宽高生效（具备了行内块的特点）<br>边偏：设置盒子的位置<br>left<br>right<br>top<br>bottom </p>
+<h3 id="3-定位居中"><a href="#3-定位居中" class="headerlink" title="3.定位居中"></a>3.定位居中</h3><p>实现步骤：<br>1.绝对定位<br>2.水平、垂直边偏移50%<br>3.子级向左、上移动自身移动自身尺寸的一半<br>1.左、上的外边距为尺寸的一半<br>2.transform：translate（-50%，-50%）(这里的50%就是自己的宽高，不需要自己计算)</p>
+<h3 id="4-固定定位"><a href="#4-固定定位" class="headerlink" title="4.固定定位"></a>4.固定定位</h3><p>position:fiexd;<br>特点：<br>1.脱标，不占位置<br>2.参照物：浏览器窗口<br>3.显示模式改变，改变成宽高生效（具备了行内块的特点）</p>
+<h3 id="5-堆叠层级z-index"><a href="#5-堆叠层级z-index" class="headerlink" title="5.堆叠层级z-index"></a>5.堆叠层级z-index</h3><p>默认按照标签书写顺序，后来者居上<br>作用：设置定位元素的层级顺序，改变定位元素的显示顺序<br>取值是整数，默认0，取值越大显示顺序越靠上</p>
+<h2 id="2、CSS精灵"><a href="#2、CSS精灵" class="headerlink" title="2、CSS精灵"></a>2、CSS精灵</h2><p>也叫CSS Sprites,是网页图片的应用处理方式，把网页中的一些背景图片整合到一个图片文件夹中，再background-position</p>
+
       </div>
       
         <div class="prev-or-next">
@@ -173,17 +208,67 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-29 03:05:15
+              2026-05-29 19:42:07
             </span>
             
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="Categories"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/CSS/" title="CSS">
+                        <b>#</b> CSS
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E5%AE%9A%E4%BD%8D/" title="定位">
+                        #定位
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/css%E7%B2%BE%E7%81%B5/" title="css精灵">
+                        #css精灵
+                      </a>
+                    </span>
+                    
+                  </span>
+              
           </div>
           <div class="post-foot-next">
+            
+              <a href="/2026/05/29/JS%E5%9F%BA%E7%A1%80/" target="_self">
+                <span>下一篇</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
             
           </div>
         </div>
       
     </div>
     
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%AE%9A%E4%BD%8D"><span class="toc-text">1、定位</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%9B%B8%E5%AF%B9%E5%AE%9A%E4%BD%8Dposition%EF%BC%9Arelative"><span class="toc-text">1.相对定位position：relative</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8Dposition%EF%BC%9Aabsolute"><span class="toc-text">2.绝对定位position：absolute</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%AE%9A%E4%BD%8D%E5%B1%85%E4%B8%AD"><span class="toc-text">3.定位居中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%9B%BA%E5%AE%9A%E5%AE%9A%E4%BD%8D"><span class="toc-text">4.固定定位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%A0%86%E5%8F%A0%E5%B1%82%E7%BA%A7z-index"><span class="toc-text">5.堆叠层级z-index</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81CSS%E7%B2%BE%E7%81%B5"><span class="toc-text">2、CSS精灵</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
 
     
       <div class="comments-container">

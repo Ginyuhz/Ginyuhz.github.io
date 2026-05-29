@@ -4,13 +4,890 @@
   
     
     <entry>
-      <title>CSS-定位</title>
-      <link href="/2026/05/29/CSS-%E5%AE%9A%E4%BD%8D/"/>
-      <url>/2026/05/29/CSS-%E5%AE%9A%E4%BD%8D/</url>
+      <title>JS面试</title>
+      <link href="/2026/05/29/JS%E9%9D%A2%E8%AF%95/"/>
+      <url>/2026/05/29/JS%E9%9D%A2%E8%AF%95/</url>
       
         <content type="html"><![CDATA[]]></content>
       
       
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>案例思路</title>
+      <link href="/2026/05/29/%E6%A1%88%E4%BE%8B%E6%80%9D%E8%B7%AF/"/>
+      <url>/2026/05/29/%E6%A1%88%E4%BE%8B%E6%80%9D%E8%B7%AF/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VUE-mutations</title>
+      <link href="/2026/05/29/VUE-mutations/"/>
+      <url>/2026/05/29/VUE-mutations/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VUE-state状态</title>
+      <link href="/2026/05/29/VUE-state%E7%8A%B6%E6%80%81/"/>
+      <url>/2026/05/29/VUE-state%E7%8A%B6%E6%80%81/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VUE-vuex基础</title>
+      <link href="/2026/05/29/VUE-vuex%E5%9F%BA%E7%A1%80/"/>
+      <url>/2026/05/29/VUE-vuex%E5%9F%BA%E7%A1%80/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VUE-面经基础版</title>
+      <link href="/2026/05/29/VUE-%E9%9D%A2%E7%BB%8F%E5%9F%BA%E7%A1%80%E7%89%88/"/>
+      <url>/2026/05/29/VUE-%E9%9D%A2%E7%BB%8F%E5%9F%BA%E7%A1%80%E7%89%88/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VUE-路由</title>
+      <link href="/2026/05/29/VUE-%E8%B7%AF%E7%94%B1/"/>
+      <url>/2026/05/29/VUE-%E8%B7%AF%E7%94%B1/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VUE-商品列表</title>
+      <link href="/2026/05/29/VUE-%E5%95%86%E5%93%81%E5%88%97%E8%A1%A8/"/>
+      <url>/2026/05/29/VUE-%E5%95%86%E5%93%81%E5%88%97%E8%A1%A8/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VUE-自定义指令及插槽</title>
+      <link href="/2026/05/29/VUE-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4%E5%8F%8A%E6%8F%92%E6%A7%BD/"/>
+      <url>/2026/05/29/VUE-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4%E5%8F%8A%E6%8F%92%E6%A7%BD/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VUE-进阶语法</title>
+      <link href="/2026/05/29/VUE-%E8%BF%9B%E9%98%B6%E8%AF%AD%E6%B3%95/"/>
+      <url>/2026/05/29/VUE-%E8%BF%9B%E9%98%B6%E8%AF%AD%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VUE-小黑记事本</title>
+      <link href="/2026/05/29/VUE-%E5%B0%8F%E9%BB%91%E8%AE%B0%E4%BA%8B%E6%9C%AC/"/>
+      <url>/2026/05/29/VUE-%E5%B0%8F%E9%BB%91%E8%AE%B0%E4%BA%8B%E6%9C%AC/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VUE-组件组成及通信</title>
+      <link href="/2026/05/29/VUE-%E7%BB%84%E4%BB%B6%E7%BB%84%E6%88%90%E5%8F%8A%E9%80%9A%E4%BF%A1/"/>
+      <url>/2026/05/29/VUE-%E7%BB%84%E4%BB%B6%E7%BB%84%E6%88%90%E5%8F%8A%E9%80%9A%E4%BF%A1/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VUE-生命周期及工程化</title>
+      <link href="/2026/05/29/VUE-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%8F%8A%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
+      <url>/2026/05/29/VUE-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%8F%8A%E5%B7%A5%E7%A8%8B%E5%8C%96/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VUE-computed计算属性、watch监听器</title>
+      <link href="/2026/05/29/VUE-computed%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E3%80%81watch%E7%9B%91%E5%90%AC%E5%99%A8/"/>
+      <url>/2026/05/29/VUE-computed%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E3%80%81watch%E7%9B%91%E5%90%AC%E5%99%A8/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VUE-指令补充</title>
+      <link href="/2026/05/29/VUE-%E6%8C%87%E4%BB%A4%E8%A1%A5%E5%85%85/"/>
+      <url>/2026/05/29/VUE-%E6%8C%87%E4%BB%A4%E8%A1%A5%E5%85%85/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VUE-基础及v-指令</title>
+      <link href="/2026/05/29/VUE-%E5%9F%BA%E7%A1%80%E5%8F%8Av-%E6%8C%87%E4%BB%A4/"/>
+      <url>/2026/05/29/VUE-%E5%9F%BA%E7%A1%80%E5%8F%8Av-%E6%8C%87%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Webpack</title>
+      <link href="/2026/05/29/Webpack/"/>
+      <url>/2026/05/29/Webpack/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>模块化</title>
+      <link href="/2026/05/29/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+      <url>/2026/05/29/%E6%A8%A1%E5%9D%97%E5%8C%96/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Node</title>
+      <link href="/2026/05/29/Node/"/>
+      <url>/2026/05/29/Node/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h2><p>Node.js是一个跨平台js运行环境，使开发者可以搭建服务器端的js应用程序</p><p>作用：</p><p>使用node.js编写服务器端程序</p><p>编写数据接口，提供网页资源浏览功能等</p><p>前端工程化</p><h2 id="2-前端工程化"><a href="#2-前端工程化" class="headerlink" title="2.前端工程化"></a>2.前端工程化</h2><p>前端工程化：开发直到项目上线，过程中集成的所有工具和技术<br>压缩工具、格式化工具、转换工具、打包工具、脚手架工具</p><h2 id="3-node-js如何执行js"><a href="#3-node-js如何执行js" class="headerlink" title="3.node.js如何执行js"></a>3.node.js如何执行js</h2><p>浏览器能够执行js，依靠的内核是v8引擎（c++程序）</p><p>node.js是基于chrome v8引擎进行封装</p><p>区别：都支持ECMAScript标准语法，node.js有独立的API</p><p>node.js环境没有dom和bom等</p><h2 id="4、fs模块"><a href="#4、fs模块" class="headerlink" title="4、fs模块"></a>4、fs模块</h2><p>模块：类似插件，封装了方法&#x2F;属性</p><p>fs模块：封装了与本机文件系统进行交互的方法</p><p><strong>语法：</strong><br>加载fs模块</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const fs = require（‘fs’）</span><br></pre></td></tr></table></figure><p>写入文件内容</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fs.writeFile(&#x27;文件路径&#x27;,&#x27;写入内容&#x27;，err =&gt;&#123;</span><br><span class="line">//写入后的回调函数</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><p>读取文件内容</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fs.readFile（&#x27;文件路径&#x27;，（err，data）=&gt;&#123;</span><br><span class="line">//读取后的回调函数</span><br><span class="line">//data是文件内容的Buffer数据流,可以通过.toString()转换成字符串 </span><br><span class="line">&#125;）</span><br></pre></td></tr></table></figure><h2 id="5、path模块-路径处理"><a href="#5、path模块-路径处理" class="headerlink" title="5、path模块-路径处理"></a>5、path模块-路径处理</h2><p>node.js代码中，相对路径是从终端所在位置开始查找，所以使用绝对路径</p><p>_dirname内置变量（获取当前模块目录-绝对路径）</p><p>path.join（）会使用特定于平台的分隔符，作为界定符，将所有给定的路径片段连接在一起</p><p>语法：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const fs = require(&#x27;fs&#x27;)</span><br><span class="line">// 1. 引入 path 模块对象</span><br><span class="line">const path = require(&#x27;path&#x27;)</span><br><span class="line">// 2. 调用 path.join() 配合 __dirname 组成目标文件的绝对路径</span><br><span class="line">console.log(__dirname)</span><br><span class="line">fs.readFile(path.join(__dirname, &#x27;../test.txt&#x27;), (err, data) =&gt; &#123;</span><br><span class="line">if (err) console.log(err)</span><br><span class="line">else console.log(data.toString())</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h2 id="6、端口号"><a href="#6、端口号" class="headerlink" title="6、端口号"></a>6、端口号</h2><p>标记服务器不同功能的服务程序</p><p>端口号：范围在0-65535之间的任意整数，http协议，默认80端口</p><p>注意：0-1023和一些特定端口号已经被占用</p><h2 id="7、http模块-创建web服务"><a href="#7、http模块-创建web服务" class="headerlink" title="7、http模块-创建web服务"></a>7、http模块-创建web服务</h2><p><strong>目标</strong>：基于 http 模块创建 Web 服务程序</p><p>1.1 加载 http 模块，创建 Web 服务对象<br>1.2 监听 request 请求事件，设置响应头和响应体<br>1.3 配置端口号并启动 Web 服务<br>1.4 浏览器请求（<a href="http://localhost:3000）测试">http://localhost:3000）测试</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// 1.1 加载 http 模块，创建 Web 服务对象</span><br><span class="line">const http = require(&#x27;http&#x27;)</span><br><span class="line">const server = http.createServer()</span><br><span class="line">// 1.2 监听 request 请求事件，设置响应头和响应体</span><br><span class="line">server.on(&#x27;request&#x27;, (req, res) =&gt; &#123;</span><br><span class="line">// 设置响应头-内容类型-普通文本以及中文编码格式</span><br><span class="line">res.setHeader(&#x27;Content-Type&#x27;, &#x27;text/plain;charset=utf-8&#x27;)</span><br><span class="line">// 设置响应体内容，结束本次请求与响应</span><br><span class="line">res.end(&#x27;欢迎使用 Node.js 和 http 模块创建的 Web 服务&#x27;)</span><br><span class="line">&#125;)</span><br><span class="line">// 1.3 配置端口号并启动 Web 服务</span><br><span class="line">server.listen(3000, () =&gt; &#123;</span><br><span class="line">console.log(&#x27;Web 服务启动成功了&#x27;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Node </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Node </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>AJAX-同步异步、回调函数地狱、promise-链式调用、async和await、事件循环、宏任务微任务</title>
+      <link href="/2026/05/29/AJAX-%E5%90%8C%E6%AD%A5%E5%BC%82%E6%AD%A5%E3%80%81%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%9C%B0%E7%8B%B1%E3%80%81promise-%E9%93%BE%E5%BC%8F%E8%B0%83%E7%94%A8%E3%80%81async%E5%92%8Cawait%E3%80%81%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E3%80%81%E5%AE%8F%E4%BB%BB%E5%8A%A1%E5%BE%AE%E4%BB%BB%E5%8A%A1/"/>
+      <url>/2026/05/29/AJAX-%E5%90%8C%E6%AD%A5%E5%BC%82%E6%AD%A5%E3%80%81%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E5%9C%B0%E7%8B%B1%E3%80%81promise-%E9%93%BE%E5%BC%8F%E8%B0%83%E7%94%A8%E3%80%81async%E5%92%8Cawait%E3%80%81%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E3%80%81%E5%AE%8F%E4%BB%BB%E5%8A%A1%E5%BE%AE%E4%BB%BB%E5%8A%A1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1、同步代码和异步代码"><a href="#1、同步代码和异步代码" class="headerlink" title="1、同步代码和异步代码"></a>1、同步代码和异步代码</h2><p>同步代码：浏览器按照我们书写代码的顺序一行行执行，上一行完成才执行下一行（逐行执行，原地等待结果后才继续执行）</p><p>异步代码：程序可能执行一个长期运行的任务的同时继续对其他事件做出反应，不必等待任务完成，与此同时，你的程序也将在任务完成后显示结果（调用后耗时，不阻塞代码继续执行，将来完成后触发一个回调函数）</p><p>异步代码：<br>setTimeout&#x2F;setInterval<br>事件<br>AJAX </p><h2 id="2、回调函数地狱"><a href="#2、回调函数地狱" class="headerlink" title="2、回调函数地狱"></a>2、回调函数地狱</h2><p>概念：在回调函数中嵌套回调函数，一直嵌套下去就形成了回调函数地狱</p><p>缺点：可读性差，异常无法捕获，耦合性差，牵一发动全身</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">axios(&#123;url: &#x27;http://hmajax.itheima.net/api/province&#x27;&#125;).then(result =&gt; &#123;</span><br><span class="line">const pname = result.data.list[0]</span><br><span class="line">document.querySelector(&#x27;.province&#x27;).innerHTML = pname</span><br><span class="line">// 2. 获取默认第一个城市的名字</span><br><span class="line">axios(&#123;url: &#x27;http://hmajax.itheima.net/api/city&#x27;, params: &#123; pname &#125;&#125;).then(result =&gt; &#123;</span><br><span class="line">const cname = result.data.list[0]</span><br><span class="line">document.querySelector(&#x27;.city&#x27;).innerHTML = cname</span><br><span class="line">// 3. 获取默认第一个地区的名字</span><br><span class="line">axios(&#123;url: &#x27;http://hmajax.itheima.net/api/area&#x27;, params: &#123; pname, cname &#125;&#125;).then(result =&gt; &#123;</span><br><span class="line">console.log(result)</span><br><span class="line">const areaName = result.data.list[0]</span><br><span class="line">document.querySelector(&#x27;.area&#x27;).innerHTML = areaName</span><br><span class="line">&#125;)</span><br><span class="line">&#125;)</span><br><span class="line">&#125;).catch(error =&gt; &#123;</span><br><span class="line">console.dir(error)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h2 id="3、promise-链式调用"><a href="#3、promise-链式调用" class="headerlink" title="3、promise-链式调用"></a>3、promise-链式调用</h2><p>概念：依靠then（）方法会返回一个新生成的promise对象特性，继续串联下一环任务，直到结束</p><p>细节：then（）回调函数中的返回值，会影响新生成的promise对象最终状态和结果</p><p>好处：通过链式调用解决回调函数嵌套问题</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">axios(&#123;url: &#x27;http://hmajax.itheima.net/api/province&#x27;&#125;).then(result =&gt; &#123;</span><br><span class="line">pname = result.data.list[0]</span><br><span class="line">document.querySelector(&#x27;.province&#x27;).innerHTML = pname</span><br><span class="line">// 2. 得到-获取城市Promise对象</span><br><span class="line">return axios(&#123;url: &#x27;http://hmajax.itheima.net/api/city&#x27;, params: &#123; pname &#125;&#125;)</span><br><span class="line">&#125;).then(result =&gt; &#123;</span><br><span class="line">const cname = result.data.list[0]</span><br><span class="line">document.querySelector(&#x27;.city&#x27;).innerHTML = cname</span><br><span class="line">// 3. 得到-获取地区Promise对象</span><br><span class="line">return axios(&#123;url: &#x27;http://hmajax.itheima.net/api/area&#x27;, params: &#123; pname, cname &#125;&#125;)</span><br><span class="line">&#125;).then(result =&gt; &#123;</span><br><span class="line">console.log(result)</span><br><span class="line">const areaName = result.data.list[0]</span><br><span class="line">document.querySelector(&#x27;.area&#x27;).innerHTML = areaName</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h2 id="4、async函数和await"><a href="#4、async函数和await" class="headerlink" title="4、async函数和await"></a>4、async函数和await</h2><p>定义：async函数是使用async关键字声明的函数，是AsyncFunction构造函数的实例，并且其中允许使用await关键字。async和await关键字让我们可以用一种更加简洁的方式写出基于promise的异步行为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">async function getData() &#123;</span><br><span class="line">// 2. await等待Promise对象成功的结果</span><br><span class="line">const pObj = await axios(&#123;url: &#x27;http://hmajax.itheima.net/api/province&#x27;&#125;)</span><br><span class="line">const pname = pObj.data.list[0]</span><br><span class="line">const cObj = await axios(&#123;url: &#x27;http://hmajax.itheima.net/api/city&#x27;, params: &#123; pname &#125;&#125;)</span><br><span class="line">const cname = cObj.data.list[0]</span><br><span class="line">const aObj = await axios(&#123;url: &#x27;http://hmajax.itheima.net/api/area&#x27;, params: &#123; pname, cname &#125;&#125;)</span><br><span class="line">const areaName = aObj.data.list[0]</span><br><span class="line"></span><br><span class="line">document.querySelector(&#x27;.province&#x27;).innerHTML = pname</span><br><span class="line">document.querySelector(&#x27;.city&#x27;).innerHTML = cname</span><br><span class="line">document.querySelector(&#x27;.area&#x27;).innerHTML = areaName</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">getData()</span><br></pre></td></tr></table></figure><h2 id="5、async函数和await-捕获错误"><a href="#5、async函数和await-捕获错误" class="headerlink" title="5、async函数和await_捕获错误"></a>5、async函数和await_捕获错误</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">async function getData() &#123;</span><br><span class="line">// 1. try包裹可能产生错误的代码</span><br><span class="line">try &#123;</span><br><span class="line">const pObj = await axios(&#123; url: &#x27;http://hmajax.itheima.net/api/province&#x27; &#125;)</span><br><span class="line">const pname = pObj.data.list[0]</span><br><span class="line">const cObj = await axios(&#123; url: &#x27;http://hmajax.itheima.net/api/city&#x27;, params: &#123; pname &#125; &#125;)</span><br><span class="line">const cname = cObj.data.list[0]</span><br><span class="line">const aObj = await axios(&#123; url: &#x27;http://hmajax.itheima.net/api/area&#x27;, params: &#123; pname, cname &#125; &#125;)</span><br><span class="line">const areaName = aObj.data.list[0]</span><br><span class="line"></span><br><span class="line">document.querySelector(&#x27;.province&#x27;).innerHTML = pname</span><br><span class="line">document.querySelector(&#x27;.city&#x27;).innerHTML = cname</span><br><span class="line">document.querySelector(&#x27;.area&#x27;).innerHTML = areaName</span><br><span class="line">&#125; catch (error) &#123;</span><br><span class="line">// 2. 接着调用catch块，接收错误信息</span><br><span class="line">// 如果try里某行代码报错后，try中剩余的代码不会执行了</span><br><span class="line">console.dir(error)</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">getData()           </span><br></pre></td></tr></table></figure><h2 id="6、事件循环"><a href="#6、事件循环" class="headerlink" title="6、事件循环"></a>6、事件循环</h2><p>概念：js有一个基于事件循环的并发模型，事件循环负责执行代码、收集和处理事件以及执行队列中的子任务</p><p>js单线程，为了让耗时代码不阻塞其他代码运行，设计了事件循环</p><p>调用栈：先执行同步代码</p><p>浏览器：执行异步代码，到时间推到任务队列</p><p>任务队列：当调用栈空闲，执行任务队列的任务</p><h2 id="7、宏任务和微任务"><a href="#7、宏任务和微任务" class="headerlink" title="7、宏任务和微任务"></a>7、宏任务和微任务</h2><p>1.宏任务：由浏览器环境执行的异步代码<br>2.微任务：由js引擎环境执行的异步任务<br>3.调用栈优先执行微任务队列</p><p>promise对象.then()</p><p>promise本身是同步，而then和catch回调函数是异步</p><h2 id="8、promise-all静态方法"><a href="#8、promise-all静态方法" class="headerlink" title="8、promise.all静态方法"></a>8、promise.all静态方法</h2><p>概念：合并多个promise对象，等待所有同时成功完成（或一个失败），做后续逻辑</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AJAX </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 同步异步 </tag>
+            
+            <tag> 回调函数地狱 </tag>
+            
+            <tag> promise-链式调用 </tag>
+            
+            <tag> async和await </tag>
+            
+            <tag> 事件循环 </tag>
+            
+            <tag> 宏任务微任务 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>AJAX-Promise</title>
+      <link href="/2026/05/29/AJAX-Promise/"/>
+      <url>/2026/05/29/AJAX-Promise/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义:"></a>1.定义:</h2><p>Promise对象用于表示一个异步操作最终完成（或失败）及其结果值（管理异步任务）<br>好处：<br>1.逻辑清晰<br>2.了解axios函数内部运作机制<br>3.解决回调函数地狱问题</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// 1. 创建Promise对象</span><br><span class="line">const p = new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">// 2. 执行异步代码</span><br><span class="line">setTimeout(() =&gt; &#123;</span><br><span class="line">// resolve(&#x27;模拟AJAX请求-成功结果&#x27;)</span><br><span class="line">reject(new Error(&#x27;模拟AJAX请求-失败结果&#x27;))</span><br><span class="line">&#125;, 2000)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// 3. 获取结果</span><br><span class="line">p.then(result =&gt; &#123;</span><br><span class="line">console.log(result)</span><br><span class="line">&#125;).catch(error =&gt; &#123;</span><br><span class="line">console.log(error)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h2 id="2-promise三种状态"><a href="#2-promise三种状态" class="headerlink" title="2.promise三种状态"></a>2.promise三种状态</h2><p>作用：了解promise对象如何关联的处理函数，以及代码执行顺序</p><p>概念：一个promise对象必然处于以下几种状态</p><p>待定（pending）：初始状态，没兑现，也没拒绝<br>已兑现（fulfilled）：操作成功完成<br>已拒绝（rejected）：操作失败<br>resolve（数据）：将状态从pending改成fulfilled，并将数据传出去<br>reject（错误）：将状态从pending改成rejected，并将错误信息传出去</p><p>错误信息用consele.dir()详细打印<br>通过状态码判断成功失败</p><h2 id="3-封装简易axios"><a href="#3-封装简易axios" class="headerlink" title="3.封装简易axios"></a>3.封装简易axios</h2><ol><li>定义myAxios函数，接收配置对象，返回Promise对象</li><li>发起XHR请求，默认请求方法为GET</li><li>调用成功&#x2F;失败的处理程序</li><li>使用myAxios函数，获取省份列表展示</li></ol>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">function myAxios(config) &#123;</span><br><span class="line">   return new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">   const xhr = new XMLHttpRequest()</span><br><span class="line"></span><br><span class="line">if (config.params) &#123;</span><br><span class="line">const paramsObj = new URLSearchParams(config.params)</span><br><span class="line">const queryString = paramsObj.toString()</span><br><span class="line">config.url += `?$&#123;queryString&#125;`</span><br><span class="line">&#125;</span><br><span class="line">xhr.open(config.method || &#x27;GET&#x27;, config.url)</span><br><span class="line"></span><br><span class="line">xhr.addEventListener(&#x27;loadend&#x27;, () =&gt; &#123;</span><br><span class="line">if (xhr.status &gt;= 200 &amp;&amp; xhr.status &lt; 300) &#123;</span><br><span class="line">resolve(JSON.parse(xhr.response))</span><br><span class="line">&#125; else &#123;</span><br><span class="line">reject(new Error(xhr.response))</span><br><span class="line">&#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// 1. 判断有data选项，携带请求体</span><br><span class="line">if (config.data) &#123;</span><br><span class="line">// 2. 转换数据类型，在send中发送</span><br><span class="line">const jsonStr = JSON.stringify(config.data)</span><br><span class="line">xhr.setRequestHeader(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;)</span><br><span class="line">xhr.send(jsonStr)</span><br><span class="line">&#125; else &#123;</span><br><span class="line">// 如果没有请求体数据，正常的发起请求</span><br><span class="line">xhr.send()</span><br><span class="line">&#125;</span><br><span class="line">&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>  ​</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AJAX </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Promise </tag>
+            
+            <tag> axios简易封装 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>AJAX原理</title>
+      <link href="/2026/05/29/AJAX%E5%8E%9F%E7%90%86/"/>
+      <url>/2026/05/29/AJAX%E5%8E%9F%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1、AJAX原理-XMLHttpRequest（XHR）"><a href="#1、AJAX原理-XMLHttpRequest（XHR）" class="headerlink" title="1、AJAX原理-XMLHttpRequest（XHR）"></a>1、AJAX原理-XMLHttpRequest（XHR）</h2><p>定义：用于与服务器交互，通过XHR可以在不刷新页面的情况下请求特定url，获取数据<br>关系：axios内部采用XHR与服务器进行交互<br>使用： </p><h3 id="1-创建XHR对象"><a href="#1-创建XHR对象" class="headerlink" title="1.创建XHR对象"></a>1.创建XHR对象</h3><p>​    const xhr &#x3D; new XMLHttpRequest()</p><h3 id="2-配置请求方法和url地址"><a href="#2-配置请求方法和url地址" class="headerlink" title="2.配置请求方法和url地址"></a>2.配置请求方法和url地址</h3><p>​    xhr.open(‘请求方法’,’请求url地址’)</p><h3 id="3-监听loadend事件，接收响应结果"><a href="#3-监听loadend事件，接收响应结果" class="headerlink" title="3.监听loadend事件，接收响应结果"></a>3.监听loadend事件，接收响应结果</h3><p>​    xhr.addEventListener(‘loadend’,()&#x3D;&gt;{<br>        console.log(xhr.response)<br>    })</p><h3 id="4-发起请求"><a href="#4-发起请求" class="headerlink" title="4.发起请求"></a>4.发起请求</h3><p>​    xhr.send()</p><h2 id="2、XHR-查询参数"><a href="#2、XHR-查询参数" class="headerlink" title="2、XHR-查询参数"></a>2、XHR-查询参数</h2><p><strong>定义</strong>：浏览器给服务器提供的额外的信息，让服务器返回浏览器想要的数据</p><p><strong>语法</strong>：<a href="http://xxxx.com/xxx/xxx?%E5%8F%82%E6%95%B0%E5%90%8D1=%E5%80%BC&%E5%8F%82%E6%95%B0%E5%90%8D2=%E5%80%BC2">http://xxxx.com/xxx/xxx?参数名1=值&amp;参数名2=值2</a><br>xhr.open(‘请求方法’,’<a href="http://xxxx.com/xxx/xxx?%E5%8F%82%E6%95%B0%E5%90%8D1=%E5%80%BC&%E5%8F%82%E6%95%B0%E5%90%8D2=%E5%80%BC2">http://xxxx.com/xxx/xxx?参数名1=值&amp;参数名2=值2</a>‘)</p><p>可以使用下面的方法转换成上面需要的格式</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">new URLSearchParams(&#123;</span><br><span class="line">    参数名1，值1，</span><br><span class="line">    参数名2，值2</span><br><span class="line">&#125;).toString()</span><br><span class="line">//结果：参数名1=值&amp;参数名2=值2</span><br></pre></td></tr></table></figure><h2 id="3、XHR-数据提交"><a href="#3、XHR-数据提交" class="headerlink" title="3、XHR-数据提交"></a>3、XHR-数据提交</h2><p>需求：通过XHR提交用户名和密码，完成组成功能<br>核心：<br>请求头设置Content-Type：application&#x2F;json</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 设置请求头-告诉服务器内容类型（JSON字符串）</span><br><span class="line">    xhr.setRequestHeader(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;)</span><br><span class="line">请求体携带JSON字符串</span><br><span class="line">// 准备提交的数据</span><br><span class="line">const userObj = &#123;</span><br><span class="line">    username: &#x27;itheima007&#x27;,</span><br><span class="line">    password: &#x27;7654321&#x27;</span><br><span class="line">&#125;</span><br><span class="line">const userStr = JSON.stringify(userObj)</span><br><span class="line">// 设置请求体，发起请求，请求体数据放在send()里面</span><br><span class="line">xhr.send(userStr)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> AJAX </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AJAX原理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>AJAX-Bootstrap、图片上传</title>
+      <link href="/2026/05/29/AJAX-Bootstrap%E3%80%81%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/"/>
+      <url>/2026/05/29/AJAX-Bootstrap%E3%80%81%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1、Bootstrap弹框"><a href="#1、Bootstrap弹框" class="headerlink" title="1、Bootstrap弹框"></a>1、Bootstrap弹框</h2><p>功能：不离开当前页面，显示单独内容，供用户操作<br>new Bootstrap Modal()<br>实例化后有show和hiden方法</p><h2 id="2、图片上传"><a href="#2、图片上传" class="headerlink" title="2、图片上传"></a>2、图片上传</h2><p>1.获取图片文件对象</p><p>2.使用FormData携带图片文件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const fd = new FormData（）</span><br><span class="line">fd.append(参数名，值)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> AJAX </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Bootstrap </tag>
+            
+            <tag> 图片上传 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>AJAX-axios、http协议、form-serialize插件</title>
+      <link href="/2026/05/29/AJAX-axios%E3%80%81http%E5%8D%8F%E8%AE%AE%E3%80%81form-serialize%E6%8F%92%E4%BB%B6/"/>
+      <url>/2026/05/29/AJAX-axios%E3%80%81http%E5%8D%8F%E8%AE%AE%E3%80%81form-serialize%E6%8F%92%E4%BB%B6/</url>
+      
+        <content type="html"><![CDATA[<p>AJAX是可以让浏览器和服务器进行数据通信的技术</p><h2 id="1、使用axios进行数据通信"><a href="#1、使用axios进行数据通信" class="headerlink" title="1、使用axios进行数据通信"></a>1、使用axios进行数据通信</h2><p>引入axios.js:<br>使用axios函数<br>传入配置对象<br>再用.then回调函数接收结果，并做后续处理</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">axios(&#123;url:‘目标资源地址’</span><br><span class="line">&#125;).then(result)=&gt;&#123;</span><br><span class="line">对服务器返回的数据做后续处理</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="2、URL"><a href="#2、URL" class="headerlink" title="2、URL"></a>2、URL</h2><p><a href="http://hmajax.itheima.net/api/province">http://hmajax.itheima.net/api/province</a><br>组成：</p><p>协议(http:&#x2F;&#x2F;)+域名(hmajax.itheima.net)+资源路径(&#x2F;api&#x2F;province)</p><p>1.协议规定数据传输格式<br>2.域名表示访问哪台服务器<br>3.资源路径标识在该服务器的路径</p><h2 id="3、查询参数"><a href="#3、查询参数" class="headerlink" title="3、查询参数"></a>3、查询参数</h2><p>使用axios提供的params选项<br>axios在运行时会把参数名和值，拼接到url？参数名&#x3D;值 </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">axios(&#123;</span><br><span class="line">url:‘目标资源地址’，</span><br><span class="line">params:&#123;</span><br><span class="line">参数名：值</span><br><span class="line">&#125; </span><br><span class="line">&#125;).then(result)=&gt;&#123;</span><br><span class="line">//对服务器返回的数据做后续处理</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="4、常用请求方法"><a href="#4、常用请求方法" class="headerlink" title="4、常用请求方法"></a>4、常用请求方法</h2><p>请求方法：对服务器资源要执行的操作<br>method：请求方法,（GET可省略，默认的）<br>data：提交数据<br>语法：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">axios(&#123;</span><br><span class="line">url:‘目标资源地址’，</span><br><span class="line">method:&#x27;请求方法&#x27;,</span><br><span class="line">data:&#123;</span><br><span class="line">参数名：值</span><br><span class="line">&#125;</span><br><span class="line">&#125;).then(result)=&gt;&#123;</span><br><span class="line">//对服务器返回的数据做后续处理</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>GET:获取数据<br>POST：提交数据<br>PUT ：修改数据（全部）<br>DELETE ：删除数据<br>PATCH：修改数据（部分）</p><h2 id="5、Http协议"><a href="#5、Http协议" class="headerlink" title="5、Http协议"></a>5、Http协议</h2><h3 id="1-请求报文"><a href="#1-请求报文" class="headerlink" title="1.请求报文"></a>1.请求报文</h3><p>请求报文：浏览器按照协议要求的格式，发送给服务器的内容<br>组成：请求行，请求头，空行，请求体<br>请求报文可以进行错误排除</p><h3 id="2-响应报文"><a href="#2-响应报文" class="headerlink" title="2.响应报文"></a>2.响应报文</h3><p>服务器按照协议格式要求，返回给浏览器的内容<br>组成：响应行，响应头，空行，响应体<br>响应状态码：用来表明是否成功完成<br>1xx  信息<br>2xx  成功<br>3xx  重定向信息<br>4xx  客户端错误<br>5xx  服务端错误</p><h2 id="6、接口文档"><a href="#6、接口文档" class="headerlink" title="6、接口文档"></a>6、接口文档</h2><p>定义：描述接口的文章<br>接口：使用AJAX和服务器通信时，使用的URL，请求方法，以及参数</p><h2 id="7、form-serialize插件"><a href="#7、form-serialize插件" class="headerlink" title="7、form-serialize插件"></a>7、form-serialize插件</h2><p>作用：快速收集表单元素值<br>函数语法：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const data = serialize(form,&#123;hash:true, empty: true&#125;)</span><br></pre></td></tr></table></figure><p>hash设置数据结构<br>取值true，数据为js对象<br>false，数据为查询字符串<br>empty：设置是否获取空值<br>true：获取空值<br>flase：不获取<br>保存的格式是将输入框的name作为键值保存</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AJAX </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> axios </tag>
+            
+            <tag> http协议 </tag>
+            
+            <tag> form-serialize插件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JS-防抖节流</title>
+      <link href="/2026/05/29/JS-%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81/"/>
+      <url>/2026/05/29/JS-%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-防抖"><a href="#1-防抖" class="headerlink" title="1.防抖"></a>1.防抖</h2><p>防抖：单位时间内频繁触发事件，只执行最后一次<br>使用场景：<br>输入框，当用户最后输入完成，在进行提交</p><h2 id="2-节流"><a href="#2-节流" class="headerlink" title="2.节流"></a>2.节流</h2><p>节流：单位时间内频繁触发事件，只执行一次</p><p>ontimeupdate事件<br>视频&#x2F;音频当前播放位置发生改变时触发</p><p>onloadeddata事件<br>当前帧的数据加载完成且还没有足够的数据支持播放,即能播放画面或音频时就会触发</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 防抖节流 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JS-拷贝、异常处理、this</title>
+      <link href="/2026/05/29/JS-%E6%8B%B7%E8%B4%9D%E3%80%81%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E3%80%81this/"/>
+      <url>/2026/05/29/JS-%E6%8B%B7%E8%B4%9D%E3%80%81%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E3%80%81this/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1、拷贝"><a href="#1、拷贝" class="headerlink" title="1、拷贝"></a>1、拷贝</h2><h3 id="1-浅拷贝"><a href="#1-浅拷贝" class="headerlink" title="1.浅拷贝"></a>1.浅拷贝</h3><p>如果是值直接拷贝值<br>如果是引用类型数据，拷贝的只是地址</p><h3 id="2-深拷贝"><a href="#2-深拷贝" class="headerlink" title="2.深拷贝"></a>2.深拷贝</h3><p>拷贝对象，不是地址</p><p>1.通过递归实现深拷贝<br>在函数内部调用自己，这个函数就是递归函数<br>防止死递归，加入return条件，条件加在自己调用自己前<br>利用递归函数实现setTimeout模拟setInterval</p><p>2.利用js库Lodash</p><p>3.利用JSON利用JSON实现深拷贝</p><h2 id="2、异常处理"><a href="#2、异常处理" class="headerlink" title="2、异常处理"></a>2、异常处理</h2><h3 id="1-throw抛异常"><a href="#1-throw抛异常" class="headerlink" title="1.throw抛异常"></a>1.throw抛异常</h3><p>throw ‘这里异常’<br>throw new Error<br>异常时停止执行</p><h3 id="2-try-catch捕获错误信息"><a href="#2-try-catch捕获错误信息" class="headerlink" title="2.try&#x2F;catch捕获错误信息"></a>2.try&#x2F;catch捕获错误信息</h3><p>try可能出现错误的代码放这<br>catch，里面有参数，可以捕获错误信息<br>finally：不管有没有错误都执行</p><h3 id="3-debugger断点"><a href="#3-debugger断点" class="headerlink" title="3.debugger断点"></a>3.debugger断点</h3><h2 id="3、处理this"><a href="#3、处理this" class="headerlink" title="3、处理this"></a>3、处理this</h2><h3 id="1-普通函数this指向"><a href="#1-普通函数this指向" class="headerlink" title="1.普通函数this指向"></a>1.普通函数this指向</h3><p>谁调用，this就是谁<br>当没有明确调用者指向window，严格模式下指向undefined</p><h3 id="2-箭头函数this指向"><a href="#2-箭头函数this指向" class="headerlink" title="2.箭头函数this指向"></a>2.箭头函数this指向</h3><p>事实上箭头函数不存在this<br>默认帮我们绑定外层this（最近一级的this），一层层找，直到找到this<br>原型，构造函数，dom事件函数，尽量不要使用箭头函数</p><h3 id="3-改变this"><a href="#3-改变this" class="headerlink" title="3.改变this"></a>3.改变this</h3><p><strong>1.call（）</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fun.call(thsiArg,arg1,arg2,...)</span><br></pre></td></tr></table></figure><p>thsiArg:在fun函数运行时指定的this值<br>arg1,arg2:传递其他参数<br>返回值就是函数的返回值，因为他是调用函数</p><p><strong>2.apply（）</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fun.apply(thsiArg,[argsArray])</span><br></pre></td></tr></table></figure><p>thsiArg:在fun函数运行时指定的this值<br>argsArray:传递的值，必须包含在数组里面<br>返回值就是函数的返回值，因为他是调用函数<br>主要和数组有关系</p><p><strong>3.bind()</strong><br>bind()方法不会调用函数，但是能改变函数内部this指向</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fun.bind(thsiArg,arg1,arg2,...)</span><br></pre></td></tr></table></figure><p>thsiArg:在fun函数运行时指定的this值<br>arg1,arg2:传递其他参数<br>返回值由指定的this值和初始化参数改造的原函数拷贝（新函数）<br>但我们只想改变this指向，并不想调用函数时，使用bind</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JS-拷贝 </tag>
+            
+            <tag> 异常处理 </tag>
+            
+            <tag> this </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>深入面向对象</title>
+      <link href="/2026/05/29/%E6%B7%B1%E5%85%A5%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+      <url>/2026/05/29/%E6%B7%B1%E5%85%A5%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1、编程思想"><a href="#1、编程思想" class="headerlink" title="1、编程思想"></a>1、编程思想</h2><p>面向对象<br>把事物分解成一个个对象，然后对象间分工合作<br>面向对象特性：<br>封装性<br>基础性<br>多态性</p><h2 id="2、构造函数"><a href="#2、构造函数" class="headerlink" title="2、构造函数"></a>2、构造函数</h2><p>构造函数体现了封装性</p><h2 id="3、原型"><a href="#3、原型" class="headerlink" title="3、原型"></a>3、原型</h2><h3 id="1-原型对象"><a href="#1-原型对象" class="headerlink" title="1.原型对象"></a>1.原型对象</h3><p>每一个构造函数都有一个prototype属性，指向另一个对象，所以我们也称为原型对象<br>可以将不变的方法写在原型对象<br>公共属性写到构造函数上<br>公共方法写到原型上<br>自己定义数组的扩展方法</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Array.prototype.max = function()&#123;</span><br><span class="line">    return Math.max(...this)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="2-constructor属性"><a href="#2-constructor属性" class="headerlink" title="2.constructor属性"></a>2.constructor属性</h3><p>该属性指向原型对象的构造函数</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Star.prototype = &#123;</span><br><span class="line">sing:fuction()&#123;</span><br><span class="line">&#125;,</span><br><span class="line">dance:fuction()&#123;</span><br><span class="line">&#125;,</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="3-对象原型"><a href="#3-对象原型" class="headerlink" title="3.对象原型"></a>3.对象原型</h3><p>对象属性__proto__指向构造函数的prototype原型对象<br>[[prototype]]和__proto__<br>对象原型里面有constructor，指向构造函数 </p><h3 id="4-原型继承"><a href="#4-原型继承" class="headerlink" title="4.原型继承"></a>4.原型继承</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Man.prototype = Person  //继承 </span><br><span class="line">Man.prototype.constructor = Man //指回构造原来函数</span><br></pre></td></tr></table></figure><p>指向同一个对象，修改一个会都影响</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 原型 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>深入对象及构造函数</title>
+      <link href="/2026/05/29/%E6%B7%B1%E5%85%A5%E5%AF%B9%E8%B1%A1%E5%8F%8A%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/"/>
+      <url>/2026/05/29/%E6%B7%B1%E5%85%A5%E5%AF%B9%E8%B1%A1%E5%8F%8A%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1、深入对象"><a href="#1、深入对象" class="headerlink" title="1、深入对象"></a>1、深入对象</h2><p>1.根据对象字面量创建对象</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const obj = &#123;</span><br><span class="line">name:&#x27;&#x27;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>2.利用new Object创建对象</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const obj =new Object（&#123;&#125;）</span><br></pre></td></tr></table></figure><p>3.利用构造函数创建对象</p><h2 id="2、构造函数"><a href="#2、构造函数" class="headerlink" title="2、构造函数"></a>2、构造函数</h2><h3 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h3><p>一种特殊的函数，用来创建多个类似的对象，大写开头字母</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function Pig(uname,age)&#123;</span><br><span class="line">this.uname =uname//形参  </span><br><span class="line">this.me =me//形参  </span><br><span class="line">this.e =e//形参  </span><br><span class="line">&#125;</span><br><span class="line">const p = new Pig（1,2,3）//1,2，3就是将实参传给形参</span><br><span class="line">const m = new Pig（1,4,3）</span><br><span class="line">const j = new Pig（1,1,3）</span><br></pre></td></tr></table></figure><p>加new创建一个新的空对象<br>构造函数的this指新对象<br>执行函数代码，修改this，添加新的属性<br>返回新对象</p><h3 id="2-实例成员"><a href="#2-实例成员" class="headerlink" title="2.实例成员"></a>2.实例成员</h3><p>通过构造函数创建的对象为实例对象，实例对象的方法属性是实例方法属性</p><h3 id="3-静态成员"><a href="#3-静态成员" class="headerlink" title="3.静态成员"></a>3.静态成员</h3><p>静态成员：构造函数的属性和方法<br>静态成员只能构造函数访问</p><h2 id="3、内置构造函数"><a href="#3、内置构造函数" class="headerlink" title="3、内置构造函数"></a>3、内置构造函数</h2><p>js底层完成，将简单数据类型包装成复杂数据类型   </p><h3 id="1-Object"><a href="#1-Object" class="headerlink" title="1.Object"></a>1.Object</h3><p>获得属性名：Object.keys(obj) &#x2F;&#x2F;返回数组<br>获得属性值：Object.values(obj)&#x2F;&#x2F;返回数组<br>对象的拷贝：Object.assign（oo，o）&#x2F;&#x2F;将o拷贝给oo</p><h3 id="2-Array"><a href="#2-Array" class="headerlink" title="2.Array"></a>2.Array</h3><p>forEach，遍历数组，不返回数组<br>filter，筛选，返回新数组<br>map ，迭代，返回处理之后的新数组，和join一起拼接字符串<br>reduce ，累计器，经常用于求和</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">arr.reduce(functhion(prev,current)&#123;</span><br><span class="line">return prev + current </span><br><span class="line">&#125;)</span><br><span class="line">arr.reduce(functhion(上一次值,下一次值)&#123;</span><br><span class="line">return prev + current </span><br><span class="line">&#125;,初始值)</span><br></pre></td></tr></table></figure><p>1.如果没有起始值，则上一次值以数组的第一个数组元素的值<br>2，每一次循环，把返回值给下一次循环的上一次值<br>3.有起始值，则起始值作为上一次值<br>数组对象reduce要加初始值 </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//返回符合条件的数组元素</span><br><span class="line">arr.find(functhion(a)&#123;</span><br><span class="line">return a === b</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">//所有符合条件返回true，否则undefined</span><br><span class="line">arr.every(fuction(item)&#123;</span><br><span class="line">item &gt;= 10</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">//伪数组转换真数组from</span><br><span class="line">Array.from(伪数组)</span><br></pre></td></tr></table></figure><h3 id="3-String"><a href="#3-String" class="headerlink" title="3.String"></a>3.String</h3><p>1.split将字符串转换成数组，根据字符串中的符号分割<br>str.split(‘，’)</p><p>2.字符串截取<br>substring(开始的索引号[，结束的索引号])<br>如果省略结束索引号，则默认截取到最后，不包含结束的索引号字符</p><p>3.检测是否以某符合开头<br>str.startsWith（’字符串’）</p><p>4.检测一个字符串是否包含着另一个字符串<br>includes（‘字符串’）</p><h3 id="4-Number"><a href="#4-Number" class="headerlink" title="4.Number"></a>4.Number</h3><p>toFixed（n）保留n位小数，四舍五入</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 构造函数 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JS-解构赋值</title>
+      <link href="/2026/05/29/JS-%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/"/>
+      <url>/2026/05/29/JS-%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-数组解构"><a href="#1-数组解构" class="headerlink" title="1.数组解构"></a>1.数组解构</h2><p>将数组单元值批量的赋值给变量的简洁语法<br>变量的顺序对应数组单元格的位置依次进行赋值操作<br>支持多维数组解构<br>const[a,b] &#x3D; [a,b]</p><h2 id="2-必须加分号"><a href="#2-必须加分号" class="headerlink" title="2.必须加分号"></a>2.必须加分号</h2><p>立即执行函数<br>（function（）{}）();<br>使用数组的时候<br>前面有代码，后面写数组要加分号</p><p>##3.对象解构</p><h3 id="1-对象解构"><a href="#1-对象解构" class="headerlink" title="1.对象解构"></a>1.对象解构</h3><p>const {a,b} &#x3D; {a:yyy,b:yyy}<br>变量名和属性名要相同</p><h3 id="2-改新变量名"><a href="#2-改新变量名" class="headerlink" title="2.改新变量名"></a>2.改新变量名</h3><p>const {a：c,b} &#x3D; {a:yyy,b:yyy}<br>旧变量名：新变量名</p><h3 id="3-数组对象解构"><a href="#3-数组对象解构" class="headerlink" title="3.数组对象解构"></a>3.数组对象解构</h3><p>const [{a,b}] &#x3D; [{a:yyy,b:yyy}]</p><h3 id="4-多级对象解构"><a href="#4-多级对象解构" class="headerlink" title="4.多级对象解构"></a>4.多级对象解构</h3><p>const [{c,d:{a,b}}] &#x3D; [c：11，d：{a:yyy,b:yyy}]</p><h2 id="4-遍历数组forEach（）"><a href="#4-遍历数组forEach（）" class="headerlink" title="4.遍历数组forEach（）"></a>4.遍历数组forEach（）</h2><p>用于调用数组的每个元素，并将元素传递给回调函数</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.forEach(functhion(item,index)&#123;&#125;)</span><br></pre></td></tr></table></figure><p>当前元素是必写，索引号可以省略，不返回值</p><h2 id="5-筛选数组filter"><a href="#5-筛选数组filter" class="headerlink" title="5.筛选数组filter"></a>5.筛选数组filter</h2><p>创建一个新数组，放入符合条件的元素</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arr.filter(functhion(item,index)&#123;</span><br><span class="line">return item&gt;=20 //这里筛选</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><p>返回筛选之后的新数组</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 解构赋值 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JS-函数进阶</title>
+      <link href="/2026/05/29/JS-%E5%87%BD%E6%95%B0%E8%BF%9B%E9%98%B6/"/>
+      <url>/2026/05/29/JS-%E5%87%BD%E6%95%B0%E8%BF%9B%E9%98%B6/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-函数提升"><a href="#1-函数提升" class="headerlink" title="1.函数提升"></a>1.函数提升</h2><p>函数在声明前可调用<br>函数表达式必须先声明后调用</p><h2 id="2-函数参数"><a href="#2-函数参数" class="headerlink" title="2.函数参数"></a>2.函数参数</h2><h3 id="1-动态参数"><a href="#1-动态参数" class="headerlink" title="1.动态参数"></a>1.动态参数</h3><p>arguments，可以动态获取参数，是伪数组只存在函数里面，可以通过for循环得到参数</p><h3 id="2-剩余参数"><a href="#2-剩余参数" class="headerlink" title="2.剩余参数"></a>2.剩余参数</h3><p>…参数名<br>用于获取多余参数，只用在函数里<br>允许我们将一个不定数量的参数表示为数组<br>展开运算符<br>也是…,数组中使用，不会修改原数组，可以展开数组</p><h2 id="3-箭头函数"><a href="#3-箭头函数" class="headerlink" title="3.箭头函数"></a>3.箭头函数</h2><h3 id="1-基本语法"><a href="#1-基本语法" class="headerlink" title="1.基本语法"></a>1.基本语法</h3><p>1.箭头函数比函数表达式更简洁<br>    （） &#x3D;&gt;{}<br>    const fn &#x3D; （） &#x3D;&gt;{<br>}</p><p>2.只有一个形参的时候<br>    const fn &#x3D; 形参 &#x3D;&gt;{<br>}</p><p>3.只有一行代码的时候<br>    const fn &#x3D; 形参 &#x3D;&gt; 代码 </p><p>4.只一行可以省略return<br>    代码自动作为返回值被返回</p><p>5.可以直接返回一个对象<br>    加括号的函数体返回对象字面量表达式<br>    const fn &#x3D; uname &#x3D;&gt;（{uname:uname}）</p><h3 id="2-箭头函数参数"><a href="#2-箭头函数参数" class="headerlink" title="2.箭头函数参数"></a>2.箭头函数参数</h3><p>没有动态参数，有剩余函数</p><h3 id="3-箭头函数this"><a href="#3-箭头函数this" class="headerlink" title="3.箭头函数this"></a>3.箭头函数this</h3><p>不会创建自己的this，只会从作用域链的上一层沿用this  </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 函数提升 </tag>
+            
+            <tag> 箭头函数 </tag>
+            
+            <tag> 函数参数 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JS-作用域</title>
+      <link href="/2026/05/29/JS-%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
+      <url>/2026/05/29/JS-%E4%BD%9C%E7%94%A8%E5%9F%9F/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-局部作用域"><a href="#1-局部作用域" class="headerlink" title="1.局部作用域"></a>1.局部作用域</h2><p>规定变量能够被访问的范围</p><h3 id="1-函数作用域"><a href="#1-函数作用域" class="headerlink" title="1.函数作用域"></a>1.函数作用域</h3><p>函数内声明的变量，只能在函数内部访问<br>函数的参数也是局部作用域<br>函数完成变量清除</p><h3 id="2-块作用域"><a href="#2-块作用域" class="headerlink" title="2.块作用域"></a>2.块作用域</h3><p>只要有大括号的都是块作用域<br>var没有块作用域</p><h2 id="2-全局作用域"><a href="#2-全局作用域" class="headerlink" title="2.全局作用域"></a>2.全局作用域</h2><p>函数中未用关键字声明的变量也是全局作用域<br>‘<script>,.Js文件里               </p><h2 id="3-作用域链"><a href="#3-作用域链" class="headerlink" title="3.作用域链"></a>3.作用域链</h2><p>本质是底层的变量查找机制<br>1.优先查找当前作用域<br>2.当前找不到会依次查找父级作用域直到全局作用域<br>3.子作用域可以访问父作用域，但是父作用域不能访问子作用域</p><h2 id="4-JS垃圾回收机制GC"><a href="#4-JS垃圾回收机制GC" class="headerlink" title="4.JS垃圾回收机制GC"></a>4.JS垃圾回收机制GC</h2><h3 id="1-内存的生命周期"><a href="#1-内存的生命周期" class="headerlink" title="1.内存的生命周期"></a>1.内存的生命周期</h3><p><strong>1.内存分配</strong><br>声明的时候分配内存</p><p><strong>2.内存使用</strong><br>即毒性内存，也就是使用变量等</p><p><strong>3.内存回收</strong><br>使用完毕，垃圾回收器回收不再使用的内存<br>全局变量关闭页面时回收<br>局部不用时会自动回收</p><p><strong>内存泄露：</strong><br>由于某种原因无法回收叫内存泄露</p><h3 id="2-算法说明"><a href="#2-算法说明" class="headerlink" title="2.算法说明"></a>2.算法说明</h3><p><strong>1.引用计数</strong><br>跟踪记录被引用次数<br>被引用1次，记录次数加1，多次引用累加<br>减少引用就减一<br>当引用次数未0，释放内存<br>嵌套引用没办法回收，导致内存泄露</p><p><strong>2.标记清除法</strong><br>1.不在使用的对象改成无法到达的随行<br>2.从根部出发查找对象，查的到继续使用，查不到回收</p><h2 id="5-闭包"><a href="#5-闭包" class="headerlink" title="5.闭包"></a>5.闭包</h2><p>简单理解：闭包 = 内层函数+外层函数变量<br>作用：封闭数据，提供操作，让外部可以函数内部变量<br>会引起内存泄露</p><h2 id="6-变量提升"><a href="#6-变量提升" class="headerlink" title="6.变量提升"></a>6.变量提升</h2><p>把所有var声明的变量提升到当前作用域的最前面<br>只提升声明，不提升赋值，出现在相同作用域<br>只有var有</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 作用域 </tag>
+            
+            <tag> 垃圾回收机制 </tag>
+            
+            <tag> 闭包 </tag>
+            
+            <tag> 变量提升 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>API-正则表达式</title>
+      <link href="/2026/05/29/API-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+      <url>/2026/05/29/API-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1.介绍"></a>1.介绍</h2><p>是一种匹配模式，也是对象<br>作用：<br>表单验证<br>过来敏感词<br>提取文字</p><h2 id="2-语法"><a href="#2-语法" class="headerlink" title="2.语法"></a>2.语法</h2><h3 id="1-定义规则"><a href="#1-定义规则" class="headerlink" title="1.定义规则"></a>1.定义规则</h3><p>const 变量名 &#x3D; &#x2F;表达式&#x2F;,不需要引号，想查找什么写什么</p><h3 id="2-查找"><a href="#2-查找" class="headerlink" title="2.查找"></a>2.查找</h3><p>规则变量名.test(被检查的字符串)，返回t&#x2F;f<br>规则变量名.exec(被检查的字符串),返回数组，否则为null</p><h2 id="3-元字符"><a href="#3-元字符" class="headerlink" title="3.元字符"></a>3.元字符</h2><h3 id="1-边界符"><a href="#1-边界符" class="headerlink" title="1.边界符"></a>1.边界符</h3><p>表示位置，开头和结尾，必须用什么开头，用什么结尾<br>^表示以谁开始，$表示以谁结束<br>^ha表示以ha开头<br>^ha$表示精确匹配，只有ha为true</p><h3 id="2-量词（表示重复次数）"><a href="#2-量词（表示重复次数）" class="headerlink" title="2.量词（表示重复次数）"></a>2.量词（表示重复次数）</h3><p>设定某个模式出现的次数</p><table><thead><tr><th>量词</th><th>含义</th><th>示范</th></tr></thead><tbody><tr><td>*</td><td>重复0次或更多次</td><td>ab*，正确：a、ab、abb、abbb，错误：ac（a后面不是b）</td></tr><tr><td>+</td><td>重复一次或更多次</td><td>ab+，正确：ab、abb、abbb，错误：a（必须有一次）</td></tr><tr><td>？</td><td>重复0次或1次</td><td>ab？，正确：a、ab，错误：abb（只有0或一次）</td></tr><tr><td>{n}</td><td>重复n次，必须是n次</td><td>ab{3}，正确：abbb，错误：abb（只能是3次）</td></tr><tr><td>{n,}</td><td>必须重复n次或更多次</td><td>ab{3，}，正确：abbb，abbbbb，错误：abb（只能是3次或更多次）</td></tr><tr><td>{n,m}</td><td>必须重复n到m次，不能有空格</td><td>ab{3，5}，正确：abbb，abbbbb，错误：abb（只能是3到5次）</td></tr></tbody></table><p>重复离最近的</p><h3 id="3-字符类（比如-d表示0-9）"><a href="#3-字符类（比如-d表示0-9）" class="headerlink" title="3.字符类（比如&#x2F;d表示0~9）"></a>3.字符类（比如&#x2F;d表示0~9）</h3><p>[]匹配字符集合，只要包括其中一个都可以，精确匹配就只选一个<br>[^a]取反，除a以外都行</p><h3 id="4-预定义"><a href="#4-预定义" class="headerlink" title="4.预定义"></a>4.预定义</h3><p>大写相当于取反<br>\d 相当于[0-9]<br>\D相当于<code>[^0-9]</code><br>\w相当于[A-Za-z0-9_]<br>\W相当于<code>[^A-Za-z0-9_]</code><br>\s匹配空格（包括换行符，制表符、空格符等）相当于[\t\r\n\v\f]<br>\S相当于</p><h2 id="4-修饰符"><a href="#4-修饰符" class="headerlink" title="4.修饰符"></a>4.修饰符</h2><p>语法：<br>&#x2F;表达式&#x2F;修饰符<br>i不区分大小写<br>g全局匹配符合的表达式<br>替换符合的内容：字符串.replace(&#x2F;正则表达式&#x2F;ig,’替换的文本’)</p><h2 id="5-change事件"><a href="#5-change事件" class="headerlink" title="5.change事件"></a>5.change事件</h2><p>内容发生改变在触发<br>6.input的属性required：非空</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> API </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 正则表达式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>API-本地存储</title>
+      <link href="/2026/05/29/API-%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/"/>
+      <url>/2026/05/29/API-%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-本地存储分类"><a href="#1-本地存储分类" class="headerlink" title="1.本地存储分类"></a>1.本地存储分类</h2><p>localStorage<br>不管什么数据类型，存储进去都是字符串</p><p><strong>存储数据&#x2F;改数据：</strong><br>localStorage.setItem(‘key’，’value’)</p><p><strong>获取：</strong><br>getItem（‘键’）</p><p><strong>删除：</strong><br>removeItem（“键”）</p><p>sessionStorage和localStorage相似，但是sessionStorage仅在当前窗口有效，打开新的页面会生成一个新的sessionStorage，读不到旧数据</p><p>生命周期是关闭浏览器窗口</p><h2 id="2-存储复杂数据类型"><a href="#2-存储复杂数据类型" class="headerlink" title="2.存储复杂数据类型"></a>2.存储复杂数据类型</h2><p>转换成JSON字符串存储：JSON.stringify(复杂数据)<br>JSON对象：属性和值都有双引号<br>JSON字符串转换成对象：JSON.parse()</p><h2 id="3-字符串拼接"><a href="#3-字符串拼接" class="headerlink" title="3.字符串拼接"></a>3.字符串拼接</h2><h3 id="1-map"><a href="#1-map" class="headerlink" title="1.map"></a>1.map</h3><p>map可以遍历数组处理数据，并返回新的数组<br>map有返回值，forEach没有返回值</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line">对象.map(function(ele,index)&#123; </span><br><span class="line">//ele表示数组元素，index表示索引号</span><br><span class="line">return ele + &quot;颜色&quot;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><p>回调函数里的参数分别有当前遍历项，索引（可选），原数组本身（可选，极少用）</p><h3 id="2-join（）"><a href="#2-join（）" class="headerlink" title="2.join（）"></a>2.join（）</h3><p>join（）用于将数组转换成一个字符串<br>join(‘’)引号表示用什么将字符串之间用什么分割</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> API </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 本地存储 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>API-Window对象</title>
+      <link href="/2026/05/29/API-Window%E5%AF%B9%E8%B1%A1/"/>
+      <url>/2026/05/29/API-Window%E5%AF%B9%E8%B1%A1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-BOM（浏览器对象模型）"><a href="#1-BOM（浏览器对象模型）" class="headerlink" title="1.BOM（浏览器对象模型）"></a>1.BOM（浏览器对象模型）</h2><h2 id="2-定时器-延时函数"><a href="#2-定时器-延时函数" class="headerlink" title="2.定时器-延时函数"></a>2.定时器-延时函数</h2><p>setTimeout(函数，等待时间)<br>只执行一次，到时间关闭，返回id</p><p>清除延时函数：<br>clearTime（）</p><h2 id="3-JS执行机制"><a href="#3-JS执行机制" class="headerlink" title="3.JS执行机制"></a>3.JS执行机制</h2><p>1.JS是单线程语言，同时间只能做一件事</p><p>2.同步放在执行栈<br>前一个完成在进行下一个</p><p>3.异步放在任务队列<br>前一个未完成时可以干其他的<br>先执行执行栈中的任务，完成后读取异步中的任务<br>事件循环event loop </p><h2 id="4-location对象"><a href="#4-location对象" class="headerlink" title="4.location对象"></a>4.location对象</h2><p>拆分并保存url地址的各个组成部分</p><p><strong>属性：</strong><br>href属性获取完整的URL地址，对其赋值时用于地址的跳转<br>search属性获取地址中携带的参数，符号？后面部分<br>hash获取地址中的哈希值，符号#后面部分</p><p><strong>方法：</strong><br>reload方法用于刷新当前页面，传入参数true时表示强制刷新（ctrl+f5）</p><h2 id="5-navigator对象"><a href="#5-navigator对象" class="headerlink" title="5.navigator对象"></a>5.navigator对象</h2><p>记录浏览器自身信息<br>userAgent检测浏览器的版本和平台<br>navigator.userAgent </p><h2 id="6-history对象"><a href="#6-history对象" class="headerlink" title="6.history对象"></a>6.history对象</h2><p>主要管理历史记录<br>方法：<br>back（）可以后退功能<br>forward（）前进功能<br>go（参数）1前进1页面，-1后退1页面</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> API </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 定时器 </tag>
+            
+            <tag> Js执行机制 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>API-节点操作</title>
+      <link href="/2026/05/29/API-%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C/"/>
+      <url>/2026/05/29/API-%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1、节点操作"><a href="#1、节点操作" class="headerlink" title="1、节点操作"></a>1、节点操作</h2><h3 id="1-DOM节点"><a href="#1-DOM节点" class="headerlink" title="1.DOM节点"></a>1.DOM节点</h3><p>DOM树里面的每一个内容都是节点<br><strong>节点类型：</strong><br><strong>元素节点</strong><br>    所有标签，如html，body</p><p><strong>属性节点</strong><br>    属性：如href<br>文本节点</p><h3 id="2-查找节点"><a href="#2-查找节点" class="headerlink" title="2.查找节点"></a>2.查找节点</h3><p>返回DOM节点 </p><p><strong>父节点</strong><br>子元素.parentNode</p><p><strong>子节点</strong><br>childNodes</p><p>父元素.children获取所有子元素，返回伪数组</p><p><strong>兄弟节点</strong><br>前previousElementSibling<br>后nextElementSibling</p><h3 id="3-增加节点"><a href="#3-增加节点" class="headerlink" title="3.增加节点"></a>3.增加节点</h3><p><strong>1.创建节点</strong><br>document.createElement(‘标签名’)</p><p><strong>2.追加节点</strong><br>插入到这个父元素的最后<br>    父元素.appendChild(要插入的元素)<br>插入到父元素中某个子元素的前面<br>    父元素.inserBefore(要插入的元素，在哪个元素前面)</p><p><strong>3.克隆节点</strong><br>元素.cloneNode(布尔值)<br>true：克隆全部子节点<br>flase：不克隆子节点</p><h3 id="4-删除节点"><a href="#4-删除节点" class="headerlink" title="4.删除节点"></a>4.删除节点</h3><p>必须父元素来删除子<br>父元素.removeChild(子元素)</p><h2 id="2、M端事件"><a href="#2、M端事件" class="headerlink" title="2、M端事件"></a>2、M端事件</h2><p>1.touch触屏事件<br>touchstart：开始触摸<br>touchend：结束触摸<br>touchmove：滑动触摸</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> API </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 节点操作 </tag>
+            
+            <tag> M段事件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>API-日期对象</title>
+      <link href="/2026/05/29/API-%E6%97%A5%E6%9C%9F%E5%AF%B9%E8%B1%A1/"/>
+      <url>/2026/05/29/API-%E6%97%A5%E6%9C%9F%E5%AF%B9%E8%B1%A1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="日期对象"><a href="#日期对象" class="headerlink" title="日期对象"></a>日期对象</h1><p>用来表示时间的对象<br>getMonthe（）获得月份，但是是0<del>11，所以用的时候加1<br>getDate（）获得一个月中的一天<br>getDay()获得星期几，且是0</del>6</p><h2 id="1-实例化"><a href="#1-实例化" class="headerlink" title="1.实例化"></a>1.实例化</h2><p>构造函数Date<br>使用new关键字，这个操作就是实例化，可以实例化为对象<br>时间一定要实例化const date &#x3D; new Date()</p><h2 id="2-日期对象方法"><a href="#2-日期对象方法" class="headerlink" title="2.日期对象方法"></a>2.日期对象方法</h2><p>toLocaleString()&#x2F;&#x2F;2020&#x2F;1&#x2F;4 09:52:21<br>toLocaleDateString()&#x2F;&#x2F;2020&#x2F;1&#x2F;4<br>toLocaleTimeString()&#x2F;&#x2F;2020&#x2F;1&#x2F;4 </p><h2 id="3-时间戳"><a href="#3-时间戳" class="headerlink" title="3.时间戳"></a>3.时间戳</h2><p>能够获得当前时间<br>是指1970&#x2F;01&#x2F;01&#x2F;00:00:00起至现在的毫秒数，一种特殊的计量方式<br>可以用来计算倒计时：将来的时间戳减去现在的时间戳  </p><p>方法 ：<br><strong>当前时间戳</strong><br>getTime（）<br>+new Date（）<br>Date.now()</p><p><strong>指定时间</strong><br>+new Date（‘2022-4-1 12:00:00’）</p><p><strong>时间转换</strong>：<br>d &#x3D; parseInt（总秒数&#x2F;60&#x2F;60&#x2F;24）&#x2F;&#x2F;计算天数<br>h &#x3D; parseInt（总秒数&#x2F;60&#x2F;60%24）&#x2F;&#x2F;计算小时<br>m &#x3D; parseInt（总秒数&#x2F;60%60）&#x2F;&#x2F;计算分数<br>s &#x3D; parseInt（总秒数%60）&#x2F;&#x2F;计算当前秒数</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> API </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 实例化 </tag>
+            
+            <tag> 时间戳 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>API-事件</title>
+      <link href="/2026/05/29/API-%E4%BA%8B%E4%BB%B6/"/>
+      <url>/2026/05/29/API-%E4%BA%8B%E4%BB%B6/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1、事件监听"><a href="#1、事件监听" class="headerlink" title="1、事件监听"></a>1、事件监听</h2><p>三要素：事件源（谁被触发）、事件类型、事件处理程序<br>元素对象.addEventListener(‘事件类型’,要执行的函数)</p><h2 id="2、事件类型（要加引号）："><a href="#2、事件类型（要加引号）：" class="headerlink" title="2、事件类型（要加引号）："></a>2、事件类型（要加引号）：</h2><p><strong>鼠标事件：</strong><br>点击click<br>经过mouseenter<br>离开mouseleave<br>鼠标移动：mousemove</p><p><strong>焦点事件：</strong><br>获得焦点focus<br>失去焦点blur</p><p><strong>属性选择器：</strong><br>[]，可以通过属性选择器控制自定义属性</p><p><strong>键盘事件：</strong><br>键盘按下keydown<br>键盘弹起keyup</p><p><strong>文本事件</strong><br>文本输入input</p><p><strong>change事件</strong><br>当内容发生改变时触发              </p><h2 id="3、事件对象"><a href="#3、事件对象" class="headerlink" title="3、事件对象"></a>3、事件对象</h2><p>在事件监听回调的函数的第一个参数就是事件对象，常见命名是e、event等，e相当于浏览器给你的事件详情，e.target可以获取当前的元素</p><p><strong>常用属性：</strong> </p><p><strong>type：</strong><br>获取当前事件类型</p><p><strong>clientX&#x2F;clientY：</strong><br>获取光标相对于浏览器可见窗口左上角的位置</p><p><strong>OffsetX&#x2F;offsetY:</strong><br>获取光标相对于当前DOM元素左上角的位置</p><p><strong>pageX&#x2F;pageY:</strong><br>获取光标相对于整个html页面左上角的位置，包含页面滚动的距离,相对于clientX+页面水平滚动距离</p><p><strong>key（键盘事件）:</strong><br>获取用户按下的键盘的值，当按下a时，e.key就是“a”<br>现在不提倡使用keyCode，因为他返回的时数字编码（如回车是13）</p><p>trim（）方法：去除字符串左右的空格</p><h2 id="4、环境对象"><a href="#4、环境对象" class="headerlink" title="4、环境对象"></a>4、环境对象</h2><p>this表示当前运行的环境<br>每个函数都有环境对象，普通函数里（如fn（））this指向的是window<br>谁调用，this就是谁</p><h2 id="5、回调函数"><a href="#5、回调函数" class="headerlink" title="5、回调函数"></a>5、回调函数</h2><p>如果将A函数作为参数传递给B，那么A就是回调函数</p><h2 id="6、全选"><a href="#6、全选" class="headerlink" title="6、全选"></a>6、全选</h2><p>checked：选中值为true，未选为flase</p><h2 id="7、事件流"><a href="#7、事件流" class="headerlink" title="7、事件流"></a>7、事件流</h2><p>指事件完整执行的完整经过</p><h3 id="1-两个阶段："><a href="#1-两个阶段：" class="headerlink" title="1.两个阶段："></a>1.两个阶段：</h3><p>元素对象.addEventListener(‘事件类型’,要执行的函数，是否使用捕获机制)<br>是否使用捕获机制 &#x3D; true 代表触发，flase代表冒泡，默认flase<br>事件捕获：父到子，外到里<br>事件冒泡：一定发生，子到父，里到外，只冒泡同名事件</p><h3 id="2-阻止冒泡"><a href="#2-阻止冒泡" class="headerlink" title="2.阻止冒泡"></a>2.阻止冒泡</h3><p>事件对象.stopPropagation()<br>阻止元素默认行为：e.preventDefault（）</p><h3 id="3-解绑事件"><a href="#3-解绑事件" class="headerlink" title="3.解绑事件"></a>3.解绑事件</h3><p>on事件方式，直接用null覆盖就可以实现事件的解绑<br>解绑：removeaddEventListener（）</p><h2 id="8、事件委托"><a href="#8、事件委托" class="headerlink" title="8、事件委托"></a>8、事件委托</h2><p>给父级绑定事件<br>事件对象.target当前点到的元素<br>事件对象.target.tagName可以获得真正触发的元素，要写大写</p><h2 id="9、其他事件"><a href="#9、其他事件" class="headerlink" title="9、其他事件"></a>9、其他事件</h2><h3 id="1-页面加载事件"><a href="#1-页面加载事件" class="headerlink" title="1.页面加载事件"></a>1.页面加载事件</h3><p><strong>1.load</strong><br>window.addEventListener(‘load’,fuction())等待页面所有资源加载完毕，就回去执行回调函数<br>window也可以写其他资源</p><p><strong>2.DOMContentLoaded</strong><br>document.addEventListener(‘DOMContentLoaded’,fuction())等待html标签加载完毕，无需等待样式表，图片加载完成</p><h3 id="2-页面滚动事件"><a href="#2-页面滚动事件" class="headerlink" title="2.页面滚动事件"></a>2.页面滚动事件</h3><p>scroll：监听整个页面滚动<br>属性：scrollLeft、scrollTop（被卷去的头部大小）、scrollTo（x,y）</p><h3 id="3-获取html元素documentElement"><a href="#3-获取html元素documentElement" class="headerlink" title="3.获取html元素documentElement"></a>3.获取html元素documentElement</h3><p>document. documentElement.scrollTop可以获取元素移动距离，返回为数字，不带单位，单位为像素</p><h3 id="4-页面尺寸事件resize"><a href="#4-页面尺寸事件resize" class="headerlink" title="4.页面尺寸事件resize"></a>4.页面尺寸事件resize</h3><p>浏览器窗口大小发生变化时触发的事件<br>获取宽高：<br>clientWidth&#x2F;clientHeiht(不包含边框，margin，滚动条等)</p><h2 id="10、元素尺寸于位置"><a href="#10、元素尺寸于位置" class="headerlink" title="10、元素尺寸于位置"></a>10、元素尺寸于位置</h2><p>获取元素自身宽高（包含padding，margin）：offsetWidth和offsetHeight<br>获取元素距离自己‘定位父级元素’的左上距离：offsetLeft&#x2F;offsetTop（只读）<br>返回元素大小及相对于(视口)的位置：element.getBoundingClientRect(),当页面滚动时，获取的位置也会发生改变<br>属性：scroll-behavior:smooth;平滑滚动</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> API </category>
+          
+          <category> 事件 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 事件监听 </tag>
+            
+            <tag> 事件类型 </tag>
+            
+            <tag> 事件 </tag>
+            
+            <tag> 冒泡 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>API-基础</title>
+      <link href="/2026/05/29/API-%E5%9F%BA%E7%A1%80/"/>
+      <url>/2026/05/29/API-%E5%9F%BA%E7%A1%80/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1、DOM"><a href="#1、DOM" class="headerlink" title="1、DOM"></a>1、DOM</h2><p>DOM是浏览器提供的一套专门用来操作网页内容的功能 </p><h2 id="2-document-querySelector-‘选择器’"><a href="#2-document-querySelector-‘选择器’" class="headerlink" title="2.document.querySelector(‘选择器’)"></a>2.document.querySelector(‘选择器’)</h2><p>获取匹配的第一个元素document.querySelector(‘选择器’),一定要加引号<br>括号里面的选择器写法和css一样，可以直接操作<br>获取的元素是js里的对象</p><h2 id="3-document-querySelectorAll-‘选择器’"><a href="#3-document-querySelectorAll-‘选择器’" class="headerlink" title="3.document.querySelectorAll(‘选择器’)"></a>3.document.querySelectorAll(‘选择器’)</h2><p>获取匹配的对象集合，是伪数组，没有数组的方法<br>要得到里面的每一个对象，要用for遍历</p><h2 id="4-修改对象内容"><a href="#4-修改对象内容" class="headerlink" title="4.修改对象内容"></a>4.修改对象内容</h2><p>获取文字内容：对象.innerText，显示纯文本，不解析标签<br>修改文字内容：对象.innerText&#x3D;<code>新值</code><br>innerHTML解析标签，与innerText类似，但是识别标签</p><h2 id="5-修改样式属性-对象-style-样式属性-‘值’，要单位"><a href="#5-修改样式属性-对象-style-样式属性-‘值’，要单位" class="headerlink" title="5.修改样式属性 对象.style.样式属性 &#x3D; ‘值’，要单位"></a>5.修改样式属性 对象.style.样式属性 &#x3D; ‘值’，要单位</h2><p>1.如果样式有-连接，则用小驼峰命名法，如backgroundImg<br>2.body可以直接用document.body<br>3.操作类名（className）操作css<br>对象.className &#x3D; ‘active’ &#x2F;&#x2F;active是个css类名<br>会覆盖前面的类，所以用<br>对象.className &#x3D; ‘active nav’ &#x2F;&#x2F;nav是原有css类名<br>4.classList<br>追加类：对象.classLIst.add(‘类名’),类名不加点，并且是字符串<br>切换类：对象.classLIst.toggle（’类名’）,有就删除，没有就加上+<br>删除类：对象.classLIst.remove（’类名’），类名不加点，并且是字符串<br>查看类：对象.classLIst.contains（’类名’）,判断是否包含类，有返回true，没有返回false</p><h2 id="6-获取表单的值"><a href="#6-获取表单的值" class="headerlink" title="6.获取表单的值"></a>6.获取表单的值</h2><p>表单.value<br>const input &#x3D; document.querySelector(‘input’)<br>input.type&#x3D;’password’</p><h2 id="7-只接收布尔值"><a href="#7-只接收布尔值" class="headerlink" title="7.只接收布尔值"></a>7.只接收布尔值</h2><p>复选框input.checked&#x3D;true 选中<br>禁用按钮disabled，默认false，不禁用</p><h2 id="8-自定义属性"><a href="#8-自定义属性" class="headerlink" title="8.自定义属性"></a>8.自定义属性</h2><p>data-，只要这个开头就是自定义属性<br>获取<br>对象.dataset：获取全部自定义属性集合<br>对象.dataset.自定义属性：获取指定自定义属性值</p><h2 id="9、定时器（间歇函数）"><a href="#9、定时器（间歇函数）" class="headerlink" title="9、定时器（间歇函数）"></a>9、定时器（间歇函数）</h2><h3 id="开启定时器"><a href="#开启定时器" class="headerlink" title="开启定时器"></a>开启定时器</h3><p>setInterval（函数，间隔时间（单位毫秒））<br>每隔一段时间调用函数<br>有名函数不要加小括号，会直接调用，而不是间隔调用</p><h3 id="关闭定时器"><a href="#关闭定时器" class="headerlink" title="关闭定时器"></a>关闭定时器</h3><p>定时器返回的是一个id数字<br>let n &#x3D; setInterval（函数，间隔时间（单位毫秒））<br>clearInterval（n）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> API </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 定时器 </tag>
+            
+            <tag> Dom </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JS-对象</title>
+      <link href="/2026/05/29/JS-%E5%AF%B9%E8%B1%A1/"/>
+      <url>/2026/05/29/JS-%E5%AF%B9%E8%B1%A1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1、对象object"><a href="#1、对象object" class="headerlink" title="1、对象object"></a>1、对象object</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let 对象名 = &#123;</span><br><span class="line">属性名：属性值，</span><br><span class="line">方法名：函数</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>定义：js里的一种数据类型<br>可以理解为一种无序的数据集合，数组为有序的<br>可以详细的描述事物<br>let 对象名 &#x3D; {}<br>let 对象名 &#x3D; new Object（）<br>属性（特征：颜色）和方法（功能：）组成</p><p>可以使用typeof检测数据类型</p><h2 id="2、对象的使用"><a href="#2、对象的使用" class="headerlink" title="2、对象的使用"></a>2、对象的使用</h2><p>1.查<br>对象名.属性<br>对象名[‘属性名’]</p><p>2.改<br>对象名.属性 &#x3D; 新值</p><p>3.增<br>对象名.新属性 &#x3D; 新值</p><p>4.删<br>delete 对象名.属性</p><p>函数调用<br>对象名.方法名()</p><h2 id="3、遍历对象"><a href="#3、遍历对象" class="headerlink" title="3、遍历对象"></a>3、遍历对象</h2><p>不要用这种方法遍历数组，是索引下标，且是字符串类型</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for (let k in obj)&#123;</span><br><span class="line">console.log(k)//得到的是加引号的属性名</span><br><span class="line">所有用obj[k]</span><br><span class="line">console.log&#123;obj[k]&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="4-内置对象"><a href="#4-内置对象" class="headerlink" title="4.内置对象"></a>4.内置对象</h2><p>.ceil：向上取整 Math.ceil(1.1)&#x3D;2<br>.floor：向下取值 Math.floor(1.1)&#x3D;1<br>.round：四舍五入<br>.max:最大<br>.min:最小<br>.pow:幂运算<br>.abs:绝对值<br>parseInt（）：取整函数,单位也去<br>null是空对象<br>.random()随机数函数，返回一个0到1之间的数，[0,1)</p><p>return两个值用数组</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 对象 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JS-函数</title>
+      <link href="/2026/05/29/JS-%E5%87%BD%E6%95%B0/"/>
+      <url>/2026/05/29/JS-%E5%87%BD%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<p>函数是可以执行特定任务的代码块，可以实现代码复用，简化代码</p><h2 id="1-函数的声明"><a href="#1-函数的声明" class="headerlink" title="1.函数的声明"></a>1.函数的声明</h2><p>function 函数名（）{<br>函数体<br>}</p><h2 id="2-命名规范"><a href="#2-命名规范" class="headerlink" title="2.命名规范"></a>2.命名规范</h2><p>尽量小驼峰<br>前缀尽量为动词<br>命名建议：常用动词约定</p><h2 id="3-关键字："><a href="#3-关键字：" class="headerlink" title="3.关键字："></a>3.关键字：</h2><p>有特殊含义的字符，如let、var、if、for等</p><h2 id="4-函数传参"><a href="#4-函数传参" class="headerlink" title="4.函数传参"></a>4.函数传参</h2><p>function （传递的参数列表）{</p><p>}<br>1.多个参数用逗号隔开<br>2.声明时括号里的参数为行参，调用时的实际参数为实参<br>3.return后面代码不在执行，return后面的数据不要换行写<br>4.有return后，外面可以调用结果<br>5.return只能返回一个值，返回多个值时用中括号返回<br>6.结束函数用return，break结束循环，return结束函数</p><h2 id="5-作用域"><a href="#5-作用域" class="headerlink" title="5.作用域"></a>5.作用域</h2><p>1.全局作用域：作用于所有代码执行的环境（整个script标签内部，或一个独立的js文件），全局有效，全局声明的变量为全局变量<br>2.局部作用域：函数内的代码环境就是局部作用域，也称函数作用域，局部有效，局部内为局部变量</p><p>（1）函数内部没有声明，直接赋值的变量也当全局变量<br>（2）形参可以看做函数的局部变量<br>（3）不同作用域的相同变量名的变量不冲突<br>（4）采取就近原则确定变量最终值</p><h2 id="6-匿名函数"><a href="#6-匿名函数" class="headerlink" title="6.匿名函数"></a>6.匿名函数</h2><p>function（）{}<br>无法直接使用<br><strong>使用方法：</strong><br>1.函数表达式<br>将函数赋值给变量，通过变量名调用，及变量名当函数名调用<br>let fn &#x3D; function(){<br>代码<br>}<br>具名函数的调用可以写在任何位置，匿名函数只能写在声明后，必须先声明，后调用</p><h2 id="7-立即执行函数"><a href="#7-立即执行函数" class="headerlink" title="7.立即执行函数"></a>7.立即执行函数</h2><p>避免全局变量直接污染</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(function（x,y）&#123;</span><br><span class="line">代码</span><br><span class="line">&#125;)(1,2);</span><br><span class="line">(function（）&#123;</span><br><span class="line">代码</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure><p>要加分号结束,最后的括号相当于调用函数<br>另一种写法：(function（）{}())<br>也是第一个括号形参，第二个括号实参</p><h2 id="8-逻辑中断"><a href="#8-逻辑中断" class="headerlink" title="8.逻辑中断"></a>8.逻辑中断</h2><p>||,当前面为真时，中断，后面的不在执行；都为假，以最后为准<br>n&#x3D;4||0  n&#x3D;4;  n&#x3D;false||0  n&#x3D;0</p><p>&amp;&amp;，当前面为假时，中断，后面不在执行；都为真，以最后为准<br>n&#x3D;4&amp;&amp;0  n&#x3D;0;  n&#x3D;false&amp;&amp;0  n&#x3D;false</p><h2 id="9-转换布尔值"><a href="#9-转换布尔值" class="headerlink" title="9.转换布尔值"></a>9.转换布尔值</h2><p>··、0、null、false、NaN、undefined转换为布尔值后为假，其余为true</p><h2 id="10-类型转换"><a href="#10-类型转换" class="headerlink" title="10.类型转换"></a>10.类型转换</h2><p>1.引号+是拼接<br>2.减号只能用于数字，他会将空字符串··转换为0<br>3.null转换为数字变为0<br>4.undefined转换为数字变为NaN<br>5.undefined和任何操作为NaN<br>NaN和任何操作为NaN</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Js-函数 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JS基础</title>
+      <link href="/2026/05/29/JS%E5%9F%BA%E7%A1%80/"/>
+      <url>/2026/05/29/JS%E5%9F%BA%E7%A1%80/</url>
+      
+        <content type="html"><![CDATA[<p>数字、布尔值、变量、对象、数组如果在赋值的右边时不用加引号，字符串要加引号，不然会当作变量报错  </p><h2 id="1-三元运算符"><a href="#1-三元运算符" class="headerlink" title="1.三元运算符"></a>1.三元运算符</h2><p>条件？满足条件执行代码：不满足条件执行代码</p><h2 id="2-字符串拼接"><a href="#2-字符串拼接" class="headerlink" title="2.字符串拼接"></a>2.字符串拼接</h2><p>只有有一个是字符串就可以用+拼接<br>只有包含在引号里就是字符串型<br>在引号里面拼接变量实，可以用反引号加】【${变量}</p><h2 id="3-循环"><a href="#3-循环" class="headerlink" title="3.循环"></a>3.循环</h2><p>break：退出循环<br>continue：结束本次循环，进行下一次循环<br>for（变量起始值；终止条件；变量变化量）{<br>代码<br>}</p><h2 id="4-数组"><a href="#4-数组" class="headerlink" title="4.数组"></a>4.数组</h2><p>undefined+任何东西都是NaN</p><h3 id="1-新增"><a href="#1-新增" class="headerlink" title="1.新增"></a>1.新增</h3><p>数组.push()将一个或多个元素添加到尾部，并返回新数组长度<br>数组.unshift()将一个或多个元素添加到开头，并返回新数组长度</p><h3 id="2-删除"><a href="#2-删除" class="headerlink" title="2.删除"></a>2.删除</h3><p>数组.pop()方法删除最后一个元素，并返回该元素的值<br>数组.shif()方法删除开头一个元素，并返回该元素的值<br>数组.splice删除指导元素，arr.splice(起始位置，删几个)，省略个数就从指定位置开删到最后</p><h3 id="3-排序"><a href="#3-排序" class="headerlink" title="3.排序"></a>3.排序</h3><p>arr.sort()排序</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 三元运算符 </tag>
+            
+            <tag> 字符串拼接 </tag>
+            
+            <tag> 循环 </tag>
+            
+            <tag> 数组 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS-定位</title>
+      <link href="/2026/05/29/CSS-%E5%AE%9A%E4%BD%8D/"/>
+      <url>/2026/05/29/CSS-%E5%AE%9A%E4%BD%8D/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1、定位"><a href="#1、定位" class="headerlink" title="1、定位"></a>1、定位</h2><p>作用：灵活的改变盒子在网页中的位置<br>实现方法：</p><h3 id="1-相对定位position：relative"><a href="#1-相对定位position：relative" class="headerlink" title="1.相对定位position：relative"></a>1.相对定位position：relative</h3><p>1.改变位置的参照物是自己原来的位置（top：100px，相对原来位置的上面，向下移动100px）<br>2.不投标，占位<br>3.标签显示模式不变</p><h3 id="2-绝对定位position：absolute"><a href="#2-绝对定位position：absolute" class="headerlink" title="2.绝对定位position：absolute"></a>2.绝对定位position：absolute</h3><p>使用场景：子级绝对定位，父级相对定位（子决父相）<br>1.脱标，不占位置<br>2.参照物：先找最近的已经定位的祖先元素，如果所有祖先元素都没有定位，参照浏览器可视区改位置<br>3.显示模式改变，改变成宽高生效（具备了行内块的特点）<br>边偏：设置盒子的位置<br>left<br>right<br>top<br>bottom </p><h3 id="3-定位居中"><a href="#3-定位居中" class="headerlink" title="3.定位居中"></a>3.定位居中</h3><p>实现步骤：<br>1.绝对定位<br>2.水平、垂直边偏移50%<br>3.子级向左、上移动自身移动自身尺寸的一半<br>1.左、上的外边距为尺寸的一半<br>2.transform：translate（-50%，-50%）(这里的50%就是自己的宽高，不需要自己计算)</p><h3 id="4-固定定位"><a href="#4-固定定位" class="headerlink" title="4.固定定位"></a>4.固定定位</h3><p>position:fiexd;<br>特点：<br>1.脱标，不占位置<br>2.参照物：浏览器窗口<br>3.显示模式改变，改变成宽高生效（具备了行内块的特点）</p><h3 id="5-堆叠层级z-index"><a href="#5-堆叠层级z-index" class="headerlink" title="5.堆叠层级z-index"></a>5.堆叠层级z-index</h3><p>默认按照标签书写顺序，后来者居上<br>作用：设置定位元素的层级顺序，改变定位元素的显示顺序<br>取值是整数，默认0，取值越大显示顺序越靠上</p><h2 id="2、CSS精灵"><a href="#2、CSS精灵" class="headerlink" title="2、CSS精灵"></a>2、CSS精灵</h2><p>也叫CSS Sprites,是网页图片的应用处理方式，把网页中的一些背景图片整合到一个图片文件夹中，再background-position</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 定位 </tag>
+            
+            <tag> css精灵 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -21,9 +898,25 @@
       <link href="/2026/05/29/CSS-%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BF/"/>
       <url>/2026/05/29/CSS-%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BF/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="1、项目目录"><a href="#1、项目目录" class="headerlink" title="1、项目目录"></a>1、项目目录</h2><p>study<br>images文件夹:存放固定使用的图片素材，如logo、样式修饰图等<br>uploads文件夹：存放非固定使用图片素材，如商品图、宣传图需要上传的图片<br>css文件夹：存放css文件（link标签引入）<br>base.css：基础公共样式，如清除默认样式、设置网页基本样式<br>index.css：首页css样式<br>index.html：首页HTML文件</p><h2 id="2、网页制作思路"><a href="#2、网页制作思路" class="headerlink" title="2、网页制作思路"></a>2、网页制作思路</h2><p>1.布局思路：先整体再局部，从内到外，从上到下，从左到右<br>2.CSS实现思路：<br>1.画盒子，调整盒子范围——宽高背景色<br>2.调整盒子位置-flex布局、内外边距<br>3.控制图片、文字内容样式</p><h2 id="3、logo制作技巧"><a href="#3、logo制作技巧" class="headerlink" title="3、logo制作技巧"></a>3、logo制作技巧</h2><p>logo功能：<br>单击跳转到首页<br>搜索引擎优化：提升网站排名(为了SEO，logo当背景图，文字隐藏。)<br>实现方法：<br>标签结构：h1&gt;a&gt;网站名称（搜索关键字）</p><h2 id="4、导航制作技巧（nav）"><a href="#4、导航制作技巧（nav）" class="headerlink" title="4、导航制作技巧（nav）"></a>4、导航制作技巧（nav）</h2><p>导航功能：<br>单击跳转页面<br>实现方法：<br>标签结构ul&gt;li*3&gt;a<br>优势：避免堆砌a标签，网站搜索排名降级</p><h2 id="5、搜索区域search"><a href="#5、搜索区域search" class="headerlink" title="5、搜索区域search"></a>5、搜索区域search</h2><p>实现方法：<br>标签结构：.search&gt;input+a&#x2F;button    </p><h2 id="6、用户区域"><a href="#6、用户区域" class="headerlink" title="6、用户区域"></a>6、用户区域</h2><p>标签结构：.user&gt;a&gt;img+span</p><h2 id="7、精品推荐"><a href="#7、精品推荐" class="headerlink" title="7、精品推荐"></a>7、精品推荐</h2><p>标签结构：.recommend&gt;h3+ul+a.modify<br>总结：<br>1.有相同的样式可以用相同的类，写css样式时不要加前面的类<br>2.要尽量减少代码量，当可以在一个选择器里面完成时，在一个选择器里设置，如上面可以不用写下边距，下面的可以不用写上边距，就在中间设置就可以</p>]]></content>
       
       
+      <categories>
+          
+          <category> CSS </category>
+          
+          <category> 实战 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 实战 </tag>
+            
+            <tag> 学成在线 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -34,9 +927,21 @@
       <link href="/2026/05/29/CSS-flex/"/>
       <url>/2026/05/29/CSS-flex/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="1-认识"><a href="#1-认识" class="headerlink" title="1.认识"></a>1.认识</h2><p>flex布局也叫弹性布局，是浏览器提倡的布局模型，非常适合结构化布局，提供了强大的空间分布和对齐能力<br>flex模型不会产生浮动布局中的脱标现象，更简单，更灵活</p><h2 id="2-组成"><a href="#2-组成" class="headerlink" title="2.组成"></a>2.组成</h2><p>设置方式：给父元素设置display：flex，子元素可以自动挤压或拉伸<br>父级是flex布局，子级变弹性盒子：加宽高生效<br>组成部分：<br>弹性容器（父级盒子）<br>弹性盒子（子级盒子）<br>主轴：默认水平方向<br>侧轴&#x2F;交叉轴：默认垂直方向</p><h2 id="3-flex属性"><a href="#3-flex属性" class="headerlink" title="3.flex属性"></a>3.flex属性</h2><h3 id="1-主轴对齐方式justify-content"><a href="#1-主轴对齐方式justify-content" class="headerlink" title="1.主轴对齐方式justify-content"></a>1.主轴对齐方式justify-content</h3><table><thead><tr><th>属性值</th><th>效果</th></tr></thead><tbody><tr><td>flex-start</td><td>默认值，弹性盒子从起点开始依次排列</td></tr><tr><td>flex-end</td><td>从终点开始依次排列</td></tr><tr><td>center</td><td>沿主轴居中排列</td></tr><tr><td>space-between</td><td>沿主轴均匀排列，空白间距分在弹性盒子之间，与容器左右边缘无间距</td></tr><tr><td>space-around</td><td>沿主轴均匀排列，空白间距在弹性盒子两侧，与容器左右边缘间距是弹性盒子之间的1&#x2F;2</td></tr><tr><td>sapce-evenly</td><td>沿主轴均匀排列，弹性盒子之间和弹性盒子与容器之间间距相等</td></tr></tbody></table><h3 id="2-侧轴对齐方式"><a href="#2-侧轴对齐方式" class="headerlink" title="2.侧轴对齐方式"></a>2.侧轴对齐方式</h3><p>align-items：当前弹性容器内所有弹性盒子的侧轴对齐方式（给弹性容器设置）<br>align-self：单独控制某个弹性盒子的侧轴对齐方式（给弹性盒子设置）</p><table><thead><tr><th>属性值</th><th>效果</th></tr></thead><tbody><tr><td>stretch</td><td>弹性盒子沿着侧轴线被拉伸至铺满容器（弹性盒子没有设置侧轴尺寸则默认拉伸，若设置了就不会拉伸,且这是默认效果）</td></tr><tr><td>center</td><td>弹性盒子沿侧轴居中排列</td></tr><tr><td>flex-start</td><td>从起点开始依次排列</td></tr><tr><td>flex-end</td><td>从终点依次排列</td></tr></tbody></table><h3 id="3-修改主轴方向flex-direction"><a href="#3-修改主轴方向flex-direction" class="headerlink" title="3.修改主轴方向flex-direction"></a>3.修改主轴方向flex-direction</h3><p>默认水平方向</p><table><thead><tr><th>属性值</th><th>效果</th></tr></thead><tbody><tr><td>row</td><td>水平方向，从左向右（默认）</td></tr><tr><td>column</td><td>垂直方向，从上向下</td></tr><tr><td>row-reverse</td><td>水平方向，从右向左</td></tr><tr><td>column-reverse</td><td>垂直方向，从下向上</td></tr></tbody></table><h2 id="4-弹性伸缩比flex"><a href="#4-弹性伸缩比flex" class="headerlink" title="4.弹性伸缩比flex"></a>4.弹性伸缩比flex</h2><p>作用：控制弹性盒子主轴方向的尺寸<br>属性名：flex<br>属性值：整数数字，表示占用父级剩余尺寸的份数</p><h2 id="5-弹性盒子换行flex-wrap"><a href="#5-弹性盒子换行flex-wrap" class="headerlink" title="5.弹性盒子换行flex-wrap"></a>5.弹性盒子换行flex-wrap</h2><p>弹性盒子可以自动挤压和拉伸，默认所有弹性盒子一行显示<br>如果换行后没有间距，可能是没有设置宽高<br>属性值：<br>wrap：换行<br>nowrap：不换行（默认）</p><h2 id="6-行对齐方式align-content"><a href="#6-行对齐方式align-content" class="headerlink" title="6.行对齐方式align-content"></a>6.行对齐方式align-content</h2><p>属性值与主轴对齐方式相同<br>对单行盒子不生效</p>]]></content>
       
       
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> flex </tag>
+            
+        </tags>
       
     </entry>
     
@@ -47,9 +952,23 @@
       <link href="/2026/05/29/CSS-%E6%A0%87%E5%87%86%E6%B5%81%E5%8F%8Afloat/"/>
       <url>/2026/05/29/CSS-%E6%A0%87%E5%87%86%E6%B5%81%E5%8F%8Afloat/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="1、标准流"><a href="#1、标准流" class="headerlink" title="1、标准流"></a>1、标准流</h2><p>指的是标签在页面默认的排布规则，如块元素独占一行，行内元素可以一行显示多个</p><h2 id="2、浮动float"><a href="#2、浮动float" class="headerlink" title="2、浮动float"></a>2、浮动float</h2><h3 id="1-作用：让块元素水平排列"><a href="#1-作用：让块元素水平排列" class="headerlink" title="1.作用：让块元素水平排列"></a>1.作用：让块元素水平排列</h3><p>属性值：<br>left：左对齐<br>right：右对齐<br>特点：<br>顶对齐;<br>且具备行内块显示模式特点<br>浮动的盒子会脱离标准流</p><h3 id="2-产品区域布局"><a href="#2-产品区域布局" class="headerlink" title="2.产品区域布局"></a>2.产品区域布局</h3><p>父级宽度不够，浮动的盒子会掉下来</p><h3 id="3-清除浮动"><a href="#3-清除浮动" class="headerlink" title="3.清除浮动"></a>3.清除浮动</h3><p>clear作用在块级元素上，只对父元素生效，不改变浮动元本身<br>浮动元素会脱标，如果父级没有高度，子级无法撑开父级高度（可能导致页面布局错乱）<br><strong>方法1：额外标签法</strong><br>在父元素内容的最后添加一个块级元素，设置CSS属性clear：both<br><strong>方法2：单伪元素法</strong><br>在父级添加下面的类</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.clearfix::after&#123;</span><br><span class="line">content:&#x27;&#x27;;</span><br><span class="line">display:block;</span><br><span class="line">clear:both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>方法3：双伪元素法</strong><br>在父级的开头和结尾加上伪元素<br><strong>方法4：overflow</strong><br>父元素添加CSS属性overflow：hidden</p>]]></content>
       
       
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> float </tag>
+            
+            <tag> 标准流 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -60,9 +979,23 @@
       <link href="/2026/05/29/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/"/>
       <url>/2026/05/29/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2><p>作用：布局网页，摆放盒子和内容</p><h2 id="1-重要组成部分："><a href="#1-重要组成部分：" class="headerlink" title="1.重要组成部分："></a>1.重要组成部分：</h2><p>内容区域-width&amp;height<br>内边距-padding（出现在内容与盒子边缘之间,会撑大盒子）<br>边框线-border<br>外边距-margin（出现在盒子外面）</p><h2 id="2-边框线border"><a href="#2-边框线border" class="headerlink" title="2.边框线border"></a>2.边框线border</h2><p>缩写：bd<br>属性值：边框线粗细 线条样式 颜色（不分先后顺序）</p><table><thead><tr><th>属性值</th><th>线条样式</th></tr></thead><tbody><tr><td>solid</td><td>实线</td></tr><tr><td>dashed</td><td>虚线</td></tr><tr><td>dotted</td><td>点线</td></tr></tbody></table><p>设置单方向边框线<br>属性名：border-方位名词（bd+方位名词首字母，例如：bdl）</p><h2 id="3-内边距padding"><a href="#3-内边距padding" class="headerlink" title="3.内边距padding"></a>3.内边距padding</h2><p>设置内容与盒子边缘之间的距离<br>属性名：padding&#x2F;padding-方位名词<br>多值写法（单位均为px）：</p><table><thead><tr><th>取值个数</th><th>示例</th><th>含义</th></tr></thead><tbody><tr><td>一个</td><td>p:10</td><td>四个方向10</td></tr><tr><td>四个</td><td>p:10 20 30 40</td><td>上10右20下30左40</td></tr><tr><td>三个</td><td>p:10 20 30px</td><td>上10左右20下30</td></tr><tr><td>两个</td><td>p:10 20</td><td>上下10左右20</td></tr></tbody></table><p>(可以按顺时针记忆，从上开始，缺值时和对面取值一样)</p><h2 id="4-尺寸计算"><a href="#4-尺寸计算" class="headerlink" title="4.尺寸计算"></a>4.尺寸计算</h2><p>默认情况<br>盒子尺寸&#x3D;内容尺寸+border尺寸+内边距尺寸<br>加paddign和border都会撑大盒子<br>解决：<br>手动减法，减掉border&#x2F;padding的尺寸<br>内减模式：box-sizing:border-box</p><h2 id="5-外边距margin"><a href="#5-外边距margin" class="headerlink" title="5.外边距margin"></a>5.外边距margin</h2><p>拉开两个盒子之间的距离<br>与padding属性值写法、含义相同<br>版心居中：<br>盒子要有宽度<br>margin取值auto</p><h2 id="6-清楚默认样式"><a href="#6-清楚默认样式" class="headerlink" title="6.清楚默认样式"></a>6.清楚默认样式</h2> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">margin: 0;</span><br><span class="line">padding: 0;</span><br><span class="line">box-sizing: border-box;</span><br><span class="line">&#125;</span><br><span class="line">/* 去掉列表的项目符号 */</span><br><span class="line">li &#123;</span><br><span class="line">list-style: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">## </span><br></pre></td></tr></table></figure><h2 id="7-元素溢出"><a href="#7-元素溢出" class="headerlink" title="7.元素溢出"></a>7.元素溢出</h2><p>  作用：控制溢出元素的内容的显示方式<br>  属性名：overflow</p><table><thead><tr><th>属性值</th><th>效果</th></tr></thead><tbody><tr><td>hidden</td><td>溢出隐藏</td></tr><tr><td>scroll</td><td>溢出滚动（无论是否溢出，都显示滚动条位置）</td></tr><tr><td>auto</td><td>溢出滚动（溢出才显示滚动条位置）</td></tr></tbody></table><h2 id="8-外边距问题"><a href="#8-外边距问题" class="headerlink" title="8.外边距问题"></a>8.外边距问题</h2><h3 id="1-合并现象"><a href="#1-合并现象" class="headerlink" title="1.合并现象"></a>1.合并现象</h3><p>  场景：垂直排列的兄弟元素，同属于标准流的块级元素，且没有边框、内边距、行内内容、清除浮动等隔离，上下margin会合并<br>  现象：取两个margin中较大值生效</p><h3 id="2-塌陷问题"><a href="#2-塌陷问题" class="headerlink" title="2.塌陷问题"></a>2.塌陷问题</h3><p>  场景：父子级的标签，子级添加上外边距会产生塌陷问题<br>  现象：导致父级一起向下移动<br>  解决方法：<br>  取消子级margin，父级设置padding<br>  父级设置overflow：hidden<br>  父级设置border-top</p><h2 id="9-行内元素-内外边距问题"><a href="#9-行内元素-内外边距问题" class="headerlink" title="9.行内元素-内外边距问题"></a>9.行内元素-内外边距问题</h2><p>  场景：行内元素添加margin和padding，无法改变元素垂直位置<br>  解决方法：给行内元素添加line-height可以改变垂直位置</p><h2 id="10-圆角border-radius"><a href="#10-圆角border-radius" class="headerlink" title="10.圆角border-radius"></a>10.圆角border-radius</h2><p>  作用：设置元素的外边框为圆角<br>  属性名：border-radius<br>  属性值：数字+px&#x2F;百分比(可写多个值，与边距属性记忆相同，不同的是，是从左上角开始，顺时针取值，没有取值的角与对角相同)<br>  提示：属性值是圆角半径，取值百分比最大为50%，超过50%效果和50%一样<br>  常用形状：<br>  正圆：给正方形设置圆角为宽高一半&#x2F;50%<br>  胶囊形状：给长方形设置圆角为高的一半</p><h2 id="11-阴影box-shadow"><a href="#11-阴影box-shadow" class="headerlink" title="11.阴影box-shadow"></a>11.阴影box-shadow</h2><p>  作用：给元素设置阴影效果<br>  属性名：box-shadow<br>  属性值：x轴偏移量 y轴偏移量 模糊半径 扩散半径 颜色 内外阴影<br>  注意：x、y轴的偏移量必须书写<br>  默认是外阴影，内阴影需要添加inset</p>]]></content>
       
       
+      <categories>
+          
+          <category> CSS </category>
+          
+          <category> 盒子模型 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 盒子模型 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -73,9 +1006,25 @@
       <link href="/2026/05/29/CSS-%E7%BB%93%E6%9E%84%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8%E5%8F%8A%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8/"/>
       <url>/2026/05/29/CSS-%E7%BB%93%E6%9E%84%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8%E5%8F%8A%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="1、结构伪类选择器"><a href="#1、结构伪类选择器" class="headerlink" title="1、结构伪类选择器"></a>1、结构伪类选择器</h2><p>不要有空格<br>根据元素的结果关系找元素</p><table><thead><tr><th>选择器</th><th>说明</th></tr></thead><tbody><tr><td>E:first-child</td><td>查找第一个E元素</td></tr><tr><td>E:last-child</td><td>查找最后一个E元素</td></tr><tr><td>E:nth-child（N）</td><td>查找第N个E元素（第一个E元素的N值为1）</td></tr></tbody></table><p>:nth-child(公式)<br>根据元素的结构关系查找多个元素</p><table><thead><tr><th>功能</th><th>公式</th></tr></thead><tbody><tr><td>偶数标签</td><td>2n</td></tr><tr><td>奇数标签</td><td>2n+1，2n-1</td></tr><tr><td>找到5的倍数的标签</td><td>5n</td></tr><tr><td>找到第五个以后的标签</td><td>n+5</td></tr><tr><td>找到第五个以前的标签</td><td>-n+5</td></tr></tbody></table><p>(n从0开始算，不能换顺序，n要在前面，否则无效)</p><h2 id="2、伪元素选择器"><a href="#2、伪元素选择器" class="headerlink" title="2、伪元素选择器"></a>2、伪元素选择器</h2><p>不要有空格<br>作用：创建虚拟元素（伪元素），用来摆放装饰性的内容<br>E::before    在E元素里面最前面添加一个伪元素<br>E::after     在E元素里面最后面添加一个伪元素<br>1.必须设置content：”内容”属性，否则不生效，用来设置伪元素的内容，如果没有内容，则引号留空即可<br>2.伪元素默认行内显示模式<br>3.权重和标签选择器相同</p>]]></content>
       
       
+      <categories>
+          
+          <category> CSS </category>
+          
+          <category> 选择器 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 结构伪类选择器 </tag>
+            
+            <tag> 伪元素选择器 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -86,9 +1035,23 @@
       <link href="/2026/05/29/CSS-%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F/"/>
       <url>/2026/05/29/CSS-%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>标签的显示方式<br>作用：布局网页的时候，根据标签的显示模式选择合适的标签摆放内容</p><h2 id="1-块级元素"><a href="#1-块级元素" class="headerlink" title="1.块级元素"></a>1.块级元素</h2><p>独占一行<br>宽度默认是父级的100%<br>添加宽高属性生效</p><h2 id="2-行内元素"><a href="#2-行内元素" class="headerlink" title="2.行内元素"></a>2.行内元素</h2><p>一行共存多个<br>尺寸由内容撑开<br>加宽高不生效</p><h2 id="3-行内块"><a href="#3-行内块" class="headerlink" title="3.行内块"></a>3.行内块</h2><p>一行共存多个<br>尺寸由内容撑开<br>宽高生效</p><h2 id="13、转换显示模式"><a href="#13、转换显示模式" class="headerlink" title="13、转换显示模式"></a>13、转换显示模式</h2><p>属性名：display</p><table><thead><tr><th>属性值</th><th>效果</th></tr></thead><tbody><tr><td>block</td><td>块级</td></tr><tr><td>inline-block</td><td>行内块</td></tr><tr><td>inline</td><td>行内</td></tr></tbody></table><p>行内块和图片的底部对齐文字下沿基线，导致会有空白，可用vertical-align: top;（或middle&#x2F;bottom）消除</p>]]></content>
       
       
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+            <tag> 显示模式 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -165,7 +1128,13 @@
       
         <tags>
             
-            <tag> css特性，继承性，层叠性，优先级 </tag>
+            <tag> css特性 </tag>
+            
+            <tag> 继承性 </tag>
+            
+            <tag> 层叠性 </tag>
+            
+            <tag> 优先级 </tag>
             
         </tags>
       
@@ -190,7 +1159,11 @@
       
         <tags>
             
-            <tag> html，css复合选择器，伪类选择器 </tag>
+            <tag> html </tag>
+            
+            <tag> css复合选择器 </tag>
+            
+            <tag> 伪类选择器 </tag>
             
         </tags>
       
@@ -215,7 +1188,9 @@
       
         <tags>
             
-            <tag> html，css文字控制属性 </tag>
+            <tag> html </tag>
+            
+            <tag> css文字控制属性 </tag>
             
         </tags>
       
@@ -246,7 +1221,13 @@
             
             <tag> html </tag>
             
-            <tag> 标签选择器，类选择器，id选择器，通配符选择器 </tag>
+            <tag> 标签选择器 </tag>
+            
+            <tag> 类选择器 </tag>
+            
+            <tag> id选择器 </tag>
+            
+            <tag> 通配符选择器 </tag>
             
         </tags>
       
@@ -342,11 +1323,11 @@
     
     
     <entry>
-      <title>Git基础</title>
-      <link href="/2026/05/28/Git%E5%9F%BA%E7%A1%80/"/>
-      <url>/2026/05/28/Git%E5%9F%BA%E7%A1%80/</url>
+      <title>Git操作流程</title>
+      <link href="/2026/05/28/Git%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B/"/>
+      <url>/2026/05/28/Git%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B/</url>
       
-        <content type="html"><![CDATA[<h2 id="vscode中有关Git的字母含义"><a href="#vscode中有关Git的字母含义" class="headerlink" title="vscode中有关Git的字母含义"></a>vscode中有关Git的字母含义</h2><p>M表示修改，对文件进行了更改但尚未暂存或提交(使用git add)<br>U表示新文件，Git还未跟踪，文件不在之前的提交中<br>A表示新文件已添加<br>D表示已删除<br>R表示已重命名<br>C合并时发生冲突</p><h2 id="GIT基本命令"><a href="#GIT基本命令" class="headerlink" title="GIT基本命令"></a>GIT基本命令</h2><p><strong>ll&#x2F;ls</strong>：查看当前目录<br><strong>cat</strong>：查看文件内容<br><strong>touch</strong>：创建文件<br>如创建.bashrc文件命令如下： touch ~&#x2F;.bashrc<br>可在该文件中配置指令别名，如下所示：<br><strong>用于输出git提交日志</strong>：alias git-log&#x3D;’git log –pretty&#x3D;oneline –all –graph –abbrev-commit’</p><p><strong>该命令可以输出当前目录所有文件及基本信息</strong>：alias ll&#x3D;’ls -al’</p><p>配置完成后，使用如下命令，执行修改：source ~&#x2F;.bashrc</p><p><strong>git init</strong>：在当前目录中创建一个新的空的Git仓库&#x2F;&#x2F;告诉GIT：从这个文件夹开始，帮我管理这里所有文件的版本历史</p><p><strong>git add 单个文件名|通配符</strong>：</p><p>​添加工作区一个或多个文件的修改到暂存区<br>将所有修改加入暂存区：git add .</p><h4 id="git-commit-m”你的提交说明信息”："><a href="#git-commit-m”你的提交说明信息”：" class="headerlink" title="git commit -m”你的提交说明信息”："></a><strong>git commit -m”你的提交说明信息”：</strong></h4><p>提交暂存区内容到本地仓库的当前分支<br>（1）git add (工作区&lt;在工作区修改或创建新文件&gt; –&gt; 暂存区)<br>（2）git commit (暂存区 –&gt; 本地仓库)</p><p><strong>git status</strong>：查看的修改的状态（暂存区、工作区）</p><h4 id="git-log-查看历史提交记录"><a href="#git-log-查看历史提交记录" class="headerlink" title="git log 查看历史提交记录"></a><strong>git log</strong> 查看历史提交记录</h4><p>​作用:查看提交记录<br>命令形式：git log [option]<br>options<br>–all 显示所有分支<br>–pretty&#x3D;oneline 将提交信息显示为一行<br>–abbrev-commit 使得输出的commitId更简短<br>–graph 以图的形式</p><h4 id="版本回退：git-reset-–hard-commitID"><a href="#版本回退：git-reset-–hard-commitID" class="headerlink" title="版本回退：git reset –hard commitID"></a><strong>版本回退</strong>：git reset –hard commitID</h4><p>​（commitID 可以使用git-log 或git log指令查看）</p><h4 id="git-reflog-查看历史提交记录"><a href="#git-reflog-查看历史提交记录" class="headerlink" title="git reflog 查看历史提交记录"></a><strong>git reflog</strong> 查看历史提交记录</h4><h4 id="gitignore列出不被操作的文件"><a href="#gitignore列出不被操作的文件" class="headerlink" title=".gitignore列出不被操作的文件"></a><strong>.gitignore</strong>列出不被操作的文件</h4><p>​在工作目录中创建一个名为 .gitignore 的文件（文件名称固定），列出要忽略的文件模式</p><h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><p>​<strong>git branch</strong> 查看分支<br><strong>git branch branchname</strong>创建分支<br><strong>git checkout branchname</strong>切换分支<br><strong>git chechout -b branchname</strong>创建并切换分支<br><strong>git merge branchname</strong>合并分支<br><strong>git branch -d b1</strong> 删除分支时，需要做各种检查<br><strong>git branch -D b1</strong> 不做任何检查，强制删除</p><h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><p>当两个分支上对文件的修改可能会存在冲突，例如同时修改了同一个文件的同一行，这时就需要手动解决冲突，解决冲突步骤如下：</p><ol><li>处理文件中冲突的地方</li><li>将解决完冲突的文件加入暂存区(add)</li><li>提交到仓库(commit)</li></ol><h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><h3 id="1-配置SSH公钥"><a href="#1-配置SSH公钥" class="headerlink" title="1.配置SSH公钥"></a>1.<strong>配置SSH公钥</strong></h3><p>生成SSH公钥：ssh-keygen -t rsa不断回车，如果公钥已经存在，则自动覆盖</p><h3 id="2-Gitee设置账户共公钥"><a href="#2-Gitee设置账户共公钥" class="headerlink" title="2.Gitee设置账户共公钥"></a>2.<strong>Gitee设置账户共公钥</strong></h3><p>​获取公钥<br>cat ~&#x2F;.ssh&#x2F;id_rsa.pub<br>验证是否配置成功<br>ssh -T <a href="mailto:&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#116;&#101;&#x65;&#46;&#99;&#111;&#x6d;">git@gitee.com</a></p><h3 id="3-操作远程仓库"><a href="#3-操作远程仓库" class="headerlink" title="3.操作远程仓库"></a>3.<strong>操作远程仓库</strong></h3><h4 id="1-添加远程仓库"><a href="#1-添加远程仓库" class="headerlink" title="1.添加远程仓库"></a>1.<strong>添加远程仓库</strong></h4><p>​此操作是先初始化本地库，然后与已创建的远程库进行对接<br>命令： git remote add &lt;远端名称&gt; &lt;仓库路径&gt;<br>远端名称，默认是origin，取决于远端服务器设置<br>仓库路径，从远端服务器获取此URL</p><h4 id="2-查看远程仓库"><a href="#2-查看远程仓库" class="headerlink" title="2.查看远程仓库"></a>2.<strong>查看远程仓库</strong></h4><p>git remote</p><h4 id="3-推送到远程仓库"><a href="#3-推送到远程仓库" class="headerlink" title="3.推送到远程仓库"></a>3.<strong>推送到远程仓库</strong></h4><p>命令：git push [-f] [–set-upstream] [远端名称 [本地分支名][:远端分支名]]<br>如果远程分支名和本地分支名称相同，则可以只写本地分支<br>git push origin master<br>-f 表示强制覆盖<br>–set-upstream 推送同时建立起和远端分支的关联关系。<br>git push –set-upstream origin master<br>如果当前分支已经和远端分支关联，则可以省略分支名和远端名。<br>git push 将master分支推送到已关联的远端分支<br>查看关联关系：<br>git branch -vv</p><h3 id="4-从远程仓库克隆（克隆到本地后是本地仓库）"><a href="#4-从远程仓库克隆（克隆到本地后是本地仓库）" class="headerlink" title="4.从远程仓库克隆（克隆到本地后是本地仓库）"></a>4.<strong>从远程仓库克隆（克隆到本地后是本地仓库）</strong></h3><p>​git clone &lt;仓库路径&gt; [本地目录]<br>​本地目录可以省略，会自动生成一个目录</p><h3 id="5-从远程仓库中抓取和拉取"><a href="#5-从远程仓库中抓取和拉取" class="headerlink" title="5.从远程仓库中抓取和拉取"></a>5.<strong>从远程仓库中抓取和拉取</strong></h3><h4 id="抓取-命令：git-fetch-remote-name-branch-name"><a href="#抓取-命令：git-fetch-remote-name-branch-name" class="headerlink" title="抓取 命令：git fetch [remote name][branch name]"></a><strong>抓取</strong> 命令：git fetch [remote name][branch name]</h4><p>抓取指令就是将仓库里的更新都抓取到本地，不会进行合并<br>如果不指定远端名称和分支名，则抓取所有分支</p><h4 id="拉取-命令：git-pull-remote-name-branch-name"><a href="#拉取-命令：git-pull-remote-name-branch-name" class="headerlink" title="拉取 命令：git pull [remote name][branch name]"></a><strong>拉取</strong> 命令：git pull [remote name][branch name]</h4><p>拉取指令就是将远端仓库的修改拉到本地并自动进行合并，等同于fetch+merge<br>如果不指定远端名称和分支名，则抓取所有并更新当前分支</p><h3 id="6-解决合并冲突"><a href="#6-解决合并冲突" class="headerlink" title="6.解决合并冲突"></a>6.<strong>解决合并冲突</strong></h3><p>​在一段时间，A、B用户修改了同一个文件，且修改了同一行位置的代码，此时会发生合并冲突。<br>A用户在本地修改代码后优先推送到远程仓库，此时B用户在本地修订代码，提交到本地仓库后，也需要<br>推送到远程仓库，此时B用户晚于A用户，故需要先拉取远程仓库的提交，经过合并后才能推送到远端分<br>支</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="如果是首次推送远程仓库："><a href="#如果是首次推送远程仓库：" class="headerlink" title="如果是首次推送远程仓库："></a>如果是首次推送远程仓库：</h2><h3 id="​1-本地Git配置（已配可跳过）："><a href="#​1-本地Git配置（已配可跳过）：" class="headerlink" title="​1. 本地Git配置（已配可跳过）："></a>​1. <strong>本地Git配置（已配可跳过）</strong>：</h3><p>终端执行 git config –global user.name “你的名字” 、 git config –global user.email “你的邮箱” 。</p><h3 id="2-初始化："><a href="#2-初始化：" class="headerlink" title="2. 初始化："></a>2. <strong>初始化</strong>：</h3><p>打开项目文件夹，终端执行 git init <strong>初始化本地库</strong>；已初始化可跳过。</p><h3 id="3-暂存并提交文件："><a href="#3-暂存并提交文件：" class="headerlink" title="3. 暂存并提交文件："></a>3. <strong>暂存并提交文件</strong>：</h3><p>git add . 、 git commit -m “首次提交说明” 。</p><h3 id="4-关联远程仓库（终端执行）："><a href="#4-关联远程仓库（终端执行）：" class="headerlink" title="4. 关联远程仓库（终端执行）："></a>4. <strong>关联远程仓库</strong>（终端执行）：</h3><p>git remote add origin 远程仓库地址 ，通常用 origin 作远程别名。</p><h3 id="5-验证关联："><a href="#5-验证关联：" class="headerlink" title="5. 验证关联："></a>5. <strong>验证关联</strong>：</h3><p>git remote -v ，显示fetch&#x2F;push地址即成功。</p><h3 id="6-统一分支名（可选但推荐）："><a href="#6-统一分支名（可选但推荐）：" class="headerlink" title="6. 统一分支名（可选但推荐）："></a>6. <strong>统一分支名</strong>（可选但推荐）：</h3><p>git branch -M main （将默认master改为main，适配多数平台默认分支）。</p><h2 id="日常开发"><a href="#日常开发" class="headerlink" title="日常开发"></a>日常开发</h2><h3 id="1-配置Git"><a href="#1-配置Git" class="headerlink" title="1.配置Git"></a>1.<strong>配置Git</strong></h3><p>打开终端执行  git config –global user.name “你的名字”  和  git config –global user.email “你的邮箱”</p><h3 id="2-初始化本地仓库或克隆远程仓库"><a href="#2-初始化本地仓库或克隆远程仓库" class="headerlink" title="2.初始化本地仓库或克隆远程仓库"></a>2.<strong>初始化本地仓库或克隆远程仓库</strong></h3><p>初始化本地仓库：git init</p><h4 id="克隆远程仓库"><a href="#克隆远程仓库" class="headerlink" title="克隆远程仓库"></a><strong>克隆远程仓库</strong></h4><p>1. 点击VS Code左侧源代码管理图标（分支图标）。<br>2. 点击克隆仓库，输入远程仓库的HTTPS&#x2F;SSH地址，选择本地保存路径，完成克隆。</p><h3 id="3-日常开发操作（暂存、提交、拉取、推送）"><a href="#3-日常开发操作（暂存、提交、拉取、推送）" class="headerlink" title="3.日常开发操作（暂存、提交、拉取、推送）"></a>3.<strong>日常开发操作（暂存、提交、拉取、推送</strong>）</h3><h4 id="1-暂存文件：git-add"><a href="#1-暂存文件：git-add" class="headerlink" title="1. 暂存文件：git add"></a>1. <strong>暂存文件</strong>：git add</h4><p>开发完成后，在源代码管理面板中，点击文件右侧的 + 号，将修改暂存到暂存区</p><h4 id="2-提交更改：git-commit"><a href="#2-提交更改：git-commit" class="headerlink" title="2. 提交更改：git commit"></a>2. <strong>提交更改</strong>：git commit</h4><p>在暂存区下方的输入框中填写提交信息（必填，描述本次修改内容），点击输入框右侧的对勾按钮，完成本地提交。</p><h4 id="3-拉取远程最新代码：git-pull"><a href="#3-拉取远程最新代码：git-pull" class="headerlink" title="3. 拉取远程最新代码：git pull"></a>3. <strong>拉取远程最新代码</strong>：git pull</h4><p>点击源代码管理面板右上角的 ··· ，选择拉取，或在终端执行  git pull ，避免本地代码与远程冲突。</p><h4 id="4-推送本地提交到远程：git-push"><a href="#4-推送本地提交到远程：git-push" class="headerlink" title="4. 推送本地提交到远程：git push"></a>4. <strong>推送本地提交到远程</strong>：git push</h4><p>确认本地提交无误后，点击源代码管理面板右上角的 ··· ，选择推送，或在终端执行  git push ；首次推送需关联远程分支，执行  git push -u origin 分支名 </p><h4 id="5-设置远程仓库"><a href="#5-设置远程仓库" class="headerlink" title="5.设置远程仓库"></a>5.<strong>设置远程仓库</strong></h4><p>git remote add &lt;远端名称&gt; &lt;仓库路径&gt;</p>]]></content>
       
       
       <categories>
@@ -369,11 +1350,11 @@
     
     
     <entry>
-      <title>Git操作流程</title>
-      <link href="/2026/05/28/Git%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B/"/>
-      <url>/2026/05/28/Git%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B/</url>
+      <title>Git基础</title>
+      <link href="/2026/05/28/Git%E5%9F%BA%E7%A1%80/"/>
+      <url>/2026/05/28/Git%E5%9F%BA%E7%A1%80/</url>
       
-        <content type="html"><![CDATA[<h2 id="如果是首次推送远程仓库："><a href="#如果是首次推送远程仓库：" class="headerlink" title="如果是首次推送远程仓库："></a>如果是首次推送远程仓库：</h2><h3 id="​1-本地Git配置（已配可跳过）："><a href="#​1-本地Git配置（已配可跳过）：" class="headerlink" title="​1. 本地Git配置（已配可跳过）："></a>​1. <strong>本地Git配置（已配可跳过）</strong>：</h3><p>终端执行 git config –global user.name “你的名字” 、 git config –global user.email “你的邮箱” 。</p><h3 id="2-初始化："><a href="#2-初始化：" class="headerlink" title="2. 初始化："></a>2. <strong>初始化</strong>：</h3><p>打开项目文件夹，终端执行 git init <strong>初始化本地库</strong>；已初始化可跳过。</p><h3 id="3-暂存并提交文件："><a href="#3-暂存并提交文件：" class="headerlink" title="3. 暂存并提交文件："></a>3. <strong>暂存并提交文件</strong>：</h3><p>git add . 、 git commit -m “首次提交说明” 。</p><h3 id="4-关联远程仓库（终端执行）："><a href="#4-关联远程仓库（终端执行）：" class="headerlink" title="4. 关联远程仓库（终端执行）："></a>4. <strong>关联远程仓库</strong>（终端执行）：</h3><p>git remote add origin 远程仓库地址 ，通常用 origin 作远程别名。</p><h3 id="5-验证关联："><a href="#5-验证关联：" class="headerlink" title="5. 验证关联："></a>5. <strong>验证关联</strong>：</h3><p>git remote -v ，显示fetch&#x2F;push地址即成功。</p><h3 id="6-统一分支名（可选但推荐）："><a href="#6-统一分支名（可选但推荐）：" class="headerlink" title="6. 统一分支名（可选但推荐）："></a>6. <strong>统一分支名</strong>（可选但推荐）：</h3><p>git branch -M main （将默认master改为main，适配多数平台默认分支）。</p><h2 id="日常开发"><a href="#日常开发" class="headerlink" title="日常开发"></a>日常开发</h2><h3 id="1-配置Git"><a href="#1-配置Git" class="headerlink" title="1.配置Git"></a>1.<strong>配置Git</strong></h3><p>打开终端执行  git config –global user.name “你的名字”  和  git config –global user.email “你的邮箱”</p><h3 id="2-初始化本地仓库或克隆远程仓库"><a href="#2-初始化本地仓库或克隆远程仓库" class="headerlink" title="2.初始化本地仓库或克隆远程仓库"></a>2.<strong>初始化本地仓库或克隆远程仓库</strong></h3><p>初始化本地仓库：git init</p><h4 id="克隆远程仓库"><a href="#克隆远程仓库" class="headerlink" title="克隆远程仓库"></a><strong>克隆远程仓库</strong></h4><p>1. 点击VS Code左侧源代码管理图标（分支图标）。<br>2. 点击克隆仓库，输入远程仓库的HTTPS&#x2F;SSH地址，选择本地保存路径，完成克隆。</p><h3 id="3-日常开发操作（暂存、提交、拉取、推送）"><a href="#3-日常开发操作（暂存、提交、拉取、推送）" class="headerlink" title="3.日常开发操作（暂存、提交、拉取、推送）"></a>3.<strong>日常开发操作（暂存、提交、拉取、推送</strong>）</h3><h4 id="1-暂存文件：git-add"><a href="#1-暂存文件：git-add" class="headerlink" title="1. 暂存文件：git add"></a>1. <strong>暂存文件</strong>：git add</h4><p>开发完成后，在源代码管理面板中，点击文件右侧的 + 号，将修改暂存到暂存区</p><h4 id="2-提交更改：git-commit"><a href="#2-提交更改：git-commit" class="headerlink" title="2. 提交更改：git commit"></a>2. <strong>提交更改</strong>：git commit</h4><p>在暂存区下方的输入框中填写提交信息（必填，描述本次修改内容），点击输入框右侧的对勾按钮，完成本地提交。</p><h4 id="3-拉取远程最新代码：git-pull"><a href="#3-拉取远程最新代码：git-pull" class="headerlink" title="3. 拉取远程最新代码：git pull"></a>3. <strong>拉取远程最新代码</strong>：git pull</h4><p>点击源代码管理面板右上角的 ··· ，选择拉取，或在终端执行  git pull ，避免本地代码与远程冲突。</p><h4 id="4-推送本地提交到远程：git-push"><a href="#4-推送本地提交到远程：git-push" class="headerlink" title="4. 推送本地提交到远程：git push"></a>4. <strong>推送本地提交到远程</strong>：git push</h4><p>确认本地提交无误后，点击源代码管理面板右上角的 ··· ，选择推送，或在终端执行  git push ；首次推送需关联远程分支，执行  git push -u origin 分支名 </p><h4 id="5-设置远程仓库"><a href="#5-设置远程仓库" class="headerlink" title="5.设置远程仓库"></a>5.<strong>设置远程仓库</strong></h4><p>git remote add &lt;远端名称&gt; &lt;仓库路径&gt;</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="vscode中有关Git的字母含义"><a href="#vscode中有关Git的字母含义" class="headerlink" title="vscode中有关Git的字母含义"></a>vscode中有关Git的字母含义</h2><p>M表示修改，对文件进行了更改但尚未暂存或提交(使用git add)<br>U表示新文件，Git还未跟踪，文件不在之前的提交中<br>A表示新文件已添加<br>D表示已删除<br>R表示已重命名<br>C合并时发生冲突</p><h2 id="GIT基本命令"><a href="#GIT基本命令" class="headerlink" title="GIT基本命令"></a>GIT基本命令</h2><p><strong>ll&#x2F;ls</strong>：查看当前目录<br><strong>cat</strong>：查看文件内容<br><strong>touch</strong>：创建文件<br>如创建.bashrc文件命令如下： touch ~&#x2F;.bashrc<br>可在该文件中配置指令别名，如下所示：<br><strong>用于输出git提交日志</strong>：alias git-log&#x3D;’git log –pretty&#x3D;oneline –all –graph –abbrev-commit’</p><p><strong>该命令可以输出当前目录所有文件及基本信息</strong>：alias ll&#x3D;’ls -al’</p><p>配置完成后，使用如下命令，执行修改：source ~&#x2F;.bashrc</p><p><strong>git init</strong>：在当前目录中创建一个新的空的Git仓库&#x2F;&#x2F;告诉GIT：从这个文件夹开始，帮我管理这里所有文件的版本历史</p><p><strong>git add 单个文件名|通配符</strong>：</p><p>​添加工作区一个或多个文件的修改到暂存区<br>将所有修改加入暂存区：git add .</p><h4 id="git-commit-m”你的提交说明信息”："><a href="#git-commit-m”你的提交说明信息”：" class="headerlink" title="git commit -m”你的提交说明信息”："></a><strong>git commit -m”你的提交说明信息”：</strong></h4><p>提交暂存区内容到本地仓库的当前分支<br>（1）git add (工作区&lt;在工作区修改或创建新文件&gt; –&gt; 暂存区)<br>（2）git commit (暂存区 –&gt; 本地仓库)</p><p><strong>git status</strong>：查看的修改的状态（暂存区、工作区）</p><h4 id="git-log-查看历史提交记录"><a href="#git-log-查看历史提交记录" class="headerlink" title="git log 查看历史提交记录"></a><strong>git log</strong> 查看历史提交记录</h4><p>​作用:查看提交记录<br>命令形式：git log [option]<br>options<br>–all 显示所有分支<br>–pretty&#x3D;oneline 将提交信息显示为一行<br>–abbrev-commit 使得输出的commitId更简短<br>–graph 以图的形式</p><h4 id="版本回退：git-reset-–hard-commitID"><a href="#版本回退：git-reset-–hard-commitID" class="headerlink" title="版本回退：git reset –hard commitID"></a><strong>版本回退</strong>：git reset –hard commitID</h4><p>​（commitID 可以使用git-log 或git log指令查看）</p><h4 id="git-reflog-查看历史提交记录"><a href="#git-reflog-查看历史提交记录" class="headerlink" title="git reflog 查看历史提交记录"></a><strong>git reflog</strong> 查看历史提交记录</h4><h4 id="gitignore列出不被操作的文件"><a href="#gitignore列出不被操作的文件" class="headerlink" title=".gitignore列出不被操作的文件"></a><strong>.gitignore</strong>列出不被操作的文件</h4><p>​在工作目录中创建一个名为 .gitignore 的文件（文件名称固定），列出要忽略的文件模式</p><h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><p>​<strong>git branch</strong> 查看分支<br><strong>git branch branchname</strong>创建分支<br><strong>git checkout branchname</strong>切换分支<br><strong>git chechout -b branchname</strong>创建并切换分支<br><strong>git merge branchname</strong>合并分支<br><strong>git branch -d b1</strong> 删除分支时，需要做各种检查<br><strong>git branch -D b1</strong> 不做任何检查，强制删除</p><h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><p>当两个分支上对文件的修改可能会存在冲突，例如同时修改了同一个文件的同一行，这时就需要手动解决冲突，解决冲突步骤如下：</p><ol><li>处理文件中冲突的地方</li><li>将解决完冲突的文件加入暂存区(add)</li><li>提交到仓库(commit)</li></ol><h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><h3 id="1-配置SSH公钥"><a href="#1-配置SSH公钥" class="headerlink" title="1.配置SSH公钥"></a>1.<strong>配置SSH公钥</strong></h3><p>生成SSH公钥：ssh-keygen -t rsa不断回车，如果公钥已经存在，则自动覆盖</p><h3 id="2-Gitee设置账户共公钥"><a href="#2-Gitee设置账户共公钥" class="headerlink" title="2.Gitee设置账户共公钥"></a>2.<strong>Gitee设置账户共公钥</strong></h3><p>​获取公钥<br>cat ~&#x2F;.ssh&#x2F;id_rsa.pub<br>验证是否配置成功<br>ssh -T <a href="mailto:&#103;&#x69;&#116;&#x40;&#x67;&#105;&#x74;&#101;&#x65;&#x2e;&#99;&#111;&#x6d;">git@gitee.com</a></p><h3 id="3-操作远程仓库"><a href="#3-操作远程仓库" class="headerlink" title="3.操作远程仓库"></a>3.<strong>操作远程仓库</strong></h3><h4 id="1-添加远程仓库"><a href="#1-添加远程仓库" class="headerlink" title="1.添加远程仓库"></a>1.<strong>添加远程仓库</strong></h4><p>​此操作是先初始化本地库，然后与已创建的远程库进行对接<br>命令： git remote add &lt;远端名称&gt; &lt;仓库路径&gt;<br>远端名称，默认是origin，取决于远端服务器设置<br>仓库路径，从远端服务器获取此URL</p><h4 id="2-查看远程仓库"><a href="#2-查看远程仓库" class="headerlink" title="2.查看远程仓库"></a>2.<strong>查看远程仓库</strong></h4><p>git remote</p><h4 id="3-推送到远程仓库"><a href="#3-推送到远程仓库" class="headerlink" title="3.推送到远程仓库"></a>3.<strong>推送到远程仓库</strong></h4><p>命令：git push [-f] [–set-upstream] [远端名称 [本地分支名][:远端分支名]]<br>如果远程分支名和本地分支名称相同，则可以只写本地分支<br>git push origin master<br>-f 表示强制覆盖<br>–set-upstream 推送同时建立起和远端分支的关联关系。<br>git push –set-upstream origin master<br>如果当前分支已经和远端分支关联，则可以省略分支名和远端名。<br>git push 将master分支推送到已关联的远端分支<br>查看关联关系：<br>git branch -vv</p><h3 id="4-从远程仓库克隆（克隆到本地后是本地仓库）"><a href="#4-从远程仓库克隆（克隆到本地后是本地仓库）" class="headerlink" title="4.从远程仓库克隆（克隆到本地后是本地仓库）"></a>4.<strong>从远程仓库克隆（克隆到本地后是本地仓库）</strong></h3><p>​git clone &lt;仓库路径&gt; [本地目录]<br>​本地目录可以省略，会自动生成一个目录</p><h3 id="5-从远程仓库中抓取和拉取"><a href="#5-从远程仓库中抓取和拉取" class="headerlink" title="5.从远程仓库中抓取和拉取"></a>5.<strong>从远程仓库中抓取和拉取</strong></h3><h4 id="抓取-命令：git-fetch-remote-name-branch-name"><a href="#抓取-命令：git-fetch-remote-name-branch-name" class="headerlink" title="抓取 命令：git fetch [remote name][branch name]"></a><strong>抓取</strong> 命令：git fetch [remote name][branch name]</h4><p>抓取指令就是将仓库里的更新都抓取到本地，不会进行合并<br>如果不指定远端名称和分支名，则抓取所有分支</p><h4 id="拉取-命令：git-pull-remote-name-branch-name"><a href="#拉取-命令：git-pull-remote-name-branch-name" class="headerlink" title="拉取 命令：git pull [remote name][branch name]"></a><strong>拉取</strong> 命令：git pull [remote name][branch name]</h4><p>拉取指令就是将远端仓库的修改拉到本地并自动进行合并，等同于fetch+merge<br>如果不指定远端名称和分支名，则抓取所有并更新当前分支</p><h3 id="6-解决合并冲突"><a href="#6-解决合并冲突" class="headerlink" title="6.解决合并冲突"></a>6.<strong>解决合并冲突</strong></h3><p>​在一段时间，A、B用户修改了同一个文件，且修改了同一行位置的代码，此时会发生合并冲突。<br>A用户在本地修改代码后优先推送到远程仓库，此时B用户在本地修订代码，提交到本地仓库后，也需要<br>推送到远程仓库，此时B用户晚于A用户，故需要先拉取远程仓库的提交，经过合并后才能推送到远端分<br>支</p>]]></content>
       
       
       <categories>
@@ -437,7 +1418,13 @@
       
         <tags>
             
-            <tag> 快捷键，缩写，报错，调试工具 </tag>
+            <tag> 快捷键 </tag>
+            
+            <tag> 缩写 </tag>
+            
+            <tag> 报错 </tag>
+            
+            <tag> 调试工具 </tag>
             
         </tags>
       

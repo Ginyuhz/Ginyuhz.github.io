@@ -153,12 +153,48 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-29 03:04:12
+          2026-05-29 19:31:32
         </span>
         
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="Categories"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/CSS/" title="CSS">
+                    <b>#</b> CSS
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/float/" title="float">
+                    #float
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E6%A0%87%E5%87%86%E6%B5%81/" title="标准流">
+                    #标准流
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
       <div class="markdown-body">
-        
+        <h2 id="1、标准流"><a href="#1、标准流" class="headerlink" title="1、标准流"></a>1、标准流</h2><p>指的是标签在页面默认的排布规则，如块元素独占一行，行内元素可以一行显示多个</p>
+<h2 id="2、浮动float"><a href="#2、浮动float" class="headerlink" title="2、浮动float"></a>2、浮动float</h2><h3 id="1-作用：让块元素水平排列"><a href="#1-作用：让块元素水平排列" class="headerlink" title="1.作用：让块元素水平排列"></a>1.作用：让块元素水平排列</h3><p>属性值：<br>left：左对齐<br>right：右对齐<br>特点：<br>顶对齐;<br>且具备行内块显示模式特点<br>浮动的盒子会脱离标准流</p>
+<h3 id="2-产品区域布局"><a href="#2-产品区域布局" class="headerlink" title="2.产品区域布局"></a>2.产品区域布局</h3><p>父级宽度不够，浮动的盒子会掉下来</p>
+<h3 id="3-清除浮动"><a href="#3-清除浮动" class="headerlink" title="3.清除浮动"></a>3.清除浮动</h3><p>clear作用在块级元素上，只对父元素生效，不改变浮动元本身<br>浮动元素会脱标，如果父级没有高度，子级无法撑开父级高度（可能导致页面布局错乱）<br><strong>方法1：额外标签法</strong><br>在父元素内容的最后添加一个块级元素，设置CSS属性clear：both<br><strong>方法2：单伪元素法</strong><br>在父级添加下面的类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.clearfix::after&#123;</span><br><span class="line">content:&#x27;&#x27;;</span><br><span class="line">display:block;</span><br><span class="line">clear:both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>方法3：双伪元素法</strong><br>在父级的开头和结尾加上伪元素<br><strong>方法4：overflow</strong><br>父元素添加CSS属性overflow：hidden</p>
+
       </div>
       
         <div class="prev-or-next">
@@ -173,9 +209,37 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-29 03:04:12
+              2026-05-29 19:31:32
             </span>
             
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="Categories"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/CSS/" title="CSS">
+                        <b>#</b> CSS
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/float/" title="float">
+                        #float
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E6%A0%87%E5%87%86%E6%B5%81/" title="标准流">
+                        #标准流
+                      </a>
+                    </span>
+                    
+                  </span>
+              
           </div>
           <div class="post-foot-next">
             
@@ -189,6 +253,23 @@
       
     </div>
     
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E6%A0%87%E5%87%86%E6%B5%81"><span class="toc-text">1、标准流</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E6%B5%AE%E5%8A%A8float"><span class="toc-text">2、浮动float</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BD%9C%E7%94%A8%EF%BC%9A%E8%AE%A9%E5%9D%97%E5%85%83%E7%B4%A0%E6%B0%B4%E5%B9%B3%E6%8E%92%E5%88%97"><span class="toc-text">1.作用：让块元素水平排列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BA%A7%E5%93%81%E5%8C%BA%E5%9F%9F%E5%B8%83%E5%B1%80"><span class="toc-text">2.产品区域布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8"><span class="toc-text">3.清除浮动</span></a></li></ol></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
 
     
       <div class="comments-container">
