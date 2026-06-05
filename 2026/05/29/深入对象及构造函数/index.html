@@ -153,7 +153,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-29 21:17:28
+          2026-05-31 10:25:41
         </span>
         
               <span class="post-categories">
@@ -188,12 +188,23 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const obj =new Object（&#123;&#125;）</span><br></pre></td></tr></table></figure>
 
 <p>3.利用构造函数创建对象</p>
-<h2 id="2、构造函数"><a href="#2、构造函数" class="headerlink" title="2、构造函数"></a>2、构造函数</h2><h3 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h3><p>一种特殊的函数，用来创建多个类似的对象，大写开头字母</p>
+<h2 id="2、构造函数"><a href="#2、构造函数" class="headerlink" title="2、构造函数"></a>2、构造函数</h2><h3 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h3><p>1.一种特殊的函数，用来创建多个类似的对象，大写开头字母</p>
+<p>2.构造函数&#x3D;用来批量创建“同类对象”的模板</p>
+<p>3.JS里普通函数，前面加new调用，就变成了构造函数</p>
+<h3 id="2举例"><a href="#2举例" class="headerlink" title="2举例"></a>2举例</h3><p>1.把构造函数理解为蛋糕模具</p>
+<p>2.模具（构造函数）：规定蛋糕长什么样，有什么配料（造对象的模板）</p>
+<p>3.new 模具（）：压出一个个实体蛋糕（对象&#x2F;实例）</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function Pig(uname,age)&#123;</span><br><span class="line">this.uname =uname//形参  </span><br><span class="line">this.me =me//形参  </span><br><span class="line">this.e =e//形参  </span><br><span class="line">&#125;</span><br><span class="line">const p = new Pig（1,2,3）//1,2，3就是将实参传给形参</span><br><span class="line">const m = new Pig（1,4,3）</span><br><span class="line">const j = new Pig（1,1,3）</span><br></pre></td></tr></table></figure>
 
-<p>加new创建一个新的空对象<br>构造函数的this指新对象<br>执行函数代码，修改this，添加新的属性<br>返回新对象</p>
-<h3 id="2-实例成员"><a href="#2-实例成员" class="headerlink" title="2.实例成员"></a>2.实例成员</h3><p>通过构造函数创建的对象为实例对象，实例对象的方法属性是实例方法属性</p>
-<h3 id="3-静态成员"><a href="#3-静态成员" class="headerlink" title="3.静态成员"></a>3.静态成员</h3><p>静态成员：构造函数的属性和方法<br>静态成员只能构造函数访问</p>
+<h3 id="3-new"><a href="#3-new" class="headerlink" title="3.new"></a>3.new</h3><p>new是JavaScript关键字</p>
+<p>作用：调用构造函数，生成一个全新的对象（实例），没有new，构造函数就是普通函数，加上new，就开始造对象</p>
+<p>就像上面举例一样，相对于new是按压模具的动作</p>
+<p>当写new 构造函数（）时，JS自动执行：</p>
+<p>1.开辟一块内存，创建一个新的空对象<br>2.构造函数的this指向新对象<br>3.执行函数内部代码，修改this，添加新的属性<br>4.自动返回这个新对象</p>
+<p>构造函数是造对象的模板，new 构造函数（）是用模板造出具体实例</p>
+<h3 id="4-实例成员"><a href="#4-实例成员" class="headerlink" title="4.实例成员"></a>4.实例成员</h3><p>实例是用构造函数造出的具体实物</p>
+<p>通过构造函数创建的对象为实例对象，实例对象的方法属性是实例方法属性</p>
+<h3 id="5-静态成员"><a href="#5-静态成员" class="headerlink" title="5.静态成员"></a>5.静态成员</h3><p>静态成员：构造函数的属性和方法<br>静态成员只能构造函数访问</p>
 <h2 id="3、内置构造函数"><a href="#3、内置构造函数" class="headerlink" title="3、内置构造函数"></a>3、内置构造函数</h2><p>js底层完成，将简单数据类型包装成复杂数据类型   </p>
 <h3 id="1-Object"><a href="#1-Object" class="headerlink" title="1.Object"></a>1.Object</h3><p>获得属性名：Object.keys(obj) &#x2F;&#x2F;返回数组<br>获得属性值：Object.values(obj)&#x2F;&#x2F;返回数组<br>对象的拷贝：Object.assign（oo，o）&#x2F;&#x2F;将o拷贝给oo</p>
 <h3 id="2-Array"><a href="#2-Array" class="headerlink" title="2.Array"></a>2.Array</h3><p>forEach，遍历数组，不返回数组<br>filter，筛选，返回新数组<br>map ，迭代，返回处理之后的新数组，和join一起拼接字符串<br>reduce ，累计器，经常用于求和</p>
@@ -225,7 +236,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-29 21:17:28
+              2026-05-31 10:25:41
             </span>
             
                   <span class="post-categories">
@@ -270,7 +281,7 @@
     <div class="title">目录</div>
     <div class="catalog-content">
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E6%B7%B1%E5%85%A5%E5%AF%B9%E8%B1%A1"><span class="toc-text">1、深入对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-text">2、构造函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%9A%E4%B9%89"><span class="toc-text">1.定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AE%9E%E4%BE%8B%E6%88%90%E5%91%98"><span class="toc-text">2.实例成员</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%9D%99%E6%80%81%E6%88%90%E5%91%98"><span class="toc-text">3.静态成员</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%86%85%E7%BD%AE%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-text">3、内置构造函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Object"><span class="toc-text">1.Object</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Array"><span class="toc-text">2.Array</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-String"><span class="toc-text">3.String</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Number"><span class="toc-text">4.Number</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E6%B7%B1%E5%85%A5%E5%AF%B9%E8%B1%A1"><span class="toc-text">1、深入对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-text">2、构造函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%9A%E4%B9%89"><span class="toc-text">1.定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E4%B8%BE%E4%BE%8B"><span class="toc-text">2举例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-new"><span class="toc-text">3.new</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%AE%9E%E4%BE%8B%E6%88%90%E5%91%98"><span class="toc-text">4.实例成员</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E9%9D%99%E6%80%81%E6%88%90%E5%91%98"><span class="toc-text">5.静态成员</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%86%85%E7%BD%AE%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-text">3、内置构造函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Object"><span class="toc-text">1.Object</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Array"><span class="toc-text">2.Array</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-String"><span class="toc-text">3.String</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Number"><span class="toc-text">4.Number</span></a></li></ol></li></ol>
       
     </div>
   </div>

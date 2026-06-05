@@ -153,7 +153,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-30 01:03:18
+          2026-06-05 23:27:37
         </span>
         
               <span class="post-categories">
@@ -181,13 +181,19 @@
       </div>
       <div class="markdown-body">
         <h2 id="1、vuex概述"><a href="#1、vuex概述" class="headerlink" title="1、vuex概述"></a>1、vuex概述</h2><p>1.是什么<br>vuex是一个vue的状态管理工具，状态就是数据<br>大白话：vuex是一个插件，可以帮助我们管理vue通用的数据（多组件共享的数据）</p>
+<p>vuex是vue2时代的状态管理方案，vue3则使用Pinia，Pinia可以看作Vuex的升级版，简化了API，去掉了mutations，直接在actions里修改state，同时保留Vuex的核心优势</p>
 <p>​<br>2.场景<br>1.某个状态多个组件使用（个人信息）<br>2.多个组件维护一份数据（购物车）</p>
 <p>3.优势<br>1.共同维护一份数据，数据集中化管理<br>2.响应式变化<br>3.操作简洁（vuex提供了一些辅助函数）</p>
 <h2 id="2、-创建一个空仓库"><a href="#2、-创建一个空仓库" class="headerlink" title="2、 创建一个空仓库"></a>2、 创建一个空仓库</h2><p>1.安装vuex<br>安装按233、344安装</p>
-<p>2.新建vuex模块文件<br>新建store&#x2F;index.js专门存放vuex</p>
-<p>3.创建仓库<br>Vue.use(Vuex)<br>创建仓库new Vuex.Store()</p>
-<p>4.main.js导入挂载<br>在main.js中导入挂载到Vue实例上</p>
+<p>2.新建vuex模块文件<br>新建store&#x2F;index.js文件，专门存放vuex</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &#x27;vue&#x27;</span><br><span class="line">import Vuex from &#x27;vuex&#x27;</span><br><span class="line"></span><br><span class="line">Vue.use(Vuex)</span><br><span class="line"></span><br><span class="line">export default new Vuex.Store(&#123;</span><br><span class="line">  state: &#123;</span><br><span class="line">  &#125;,</span><br><span class="line">  getters: &#123;</span><br><span class="line">  &#125;,</span><br><span class="line">  mutations: &#123;</span><br><span class="line">  &#125;,</span><br><span class="line">  actions: &#123;</span><br><span class="line">  &#125;,</span><br><span class="line">  modules: &#123;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
+<p>3.安装插件<br>Vue.use(Vuex)</p>
+<p>4.创建仓库<br>创建仓库new Vuex.Store()</p>
+<p>Vuex提供构造函数Store，用new实例化，创建一个全局唯一的数据库实例，整个Vue项目共用一个仓库</p>
+<p>5.导出给main.js使用<br>export default store</p>
+<p>6.main.js导入挂载<br>在main.js中导入，挂载到Vue实例上</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &#x27;vue&#x27;</span><br><span class="line">import App from &#x27;./App.vue&#x27;</span><br><span class="line">import store from &#x27;@/store/index&#x27;</span><br><span class="line">console.log(store.state.count)</span><br><span class="line"></span><br><span class="line">Vue.config.productionTip = false</span><br><span class="line"></span><br><span class="line">new Vue(&#123;</span><br><span class="line">  render: h =&gt; h(App),</span><br><span class="line">  store</span><br><span class="line">&#125;).$mount(&#x27;#app&#x27;)</span><br></pre></td></tr></table></figure>
       </div>
       
         <div class="prev-or-next">
@@ -202,7 +208,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-30 01:03:18
+              2026-06-05 23:27:37
             </span>
             
                   <span class="post-categories">

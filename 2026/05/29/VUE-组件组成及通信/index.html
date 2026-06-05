@@ -153,7 +153,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-30 00:13:27
+          2026-05-31 09:21:38
         </span>
         
               <span class="post-categories">
@@ -190,15 +190,22 @@
 <h3 id="2-样式style"><a href="#2-样式style" class="headerlink" title="2.样式style"></a>2.样式style</h3><p>全局样式（默认）：影响所有组件<br>局部样式：scoped下样式（给style加scoped属性），只作用于当前组件</p>
 <p>scoped原理：<br>1.当前模版的所有元素，都会被添加一个自定义属性data-v-hash值<br>3.css选择器后面，被自动处理，添加上属性选择器div[data-v-hash]<br>3.逻辑script<br>el根实例独有，data是一个函数（保证每个组件实例，维护独立的一个数据对象），其他配置项一致</p>
 <h2 id="2、组件通信"><a href="#2、组件通信" class="headerlink" title="2、组件通信"></a>2、组件通信</h2><h3 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1.介绍"></a>1.介绍</h3><p>组件通信就是组件与组件之间的数据传递<br>组件的数据是独立的，无法直接访问其他组件的数据<br>想用其他组件的数据-&gt;组件通信</p>
-<h3 id="2-组件关系"><a href="#2-组件关系" class="headerlink" title="2.组件关系"></a>2.组件关系</h3><h4 id="1-父子关系"><a href="#1-父子关系" class="headerlink" title="1.父子关系"></a>1.父子关系</h4><p>1.props和$emit<br>父组件通过props传递数据给子组件，子组件利用$emit通知父组件修改更新</p>
+<h3 id="2-组件关系"><a href="#2-组件关系" class="headerlink" title="2.组件关系"></a>2.组件关系</h3><h4 id="1-父子关系"><a href="#1-父子关系" class="headerlink" title="1.父子关系"></a>1.父子关系</h4><h5 id="1-props和-emit"><a href="#1-props和-emit" class="headerlink" title="1.props和$emit"></a>1.props和$emit</h5><p>父组件通过props传递数据给子组件，子组件利用$emit通知父组件修改更新</p>
 <p>prop<br>定义：组件上注册的一些自定义属性<br>作用：向子组件传递数据</p>
-<p>2.prop校验<br>为组件的prop指定验证要求，不符合要求，控制台给错误提示<br>语法：</p>
+<h5 id="2-prop校验"><a href="#2-prop校验" class="headerlink" title="2.prop校验"></a>2.prop校验</h5><p>为组件的prop指定验证要求，不符合要求，控制台给错误提示<br>语法：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">props：&#123;</span><br><span class="line">校验属性名：类型</span><br><span class="line">&#125;，</span><br><span class="line">//其他更详细的校验(类型，非空，默认，自定义校验)</span><br><span class="line">props：&#123;</span><br><span class="line">    校验属性名：&#123;</span><br><span class="line">        type:类型,</span><br><span class="line">        required：true，//是否必填 </span><br><span class="line">        default：0，//默认值</span><br><span class="line">        validator（）&#123;</span><br><span class="line">            方法中return true //通过校验，反之不通过校验</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line">			&#125;</span><br></pre></td></tr></table></figure>
 
-<p>3.prop和data</p>
-<p>1.共同点：都可以传递数据</p>
+<h5 id="3-prop和data"><a href="#3-prop和data" class="headerlink" title="3.prop和data"></a>3.prop和data</h5><p>1.共同点：都可以传递数据</p>
 <p>2.区别：<br>data：自己的数据，可以随便改<br>props：外部传的数据，不能随便改，要遵循单向数据流，要通过子传父告诉父组件要更改的信息</p>
-<p>3.单向数据流<br>父组件的prop更新，会单向向下流动，影响到子组件，这个数据流动是单向的</p>
+<h5 id="4-单向数据流"><a href="#4-单向数据流" class="headerlink" title="4.单向数据流"></a>4.单向数据流</h5><p>**定义:**数据只能从父组件流向子组件，子组件不能修改父组件的数据，数据流动方向固定、单一</p>
+<p>即父组件的prop更新，会单向向下流动，影响到子组件，这个数据流动是单向的</p>
+<p>1.数据源唯一，只在上层&#x2F;父组件定义维护</p>
+<p>2.父组件通过属性props把数据传给子组件</p>
+<p>3.子组件只读，不能直接修改传递过来的数据</p>
+<p>4.子要修改数据，必须向上通知</p>
+<p><strong>数据修改流程：</strong></p>
+<p>父组件存数据–&gt;传数据给子–&gt;子组件使用数据</p>
+<p>子组件想要修改数据–&gt;触发事件向上回调–&gt;父组件修改原数据–&gt;数据重新单向向下流动</p>
 <h4 id="2-父传子："><a href="#2-父传子：" class="headerlink" title="2.父传子："></a>2.父传子：</h4><p>步骤：<br>1.父组件里给子组件添加自定义属性（属性名随便取，但子组件要对应）并赋值数据<br>2.子组件里通过props声明接收并使用</p>
 <h4 id="3-子传父："><a href="#3-子传父：" class="headerlink" title="3.子传父："></a>3.子传父：</h4><p>步骤：<br>1.子组件触发事件+传数据，$emit(‘事件名’,参数1,参数2…)<br>2.父组件监听事件+处理数据,父组件中的触发事件名要和子组件中的事件名相同</p>
 <h3 id="2-非父子关系"><a href="#2-非父子关系" class="headerlink" title="2.非父子关系"></a>2.非父子关系</h3><h4 id="1-provide-inject"><a href="#1-provide-inject" class="headerlink" title="1.provide&amp;inject"></a>1.provide&amp;inject</h4><p>作用：跨跨层级共享数据<br>1.父组件provide提供数据</p>
@@ -232,7 +239,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-30 00:13:27
+              2026-05-31 09:21:38
             </span>
             
                   <span class="post-categories">
@@ -283,7 +290,7 @@
     <div class="title">目录</div>
     <div class="catalog-content">
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E7%BB%84%E4%BB%B6%E4%B8%89%E5%A4%A7%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86"><span class="toc-text">1、组件三大组成部分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%BB%93%E6%9E%84template"><span class="toc-text">1.结构template</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%A0%B7%E5%BC%8Fstyle"><span class="toc-text">2.样式style</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1"><span class="toc-text">2、组件通信</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BB%8B%E7%BB%8D"><span class="toc-text">1.介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%BB%84%E4%BB%B6%E5%85%B3%E7%B3%BB"><span class="toc-text">2.组件关系</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%88%B6%E5%AD%90%E5%85%B3%E7%B3%BB"><span class="toc-text">1.父子关系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E7%88%B6%E4%BC%A0%E5%AD%90%EF%BC%9A"><span class="toc-text">2.父传子：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%AD%90%E4%BC%A0%E7%88%B6%EF%BC%9A"><span class="toc-text">3.子传父：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%9D%9E%E7%88%B6%E5%AD%90%E5%85%B3%E7%B3%BB"><span class="toc-text">2.非父子关系</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-provide-inject"><span class="toc-text">1.provide&amp;inject</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-eventbus%E4%BA%8B%E4%BB%B6%E6%80%BB%E7%BA%BF"><span class="toc-text">2.eventbus事件总线</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-on-%EF%BC%88%E4%BB%85Vue2%E9%87%8C%E6%9C%89%EF%BC%89"><span class="toc-text">3.$on （仅Vue2里有）</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E7%BB%84%E4%BB%B6%E4%B8%89%E5%A4%A7%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86"><span class="toc-text">1、组件三大组成部分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%BB%93%E6%9E%84template"><span class="toc-text">1.结构template</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%A0%B7%E5%BC%8Fstyle"><span class="toc-text">2.样式style</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1"><span class="toc-text">2、组件通信</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BB%8B%E7%BB%8D"><span class="toc-text">1.介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%BB%84%E4%BB%B6%E5%85%B3%E7%B3%BB"><span class="toc-text">2.组件关系</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%88%B6%E5%AD%90%E5%85%B3%E7%B3%BB"><span class="toc-text">1.父子关系</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-props%E5%92%8C-emit"><span class="toc-text">1.props和$emit</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-prop%E6%A0%A1%E9%AA%8C"><span class="toc-text">2.prop校验</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-prop%E5%92%8Cdata"><span class="toc-text">3.prop和data</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E5%8D%95%E5%90%91%E6%95%B0%E6%8D%AE%E6%B5%81"><span class="toc-text">4.单向数据流</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E7%88%B6%E4%BC%A0%E5%AD%90%EF%BC%9A"><span class="toc-text">2.父传子：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%AD%90%E4%BC%A0%E7%88%B6%EF%BC%9A"><span class="toc-text">3.子传父：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%9D%9E%E7%88%B6%E5%AD%90%E5%85%B3%E7%B3%BB"><span class="toc-text">2.非父子关系</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-provide-inject"><span class="toc-text">1.provide&amp;inject</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-eventbus%E4%BA%8B%E4%BB%B6%E6%80%BB%E7%BA%BF"><span class="toc-text">2.eventbus事件总线</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-on-%EF%BC%88%E4%BB%85Vue2%E9%87%8C%E6%9C%89%EF%BC%89"><span class="toc-text">3.$on （仅Vue2里有）</span></a></li></ol></li></ol></li></ol>
       
     </div>
   </div>

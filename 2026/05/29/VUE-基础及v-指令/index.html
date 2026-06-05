@@ -153,7 +153,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-29 23:52:23
+          2026-06-06 00:49:52
         </span>
         
               <span class="post-categories">
@@ -189,10 +189,77 @@
         <h2 id="1、插值表达式"><a href="#1、插值表达式" class="headerlink" title="1、插值表达式"></a>1、插值表达式</h2><p>作用：利用表达式进行插值，渲染到页面中<br>语法：</p>
 <h2 id="2、核心特性：响应式"><a href="#2、核心特性：响应式" class="headerlink" title="2、核心特性：响应式"></a>2、核心特性：响应式</h2><p>数据变化，渲染视图自动更新<br>data的数据会添加到实例里<br>如下数据会添加到app里</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">const app = new Vue(&#123;</span><br><span class="line">el:&#x27;#app&#x27;,//通过el配置选择器，指定vue管理的是哪个盒子</span><br><span class="line">data:&#123;</span><br><span class="line">msg:&#x27;hello&#x27;,</span><br><span class="line">count:&#x27;666&#x27;,</span><br><span class="line">nickname:&#x27;zby&#x27;</span><br><span class="line">&#125;</span><br><span class="line">&#125;)</span><br><span class="line">new Vue(&#123;</span><br><span class="line">render: h =&gt; h(App),</span><br><span class="line">&#125;).$mount(&#x27;#app&#x27;)//这个和el效果相同</span><br></pre></td></tr></table></figure>
+<h2 id="3、Diff算法及VNode"><a href="#3、Diff算法及VNode" class="headerlink" title="3、Diff算法及VNode"></a>3、Diff算法及VNode</h2><h3 id="Diff算法"><a href="#Diff算法" class="headerlink" title="Diff算法"></a>Diff算法</h3><p>Diff算法（Vue2核心，作用：对比新旧虚拟DOM，最小化更新真实DOM）</p>
+<ol>
+<li><p>作用<br>数据变了 → 生成新VNode（新虚拟DOM），不和旧DOM全量替换；<br>Diff 对比新旧虚拟DOM树，只改不一样的DOM，减少DOM操作开销。<br>没有Diff：每次更新全删整个页面DOM、重新创建，性能极差。</p>
+</li>
+<li><p>Vue2 Diff规则：同层比较（不跨层级比对）<br>只在同一层级节点挨个对比，不会跨父节点找节点，降低复杂度。</p>
+</li>
+<li><p>三步对比：<br> 1.节点类型不一样：直接销毁旧DOM，新建DOM</p>
+<ul>
+<li>旧 <code>&lt;div&gt;</code>  → 新 <code>&lt;p&gt;</code> ：整段替换</li>
+</ul>
+<p> 2.标签相同、属性不同：只更新属性，DOM节点复用</p>
+<ul>
+<li> <code>&lt;div class=&quot;a&quot;&gt;</code> → <code>&lt;div class=&quot;b&quot;&gt;</code> ：只改class</li>
+</ul>
+<p> 3.标签一样、key存在：用key精准匹配列表节点（v-for必备）</p>
+<ul>
+<li>列表增删时，复用原有DOM，只移动位置，不重复创建销毁</li>
+</ul>
+</li>
+<li><p>key的意义<br>key 是节点唯一标识，Diff靠key快速找到新旧对应的节点；<br>不加key默认用下标index，数组乱序、插入开头会引发DOM错误复用。</p>
+</li>
+<li><p>时机（什么时候走Diff）<br>1. 初始化挂载：不走Diff，直接创建DOM<br>2. 响应式数据修改（state&#x2F;data变了）→触发视图更新→生成新VNode→执行Diff→局部更新真实DOM</p>
+</li>
+<li><p>总结<br>Diff &#x3D; 找差别 → 精准局部改DOM，少删少建DOM，优化渲染性能</p>
+</li>
+</ol>
+<h3 id="VNode（虚拟节点-Virtual-Node，虚拟DOM）"><a href="#VNode（虚拟节点-Virtual-Node，虚拟DOM）" class="headerlink" title="VNode（虚拟节点 &#x2F; Virtual Node，虚拟DOM）"></a>VNode（虚拟节点 &#x2F; Virtual Node，虚拟DOM）</h3><p>1、定义<br>用JS对象描述真实DOM节点，这个JS对象就是VNode，不是页面上真实DOM元素。<br>真实DOM：<br><code>&lt;div id=&quot;box&quot;&gt;hello&lt;/div&gt;</code></p>
+<p>对应VNode（JS对象）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  tag:&#x27;div&#x27;,       //标签名</span><br><span class="line">  props:&#123;id:&#x27;box&#x27;&#125;,//属性</span><br><span class="line">  children:[&#123;text:&#x27;hello&#x27;&#125;],//子节点/文本</span><br><span class="line">  el:null //挂载后指向真实DOM</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>2、VNode从哪来？<br>render(h) → h() 就是创建VNode </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">render: h =&gt; h(App)</span><br><span class="line">// h函数 = createVNode，生成VNode树</span><br></pre></td></tr></table></figure>
 
-
-<h2 id="3、vue指令"><a href="#3、vue指令" class="headerlink" title="3、vue指令"></a>3、vue指令</h2><p>带有v-前缀的特殊标签属性</p>
+<p>Vue挂载时：VNode → 翻译成真实DOM插入页面。</p>
+<p>3、和Diff关系<br>数据更新 → 生成新VNode，拿新VNode和旧VNode Diff对比，算出差异，只局部改真实DOM。</p>
+<p>4、关键区分</p>
+<ul>
+<li>VNode：JS对象（内存里） → 虚拟DOM</li>
+<li>el：真实DOM（页面上HTML标签）</li>
+</ul>
+<p>5、挂载流程串联<br>render生成VNode → patch(Diff) → 创建真实DOM(el) → 替换#app容器 <br>patch函数将VNode变成真实DOM或修改真实DOM（）</p>
+<h2 id="3、挂载"><a href="#3、挂载" class="headerlink" title="3、挂载"></a>3、挂载</h2><h3 id="Vue2-mount-‘-app’-完整流程"><a href="#Vue2-mount-‘-app’-完整流程" class="headerlink" title="Vue2 $mount(‘#app’) 完整流程"></a>Vue2 $mount(‘#app’) 完整流程</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">new Vue(&#123;</span><br><span class="line">  render: h=&gt;h(App),//h()创建VNode方法</span><br><span class="line">  store</span><br><span class="line">&#125;).$mount(&#x27;#app&#x27;)</span><br></pre></td></tr></table></figure>
+<ol>
+<li>编译阶段<br>template模板编译为render函数，h函数生成VNode。<br>render函数是专门用来生成VNode的函数，在挂载阶段（mount）执行一次，数据发送变化时再次执行，生成新的VNode</li>
+<li>new Vue() 创建根实例<br>初始化：data、computed、watch、生命周期；传入store，挂载 this.$store 到实例原型，全局子组件可访问。</li>
+<li>beforeMount 触发<br>模板编译完成，真实DOM未创建、未挂载页面。</li>
+<li>调用render生成VNode<br>执行render(h &#x3D;&gt; h(App))，生成整棵虚拟DOM树。</li>
+<li>patch创建真实DOM<br>首次挂载无旧VNode，直接依据VNode生成原生DOM。</li>
+<li>替换#app挂载容器<br>用新DOM覆盖页面<code>&lt;div id=&quot;app&quot;&gt;</code>内部内容。</li>
+<li>mounted 触发<br>DOM已渲染至页面，可操作DOM、发起网络请求。</li>
+</ol>
+<p>总结<br>模板→render→VNode→patch生成DOM→替换挂载容器→mounted。</p>
+<p>补充<br>- 初始化挂载只执行一次；<br>- 后续数据更新：新VNode → Diff对比 → patch局部更新DOM，不再走完整挂载。</p>
+<h3 id="Vue3-挂载-mount-流程"><a href="#Vue3-挂载-mount-流程" class="headerlink" title="Vue3 挂载 .mount() 流程"></a>Vue3 挂载 .mount() 流程</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const app = createApp(App)</span><br><span class="line">app.use(store)</span><br><span class="line">app.mount(&#x27;#app&#x27;)</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>编译阶段（构建时&#x2F;运行时）<br>把template模板 → 编译成 render 渲染函数，生成 VNode（虚拟DOM）。</p>
+</li>
+<li><p>创建组件实例<br> createApp(App)  生成应用实例、根组件实例，初始化：<br>- props、setup 执行、ref&#x2F;reactive 生成响应式数据<br>- 注册生命周期、指令、组件</p>
+</li>
+<li><p>beforeMount 钩子触发<br>DOM还没生成、没插入页面，拿不到真实DOM。</p>
+</li>
+<li><p>虚拟DOM → 真实DOM（patch）<br>执行 render() 得到VNode，通过 patch 算法：<br>虚拟DOM转为真实DOM元素。</p>
+</li>
+<li><p>替换挂载点容器<br> .mount(‘#app’) ：<br>用生成的真实DOM替换 <code>&lt;div id=&quot;app&quot;&gt;</code>内部内容。</p>
+</li>
+<li><p>onMounted 钩子触发<br>DOM已挂载到页面，可以获取DOM、发接口请求。</p>
+</li>
+<li><p>总结<br>模板→render→VNode→真实DOM→替换挂载节点→mounted。<br>补充小知识点<br>- 挂载只执行一次；<br>- 更新不走挂载，只走 patch diff 更新DOM。</p>
+</li>
+</ol>
+<h2 id="4、vue指令"><a href="#4、vue指令" class="headerlink" title="4、vue指令"></a>4、vue指令</h2><p>带有v-前缀的特殊标签属性</p>
 <h3 id="1-v-show"><a href="#1-v-show" class="headerlink" title="1.v-show"></a>1.v-show</h3><p>作用：控制元素显示隐藏<br>本质是控制display：none<br>场景：频繁切换隐藏的场景</p>
 <h3 id="2-v-if"><a href="#2-v-if" class="headerlink" title="2.v-if"></a>2.v-if</h3><p>作用：控制元素显示隐藏<br>本质是基于添加判断创建和移除元素节点<br>场景：要么显示，要么隐藏</p>
 <h3 id="3-v-else-v-else-if"><a href="#3-v-else-v-else-if" class="headerlink" title="3.v-else&#x2F;v-else-if"></a>3.v-else&#x2F;v-else-if</h3><p>作用：辅助v-if进行判断渲染<br>语法：v-else v-else-if&#x3D;”表达式”<br>注意：需要紧挨v-if一起使用</p>
@@ -218,7 +285,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-29 23:52:23
+              2026-06-06 00:49:52
             </span>
             
                   <span class="post-categories">
@@ -269,7 +336,7 @@
     <div class="title">目录</div>
     <div class="catalog-content">
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E6%8F%92%E5%80%BC%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">1、插值表达式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E6%A0%B8%E5%BF%83%E7%89%B9%E6%80%A7%EF%BC%9A%E5%93%8D%E5%BA%94%E5%BC%8F"><span class="toc-text">2、核心特性：响应式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81vue%E6%8C%87%E4%BB%A4"><span class="toc-text">3、vue指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-v-show"><span class="toc-text">1.v-show</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-v-if"><span class="toc-text">2.v-if</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-v-else-v-else-if"><span class="toc-text">3.v-else&#x2F;v-else-if</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-v-on"><span class="toc-text">4.v-on</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-v-bind"><span class="toc-text">5.v-bind</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-v-for"><span class="toc-text">6.v-for</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-key"><span class="toc-text">7.key</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-v-model"><span class="toc-text">8.v-model</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E6%8F%92%E5%80%BC%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">1、插值表达式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E6%A0%B8%E5%BF%83%E7%89%B9%E6%80%A7%EF%BC%9A%E5%93%8D%E5%BA%94%E5%BC%8F"><span class="toc-text">2、核心特性：响应式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81Diff%E7%AE%97%E6%B3%95%E5%8F%8AVNode"><span class="toc-text">3、Diff算法及VNode</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Diff%E7%AE%97%E6%B3%95"><span class="toc-text">Diff算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#VNode%EF%BC%88%E8%99%9A%E6%8B%9F%E8%8A%82%E7%82%B9-Virtual-Node%EF%BC%8C%E8%99%9A%E6%8B%9FDOM%EF%BC%89"><span class="toc-text">VNode（虚拟节点 &#x2F; Virtual Node，虚拟DOM）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E6%8C%82%E8%BD%BD"><span class="toc-text">3、挂载</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Vue2-mount-%E2%80%98-app%E2%80%99-%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B"><span class="toc-text">Vue2 $mount(‘#app’) 完整流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Vue3-%E6%8C%82%E8%BD%BD-mount-%E6%B5%81%E7%A8%8B"><span class="toc-text">Vue3 挂载 .mount() 流程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81vue%E6%8C%87%E4%BB%A4"><span class="toc-text">4、vue指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-v-show"><span class="toc-text">1.v-show</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-v-if"><span class="toc-text">2.v-if</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-v-else-v-else-if"><span class="toc-text">3.v-else&#x2F;v-else-if</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-v-on"><span class="toc-text">4.v-on</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-v-bind"><span class="toc-text">5.v-bind</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-v-for"><span class="toc-text">6.v-for</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-key"><span class="toc-text">7.key</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-v-model"><span class="toc-text">8.v-model</span></a></li></ol></li></ol>
       
     </div>
   </div>
