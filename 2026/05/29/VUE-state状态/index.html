@@ -153,7 +153,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-30 01:06:25
+          2026-06-06 03:31:11
         </span>
         
               <span class="post-categories">
@@ -182,7 +182,7 @@
       <div class="markdown-body">
         <p>明确如何给仓库提供数据，如何使用仓库数据</p>
 <h2 id="1-提供数据"><a href="#1-提供数据" class="headerlink" title="1.提供数据"></a>1.提供数据</h2><p>state提供唯一的公共数据源，所有共享的数据统一放到store中的state中存储<br>在state对象中添加我们共享的数据</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const store = new Vuex.Store(&#123;</span><br><span class="line">// 1. 通过 state 可以提供数据 (所有组件共享的数据)</span><br><span class="line">state: &#123;</span><br><span class="line">title: &#x27;仓库大标题&#x27;,</span><br><span class="line">count: 100,</span><br><span class="line">list: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span><br><span class="line">&#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> <span class="title class_">Vuex</span>.<span class="title class_">Store</span>(&#123;</span><br><span class="line"><span class="comment">// 1. 通过 state 可以提供数据 (所有组件共享的数据)</span></span><br><span class="line"><span class="attr">state</span>: &#123;</span><br><span class="line"><span class="attr">title</span>: <span class="string">&#x27;仓库大标题&#x27;</span>,</span><br><span class="line"><span class="attr">count</span>: <span class="number">100</span>,</span><br><span class="line"><span class="attr">list</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line">&#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 
 <p>state状态即数据，类似vue组件中的data<br>区别：<br>data是组件自己的数据<br>state是所有组件共享的数据</p>
@@ -191,13 +191,13 @@
 <p>模板中：<br>组件逻辑中：this.$store.state.xxx<br>JS模块中：store.state.xxx</p>
 <h3 id="2-通过辅助函数"><a href="#2-通过辅助函数" class="headerlink" title="2.通过辅助函数"></a>2.通过辅助函数</h3><p>mapState是辅助函数，帮助我们把store中的数据自动映射到组件的计算属性中<br>使用：  </p>
 <p>1.导入mapState</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import&#123;mapState&#125;from &#x27;vuex&#x27;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span>&#123;mapState&#125;<span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span></span><br></pre></td></tr></table></figure>
 
 <p>2.数组方式引入state</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mapState&#123;[&#x27;需要的属性1，属性2&#x27;]&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mapState&#123;[<span class="string">&#x27;需要的属性1，属性2&#x27;</span>]&#125;</span><br></pre></td></tr></table></figure>
 
 <p>3.展开运算符映射<br>…是展开运算符<br>作用：可以将数组拆成一个个元素，对象拆成一个个键值对<br>如：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">arr=[1,3,5]   ...arr就是拆成单独的1、3、5</span><br><span class="line">mapState([&#x27;name&#x27;,&#x27;age&#x27;])会返回一个对象</span><br><span class="line">比如：&#123;</span><br><span class="line">name()&#123;return this.$store.state.name&#125;,</span><br><span class="line">age()&#123;retuen this.$store.state.age&#125;</span><br><span class="line">&#125;</span><br><span class="line">computed:&#123;</span><br><span class="line">...mapState([&#x27;name&#x27;,&#x27;age&#x27;]),</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">arr=[<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>]   ...arr就是拆成单独的<span class="number">1</span>、<span class="number">3</span>、<span class="number">5</span></span><br><span class="line"><span class="title function_">mapState</span>([<span class="string">&#x27;name&#x27;</span>,<span class="string">&#x27;age&#x27;</span>])会返回一个对象</span><br><span class="line">比如：</span><br><span class="line"><span class="attr">computed</span>:&#123;</span><br><span class="line">...<span class="title function_">mapState</span>([<span class="string">&#x27;name&#x27;</span>,<span class="string">&#x27;age&#x27;</span>]),<span class="comment">//这个会展开成下发的内容</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"><span class="title function_">name</span>(<span class="params"></span>)&#123;<span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">$store</span>.<span class="property">state</span>.<span class="property">name</span>&#125;,</span><br><span class="line"><span class="title function_">age</span>(<span class="params"></span>)&#123;retuen <span class="variable language_">this</span>.<span class="property">$store</span>.<span class="property">state</span>.<span class="property">age</span>&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>加上…展开<br>就是将对象拆开铺到computed</p>
 
       </div>
@@ -214,7 +214,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-30 01:06:25
+              2026-06-06 03:31:11
             </span>
             
                   <span class="post-categories">
