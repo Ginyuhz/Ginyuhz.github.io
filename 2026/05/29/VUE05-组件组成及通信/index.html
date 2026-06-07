@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="zn-CN" color-mode="light">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="John Doe" />
+  <!-- Open Graph Description 简短摘要-->
+  
+  <!-- 用于搜索引擎的文章摘要 -->
+  
+  
+  
+  <title>
+    
+      VUE-组件组成及通信 
+      
+      
+      |
+    
+     GINYUHZ
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
+  <!-- 代码块风格 -->
+  
+
+  <!-- jquery3.3.1 -->
+  
+    <script defer type="text/javascript" src="/plugins/jquery.min.js"></script>
+  
+
+  <!-- fancybox -->
+  
+    <link href="/plugins/jquery.fancybox.min.css" rel="stylesheet">
+    <script defer type="text/javascript" src="/plugins/jquery.fancybox.min.js"></script>
+  
+  
+<script src="/js/fancybox.js"></script>
+
+
+  
+
+  
+
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
+    }
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img src="/images/avatar.png" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">Ginyuhz</a></div>
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">首页</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">归档</a>
+        </li>
+      
+        <li class="nav-item" data-path="/categories/">
+          <a href="/categories/">分类</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">标签</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<script src="/js/activeNav.js"></script>
+
+
+
+      <div class="flex-container">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">VUE-组件组成及通信</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+          2026-06-07 21:27:48
+        </span>
+        
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="Categories"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/VUE/" title="VUE">
+                    <b>#</b> VUE
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E7%BB%84%E4%BB%B6%E7%BB%84%E6%88%90/" title="组件组成">
+                    #组件组成
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/" title="组件通信">
+                    #组件通信
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h2 id="1、组件三大组成部分"><a href="#1、组件三大组成部分" class="headerlink" title="1、组件三大组成部分"></a>1、组件三大组成部分</h2><h3 id="1-结构template"><a href="#1-结构template" class="headerlink" title="1.结构template"></a>1.结构template</h3><p>只能有一个根元素</p>
+<h3 id="2-样式style"><a href="#2-样式style" class="headerlink" title="2.样式style"></a>2.样式style</h3><p>全局样式（默认）：影响所有组件<br>局部样式：scoped下样式（给style加scoped属性），只作用于当前组件</p>
+<p>scoped原理：<br>1.当前模版的所有元素，都会被添加一个自定义属性data-v-hash值<br>3.css选择器后面，被自动处理，添加上属性选择器div[data-v-hash]</p>
+<h3 id="3-逻辑script"><a href="#3-逻辑script" class="headerlink" title="3.逻辑script"></a>3.逻辑script</h3><p>el：根实例独有<br>data是一个函数（），其他配置项一致<br>在根实例中是对象，但是在VUE里data选项必须是一个函数,保证每个组件实例，维护独立的一个数据对象<br>因为每次创建新的组件实例，都会新执行一次data函数，得到一个新对象，这样各个组件组件不会互相影响，而是相互独立的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="title class_">Vue</span>(&#123;</span><br><span class="line">    <span class="attr">el</span>:<span class="string">&#x27;app&#x27;</span>,</span><br><span class="line">    <span class="attr">data</span>:&#123;<span class="attr">msg</span>:<span class="string">&#x27;根实例对象&#x27;</span>&#125;<span class="comment">//可以写成对象</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><figcaption><span>BaseCount.vue</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line">    <span class="title function_">data</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="attr">count</span>:<span class="number">999</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><figcaption><span>APP.vue</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">&quot;app&quot;</span>&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">BaseCount</span>&gt;</span><span class="tag">&lt;/<span class="name">BaseCount</span>&gt;</span></span><span class="comment">//3个组件中的数据相互独立</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">BaseCount</span>&gt;</span><span class="tag">&lt;/<span class="name">BaseCount</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">BaseCount</span>&gt;</span><span class="tag">&lt;/<span class="name">BaseCount</span>&gt;</span></span></span><br><span class="line">&lt;/div&gt;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line">    <span class="attr">components</span>:&#123;</span><br><span class="line">        <span class="title class_">BaseCount</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2、组件通信"><a href="#2、组件通信" class="headerlink" title="2、组件通信"></a>2、组件通信</h2><h3 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1.介绍"></a>1.介绍</h3><p>组件通信就是组件与组件之间的数据传递<br>组件的数据是独立的，无法直接访问其他组件的数据<br>想用其他组件的数据-&gt;组件通信</p>
+<h3 id="2-组件关系"><a href="#2-组件关系" class="headerlink" title="2.组件关系"></a>2.组件关系</h3><h4 id="1-父子关系"><a href="#1-父子关系" class="headerlink" title="1.父子关系"></a>1.父子关系</h4><h5 id="1-props和-emit"><a href="#1-props和-emit" class="headerlink" title="1.props和$emit"></a>1.props和$emit</h5><p>父组件通过props传递数据给子组件，子组件利用$emit通知父组件修改更新</p>
+<ol>
+<li>什么是prop<br>定义：组件上注册的一些<strong>自定义属性</strong><br>作用：向子组件传递数据<br>如下面代码所示，:username，:age，:isSingle等，这些就是prop，也就是自定义属性，可以向子组件传递数据，子组件再通过props接收</li>
+</ol>
+<figure class="highlight html"><figcaption><span>App.vue</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">UserInfo</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:username</span>=<span class="string">&quot;username&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:age</span>=<span class="string">&quot;age&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:isSingle</span>=<span class="string">&quot;isSingle&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:car</span>=<span class="string">&quot;car&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:hobby</span>=<span class="string">&quot;hobby&quot;</span></span></span><br><span class="line"><span class="tag">    &gt;</span><span class="tag">&lt;/<span class="name">UserInfo</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><figcaption><span>App.vue</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="title function_">data</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">username</span>: <span class="string">&#x27;小帅&#x27;</span>,</span><br><span class="line">      <span class="attr">age</span>: <span class="number">28</span>,</span><br><span class="line">      <span class="attr">isSingle</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">car</span>: &#123;</span><br><span class="line">        <span class="attr">brand</span>: <span class="string">&#x27;宝马&#x27;</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">hobby</span>: [<span class="string">&#x27;篮球&#x27;</span>, <span class="string">&#x27;足球&#x27;</span>, <span class="string">&#x27;羽毛球&#x27;</span>],</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><figcaption><span>Son.vue</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">props</span>:[<span class="string">&#x27;username&#x27;</span>,<span class="string">&#x27;age&#x27;</span>,<span class="string">&#x27;isSingle&#x27;</span>,<span class="string">&#x27;car&#x27;</span>,<span class="string">&#x27;hobby&#x27;</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>特点<br>可以传递<strong>任意数量</strong>的prop<br>可以传递<strong>任意类型</strong>的prop</li>
+<li>注意事项<br>prop是单个属性<br>props是一组属性，是组件所有属性的配置对象，是Vue组件选项的关键字</li>
+</ol>
+<h5 id="2-prop校验"><a href="#2-prop校验" class="headerlink" title="2.prop校验"></a>2.prop校验</h5><p>prop校验作用：为组件的prop指定验证要求，不符合要求，控制台给错误提示<br>语法：</p>
+<figure class="highlight js"><figcaption><span>son.vue</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">props：&#123;</span><br><span class="line">校验属性名：类型</span><br><span class="line">&#125;，</span><br><span class="line"><span class="comment">//其他更详细的校验(类型，非空，默认，自定义校验)</span></span><br><span class="line">props：&#123;</span><br><span class="line">    校验属性名：&#123;</span><br><span class="line">        <span class="attr">type</span>:类型,</span><br><span class="line">        required：<span class="literal">true</span>，<span class="comment">//是否必填 </span></span><br><span class="line">        <span class="keyword">default</span>：<span class="number">0</span>，<span class="comment">//默认值</span></span><br><span class="line">        validator（）&#123;</span><br><span class="line">            方法中<span class="keyword">return</span> <span class="literal">true</span> <span class="comment">//通过校验，反之不通过校验</span></span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line">			&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>注意<br>1.default和required一般不同时写（因为当时必填项时，肯定是有值的）<br>2.default后面如果是简单类型的值，可以直接写默认。如果是复杂类型的值，则需要以函数的形式return一个默认值</li>
+</ul>
+<h5 id="3-prop和data"><a href="#3-prop和data" class="headerlink" title="3.prop和data"></a>3.prop和data</h5><p>1.共同点：都可以传递数据</p>
+<p>2.区别：<br>data：自己的数据，可以随便改<br>props：外部传的数据，不能随便改，要遵循单向数据流，要通过子传父告诉父组件要更改的信息</p>
+<h5 id="4-单向数据流"><a href="#4-单向数据流" class="headerlink" title="4.单向数据流"></a>4.单向数据流</h5><p>**定义:**数据只能从父组件流向子组件，子组件不能修改父组件的数据，数据流动方向固定、单一</p>
+<p>即父组件的prop更新，会单向向下流动，影响到子组件，这个数据流动是单向的</p>
+<p>1.数据源唯一，只在上层&#x2F;父组件定义维护</p>
+<p>2.父组件通过属性props把数据传给子组件</p>
+<p>3.子组件只读，不能直接修改传递过来的数据</p>
+<p>4.子要修改数据，必须向上通知</p>
+<p><strong>数据修改流程：</strong></p>
+<p>父组件存数据–&gt;传数据给子–&gt;子组件使用数据</p>
+<p>子组件想要修改数据–&gt;触发事件向上回调–&gt;父组件修改原数据–&gt;数据重新单向向下流动</p>
+<h4 id="2-父传子："><a href="#2-父传子：" class="headerlink" title="2.父传子："></a>2.父传子：</h4><ul>
+<li>步骤：<br>1.父组件里给子组件添加自定义属性（属性名随便取，但子组件要对应）并赋值数据<br>2.子组件里通过props声明接收并使用</li>
+</ul>
+<p><img src="/../img/%E7%88%B6%E4%BC%A0%E5%AD%90.png"></p>
+<h4 id="3-子传父："><a href="#3-子传父：" class="headerlink" title="3.子传父："></a>3.子传父：</h4><ul>
+<li>步骤：<br>1.子组件触发事件+传数据，$emit(‘事件名’,参数1,参数2…)<br>2.父组件监听事件+处理数据,父组件中的触发事件名要和子组件中的事件名相同</li>
+</ul>
+<p><img src="/../img/%E5%AD%90%E4%BC%A0%E7%88%B6.png"></p>
+<h3 id="2-非父子关系"><a href="#2-非父子关系" class="headerlink" title="2.非父子关系"></a>2.非父子关系</h3><h4 id="1-provide-inject"><a href="#1-provide-inject" class="headerlink" title="1.provide&amp;inject"></a>1.provide&amp;inject</h4><p>作用：跨跨层级共享数据<br>1.父组件provide提供数据</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line"><span class="title function_">provide</span>(<span class="params"></span>)&#123;</span><br><span class="line"><span class="keyword">return</span>&#123;</span><br><span class="line"><span class="comment">//普通类型，非响应式</span></span><br><span class="line">color：<span class="variable language_">this</span>.<span class="property">color</span> </span><br><span class="line"><span class="comment">//复杂类型，响应式</span></span><br><span class="line">userInfo：<span class="variable language_">this</span>.<span class="property">userInfo</span> </span><br><span class="line">&#125;&#125;，</span><br><span class="line"><span class="title function_">data</span>(<span class="params"></span>)&#123;</span><br><span class="line"><span class="keyword">return</span>&#123;</span><br><span class="line"><span class="attr">color</span>:<span class="string">&#x27;pink&#x27;</span>,</span><br><span class="line"><span class="attr">userInfo</span>:&#123;</span><br><span class="line"><span class="attr">name</span>:<span class="string">&#x27;zhe&#x27;</span></span><br><span class="line"><span class="attr">age</span>:<span class="number">18</span></span><br><span class="line">&#125;&#125;&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>2.子&#x2F;孙组件inject取值使用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line"><span class="attr">inject</span>:[<span class="string">&#x27;color&#x27;</span>,<span class="string">&#x27;userInfo&#x27;</span>],</span><br><span class="line">created（）&#123;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">color</span>,<span class="variable language_">this</span>.<span class="property">userInfo</span>)</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-eventbus事件总线"><a href="#2-eventbus事件总线" class="headerlink" title="2.eventbus事件总线"></a>2.eventbus事件总线</h4><p>作用：非父子组件之间，进行简易信息传递<br>1.创建一个都能访问到的事件总线（空vue实例）-&gt;utils&#x2F;EventBus.js<br>2.A组件（接收方），监听Bus实例的事件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">created（）&#123;</span><br><span class="line"><span class="title class_">Bus</span>.$on(‘事件名’，（新数据）=&gt;&#123;</span><br><span class="line"><span class="variable language_">this</span>.数据 = 新数据</span><br><span class="line">&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>3.B组件（发送方），触发Bus实例的事件</p>
+<p>Bus.$emit(‘事件名’,新数据)<br>只有B组件触发事件，A组件监听到事件触发，就可以接收事件</p>
+<h4 id="3-on-（仅Vue2里有）"><a href="#3-on-（仅Vue2里有）" class="headerlink" title="3.$on （仅Vue2里有）"></a>3.$on （仅Vue2里有）</h4><p>1.$on(‘事件名’,回调)<br>监听一个自定义事件，触发时执行回调</p>
+<p>2.$emit(‘事件名’,数据)<br>触发一个自定义事件<br>两个是一对：一个监听，一个发送</p>
+<p>通用解决方案：Vuex（适合复杂业务场景）</p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-prev">
+            
+              <a href="/2026/05/29/VUE04-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%8F%8A%E5%B7%A5%E7%A8%8B%E5%8C%96/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一篇</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+              2026-06-07 21:27:48
+            </span>
+            
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="Categories"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/VUE/" title="VUE">
+                        <b>#</b> VUE
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E7%BB%84%E4%BB%B6%E7%BB%84%E6%88%90/" title="组件组成">
+                        #组件组成
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/" title="组件通信">
+                        #组件通信
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-next">
+            
+              <a href="/2026/05/29/VUE06-%E5%B0%8F%E9%BB%91%E8%AE%B0%E4%BA%8B%E6%9C%AC/" target="_self">
+                <span>下一篇</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E7%BB%84%E4%BB%B6%E4%B8%89%E5%A4%A7%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86"><span class="toc-text">1、组件三大组成部分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%BB%93%E6%9E%84template"><span class="toc-text">1.结构template</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%A0%B7%E5%BC%8Fstyle"><span class="toc-text">2.样式style</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%80%BB%E8%BE%91script"><span class="toc-text">3.逻辑script</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1"><span class="toc-text">2、组件通信</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BB%8B%E7%BB%8D"><span class="toc-text">1.介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%BB%84%E4%BB%B6%E5%85%B3%E7%B3%BB"><span class="toc-text">2.组件关系</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%88%B6%E5%AD%90%E5%85%B3%E7%B3%BB"><span class="toc-text">1.父子关系</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-props%E5%92%8C-emit"><span class="toc-text">1.props和$emit</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-prop%E6%A0%A1%E9%AA%8C"><span class="toc-text">2.prop校验</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-prop%E5%92%8Cdata"><span class="toc-text">3.prop和data</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E5%8D%95%E5%90%91%E6%95%B0%E6%8D%AE%E6%B5%81"><span class="toc-text">4.单向数据流</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E7%88%B6%E4%BC%A0%E5%AD%90%EF%BC%9A"><span class="toc-text">2.父传子：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%AD%90%E4%BC%A0%E7%88%B6%EF%BC%9A"><span class="toc-text">3.子传父：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%9D%9E%E7%88%B6%E5%AD%90%E5%85%B3%E7%B3%BB"><span class="toc-text">2.非父子关系</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-provide-inject"><span class="toc-text">1.provide&amp;inject</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-eventbus%E4%BA%8B%E4%BB%B6%E6%80%BB%E7%BA%BF"><span class="toc-text">2.eventbus事件总线</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-on-%EF%BC%88%E4%BB%85Vue2%E9%87%8C%E6%9C%89%EF%BC%89"><span class="toc-text">3.$on （仅Vue2里有）</span></a></li></ol></li></ol></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
+    
+      <div class="comments-container">
+        
+
+
+
+
+
+
+
+      </div>
+    
+  </div>
+
+
+        
+<div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          
+              <a title="github" target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">
+                <i class="iconfont icon-github"></i>
+              </a>
+              
+        </li>
+        
+    </ul>
+  </div>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Copyright © 2026 Ginyuhz</a>
+        
+    </div>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Ginyuhz | Powered by Hexo</a>
+        
+    </div>
+  
+  
+</div>
+
+      </div>
+
+      <div class="tools-bar">
+        <div class="back-to-top tools-bar-item hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+        
+  <div class="search-icon tools-bar-item" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-title">
+        <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-search"></i>
+          </a>
+        </span>
+        
+          <input type="text" class="search-input" id="search-input" placeholder="搜索文章...">
+        
+        <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-close"></i>
+          </a>
+        </span>
+      </div>
+      <div class="search-result" id="search-result"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    inputArea.onclick = function() {
+      getSearchFile()
+      this.onclick = null
+    }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        // inputArea.focus()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>输入想要搜索的内容：<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'>" + orig_data_title + "</a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<p class=\"search-result-abstract\">" + match_content + "...</p>"
+                }
+                str += "</li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>未找到...<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The search.xml file was not found, please refer to：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The request failed, Try to refresh the page or try again later.<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
+        
+  <div class="tools-bar-item theme-icon" id="switch-color-scheme">
+    <a href="javascript: void(0)">
+      <i id="theme-icon" class="iconfont icon-moon"></i>
+    </a>
+  </div>
+
+  
+<script src="/js/colorscheme.js"></script>
+
+
+
+
+
+        
+
+      </div>
+    </div>
+  </body>
+</html>
