@@ -13,7 +13,7 @@
   
   <title>
     
-      VUE16-actions 
+      VUE16-actions和辅助函数mapActions 
       
       
       |
@@ -149,11 +149,11 @@
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">VUE16-actions</div>
+      <div class="post-title">VUE16-actions和辅助函数mapActions</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-06-08 02:31:21
+          2026-06-08 17:44:36
         </span>
         
               <span class="post-categories">
@@ -176,11 +176,35 @@
                   </a>
                 </span>
                 
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B0mapActions/" title="辅助函数mapActions">
+                    #辅助函数mapActions
+                  </a>
+                </span>
+                
               </span>
           
       </div>
       <div class="markdown-body">
-        
+        <h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><ol>
+<li>专门处理异步操作（定时器，接口请求，延时逻辑）</li>
+<li>不直接改state，内部调用commit触发mutations去改数据</li>
+<li>组件通过dispatch调用actions，或mapActions映射到methods使用<blockquote>
+<p>同步改数据用mutations，异步逻辑先走actions</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>流程：准备好action方法–》触发事件后执行回调函数–》回调函数调用action</p>
+<ol>
+<li>准备好actions方法及mutations方法 <figure class="highlight js"><figcaption><span>store/index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//注意：不能直接操作 state，操作 state，还是需要 commit mutation</span></span><br><span class="line"><span class="attr">actions</span>: &#123;</span><br><span class="line">    <span class="comment">// context 上下文 (此处未分模块，可以当成store仓库)</span></span><br><span class="line">  	<span class="comment">//上下文=当前环境/所处场景/前置信息/代码当下所处【环境+数据+状态】</span></span><br><span class="line">    <span class="comment">// context.commit(&#x27;mutation名字&#x27;, 额外参数)，如果需要多个参数可以包裹进一个对象里</span></span><br><span class="line">    <span class="title function_">changeCountAction</span> (context, num) &#123;</span><br><span class="line">    <span class="comment">// 这里是setTimeout模拟异步，以后大部分场景是发请求</span></span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        context.<span class="title function_">commit</span>(<span class="string">&#x27;changeCount&#x27;</span>, num)</span><br><span class="line">    &#125;, <span class="number">1000</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;，</span><br><span class="line"><span class="attr">mutations</span>: &#123;</span><br><span class="line"><span class="title function_">changeCount</span> (state, newCount) &#123;</span><br><span class="line">  state.<span class="property">count</span> = newCount</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>调用action <figure class="highlight html"><figcaption><span>son.vue</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;handleChange&quot;</span>&gt;</span>一秒后修改成666<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+ <figure class="highlight js"><figcaption><span>son.vue</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">methods</span>: &#123;</span><br><span class="line"><span class="title function_">handleChange</span> () &#123;</span><br><span class="line">    <span class="comment">// 调用action</span></span><br><span class="line">    <span class="comment">// this.$store.dispatch(&#x27;action名字&#x27;, 额外参数)</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">$store</span>.<span class="title function_">dispatch</span>(<span class="string">&#x27;changeCountAction&#x27;</span>, <span class="number">666</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="辅助函数mapActions"><a href="#辅助函数mapActions" class="headerlink" title="辅助函数mapActions"></a>辅助函数mapActions</h2><ol>
+<li>作用<br>将位于actions中的方法提前出来，映射到methods中</li>
+<li>使用<br>先导入辅助函数mapActions，然后将actions同名映射到methods里<figure class="highlight js"><figcaption><span>son.vue</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; mapState, mapMutations, mapActions, mapGetters &#125; <span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span></span><br><span class="line"><span class="attr">methods</span>: &#123;</span><br><span class="line"> <span class="comment">// mapMutations 和 mapActions 都是映射方法</span></span><br><span class="line"> <span class="comment">// 全局级别的映射</span></span><br><span class="line"> ...<span class="title function_">mapActions</span>([<span class="string">&#x27;changeCountAction&#x27;</span>]),<span class="comment">//方法名要与actions里的同名</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">// 分模块的映射</span></span><br><span class="line"> ...<span class="title function_">mapActions</span>(<span class="string">&#x27;user&#x27;</span>, [<span class="string">&#x27;setUserSecond&#x27;</span>])</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+
       </div>
       
         <div class="prev-or-next">
@@ -195,7 +219,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-06-08 02:31:21
+              2026-06-08 17:44:36
             </span>
             
                   <span class="post-categories">
@@ -218,16 +242,44 @@
                       </a>
                     </span>
                     
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B0mapActions/" title="辅助函数mapActions">
+                        #辅助函数mapActions
+                      </a>
+                    </span>
+                    
                   </span>
               
           </div>
           <div class="post-foot-next">
+            
+              <a href="/2026/06/08/VUE17-getters/" target="_self">
+                <span>下一篇</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
             
           </div>
         </div>
       
     </div>
     
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8"><span class="toc-text">作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-text">使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B0mapActions"><span class="toc-text">辅助函数mapActions</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
 
     
       <div class="comments-container">

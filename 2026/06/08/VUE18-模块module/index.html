@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="zn-CN" color-mode="light">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="John Doe" />
+  <!-- Open Graph Description 简短摘要-->
+  
+  <!-- 用于搜索引擎的文章摘要 -->
+  
+  
+  
+  <title>
+    
+      VUE18-模块module 
+      
+      
+      |
+    
+     GINYUHZ
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
+  <!-- 代码块风格 -->
+  
+
+  <!-- jquery3.3.1 -->
+  
+    <script defer type="text/javascript" src="/plugins/jquery.min.js"></script>
+  
+
+  <!-- fancybox -->
+  
+    <link href="/plugins/jquery.fancybox.min.css" rel="stylesheet">
+    <script defer type="text/javascript" src="/plugins/jquery.fancybox.min.js"></script>
+  
+  
+<script src="/js/fancybox.js"></script>
+
+
+  
+
+  
+
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
+    }
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img src="/images/avatar.png" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">Ginyuhz</a></div>
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">首页</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">归档</a>
+        </li>
+      
+        <li class="nav-item" data-path="/categories/">
+          <a href="/categories/">分类</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">标签</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<script src="/js/activeNav.js"></script>
+
+
+
+      <div class="flex-container">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">VUE18-模块module</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+          2026-06-08 17:40:20
+        </span>
+        
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="Categories"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/VUE/" title="VUE">
+                    <b>#</b> VUE
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E6%A8%A1%E5%9D%97module/" title="模块module">
+                    #模块module
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E8%AE%BF%E9%97%AE%E6%A8%A1%E5%9D%97/" title="访问模块">
+                    #访问模块
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>模块module，就是把大型store拆分成多个独立的小模块，每个模块都有自己的state、mutations、actions、getters，解决单文件store臃肿、命名冲突的问题<br>好处：</p>
+<ol>
+<li>代码拆分：拆分成模块后，每个模块只负责自己的业务</li>
+<li>命名隔离：模块可以配置命名空间避免冲突</li>
+<li>可维护性：业务逻辑模块划分，修改查找更方便</li>
+</ol>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ol>
+<li><p>将模块拆分后会有多个js文件，这些文件放在store&#x2F;modules文件夹里</p>
+<figure class="highlight js"><figcaption><span>store/module/user.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// user模块</span></span><br><span class="line"> <span class="keyword">const</span> state = &#123;&#125;</span><br><span class="line"> <span class="keyword">const</span> mutations = &#123;&#125;</span><br><span class="line"> <span class="keyword">const</span> actions = &#123;</span><br><span class="line"> <span class="title function_">setUserSecond</span> (context, newUserInfo) &#123;</span><br><span class="line">     <span class="comment">// 将异步在action中进行封装</span></span><br><span class="line">     <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">     <span class="comment">// 调用mutation   context上下文，默认提交的就是自己模块的action和mutation</span></span><br><span class="line">     context.<span class="title function_">commit</span>(<span class="string">&#x27;setUser&#x27;</span>, newUserInfo)</span><br><span class="line">     &#125;, <span class="number">1000</span>)</span><br><span class="line"> &#125;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">const</span> getters = &#123;</span><br><span class="line"> <span class="comment">// 分模块后，state指代子模块的state</span></span><br><span class="line"> <span class="title class_">UpperCaseName</span> (state) &#123;</span><br><span class="line">     <span class="keyword">return</span> state.<span class="property">userInfo</span>.<span class="property">name</span>.<span class="title function_">toUpperCase</span>()</span><br><span class="line"> &#125;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line"> <span class="attr">namespaced</span>: <span class="literal">true</span>,</span><br><span class="line"> state,</span><br><span class="line"> mutations,</span><br><span class="line"> actions,</span><br><span class="line"> getters</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>要使用相应模块时，就导入到核心文件里，配置module</p>
+<figure class="highlight js"><figcaption><span>store/index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> user <span class="keyword">from</span> <span class="string">&#x27;./modules/user&#x27;</span></span><br><span class="line"><span class="keyword">import</span> setting <span class="keyword">from</span> <span class="string">&#x27;./modules/setting&#x27;</span></span><br><span class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> <span class="title class_">Vuex</span>.<span class="title class_">Store</span>(&#123;</span><br><span class="line">    <span class="attr">modules</span>: &#123;</span><br><span class="line">        user,</span><br><span class="line">        setting</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如何确认<br> 可以在调试模块中看到除根模块外，还有子模块<br>   <img src="/../img/%E6%A8%A1%E5%9D%97.png"></p>
+</li>
+</ol>
+<h2 id="访问子模块的state"><a href="#访问子模块的state" class="headerlink" title="访问子模块的state"></a>访问子模块的state</h2><p>尽管已经分模块了，但其实子模块的状态，还是会挂到根级别的 state 中，属性名就是模块名</p>
+<p><img src="/../img/%E5%AD%90%E6%A8%A1%E5%9D%97state.png"></p>
+<p>访问方法：</p>
+<ol>
+<li>通过模块名访问<code>$store.state.模块名.模块中的state中的属性名</code><br> 因为子模块的状态还是挂在根级别的state中，所以要先进入state，再进入模块<br> <code>$</code>store直接访问 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;$store.<span class="property">state</span>.<span class="property">user</span>.<span class="property">userInfo</span>.<span class="property">name</span>&#125;&#125;</span><br></pre></td></tr></table></figure></li>
+<li>通过mapState映射<ol>
+<li>默认根级别的映射  mapState([ ‘模块中的state中的属性名’ ])     </li>
+<li>子模块的映射 ：mapState(‘模块名’, [‘模块中的state中的属性名’])  -  <strong>需要开启命名空间 namespaced:true</strong><br>命名空间 namespaced:当不开启时，模块中的各个部分会合并到全局，可以直接全局访问，和根模块访问方法一样，但是这样容易冲突，建议开启<br> 开启命名空间</li>
+</ol>
+ <figure class="highlight js"><figcaption><span>modules/user.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> state = &#123;</span><br><span class="line"><span class="attr">userInfo</span>: &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;zs&#x27;</span>,</span><br><span class="line">    <span class="attr">age</span>: <span class="number">18</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="attr">myMsg</span>: <span class="string">&#x27;我的数据&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> mutations = &#123;&#125;</span><br><span class="line"><span class="keyword">const</span> actions = &#123;&#125;</span><br><span class="line"><span class="keyword">const</span> getters = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line"><span class="attr">namespaced</span>: <span class="literal">true</span>,<span class="comment">//开启命名空间</span></span><br><span class="line">state,</span><br><span class="line">mutations,</span><br><span class="line">actions,</span><br><span class="line">getters</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> mapState辅助函数访问<br> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">...<span class="title function_">mapState</span>(<span class="string">&#x27;user&#x27;</span>, [<span class="string">&#x27;userInfo&#x27;</span>]),</span><br><span class="line">...<span class="title function_">mapState</span>(<span class="string">&#x27;setting&#x27;</span>, [<span class="string">&#x27;theme&#x27;</span>, <span class="string">&#x27;desc&#x27;</span>]),</span><br></pre></td></tr></table></figure></p>
+</li>
+</ol>
+<h2 id="访问模块中的getters"><a href="#访问模块中的getters" class="headerlink" title="访问模块中的getters"></a>访问模块中的getters</h2><p>使用模块中getters中的数据：</p>
+<ol>
+<li>直接通过模块名访问<code>$store.getters[&#39;模块名/getters中的方法名&#39;]</code><br>含有&#x2F;特殊字符可以通过使用[‘’]包裹的方式使用<figure class="highlight html"><figcaption><span>Son1.vue 直接访问getters</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 测试访问模块中的getters - 原生 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123; $store.getters[&#x27;user/UpperCaseName&#x27;] &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>通过mapGetters映射<br>1.默认根级别映射mapGetters（[‘模块中的getters中的方法名’]）<br>2.子模块的映射 ：mapGetters(‘模块名’, [‘模块中的getters中的方法名’])  -  <strong>需要开启命名空间 namespaced:true</strong><br>定义子模块getters： <figure class="highlight js"><figcaption><span>modules/user.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> getters = &#123;</span><br><span class="line"><span class="comment">// 分模块后，state指代子模块的state</span></span><br><span class="line"><span class="title class_">UpperCaseName</span> (state) &#123;</span><br><span class="line">    <span class="keyword">return</span> state.<span class="property">userInfo</span>.<span class="property">name</span>.<span class="title function_">toUpperCase</span>()</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+ 调用映射： <figure class="highlight html"><figcaption><span>Son.vue</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123;UpperCaseName&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+ <figure class="highlight js"><figcaption><span>Son.vue 通过命名空间访问</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">computed</span>:&#123;</span><br><span class="line">...<span class="title function_">mapGetters</span>(<span class="string">&#x27;user&#x27;</span>, [<span class="string">&#x27;UpperCaseName&#x27;</span>])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="访问模块中的mutations"><a href="#访问模块中的mutations" class="headerlink" title="访问模块中的mutations"></a>访问模块中的mutations</h2><ol>
+<li>注意：<br> 默认模块中的 mutation 和 actions 会被挂载到全局，需要开启命名空间，才会挂载到子模块。建议开启不然难以维护</li>
+<li>调用方式：<ol>
+<li>直接通过 store 调用   $store.commit(‘模块名&#x2F;mutation名 ‘,  额外参数)</li>
+<li>通过 mapMutations 映射    <ol>
+<li>默认根级别的映射  mapMutations([ ‘mutation名’ ])     </li>
+<li>子模块的映射 mapMutations(‘模块名’, [‘mutation名’])  -  需要开启命名空间</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>代码实现<br>1.定义mutations方法</li>
+</ol>
+<figure class="highlight js"><figcaption><span>modules/user.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mutations = &#123;</span><br><span class="line">  <span class="title function_">setUser</span> (state, newUserInfo) &#123;</span><br><span class="line">    state.<span class="property">userInfo</span> = newUserInfo</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><figcaption><span>modules/setting.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mutations = &#123;</span><br><span class="line">  <span class="title function_">setTheme</span> (state, newTheme) &#123;</span><br><span class="line">    state.<span class="property">theme</span> = newTheme</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.直接调用mutations方法</p>
+<figure class="highlight html"><figcaption><span>Son1.vue</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;updateUser&quot;</span>&gt;</span>更新个人信息<span class="tag">&lt;/<span class="name">button</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;updateTheme&quot;</span>&gt;</span>更新主题色<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">```    </span><br><span class="line">```js Son1.vue    </span><br><span class="line">    export default &#123;</span><br><span class="line">      methods: &#123;</span><br><span class="line">        updateUser () &#123;</span><br><span class="line">          // $store.commit(&#x27;模块名/mutation名&#x27;, 额外传参)</span><br><span class="line">          this.$store.commit(&#x27;user/setUser&#x27;, &#123;</span><br><span class="line">            name: &#x27;xiaowang&#x27;,</span><br><span class="line">            age: 25</span><br><span class="line">          &#125;)</span><br><span class="line">        &#125;, </span><br><span class="line">        updateTheme () &#123;</span><br><span class="line">          this.$store.commit(&#x27;setting/setTheme&#x27;, &#x27;pink&#x27;)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>3.通过映射调用mutations方法</p>
+<figure class="highlight html"><figcaption><span>Son2.vue</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;setUser(&#123; name: &#x27;xiaoli&#x27;, age: 80 &#125;)&quot;</span>&gt;</span>更新个人信息<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;setTheme(&#x27;skyblue&#x27;)&quot;</span>&gt;</span>更新主题<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">```    </span><br><span class="line">```js Son2.vue</span><br><span class="line">    methods:&#123;</span><br><span class="line">    // 分模块的映射</span><br><span class="line">    ...mapMutations(&#x27;setting&#x27;, [&#x27;setTheme&#x27;]),</span><br><span class="line">    ...mapMutations(&#x27;user&#x27;, [&#x27;setUser&#x27;]),</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="获取模块内的actions方法"><a href="#获取模块内的actions方法" class="headerlink" title="获取模块内的actions方法"></a>获取模块内的actions方法</h2><p>同理 - 直接类比 mutation </p>
+<ol>
+<li>注意：<br>默认模块中的 mutation 和 actions 会被挂载到全局，需要开启命名空间，才会挂载到子模块。</li>
+<li>调用语法：<ol>
+<li>直接通过 store 调用 $store.dispatch(‘模块名&#x2F;action名 ‘,  额外参数)</li>
+<li>通过 mapActions 映射     <ol>
+<li>默认根级别的映射  mapActions([ ‘action名’ ])     </li>
+<li>子模块的映射 mapActions(‘模块名’, [‘action名’])  -  需要开启命名空间</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>代码实现<br>需求：实现一秒后更新数据<br>1.定义action方法<figure class="highlight js"><figcaption><span>modules/user.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> actions = &#123;</span><br><span class="line">  <span class="title function_">setUserSecond</span> (context, newUserInfo) &#123;</span><br><span class="line">    <span class="comment">// 将异步在action中进行封装</span></span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// 调用mutation   context上下文，默认提交的就是自己模块的action和mutation</span></span><br><span class="line">      context.<span class="title function_">commit</span>(<span class="string">&#x27;setUser&#x27;</span>, newUserInfo)</span><br><span class="line">    &#125;, <span class="number">1000</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+ 2.直接调用 <figure class="highlight html"><figcaption><span>Son1.vue  直接通过store调用</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;updateUser2&quot;</span>&gt;</span>一秒后更新信息<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">```    </span><br><span class="line">```js Son1.vue  直接通过store调用</span><br><span class="line">    methods:&#123;</span><br><span class="line">        updateUser2 () &#123;</span><br><span class="line">        // 调用action dispatch</span><br><span class="line">        this.$store.dispatch(&#x27;user/setUserSecond&#x27;, &#123;</span><br><span class="line">            name: &#x27;xiaohong&#x27;,</span><br><span class="line">            age: 28</span><br><span class="line">        &#125;)</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+ 3.通过映射调用 <figure class="highlight html"><figcaption><span>Son2.vue mapActions映射</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;setUserSecond(&#123; name: &#x27;xiaoli&#x27;, age: 80 &#125;)&quot;</span>&gt;</span>一秒后更新信息<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">```  </span><br><span class="line">```js Son2.vue mapActions映射  </span><br><span class="line">    methods:&#123;</span><br><span class="line">    ...mapActions(&#x27;user&#x27;, [&#x27;setUserSecond&#x27;])</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-prev">
+            
+              <a href="/2026/06/08/VUE17-getters/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一篇</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+              2026-06-08 17:40:20
+            </span>
+            
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="Categories"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/VUE/" title="VUE">
+                        <b>#</b> VUE
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E6%A8%A1%E5%9D%97module/" title="模块module">
+                        #模块module
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E8%AE%BF%E9%97%AE%E6%A8%A1%E5%9D%97/" title="访问模块">
+                        #访问模块
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-next">
+            
+              <a href="/2026/06/08/VUE19-vuex%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B%E8%B4%AD%E7%89%A9%E8%BD%A6/" target="_self">
+                <span>下一篇</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8"><span class="toc-text">作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-text">使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E5%AD%90%E6%A8%A1%E5%9D%97%E7%9A%84state"><span class="toc-text">访问子模块的state</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E6%A8%A1%E5%9D%97%E4%B8%AD%E7%9A%84getters"><span class="toc-text">访问模块中的getters</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E6%A8%A1%E5%9D%97%E4%B8%AD%E7%9A%84mutations"><span class="toc-text">访问模块中的mutations</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E6%A8%A1%E5%9D%97%E5%86%85%E7%9A%84actions%E6%96%B9%E6%B3%95"><span class="toc-text">获取模块内的actions方法</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
+    
+      <div class="comments-container">
+        
+
+
+
+
+
+
+
+      </div>
+    
+  </div>
+
+
+        
+<div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          
+              <a title="github" target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">
+                <i class="iconfont icon-github"></i>
+              </a>
+              
+        </li>
+        
+    </ul>
+  </div>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Copyright © 2026 Ginyuhz</a>
+        
+    </div>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Ginyuhz | Powered by Hexo</a>
+        
+    </div>
+  
+  
+</div>
+
+      </div>
+
+      <div class="tools-bar">
+        <div class="back-to-top tools-bar-item hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+        
+  <div class="search-icon tools-bar-item" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-title">
+        <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-search"></i>
+          </a>
+        </span>
+        
+          <input type="text" class="search-input" id="search-input" placeholder="搜索文章...">
+        
+        <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-close"></i>
+          </a>
+        </span>
+      </div>
+      <div class="search-result" id="search-result"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    inputArea.onclick = function() {
+      getSearchFile()
+      this.onclick = null
+    }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        // inputArea.focus()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>输入想要搜索的内容：<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'>" + orig_data_title + "</a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<p class=\"search-result-abstract\">" + match_content + "...</p>"
+                }
+                str += "</li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>未找到...<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The search.xml file was not found, please refer to：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The request failed, Try to refresh the page or try again later.<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
+        
+  <div class="tools-bar-item theme-icon" id="switch-color-scheme">
+    <a href="javascript: void(0)">
+      <i id="theme-icon" class="iconfont icon-moon"></i>
+    </a>
+  </div>
+
+  
+<script src="/js/colorscheme.js"></script>
+
+
+
+
+
+        
+
+      </div>
+    </div>
+  </body>
+</html>

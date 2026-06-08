@@ -153,7 +153,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-06-08 01:57:52
+          2026-06-08 10:50:47
         </span>
         
               <span class="post-categories">
@@ -181,8 +181,10 @@
       </div>
       <div class="markdown-body">
         <p>目标：<br>明确vuex同样遵循单向数据流，组件中不能直接修改仓库数据<br>掌握mutations的操作流程，来修改state数据（state数据只能通过mutations修改）</p>
-<h2 id="1-mutataions定义"><a href="#1-mutataions定义" class="headerlink" title="1.mutataions定义"></a>1.mutataions定义</h2><p>定义：mutations是一个对象，对象中存放一系列修改state的方法，且只能写同步代码</p>
-<p>流程：src\store\index.js中定义mutions对象–》组件中调用mutions方法–》mutations方法中修改state–》页面响应式更新</p>
+<h2 id="1-mutataions定义"><a href="#1-mutataions定义" class="headerlink" title="1.mutataions定义"></a>1.mutataions定义</h2><p>定义：mutations是一个对象，对象中存放一系列修改state的方法，且<strong>只能写同步代码</strong></p>
+<blockquote>
+<p>mutataions必须是同步（便于检测数据变化，记录调试）<br>流程：src\store\index.js中定义mutions对象–》组件中调用mutions方法–》mutations方法中修改state–》页面响应式更新</p>
+</blockquote>
 <ol>
 <li><p>所有mutation函数，第一个参数，都是 state</p>
 </li>
@@ -206,7 +208,7 @@
 <ol start="2">
 <li>页面中提交调用mutation</li>
 </ol>
-<figure class="highlight js"><figcaption><span>src\components\Son.vue</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//再触发事件同时传递参数</span></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;handle(1)&quot;</span>&gt;</span>值 + 1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="title function_">handle</span> (n) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="variable language_">this</span>.<span class="property">$store</span>.<span class="title function_">commit</span>(<span class="string">&#x27;addCount&#x27;</span>, n)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">&#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><figcaption><span>src\components\Son.vue</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//再触发事件同时传递参数</span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;handle(1)&quot;</span>&gt;</span>值 + 1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="title function_">handle</span> (n) &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="variable language_">this</span>.<span class="property">$store</span>.<span class="title function_">commit</span>(<span class="string">&#x27;addCount&#x27;</span>, n)</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 <ol start="3">
@@ -247,7 +249,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-06-08 01:57:52
+              2026-06-08 10:50:47
             </span>
             
                   <span class="post-categories">

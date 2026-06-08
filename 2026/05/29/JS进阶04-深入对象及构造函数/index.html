@@ -153,7 +153,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-31 10:25:41
+          2026-06-08 23:49:39
         </span>
         
               <span class="post-categories">
@@ -208,7 +208,7 @@
 <h2 id="3、内置构造函数"><a href="#3、内置构造函数" class="headerlink" title="3、内置构造函数"></a>3、内置构造函数</h2><p>js底层完成，将简单数据类型包装成复杂数据类型   </p>
 <h3 id="1-Object"><a href="#1-Object" class="headerlink" title="1.Object"></a>1.Object</h3><p>获得属性名：Object.keys(obj) &#x2F;&#x2F;返回数组<br>获得属性值：Object.values(obj)&#x2F;&#x2F;返回数组<br>对象的拷贝：Object.assign（oo，o）&#x2F;&#x2F;将o拷贝给oo</p>
 <h3 id="2-Array"><a href="#2-Array" class="headerlink" title="2.Array"></a>2.Array</h3><p>forEach，遍历数组，不返回数组<br>filter，筛选，返回新数组<br>map ，迭代，返回处理之后的新数组，和join一起拼接字符串<br>reduce ，累计器，经常用于求和</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">arr.reduce(functhion(prev,current)&#123;</span><br><span class="line">return prev + current </span><br><span class="line">&#125;)</span><br><span class="line">arr.reduce(functhion(上一次值,下一次值)&#123;</span><br><span class="line">return prev + current </span><br><span class="line">&#125;,初始值)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">arr.reduce(functhion(prev,current)&#123;</span><br><span class="line">return prev + current </span><br><span class="line">&#125;)</span><br><span class="line">arr.reduce(functhion(上一次值,当前遍历数组元素)&#123;</span><br><span class="line">return prev + current </span><br><span class="line">&#125;,初始值)</span><br></pre></td></tr></table></figure>
 
 
 <p>1.如果没有起始值，则上一次值以数组的第一个数组元素的值<br>2，每一次循环，把返回值给下一次循环的上一次值<br>3.有起始值，则起始值作为上一次值<br>数组对象reduce要加初始值 </p>
@@ -236,7 +236,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-31 10:25:41
+              2026-06-08 23:49:39
             </span>
             
                   <span class="post-categories">

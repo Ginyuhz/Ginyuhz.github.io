@@ -153,7 +153,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-30 00:53:22
+          2026-06-08 19:49:40
         </span>
         
               <span class="post-categories">
@@ -186,18 +186,18 @@
 <p>2.作用：修改地址栏路径时，切换显示匹配的组件</p>
 <p>3.使用（5+2）</p>
 <h4 id="1-5个基础步骤"><a href="#1-5个基础步骤" class="headerlink" title="1.5个基础步骤"></a>1.5个基础步骤</h4><p>1.下载vuerouter模块</p>
-<p>Vue2使用VueRouter3.x Vuex3.x<br>Vue3使用VueRouter4.x Vuex4.x<br>npm install <a href="mailto:&#118;&#x75;&#x65;&#45;&#x72;&#x6f;&#117;&#116;&#x65;&#x72;&#x40;&#51;&#x2e;&#x36;&#x2e;&#x35;">vue-router@3.6.5</a></p>
+<p>Vue2使用VueRouter3.x Vuex3.x<br>Vue3使用VueRouter4.x Vuex4.x<br>npm install <a href="mailto:&#118;&#x75;&#101;&#x2d;&#114;&#111;&#117;&#x74;&#101;&#x72;&#x40;&#x33;&#x2e;&#54;&#x2e;&#x35;">vue-router@3.6.5</a></p>
 <p>2.引入 </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import VueRouter from ‘vue-router’</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><figcaption><span>router/index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">VueRouter</span> <span class="keyword">from</span> ‘vue-router’</span><br></pre></td></tr></table></figure>
 
 <p>3.安装注册（vue插件要先安装注册）</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue.use(Vuetouter)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><figcaption><span>router/index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">Vuetouter</span>)</span><br></pre></td></tr></table></figure>
 
 <p>4.创建路由对象</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const router = new VueRouter（）</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><figcaption><span>router/index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> <span class="title class_">VueRouter</span>（）</span><br></pre></td></tr></table></figure>
 
 <p>5.注入，将路由对象注入到new Vue实例中，建立关联</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">new Vue（&#123;</span><br><span class="line">render:h=&gt;h(App),</span><br><span class="line">router</span><br><span class="line">&#125;）.$mount(&#x27;#app&#x27;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><figcaption><span>main.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="title class_">Vue</span>（&#123;</span><br><span class="line"><span class="attr">render</span>:<span class="function"><span class="params">h</span>=&gt;</span><span class="title function_">h</span>(<span class="title class_">App</span>),</span><br><span class="line">router</span><br><span class="line">&#125;）.$mount(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
 
 
@@ -272,6 +272,7 @@
 <h5 id="1-path路径跳转传参"><a href="#1-path路径跳转传参" class="headerlink" title="1.path路径跳转传参"></a>1.path路径跳转传参</h5><p>1.查询参数<br>跳转：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">this.$router.push(&#x27;路由路径？参数名1=参数值1&amp;参数2=参数值2&#x27;)</span><br><span class="line">this.$router.push(&#123;</span><br><span class="line">path:&#x27;路由路径&#x27;， </span><br><span class="line">query：&#123;</span><br><span class="line">参数名1=参数值1,</span><br><span class="line">参数2=参数值2</span><br><span class="line">&#125;                                    </span><br><span class="line">&#125;)//完整写法</span><br></pre></td></tr></table></figure>
 
+
 <p>接收：对应页面组件接收传递过来的值</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$router.query.参数名</span><br></pre></td></tr></table></figure>
 
@@ -321,7 +322,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-30 00:53:22
+              2026-06-08 19:49:40
             </span>
             
                   <span class="post-categories">

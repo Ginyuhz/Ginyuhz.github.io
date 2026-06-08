@@ -153,7 +153,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-29 22:51:25
+          2026-06-08 09:42:21
         </span>
         
               <span class="post-categories">
@@ -226,7 +226,7 @@
 
 
 
-<h2 id="4、async函数和await"><a href="#4、async函数和await" class="headerlink" title="4、async函数和await"></a>4、async函数和await</h2><p>定义：async函数是使用async关键字声明的函数，是AsyncFunction构造函数的实例，并且其中允许使用await关键字。async和await关键字让我们可以用一种更加简洁的方式写出基于promise的异步行为</p>
+<h2 id="4、async函数和await"><a href="#4、async函数和await" class="headerlink" title="4、async函数和await"></a>4、async函数和await</h2><p>定义：async函数是使用async关键字声明的函数，是AsyncFunction构造函数的实例，并且其中允许使用await关键字。async和await关键字让我们可以用一种更加简洁的方式写出基于promise的异步行为<br>async修饰函数，声明这是异步函数，返回值自动转为Promise<br>await写在async函数内部，等待Promise完成</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">async function getData() &#123;</span><br><span class="line">// 2. await等待Promise对象成功的结果</span><br><span class="line">const pObj = await axios(&#123;url: &#x27;http://hmajax.itheima.net/api/province&#x27;&#125;)</span><br><span class="line">const pname = pObj.data.list[0]</span><br><span class="line">const cObj = await axios(&#123;url: &#x27;http://hmajax.itheima.net/api/city&#x27;, params: &#123; pname &#125;&#125;)</span><br><span class="line">const cname = cObj.data.list[0]</span><br><span class="line">const aObj = await axios(&#123;url: &#x27;http://hmajax.itheima.net/api/area&#x27;, params: &#123; pname, cname &#125;&#125;)</span><br><span class="line">const areaName = aObj.data.list[0]</span><br><span class="line"></span><br><span class="line">document.querySelector(&#x27;.province&#x27;).innerHTML = pname</span><br><span class="line">document.querySelector(&#x27;.city&#x27;).innerHTML = cname</span><br><span class="line">document.querySelector(&#x27;.area&#x27;).innerHTML = areaName</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">getData()</span><br></pre></td></tr></table></figure>
 
 
@@ -259,7 +259,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-29 22:51:25
+              2026-06-08 09:42:21
             </span>
             
                   <span class="post-categories">

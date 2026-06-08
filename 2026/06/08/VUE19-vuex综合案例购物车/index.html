@@ -10,10 +10,13 @@
   <!-- 用于搜索引擎的文章摘要 -->
   
   
-    <meta name="robots" content="noindex" />
-  
   
   <title>
+    
+      VUE19-vuex综合案例购物车 
+      
+      
+      |
     
      GINYUHZ
   </title>
@@ -101,151 +104,204 @@
 
 
       <div class="flex-container">
-        <div class="container index">
-  <div class="post-list">
-    <!-- 遍历渲染文章 -->
-    
-      <div class="post-item" title="CSS-标准流及float">
-        <div class="time-m-d">2026-05-29</div>
-        <div class="title">
-          <a href="/2026/05/29/CSS11-%E6%A0%87%E5%87%86%E6%B5%81%E5%8F%8Afloat/">
-            
-              
-                <span>CSS-标准流及float</span>
-              
-            
-          </a>
-        </div>
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">VUE19-vuex综合案例购物车</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+          2026-06-08 21:33:08
+        </span>
+        
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="Categories"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/VUE/" title="VUE">
+                    <b>#</b> VUE
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E5%AE%9E%E6%88%98/" title="实战">
+                    #实战
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/vuex-%E8%B4%AD%E7%89%A9%E8%BD%A6/" title="vuex-购物车">
+                    #vuex-购物车
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
-    
-      <div class="post-item" title="CSS-盒子模型">
-        <div class="time-m-d">2026-05-29</div>
-        <div class="title">
-          <a href="/2026/05/29/CSS10-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/">
-            
-              
-                <span>CSS-盒子模型</span>
-              
-            
-          </a>
-        </div>
+      <div class="markdown-body">
+        <h2 id="功能模块分析"><a href="#功能模块分析" class="headerlink" title="功能模块分析"></a>功能模块分析</h2><ol>
+<li>请求动态渲染购物车，数据存vuex</li>
+<li>数字框控件修改数据</li>
+<li>动态计算总价和总数量</li>
+</ol>
+<h2 id="构建vuex-cart模块"><a href="#构建vuex-cart模块" class="headerlink" title="构建vuex-cart模块"></a>构建vuex-cart模块</h2><ol>
+<li>新建 store&#x2F;modules&#x2F;cart.js</li>
+</ol>
+  <figure class="highlight js"><figcaption><span>store/modules/cart.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">namespaced</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="title function_">state</span> () &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">list</span>: []</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>挂载到 vuex 仓库上 store&#x2F;cart.js</li>
+</ol>
+  <figure class="highlight js"><figcaption><span>store/index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Vuex</span> <span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Vue</span> <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> cart <span class="keyword">from</span> <span class="string">&#x27;./modules/cart&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">Vuex</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> <span class="title class_">Vuex</span>.<span class="title class_">Store</span>(&#123;</span><br><span class="line">  <span class="attr">modules</span>: &#123;</span><br><span class="line">    cart</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> store</span><br></pre></td></tr></table></figure>
+<h2 id="准备后端接口服务环境-了解"><a href="#准备后端接口服务环境-了解" class="headerlink" title="准备后端接口服务环境(了解)"></a>准备后端接口服务环境(了解)</h2><p>基于json-server工具，准备后端接口服务环境</p>
+<h3 id="JSON-Server：轻量Mock后端工具，基于Node-js-Express"><a href="#JSON-Server：轻量Mock后端工具，基于Node-js-Express" class="headerlink" title="JSON Server：轻量Mock后端工具，基于Node.js+Express"></a>JSON Server：轻量Mock后端工具，基于Node.js+Express</h3><p>JSON Server是轻量Mock（模拟）后端工具，基于Node.js+Express<br>作用：将db.json文件模拟成数据库，自动生成RESTful接口</p>
+<blockquote>
+<p>仅用于开发、测试，禁止用于生产环境</p>
+</blockquote>
+<ol>
+<li>安装全局工具 json-server （全局工具仅需要安装一次）</li>
+</ol>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">      yarn global add json-server 或 npm i json-server  -g</span><br><span class="line">  ```   </span><br><span class="line">2. 代码根目录新建一个 db 目录</span><br><span class="line">3. 将资料 index.json 移入 db 目录</span><br><span class="line">4. 进入 db 目录，执行命令，启动后端接口服务 (使用--watch 参数 可以实时监听 json 文件的修改)</span><br></pre></td></tr></table></figure>
+<pre><code>  json-server  --watch  index.json
+</code></pre>
+<pre><code>## 请求获取数据存入vuex，映射渲染
+安装axios--》准备actions和mutations--》调用action获取数据--》动态渲染
+代码实现：
+
+
+</code></pre>
+
       </div>
-    
-      <div class="post-item" title="CSS-结构伪类选择器及伪元素选择器">
-        <div class="time-m-d">2026-05-29</div>
-        <div class="title">
-          <a href="/2026/05/29/CSS09-%E7%BB%93%E6%9E%84%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8%E5%8F%8A%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8/">
+      
+        <div class="prev-or-next">
+          <div class="post-foot-prev">
             
-              
-                <span>CSS-结构伪类选择器及伪元素选择器</span>
-              
+              <a href="/2026/06/08/VUE18-%E6%A8%A1%E5%9D%97module/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一篇</span>
+              </a>
             
-          </a>
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+              2026-06-08 21:33:08
+            </span>
+            
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="Categories"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/VUE/" title="VUE">
+                        <b>#</b> VUE
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E5%AE%9E%E6%88%98/" title="实战">
+                        #实战
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/vuex-%E8%B4%AD%E7%89%A9%E8%BD%A6/" title="vuex-购物车">
+                        #vuex-购物车
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-next">
+            
+          </div>
         </div>
-      </div>
+      
+    </div>
     
-      <div class="post-item" title="CSS-显示模式">
-        <div class="time-m-d">2026-05-29</div>
-        <div class="title">
-          <a href="/2026/05/29/CSS08-%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F/">
-            
-              
-                <span>CSS-显示模式</span>
-              
-            
-          </a>
-        </div>
-      </div>
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97%E5%88%86%E6%9E%90"><span class="toc-text">功能模块分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E5%BB%BAvuex-cart%E6%A8%A1%E5%9D%97"><span class="toc-text">构建vuex-cart模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%90%8E%E7%AB%AF%E6%8E%A5%E5%8F%A3%E6%9C%8D%E5%8A%A1%E7%8E%AF%E5%A2%83-%E4%BA%86%E8%A7%A3"><span class="toc-text">准备后端接口服务环境(了解)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JSON-Server%EF%BC%9A%E8%BD%BB%E9%87%8FMock%E5%90%8E%E7%AB%AF%E5%B7%A5%E5%85%B7%EF%BC%8C%E5%9F%BA%E4%BA%8ENode-js-Express"><span class="toc-text">JSON Server：轻量Mock后端工具，基于Node.js+Express</span></a></li></ol></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
     
-      <div class="post-item" title="CSS-背景属性">
-        <div class="time-m-d">2026-05-29</div>
-        <div class="title">
-          <a href="/2026/05/29/CSS07-%E8%83%8C%E6%99%AF%E5%B1%9E%E6%80%A7/">
-            
-              
-                <span>CSS-背景属性</span>
-              
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="CSS-Emmet写法">
-        <div class="time-m-d">2026-05-29</div>
-        <div class="title">
-          <a href="/2026/05/29/CSS06-Emmet%E5%86%99%E6%B3%95/">
-            
-              
-                <span>CSS-Emmet写法</span>
-              
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="CSS特性">
-        <div class="time-m-d">2026-05-29</div>
-        <div class="title">
-          <a href="/2026/05/29/CSS05-%E7%89%B9%E6%80%A7/">
-            
-              
-                <span>CSS特性</span>
-              
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="CSS复合选择器及伪类选择器">
-        <div class="time-m-d">2026-05-29</div>
-        <div class="title">
-          <a href="/2026/05/29/CSS04-%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8%E5%8F%8A%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8/">
-            
-              
-                <span>CSS复合选择器及伪类选择器</span>
-              
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="CSS文字控制属性">
-        <div class="time-m-d">2026-05-29</div>
-        <div class="title">
-          <a href="/2026/05/29/CSS03-%E6%96%87%E5%AD%97%E6%8E%A7%E5%88%B6%E5%B1%9E%E6%80%A7/">
-            
-              
-                <span>CSS文字控制属性</span>
-              
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Css基础选择器">
-        <div class="time-m-d">2026-05-29</div>
-        <div class="title">
-          <a href="/2026/05/29/Css02-%E5%9F%BA%E7%A1%80%E9%80%89%E6%8B%A9%E5%99%A8/">
-            
-              
-                <span>Css基础选择器</span>
-              
-            
-          </a>
-        </div>
+      <div class="comments-container">
+        
+
+
+
+
+
+
+
       </div>
     
   </div>
-  <nav class="post-navigation">
-    
-      <a href="/page/5/"><i class="iconfont icon-angleleft"></i></a>
-    
-    <span class="page-num">6 / 7</span>
-    
-      <a href="/page/7/"><i class="iconfont icon-angleright"></i></a>
-    
-  </nav>
-</div>
+
 
         
 <div class="footer">

@@ -153,7 +153,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-29 22:33:09
+          2026-06-08 09:36:16
         </span>
         
               <span class="post-categories">
@@ -192,9 +192,14 @@
           
       </div>
       <div class="markdown-body">
-        <p>AJAX是可以让浏览器和服务器进行数据通信的技术</p>
-<h2 id="1、使用axios进行数据通信"><a href="#1、使用axios进行数据通信" class="headerlink" title="1、使用axios进行数据通信"></a>1、使用axios进行数据通信</h2><p>引入axios.js:<br>使用axios函数<br>传入配置对象<br>再用.then回调函数接收结果，并做后续处理</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">axios(&#123;url:‘目标资源地址’</span><br><span class="line">&#125;).then(result)=&gt;&#123;</span><br><span class="line">对服务器返回的数据做后续处理</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ol>
+<li>AJAX是可以让浏览器和服务器进行数据通信的技术</li>
+<li>Axios是HTTP请求库，专门发GET&#x2F;POST等网络请求（调后端接口），底层基于Promise封装</li>
+<li>什么是HTTP请求库：封装好的工具，调用后端接口和服务器收发数据的JS工具包，不需要自己进行额外的操作</li>
+<li>Axios &#x3D; 给原生又老又繁琐的 AJAX（XHR）套了一层「便利外壳」<br> 把所有重复、底层、易错的代码全部封装，只留给你最简单的调用方式，同时加上 Promise 和一堆实用功能。<br> Axios 一共包了 8 大块：<br> 1. 隐藏原生  XMLHttpRequest  底层代码<br> 2. 自动 JSON 解析<br> 3. 转为 Promise 异步写法（支持 then &#x2F; async await）<br> 4. 简化 GET&#x2F;POST 等请求方法<br> 5. 自动处理请求参数、请求头<br> 6. 统一网络错误、状态码判断<br> 7. 增加拦截器、全局配置<br> 8. 拓展超时、取消请求、进度监听等功能</li>
+</ol>
+<h2 id="1、使用axios进行数据通信"><a href="#1、使用axios进行数据通信" class="headerlink" title="1、使用axios进行数据通信"></a>1、使用axios进行数据通信</h2><p>引入axios.js:<br>使用axios函数<br>传入配置对象<br>再用.then回调函数接收结果，并做后续处理<br>形参result是请求后接收到的数据</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">axios</span>(&#123;<span class="attr">url</span>:‘目标资源地址’</span><br><span class="line">&#125;).<span class="title function_">then</span>(result)=&gt;&#123;</span><br><span class="line">对服务器返回的数据做后续处理</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -202,12 +207,12 @@
 <p>协议(http:&#x2F;&#x2F;)+域名(hmajax.itheima.net)+资源路径(&#x2F;api&#x2F;province)</p>
 <p>1.协议规定数据传输格式<br>2.域名表示访问哪台服务器<br>3.资源路径标识在该服务器的路径</p>
 <h2 id="3、查询参数"><a href="#3、查询参数" class="headerlink" title="3、查询参数"></a>3、查询参数</h2><p>使用axios提供的params选项<br>axios在运行时会把参数名和值，拼接到url？参数名&#x3D;值 </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">axios(&#123;</span><br><span class="line">url:‘目标资源地址’，</span><br><span class="line">params:&#123;</span><br><span class="line">参数名：值</span><br><span class="line">&#125; </span><br><span class="line">&#125;).then(result)=&gt;&#123;</span><br><span class="line">//对服务器返回的数据做后续处理</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">axios</span>(&#123;</span><br><span class="line"><span class="attr">url</span>:‘目标资源地址’，</span><br><span class="line"><span class="attr">params</span>:&#123;</span><br><span class="line">参数名：值</span><br><span class="line">&#125; </span><br><span class="line">&#125;).<span class="title function_">then</span>(result)=&gt;&#123;</span><br><span class="line"><span class="comment">//对服务器返回的数据做后续处理</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
 <h2 id="4、常用请求方法"><a href="#4、常用请求方法" class="headerlink" title="4、常用请求方法"></a>4、常用请求方法</h2><p>请求方法：对服务器资源要执行的操作<br>method：请求方法,（GET可省略，默认的）<br>data：提交数据<br>语法：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">axios(&#123;</span><br><span class="line">url:‘目标资源地址’，</span><br><span class="line">method:&#x27;请求方法&#x27;,</span><br><span class="line">data:&#123;</span><br><span class="line">参数名：值</span><br><span class="line">&#125;</span><br><span class="line">&#125;).then(result)=&gt;&#123;</span><br><span class="line">//对服务器返回的数据做后续处理</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">axios</span>(&#123;</span><br><span class="line"><span class="attr">url</span>:‘目标资源地址’，</span><br><span class="line"><span class="attr">method</span>:<span class="string">&#x27;请求方法&#x27;</span>,</span><br><span class="line"><span class="attr">data</span>:&#123;</span><br><span class="line">参数名：值</span><br><span class="line">&#125;</span><br><span class="line">&#125;).<span class="title function_">then</span>(result)=&gt;&#123;</span><br><span class="line"><span class="comment">//对服务器返回的数据做后续处理</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 <p>GET:获取数据<br>POST：提交数据<br>PUT ：修改数据（全部）<br>DELETE ：删除数据<br>PATCH：修改数据（部分）</p>
@@ -215,7 +220,7 @@
 <h3 id="2-响应报文"><a href="#2-响应报文" class="headerlink" title="2.响应报文"></a>2.响应报文</h3><p>服务器按照协议格式要求，返回给浏览器的内容<br>组成：响应行，响应头，空行，响应体<br>响应状态码：用来表明是否成功完成<br>1xx  信息<br>2xx  成功<br>3xx  重定向信息<br>4xx  客户端错误<br>5xx  服务端错误</p>
 <h2 id="6、接口文档"><a href="#6、接口文档" class="headerlink" title="6、接口文档"></a>6、接口文档</h2><p>定义：描述接口的文章<br>接口：使用AJAX和服务器通信时，使用的URL，请求方法，以及参数</p>
 <h2 id="7、form-serialize插件"><a href="#7、form-serialize插件" class="headerlink" title="7、form-serialize插件"></a>7、form-serialize插件</h2><p>作用：快速收集表单元素值<br>函数语法：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const data = serialize(form,&#123;hash:true, empty: true&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> data = <span class="title function_">serialize</span>(form,&#123;<span class="attr">hash</span>:<span class="literal">true</span>, <span class="attr">empty</span>: <span class="literal">true</span>&#125;)</span><br></pre></td></tr></table></figure>
 
 
 <p>hash设置数据结构<br>取值true，数据为js对象<br>false，数据为查询字符串<br>empty：设置是否获取空值<br>true：获取空值<br>flase：不获取<br>保存的格式是将输入框的name作为键值保存</p>
@@ -234,7 +239,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-29 22:33:09
+              2026-06-08 09:36:16
             </span>
             
                   <span class="post-categories">
@@ -291,7 +296,7 @@
     <div class="title">目录</div>
     <div class="catalog-content">
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E4%BD%BF%E7%94%A8axios%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1"><span class="toc-text">1、使用axios进行数据通信</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81URL"><span class="toc-text">2、URL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E6%9F%A5%E8%AF%A2%E5%8F%82%E6%95%B0"><span class="toc-text">3、查询参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E5%B8%B8%E7%94%A8%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95"><span class="toc-text">4、常用请求方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81Http%E5%8D%8F%E8%AE%AE"><span class="toc-text">5、Http协议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87"><span class="toc-text">1.请求报文</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87"><span class="toc-text">2.响应报文</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3"><span class="toc-text">6、接口文档</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E3%80%81form-serialize%E6%8F%92%E4%BB%B6"><span class="toc-text">7、form-serialize插件</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E4%BD%BF%E7%94%A8axios%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1"><span class="toc-text">1、使用axios进行数据通信</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81URL"><span class="toc-text">2、URL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E6%9F%A5%E8%AF%A2%E5%8F%82%E6%95%B0"><span class="toc-text">3、查询参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E5%B8%B8%E7%94%A8%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95"><span class="toc-text">4、常用请求方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81Http%E5%8D%8F%E8%AE%AE"><span class="toc-text">5、Http协议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87"><span class="toc-text">1.请求报文</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87"><span class="toc-text">2.响应报文</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3"><span class="toc-text">6、接口文档</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E3%80%81form-serialize%E6%8F%92%E4%BB%B6"><span class="toc-text">7、form-serialize插件</span></a></li></ol>
       
     </div>
   </div>

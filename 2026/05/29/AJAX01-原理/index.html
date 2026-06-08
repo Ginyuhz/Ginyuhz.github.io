@@ -153,7 +153,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-05-29 22:41:16
+          2026-06-08 10:19:43
         </span>
         
               <span class="post-categories">
@@ -192,7 +192,7 @@
 
 
 
-<h2 id="3、XHR-数据提交"><a href="#3、XHR-数据提交" class="headerlink" title="3、XHR-数据提交"></a>3、XHR-数据提交</h2><p>需求：通过XHR提交用户名和密码，完成组成功能<br>核心：<br>请求头设置Content-Type：application&#x2F;json</p>
+<h2 id="3、XHR-数据提交"><a href="#3、XHR-数据提交" class="headerlink" title="3、XHR-数据提交"></a>3、XHR-数据提交</h2><p>Content-Type：告诉服务器，发送的请求体数据是什么格式<br>常见值：<br>application&#x2F;json：JSON格式<br>application&#x2F;x-www-form-urlencoded：表单格式<br>multipart&#x2F;form-data：文件上传格式<br>需求：通过XHR提交用户名和密码，完成组成功能<br>核心：<br>请求头设置Content-Type：application&#x2F;json</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 设置请求头-告诉服务器内容类型（JSON字符串）</span><br><span class="line">    xhr.setRequestHeader(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;)</span><br><span class="line">请求体携带JSON字符串</span><br><span class="line">// 准备提交的数据</span><br><span class="line">const userObj = &#123;</span><br><span class="line">    username: &#x27;itheima007&#x27;,</span><br><span class="line">    password: &#x27;7654321&#x27;</span><br><span class="line">&#125;</span><br><span class="line">const userStr = JSON.stringify(userObj)</span><br><span class="line">// 设置请求体，发起请求，请求体数据放在send()里面</span><br><span class="line">xhr.send(userStr)</span><br></pre></td></tr></table></figure>
 
 
@@ -211,7 +211,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-05-29 22:41:16
+              2026-06-08 10:19:43
             </span>
             
                   <span class="post-categories">
