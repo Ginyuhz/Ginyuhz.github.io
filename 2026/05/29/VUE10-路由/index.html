@@ -13,7 +13,7 @@
   
   <title>
     
-      VUE-路由 
+      Vue10-路由 
       
       
       |
@@ -149,19 +149,19 @@
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">VUE-路由</div>
+      <div class="post-title">Vue10-路由</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-06-08 19:49:40
+          2026-06-11 03:44:23
         </span>
         
               <span class="post-categories">
                 <i class="iconfont icon-bookmark" title="Categories"></i>
                 
                 <span class="span--category">
-                  <a href="/categories/VUE/" title="VUE">
-                    <b>#</b> VUE
+                  <a href="/categories/Vue/" title="Vue">
+                    <b>#</b> Vue
                   </a>
                 </span>
                 
@@ -186,7 +186,7 @@
 <p>2.作用：修改地址栏路径时，切换显示匹配的组件</p>
 <p>3.使用（5+2）</p>
 <h4 id="1-5个基础步骤"><a href="#1-5个基础步骤" class="headerlink" title="1.5个基础步骤"></a>1.5个基础步骤</h4><p>1.下载vuerouter模块</p>
-<p>Vue2使用VueRouter3.x Vuex3.x<br>Vue3使用VueRouter4.x Vuex4.x<br>npm install <a href="mailto:&#118;&#x75;&#101;&#x2d;&#114;&#111;&#117;&#x74;&#101;&#x72;&#x40;&#x33;&#x2e;&#54;&#x2e;&#x35;">vue-router@3.6.5</a></p>
+<p>Vue2使用VueRouter3.x Vuex3.x<br>Vue3使用VueRouter4.x Vuex4.x<br>npm install <a href="mailto:&#x76;&#x75;&#x65;&#x2d;&#114;&#111;&#117;&#116;&#101;&#114;&#64;&#51;&#46;&#54;&#46;&#x35;">vue-router@3.6.5</a></p>
 <p>2.引入 </p>
 <figure class="highlight js"><figcaption><span>router/index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">VueRouter</span> <span class="keyword">from</span> ‘vue-router’</span><br></pre></td></tr></table></figure>
 
@@ -208,13 +208,79 @@
 <p>path是路由规则里的路径匹配标识，它决定了浏览器地址栏里的路径、和那个组件对应</p>
 <p>2.配置导航，配置路由出口（路由匹配的组件显示位置）</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">给href=‘#/find’</span><br><span class="line">&lt;router-view&gt;&lt;/router-view&gt;//这个在哪，显示位置就在哪</span><br></pre></td></tr></table></figure>
-
-
+<h2 id="router常用方法"><a href="#router常用方法" class="headerlink" title="$router常用方法"></a><code>$router</code>常用方法</h2><table>
+<thead>
+<tr>
+<th>写法</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>$router.push(&#39;/xxx&#39;)</code></td>
+<td>跳转到新页面，新增一条历史记录，可以返回</td>
+</tr>
+<tr>
+<td><code>$router.replace(&#39;/xxx&#39;)</code></td>
+<td>替换当前历史记录，不能返回上一页</td>
+</tr>
+<tr>
+<td><code>$router.go(n)</code></td>
+<td>基于历史记录前进&#x2F;后退&#x2F;刷新</td>
+</tr>
+</tbody></table>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">go</span>(n)</span><br><span class="line"><span class="comment">// -  n  是数字：</span></span><br><span class="line"><span class="comment">// 1. 正数：前进 n 页（相当于浏览器点前进按钮）</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">go</span>(<span class="number">1</span>) <span class="comment">// 前进1页</span></span><br><span class="line"><span class="comment">// 2. 负数：后退 n 页（相当于浏览器返回按钮）</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">go</span>(-<span class="number">1</span>) <span class="comment">// 返回上一页（最常用）</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">go</span>(-<span class="number">2</span>) <span class="comment">// 后退两页</span></span><br><span class="line"><span class="comment">// 3. 0 / 不传参数：刷新当前页面</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">go</span>(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
 
 <h4 id="3-组件存放目录问题（组件分类）"><a href="#3-组件存放目录问题（组件分类）" class="headerlink" title="3.组件存放目录问题（组件分类）"></a>3.组件存放目录问题（组件分类）</h4><p>.vue文件分为2类：页面组件&amp;复用组件<br>src&#x2F;views文件夹<br>页面组件-页面展示-配合路由用<br>src&#x2F;components文件夹<br>复用组件-展示数据-常用于复用</p>
 <h2 id="3、路由进阶"><a href="#3、路由进阶" class="headerlink" title="3、路由进阶"></a>3、路由进阶</h2><h3 id="1-路由模块封装"><a href="#1-路由模块封装" class="headerlink" title="1.路由模块封装"></a>1.路由模块封装</h3><p>目标：将路由模块抽离出来<br>好处：拆分模块，利用维护</p>
 <p>1.放到src&#x2F;router&#x2F;index.js<br>2.封装好后要先导出才能在main.js里导入<br>3.@默认指src路径，时VueCLI新建的默认项目里脚手架配置好的，可以更改<br>4.路由路径可以用@更加高效</p>
-<h3 id="2-导航"><a href="#2-导航" class="headerlink" title="2.导航"></a>2.导航</h3><h4 id="1-声明式导航"><a href="#1-声明式导航" class="headerlink" title="1.声明式导航"></a>1.声明式导航</h4><h5 id="1-导航链接"><a href="#1-导航链接" class="headerlink" title="1.导航链接"></a>1.导航链接</h5><p>需求：实现导航高亮效果<br>vue-router提供了一个全局组件router-link（取代a标签）<br>1.能跳转，配置to属性指定路径（必须）。本质还是a标签，to无需#<br>2.能高亮，默认就会提供高亮类名，可以直接设置高亮样式，可以通过控制台看类名</p>
+<h3 id="2-导航"><a href="#2-导航" class="headerlink" title="2.导航"></a>2.导航</h3><ol>
+<li>声明式导航、编程式导航对比<br>  1.区别：</li>
+</ol>
+<ul>
+<li>1. 声明式导航： <router-link> <br>写在模板 template 标签里，用标签跳转，类似原生  <a>  标签。</li>
+<li>2. 编程式导航： $router.push&#x2F;replace&#x2F;go <br>写在 JS 逻辑（methods、点击事件、接口回调等） 里，通过代码调用方法跳转。<br>  2.语法示例</li>
+</ul>
+<ol>
+<li>声明式导航<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 字符串路径 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">&quot;/home&quot;</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 对象方式（带参数） --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">router-link</span> <span class="attr">:to</span>=<span class="string">&quot;&#123; name: &#x27;User&#x27;, params: &#123; id: 100 &#125; &#125;&quot;</span>&gt;</span>用户<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br></pre></td></tr></table></figure><br>底层本质：浏览器阻止 a 标签默认刷新，调用了  $router.push 。</li>
+<li>编程式导航</li>
+</ol>
+   <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 字符串路径</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">push</span>(<span class="string">&#x27;/home&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 命名路由传参</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">push</span>(&#123; <span class="attr">name</span>: <span class="string">&#x27;User&#x27;</span>, <span class="attr">params</span>: &#123; <span class="attr">id</span>: <span class="number">100</span> &#125; &#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 替换历史记录</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">replace</span>(<span class="string">&#x27;/login&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 前进后退</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">go</span>(-<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<p>  3.详细对比表</p>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>声明式导航  <router-link></th>
+<th>编程式导航  <code>$router</code>  方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>书写位置</td>
+<td>template 模板中</td>
+<td>js 脚本、事件回调、函数内</td>
+</tr>
+<tr>
+<td>使用场景</td>
+<td>导航菜单、侧边栏、页面固定跳转按钮</td>
+<td>点击按钮先校验表单、登录后跳转、请求成功&#x2F;失败跳转、返回上一页、定时器跳转等需要逻辑判断的场景</td>
+</tr>
+<tr>
+<td>本质</td>
+<td>封装的 push 方法</td>
+<td>直接调用路由实例原生方法</td>
+</tr>
+<tr>
+<td>可做逻辑判断</td>
+<td>不能直接写复杂 if 判断</td>
+<td>可以先判断权限、登录状态再决定跳不跳转</td>
+</tr>
+<tr>
+<td>常用方式</td>
+<td>to 字符串 &#x2F; to 绑定对象</td>
+<td>push、replace、go</td>
+</tr>
+</tbody></table>
+<h4 id="1-声明式导航"><a href="#1-声明式导航" class="headerlink" title="1.声明式导航"></a>1.声明式导航</h4><h5 id="1-导航链接"><a href="#1-导航链接" class="headerlink" title="1.导航链接"></a>1.导航链接</h5><p>需求：实现导航高亮效果<br>vue-router提供了一个全局组件router-link（取代a标签）<br>1.能跳转，配置to属性指定路径（必须）。本质还是a标签，to无需#<br>2.能高亮，默认就会提供高亮类名，可以直接设置高亮样式，可以通过控制台看类名</p>
 <h5 id="2-两个类名"><a href="#2-两个类名" class="headerlink" title="2.两个类名"></a>2.两个类名</h5><p>1.router-link-active模糊匹配（用的多）<br>to&#x3D;‘&#x2F;my ’可以匹配&#x2F;my  &#x2F;my&#x2F;a  &#x2F;my&#x2F;b ….</p>
 <p>2.router-link-exact-active精确匹配<br>to&#x3D;‘&#x2F;my ’只可以匹配&#x2F;my</p>
 <h5 id="3、自定义两个类名"><a href="#3、自定义两个类名" class="headerlink" title="3、自定义两个类名"></a>3、自定义两个类名</h5><p>在路由对象中自定义</p>
@@ -243,8 +309,6 @@
 
 <p>3.对应页面组件接收传递过来的值  </p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$route.params.参数名 </span><br></pre></td></tr></table></figure>
-
-
 
 <h6 id="2-动态路由参数可选符"><a href="#2-动态路由参数可选符" class="headerlink" title="2.动态路由参数可选符"></a>2.动态路由参数可选符</h6><p>&#x2F;search&#x2F;:words表示，必须要传参<br>如果不传参，也希望匹配，可以加个可选符“？”<br>&#x2F;search&#x2F;:words？</p>
 <h3 id="2-Vue路由"><a href="#2-Vue路由" class="headerlink" title="2.Vue路由"></a>2.Vue路由</h3><h4 id="1-Vue路由-重定向"><a href="#1-Vue路由-重定向" class="headerlink" title="1.Vue路由-重定向"></a>1.Vue路由-重定向</h4><p>问题：网页打开，url默认是&#x2F;路径，未匹配到组件时，会出现空白<br>说明：重定向-》匹配path后，强制跳转path路径<br>语法：{path:匹配路径，redirect：重定向到的路径}</p>
@@ -322,15 +386,15 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-06-08 19:49:40
+              2026-06-11 03:44:23
             </span>
             
                   <span class="post-categories">
                     <i class="iconfont icon-bookmark" title="Categories"></i>
                     
                     <span class="span--category">
-                      <a href="/categories/VUE/" title="VUE">
-                        <b>#</b> VUE
+                      <a href="/categories/Vue/" title="Vue">
+                        <b>#</b> Vue
                       </a>
                     </span>
                     
@@ -367,7 +431,7 @@
     <div class="title">目录</div>
     <div class="catalog-content">
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%8D%95%E9%A1%B5%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%EF%BC%9ASPA-Single-Page-Application"><span class="toc-text">1、单页应用程序：SPA-Single Page Application</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E8%B7%AF%E7%94%B1%E5%85%A5%E9%97%A8"><span class="toc-text">2、路由入门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%9A%E4%B9%89"><span class="toc-text">1.定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-VueRouter"><span class="toc-text">2.VueRouter</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5%E4%B8%AA%E5%9F%BA%E7%A1%80%E6%AD%A5%E9%AA%A4"><span class="toc-text">1.5个基础步骤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2%E4%B8%AA%E6%A0%B8%E5%BF%83%E6%AD%A5%E9%AA%A4"><span class="toc-text">2.2个核心步骤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E7%BB%84%E4%BB%B6%E5%AD%98%E6%94%BE%E7%9B%AE%E5%BD%95%E9%97%AE%E9%A2%98%EF%BC%88%E7%BB%84%E4%BB%B6%E5%88%86%E7%B1%BB%EF%BC%89"><span class="toc-text">3.组件存放目录问题（组件分类）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E8%B7%AF%E7%94%B1%E8%BF%9B%E9%98%B6"><span class="toc-text">3、路由进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%B7%AF%E7%94%B1%E6%A8%A1%E5%9D%97%E5%B0%81%E8%A3%85"><span class="toc-text">1.路由模块封装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AF%BC%E8%88%AA"><span class="toc-text">2.导航</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%A3%B0%E6%98%8E%E5%BC%8F%E5%AF%BC%E8%88%AA"><span class="toc-text">1.声明式导航</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5"><span class="toc-text">1.导航链接</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E4%B8%A4%E4%B8%AA%E7%B1%BB%E5%90%8D"><span class="toc-text">2.两个类名</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3%E3%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%A4%E4%B8%AA%E7%B1%BB%E5%90%8D"><span class="toc-text">3、自定义两个类名</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E8%B7%B3%E8%BD%AC%E4%BC%A0%E5%8F%82"><span class="toc-text">4.跳转传参</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1-%E6%9F%A5%E8%AF%A2%E5%8F%82%E6%95%B0%E4%BC%A0%E5%8F%82%EF%BC%88%E5%A4%9A%E4%B8%AA%E5%8F%82%E6%95%B0%EF%BC%89"><span class="toc-text">1.查询参数传参（多个参数）</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82%EF%BC%88%E4%BC%98%E9%9B%85%E7%AE%80%E6%B4%81%EF%BC%89"><span class="toc-text">2.动态路由传参（优雅简洁）</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E5%8F%82%E6%95%B0%E5%8F%AF%E9%80%89%E7%AC%A6"><span class="toc-text">2.动态路由参数可选符</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Vue%E8%B7%AF%E7%94%B1"><span class="toc-text">2.Vue路由</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-Vue%E8%B7%AF%E7%94%B1-%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-text">1.Vue路由-重定向</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-Vue%E8%B7%AF%E7%94%B1-404"><span class="toc-text">2.Vue路由-404</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-Vue%E8%B7%AF%E7%94%B1-%E6%A8%A1%E5%BC%8F%E8%AE%BE%E7%BD%AE"><span class="toc-text">3.Vue路由-模式设置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%BC%96%E7%A8%8B%E5%BC%8F%E5%AF%BC%E8%88%AA"><span class="toc-text">3.编程式导航</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%BC%96%E7%A8%8B%E5%BC%8F%E5%AF%BC%E8%88%AA-%E5%9F%BA%E6%9C%AC%E8%B7%B3%E8%BD%AC"><span class="toc-text">1.编程式导航-基本跳转</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E7%BC%96%E7%A8%8B%E5%BC%8F%E5%AF%BC%E8%88%AA-%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82"><span class="toc-text">2.编程式导航-路由传参</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-path%E8%B7%AF%E5%BE%84%E8%B7%B3%E8%BD%AC%E4%BC%A0%E5%8F%82"><span class="toc-text">1.path路径跳转传参</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-name%E5%91%BD%E5%90%8D%E8%B7%AF%E7%94%B1%E8%B7%B3%E8%BD%AC%E4%BC%A0%E5%8F%82"><span class="toc-text">2.name命名路由跳转传参</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%8D%95%E9%A1%B5%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%EF%BC%9ASPA-Single-Page-Application"><span class="toc-text">1、单页应用程序：SPA-Single Page Application</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E8%B7%AF%E7%94%B1%E5%85%A5%E9%97%A8"><span class="toc-text">2、路由入门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%9A%E4%B9%89"><span class="toc-text">1.定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-VueRouter"><span class="toc-text">2.VueRouter</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5%E4%B8%AA%E5%9F%BA%E7%A1%80%E6%AD%A5%E9%AA%A4"><span class="toc-text">1.5个基础步骤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2%E4%B8%AA%E6%A0%B8%E5%BF%83%E6%AD%A5%E9%AA%A4"><span class="toc-text">2.2个核心步骤</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#router%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-text">$router常用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E7%BB%84%E4%BB%B6%E5%AD%98%E6%94%BE%E7%9B%AE%E5%BD%95%E9%97%AE%E9%A2%98%EF%BC%88%E7%BB%84%E4%BB%B6%E5%88%86%E7%B1%BB%EF%BC%89"><span class="toc-text">3.组件存放目录问题（组件分类）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E8%B7%AF%E7%94%B1%E8%BF%9B%E9%98%B6"><span class="toc-text">3、路由进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%B7%AF%E7%94%B1%E6%A8%A1%E5%9D%97%E5%B0%81%E8%A3%85"><span class="toc-text">1.路由模块封装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AF%BC%E8%88%AA"><span class="toc-text">2.导航</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%A3%B0%E6%98%8E%E5%BC%8F%E5%AF%BC%E8%88%AA"><span class="toc-text">1.声明式导航</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5"><span class="toc-text">1.导航链接</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E4%B8%A4%E4%B8%AA%E7%B1%BB%E5%90%8D"><span class="toc-text">2.两个类名</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3%E3%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%A4%E4%B8%AA%E7%B1%BB%E5%90%8D"><span class="toc-text">3、自定义两个类名</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E8%B7%B3%E8%BD%AC%E4%BC%A0%E5%8F%82"><span class="toc-text">4.跳转传参</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1-%E6%9F%A5%E8%AF%A2%E5%8F%82%E6%95%B0%E4%BC%A0%E5%8F%82%EF%BC%88%E5%A4%9A%E4%B8%AA%E5%8F%82%E6%95%B0%EF%BC%89"><span class="toc-text">1.查询参数传参（多个参数）</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82%EF%BC%88%E4%BC%98%E9%9B%85%E7%AE%80%E6%B4%81%EF%BC%89"><span class="toc-text">2.动态路由传参（优雅简洁）</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E5%8F%82%E6%95%B0%E5%8F%AF%E9%80%89%E7%AC%A6"><span class="toc-text">2.动态路由参数可选符</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Vue%E8%B7%AF%E7%94%B1"><span class="toc-text">2.Vue路由</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-Vue%E8%B7%AF%E7%94%B1-%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-text">1.Vue路由-重定向</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-Vue%E8%B7%AF%E7%94%B1-404"><span class="toc-text">2.Vue路由-404</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-Vue%E8%B7%AF%E7%94%B1-%E6%A8%A1%E5%BC%8F%E8%AE%BE%E7%BD%AE"><span class="toc-text">3.Vue路由-模式设置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%BC%96%E7%A8%8B%E5%BC%8F%E5%AF%BC%E8%88%AA"><span class="toc-text">3.编程式导航</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%BC%96%E7%A8%8B%E5%BC%8F%E5%AF%BC%E8%88%AA-%E5%9F%BA%E6%9C%AC%E8%B7%B3%E8%BD%AC"><span class="toc-text">1.编程式导航-基本跳转</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E7%BC%96%E7%A8%8B%E5%BC%8F%E5%AF%BC%E8%88%AA-%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82"><span class="toc-text">2.编程式导航-路由传参</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-path%E8%B7%AF%E5%BE%84%E8%B7%B3%E8%BD%AC%E4%BC%A0%E5%8F%82"><span class="toc-text">1.path路径跳转传参</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-name%E5%91%BD%E5%90%8D%E8%B7%AF%E7%94%B1%E8%B7%B3%E8%BD%AC%E4%BC%A0%E5%8F%82"><span class="toc-text">2.name命名路由跳转传参</span></a></li></ol></li></ol></li></ol></li></ol>
       
     </div>
   </div>

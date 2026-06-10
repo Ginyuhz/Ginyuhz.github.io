@@ -13,7 +13,7 @@
   
   <title>
     
-      VUE-小知识点 
+      Vue-小知识点 
       
       
       |
@@ -149,19 +149,19 @@
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">VUE-小知识点</div>
+      <div class="post-title">Vue-小知识点</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-06-06 10:41:20
+          2026-06-10 14:56:53
         </span>
         
               <span class="post-categories">
                 <i class="iconfont icon-bookmark" title="Categories"></i>
                 
                 <span class="span--category">
-                  <a href="/categories/VUE/" title="VUE">
-                    <b>#</b> VUE
+                  <a href="/categories/Vue/" title="Vue">
+                    <b>#</b> Vue
                   </a>
                 </span>
                 
@@ -213,6 +213,25 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">&#x27;./store&#x27;</span></span><br><span class="line"><span class="keyword">new</span> <span class="title class_">Vue</span>(&#123;</span><br><span class="line">  <span class="attr">el</span>:<span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">  store, <span class="comment">// 挂载后，Vue自动绑定this.$store = store实例</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>挂载后，所有.vue组件的this身上自动出现$store，不用每个组件手动导入store。<br>4. $符号含义💡<br>Vue中 $xxx 代表Vue内置全局实例属性，用来和你自定义的变量区分开，比如 $route、$refs、$store 。<br>5. 简写优化（实际开发）<br>频繁取值时不用反复写 this.$store ，用辅助函数：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;mapState,mapMutations&#125; <span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span></span><br><span class="line"><span class="attr">computed</span>:&#123; ...<span class="title function_">mapState</span>([<span class="string">&#x27;count&#x27;</span>]) &#125;,</span><br><span class="line"><span class="attr">methods</span>:&#123; ...<span class="title function_">mapMutations</span>([<span class="string">&#x27;addCount&#x27;</span>]) &#125;</span><br><span class="line"><span class="comment">// 直接调用 addCount(10)，省去 this.$store.commit</span></span><br></pre></td></tr></table></figure>
+<h2 id="this-store和-store"><a href="#this-store和-store" class="headerlink" title="this.$store和$store"></a><code>this.$store和$store</code></h2><p>JS 环境中，要通过this拿到当前组件实例，再访问<code>$store</code>,所以使用<code>this.$store</code>访问<br>Vue 模板会自动把组件实例暴露在作用域里，语法规定省略this，直接使用<code>$store</code>访问</p>
+<ol>
+<li>核心概念<br>   <code>$store</code>是Vue给所有组件实例全局挂载的属性，指向Vuex 仓库对象。</li>
+</ol>
+<ul>
+<li> this  &#x3D; 当前 Vue 组件实例</li>
+<li> <code>this.$store</code> ：在组件 JS 代码里访问仓库（必须写this ）</li>
+<li> <code>$store</code> ：在 模板 HTML 里直接使用（不用写this ）</li>
+</ul>
+<ol start="2">
+<li>分场景实战对比<ol>
+<li>在  <code>&lt;script&gt;  脚本里（JS 逻辑）</code><br>必须写  <code>this.$store </code><br>JS 环境中，要通过  this  拿到当前组件实例，再访问  <code>$store</code> 。</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">computed</span>: &#123;</span><br><span class="line">    <span class="comment">// 原生取值</span></span><br><span class="line">    <span class="title function_">list</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">$store</span>.<span class="property">state</span>.<span class="property">cart</span>.<span class="property">list</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">methods</span>: &#123;</span><br><span class="line">    <span class="title function_">btnClick</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="comment">// 调用 mutations</span></span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">$store</span>.<span class="title function_">commit</span>(<span class="string">&#x27;cart/addCount&#x27;</span>, <span class="number">1</span>)</span><br><span class="line">      <span class="comment">// 打印数据调试</span></span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">$store</span>.<span class="property">state</span>.<span class="property">cart</span>.<span class="property">list</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>在  <code>&lt;template&gt; </code>模板里（HTML 部分）<br>  直接写  <code>$store</code> ，不用this <br>  Vue 模板会自动把组件实例暴露在作用域里，语法规定省略  this 。</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 读取 state --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">&quot;item in $store.state.cart.list&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;item.id&quot;</span>&gt;</span></span><br><span class="line">    &#123;&#123; item.name &#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">&lt;!-- 读取 getters --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>总数：&#123;&#123; $store.getters[&#x27;cart/totalCount&#x27;] &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">&lt;!-- 点击调用 mutations（不推荐，仅演示语法） --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;$store.commit(&#x27;cart/addCount&#x27;, 1)&quot;</span>&gt;</span>+<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">&lt;!-- 无效，模板不识别 this --&gt;</span></span><br><span class="line">  &#123;&#123; this.$store.state.cart.list &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
 
       </div>
       
@@ -228,15 +247,15 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-06-06 10:41:20
+              2026-06-10 14:56:53
             </span>
             
                   <span class="post-categories">
                     <i class="iconfont icon-bookmark" title="Categories"></i>
                     
                     <span class="span--category">
-                      <a href="/categories/VUE/" title="VUE">
-                        <b>#</b> VUE
+                      <a href="/categories/Vue/" title="Vue">
+                        <b>#</b> Vue
                       </a>
                     </span>
                     
@@ -279,7 +298,7 @@
     <div class="title">目录</div>
     <div class="catalog-content">
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%A6%E5%8F%B7-%E5%90%AB%E4%B9%89"><span class="toc-text">符号$含义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this-store"><span class="toc-text">this.$store</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%A6%E5%8F%B7-%E5%90%AB%E4%B9%89"><span class="toc-text">符号$含义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this-store"><span class="toc-text">this.$store</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this-store%E5%92%8C-store"><span class="toc-text">this.$store和$store</span></a></li></ol>
       
     </div>
   </div>

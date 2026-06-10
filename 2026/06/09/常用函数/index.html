@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="zn-CN" color-mode="light">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="John Doe" />
+  <!-- Open Graph Description 简短摘要-->
+  
+  <!-- 用于搜索引擎的文章摘要 -->
+  
+  
+  
+  <title>
+    
+      常用函数 
+      
+      
+      |
+    
+     GINYUHZ
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
+  <!-- 代码块风格 -->
+  
+
+  <!-- jquery3.3.1 -->
+  
+    <script defer type="text/javascript" src="/plugins/jquery.min.js"></script>
+  
+
+  <!-- fancybox -->
+  
+    <link href="/plugins/jquery.fancybox.min.css" rel="stylesheet">
+    <script defer type="text/javascript" src="/plugins/jquery.fancybox.min.js"></script>
+  
+  
+<script src="/js/fancybox.js"></script>
+
+
+  
+
+  
+
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
+    }
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img src="/images/avatar.png" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">Ginyuhz</a></div>
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">首页</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">归档</a>
+        </li>
+      
+        <li class="nav-item" data-path="/categories/">
+          <a href="/categories/">分类</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">标签</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<script src="/js/activeNav.js"></script>
+
+
+
+      <div class="flex-container">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">常用函数</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+          2026-06-09 10:45:07
+        </span>
+        
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="Categories"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/%E5%87%BD%E6%95%B0/" title="函数">
+                    <b>#</b> 函数
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/" title="常用函数">
+                    #常用函数
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h2 id="数组常用方法"><a href="#数组常用方法" class="headerlink" title="数组常用方法"></a>数组常用方法</h2><ol>
+<li><strong>遍历类</strong><br>**forEach：**遍历数组，执行回调，无返回值</li>
+</ol>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">arr.<span class="title function_">forEach</span>(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(index, item)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 场景：单纯遍历、修改对象属性</span></span><br></pre></td></tr></table></figure>
+<p>**map:**遍历并加工每一项，返回新数组，不改变原数组<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> newArr = arr.<span class="title function_">map</span>(<span class="function"><span class="params">item</span> =&gt;</span> item * <span class="number">2</span>)</span><br><span class="line"><span class="comment">// 场景：批量转换数据、渲染列表预处理</span></span><br></pre></td></tr></table></figure><br>**filter:**过滤数组，返回符合条件的新数组<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> res = arr.<span class="title function_">filter</span>(<span class="function"><span class="params">item</span> =&gt;</span> item &gt; <span class="number">1</span>)</span><br><span class="line"><span class="comment">// 场景：筛选商品、过滤数据</span></span><br></pre></td></tr></table></figure><br>**find:**查找第一个符合条件的元素，找到即终止，返回单个值&#x2F;undefined<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> target = arr.<span class="title function_">find</span>(<span class="function"><span class="params">item</span> =&gt;</span> item === <span class="number">2</span>)</span><br><span class="line"><span class="comment">// 场景：根据 id 查单个商品（你购物车核心用法）</span></span><br></pre></td></tr></table></figure><br>**findIndex:**查找第一个符合条件元素的下标<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> idx = arr.<span class="title function_">findIndex</span>(<span class="function"><span class="params">item</span> =&gt;</span> item === <span class="number">2</span>)</span><br></pre></td></tr></table></figure><br>2. <strong>求和&#x2F;累计类</strong><br>**reduce:**累计计算、求和、求积、拼接等，功能最强<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 求和</span></span><br><span class="line"><span class="keyword">const</span> sum = arr.<span class="title function_">reduce</span>(<span class="function">(<span class="params">prev, curr</span>) =&gt;</span> prev + curr, <span class="number">0</span>)</span><br><span class="line"><span class="comment">// 购物车总价：prev 累加值，curr 当前商品</span></span><br><span class="line">state.<span class="property">list</span>.<span class="title function_">reduce</span>(<span class="function">(<span class="params">sum, item</span>) =&gt;</span> sum + item.<span class="property">price</span> * item.<span class="property">count</span>, <span class="number">0</span>)</span><br></pre></td></tr></table></figure><br>3. <strong>判断类</strong><br>**some:**只要有一项满足条件就返回 true<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.<span class="title function_">some</span>(<span class="function"><span class="params">item</span> =&gt;</span> item &gt; <span class="number">2</span>)</span><br></pre></td></tr></table></figure><br>**every:**所有项都满足条件才返回 true<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.<span class="title function_">every</span>(<span class="function"><span class="params">item</span> =&gt;</span> item &gt; <span class="number">0</span>)</span><br></pre></td></tr></table></figure><br>4. <strong>增删改（改变原数组）</strong></p>
+<ul>
+<li> push ：尾部添加</li>
+<li> pop ：尾部删除</li>
+<li> unshift ：头部添加</li>
+<li> shift ：头部删除</li>
+<li> splice(起始下标, 删除个数, 新值) ：增&#x2F;删&#x2F;改</li>
+</ul>
+<h2 id="字符串常用方法"><a href="#字符串常用方法" class="headerlink" title="字符串常用方法"></a>字符串常用方法</h2>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27; hello Vue &#x27;</span></span><br></pre></td></tr></table></figure>
+<p>1. <strong>trim()</strong>： 去除首尾空格<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.<span class="title function_">trim</span>() <span class="comment">// &#x27;hello Vue&#x27;</span></span><br></pre></td></tr></table></figure><br>2. <strong>split(分隔符)</strong>: 字符串转数组<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.<span class="title function_">split</span>(<span class="string">&#x27; &#x27;</span>) <span class="comment">// 按空格切割</span></span><br></pre></td></tr></table></figure><br>3. <strong>join(连接符)</strong>: 数组转字符串<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>].<span class="title function_">join</span>(<span class="string">&#x27;-&#x27;</span>) <span class="comment">// &#x27;a-b&#x27;</span></span><br></pre></td></tr></table></figure><br>4. <strong>substring &#x2F; slice</strong>: 截取字符串<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.<span class="title function_">slice</span>(<span class="number">0</span>, <span class="number">5</span>)</span><br></pre></td></tr></table></figure><br>5. <strong>includes()</strong>: 判断是否包含某字符，返回布尔<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.<span class="title function_">includes</span>(<span class="string">&#x27;Vue&#x27;</span>) <span class="comment">// true</span></span><br></pre></td></tr></table></figure><br>6. <strong>replace</strong>: 替换内容<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.<span class="title function_">replace</span>(<span class="string">&#x27;Vue&#x27;</span>, <span class="string">&#x27;JS&#x27;</span>)</span><br></pre></td></tr></table></figure></p>
+<h2 id="对象常用方法"><a href="#对象常用方法" class="headerlink" title="对象常用方法"></a>对象常用方法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123; <span class="attr">name</span>: <span class="string">&#x27;张三&#x27;</span>, <span class="attr">age</span>: <span class="number">18</span> &#125;</span><br></pre></td></tr></table></figure>
+<p>1. <strong>Object.keys()</strong>: 获取对象所有键 → 数组<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Object</span>.<span class="title function_">keys</span>(obj) <span class="comment">// [&quot;name&quot;, &quot;age&quot;]</span></span><br></pre></td></tr></table></figure><br>2. <strong>Object.values()</strong>: 获取对象所有值 → 数组<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Object</span>.<span class="title function_">values</span>(obj) <span class="comment">// [&quot;张三&quot;, 18]</span></span><br></pre></td></tr></table></figure><br>3. <strong>Object.assign()</strong>: 对象合并、浅拷贝<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> newObj = <span class="title class_">Object</span>.<span class="title function_">assign</span>(&#123;&#125;, obj, &#123; <span class="attr">age</span>: <span class="number">20</span> &#125;)</span><br></pre></td></tr></table></figure><br>4. <strong>解构赋值</strong><br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; name, age &#125; = obj</span><br></pre></td></tr></table></figure></p>
+<h2 id="数值-数学方法"><a href="#数值-数学方法" class="headerlink" title="数值 &amp; 数学方法"></a>数值 &amp; 数学方法</h2><p>1. <strong>Number.toFixed(n)</strong>: 保留 n 位小数（处理价格）<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> price = <span class="number">19.996</span></span><br><span class="line">price.<span class="title function_">toFixed</span>(<span class="number">2</span>) <span class="comment">// &quot;20.00&quot;</span></span><br></pre></td></tr></table></figure><br>2. <strong>Math 系列</strong><br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Math</span>.<span class="title function_">ceil</span>()   <span class="comment">// 向上取整</span></span><br><span class="line"><span class="title class_">Math</span>.<span class="title function_">floor</span>()  <span class="comment">// 向下取整</span></span><br><span class="line"><span class="title class_">Math</span>.<span class="title function_">round</span>()  <span class="comment">// 四舍五入</span></span><br><span class="line"><span class="title class_">Math</span>.<span class="title function_">max</span>(a,b) <span class="comment">// 最大值</span></span><br><span class="line"><span class="title class_">Math</span>.<span class="title function_">min</span>(a,b) <span class="comment">// 最小值</span></span><br><span class="line"><span class="title class_">Math</span>.<span class="title function_">random</span>() <span class="comment">// 0~1 随机数</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="定时器（异步常用）"><a href="#定时器（异步常用）" class="headerlink" title="定时器（异步常用）"></a>定时器（异步常用）</h2><p>1. <strong>setTimeout</strong>: 延时执行一次<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 3秒后执行</span></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;延时&#x27;</span>)</span><br><span class="line">&#125;, <span class="number">3000</span>)</span><br></pre></td></tr></table></figure><br>2. <strong>setInterval</strong>: 循环定时执行<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 每隔1秒执行</span></span><br><span class="line"><span class="keyword">let</span> timer = <span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> &#123;&#125;, <span class="number">1000</span>)</span><br><span class="line"><span class="built_in">clearInterval</span>(timer) <span class="comment">// 清除定时器</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="数组去重-高频"><a href="#数组去重-高频" class="headerlink" title="数组去重(高频)"></a>数组去重(高频)</h2>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"><span class="comment">// 方法1：Set 最简</span></span><br><span class="line"><span class="keyword">const</span> unique = [...<span class="keyword">new</span> <span class="title class_">Set</span>(arr)] </span><br><span class="line"><span class="comment">// 方法2：filter + indexOf</span></span><br><span class="line">arr.<span class="title function_">filter</span>(<span class="function">(<span class="params">item, idx</span>) =&gt;</span> arr.<span class="title function_">indexOf</span>(item) === idx)</span><br></pre></td></tr></table></figure>
+<h2 id="真假判断-空值处理"><a href="#真假判断-空值处理" class="headerlink" title="真假判断 &amp; 空值处理"></a>真假判断 &amp; 空值处理</h2><p>1. <strong>!!</strong> 转布尔值<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="string">&#x27;&#x27;</span></span><br><span class="line">!!a <span class="comment">// false</span></span><br></pre></td></tr></table></figure><br>2. <strong>||</strong> 兜底默认值<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = val || <span class="string">&#x27;匿名&#x27;</span></span><br></pre></td></tr></table></figure><br>3. <strong>?.</strong> 可选链（防止报错）<br>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 当 list 不存在也不会报错</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">$store</span>.<span class="property">state</span>.<span class="property">cart</span>.<span class="property">list</span>?.[<span class="number">0</span>]</span><br></pre></td></tr></table></figure></p>
+<h2 id="Vue-项目额外高频写法"><a href="#Vue-项目额外高频写法" class="headerlink" title="Vue 项目额外高频写法"></a>Vue 项目额外高频写法</h2><ol>
+<li><strong>数组遍历渲染</strong></li>
+</ol>
+  <figure class="highlight html"><figcaption><span>vue</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">&quot;(item, index) in list&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;index&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li><strong>列表查找（同原生 find）</strong></li>
+<li><strong>解构 props &#x2F; 数据</strong></li>
+</ol>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">props</span>: [<span class="string">&#x27;id&#x27;</span>,<span class="string">&#x27;name&#x27;</span>]</span><br></pre></td></tr></table></figure>
+<h2 id="快速记忆总结（按使用频率排序）"><a href="#快速记忆总结（按使用频率排序）" class="headerlink" title="快速记忆总结（按使用频率排序）"></a>快速记忆总结（按使用频率排序）</h2><p>数组（每天都用）<br> map  &#x2F;  filter  &#x2F;  find  &#x2F;  forEach  &#x2F;  reduce  &#x2F;  split  &#x2F;  join </p>
+<p>字符串<br> trim  &#x2F;  includes  &#x2F;  replace </p>
+<p>拷贝&#x2F;合并<br> Object.assign  &#x2F; 扩展运算符  … </p>
+<p>价格&#x2F;小数<br> toFixed </p>
+<p>延时<br> setTimeout </p>
+<p>去重<br> Set </p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-prev">
+            
+              <a href="/2026/06/08/VUE20-vuex%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B%E8%B4%AD%E7%89%A9%E8%BD%A6/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一篇</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+              2026-06-09 10:45:07
+            </span>
+            
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="Categories"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/%E5%87%BD%E6%95%B0/" title="函数">
+                        <b>#</b> 函数
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/" title="常用函数">
+                        #常用函数
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-next">
+            
+              <a href="/2026/06/09/VUE21-vue%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B%E8%B4%AD%E7%89%A9%E5%95%86%E5%9F%8E/" target="_self">
+                <span>下一篇</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-text">数组常用方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-text">字符串常用方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-text">对象常用方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%80%BC-%E6%95%B0%E5%AD%A6%E6%96%B9%E6%B3%95"><span class="toc-text">数值 &amp; 数学方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E6%97%B6%E5%99%A8%EF%BC%88%E5%BC%82%E6%AD%A5%E5%B8%B8%E7%94%A8%EF%BC%89"><span class="toc-text">定时器（异步常用）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D-%E9%AB%98%E9%A2%91"><span class="toc-text">数组去重(高频)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9C%9F%E5%81%87%E5%88%A4%E6%96%AD-%E7%A9%BA%E5%80%BC%E5%A4%84%E7%90%86"><span class="toc-text">真假判断 &amp; 空值处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue-%E9%A1%B9%E7%9B%AE%E9%A2%9D%E5%A4%96%E9%AB%98%E9%A2%91%E5%86%99%E6%B3%95"><span class="toc-text">Vue 项目额外高频写法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E8%AE%B0%E5%BF%86%E6%80%BB%E7%BB%93%EF%BC%88%E6%8C%89%E4%BD%BF%E7%94%A8%E9%A2%91%E7%8E%87%E6%8E%92%E5%BA%8F%EF%BC%89"><span class="toc-text">快速记忆总结（按使用频率排序）</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
+    
+      <div class="comments-container">
+        
+
+
+
+
+
+
+
+      </div>
+    
+  </div>
+
+
+        
+<div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          
+              <a title="github" target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">
+                <i class="iconfont icon-github"></i>
+              </a>
+              
+        </li>
+        
+    </ul>
+  </div>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Copyright © 2026 Ginyuhz</a>
+        
+    </div>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Ginyuhz | Powered by Hexo</a>
+        
+    </div>
+  
+  
+</div>
+
+      </div>
+
+      <div class="tools-bar">
+        <div class="back-to-top tools-bar-item hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+        
+  <div class="search-icon tools-bar-item" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-title">
+        <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-search"></i>
+          </a>
+        </span>
+        
+          <input type="text" class="search-input" id="search-input" placeholder="搜索文章...">
+        
+        <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-close"></i>
+          </a>
+        </span>
+      </div>
+      <div class="search-result" id="search-result"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    inputArea.onclick = function() {
+      getSearchFile()
+      this.onclick = null
+    }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        // inputArea.focus()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>输入想要搜索的内容：<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'>" + orig_data_title + "</a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<p class=\"search-result-abstract\">" + match_content + "...</p>"
+                }
+                str += "</li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>未找到...<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The search.xml file was not found, please refer to：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The request failed, Try to refresh the page or try again later.<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
+        
+  <div class="tools-bar-item theme-icon" id="switch-color-scheme">
+    <a href="javascript: void(0)">
+      <i id="theme-icon" class="iconfont icon-moon"></i>
+    </a>
+  </div>
+
+  
+<script src="/js/colorscheme.js"></script>
+
+
+
+
+
+        
+
+      </div>
+    </div>
+  </body>
+</html>

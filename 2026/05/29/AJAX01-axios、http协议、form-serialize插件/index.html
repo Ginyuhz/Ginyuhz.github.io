@@ -153,7 +153,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-06-08 09:36:16
+          2026-06-09 15:48:27
         </span>
         
               <span class="post-categories">
@@ -206,16 +206,71 @@
 <h2 id="2、URL"><a href="#2、URL" class="headerlink" title="2、URL"></a>2、URL</h2><p><a target="_blank" rel="noopener" href="http://hmajax.itheima.net/api/province">http://hmajax.itheima.net/api/province</a><br>组成：</p>
 <p>协议(http:&#x2F;&#x2F;)+域名(hmajax.itheima.net)+资源路径(&#x2F;api&#x2F;province)</p>
 <p>1.协议规定数据传输格式<br>2.域名表示访问哪台服务器<br>3.资源路径标识在该服务器的路径</p>
-<h2 id="3、查询参数"><a href="#3、查询参数" class="headerlink" title="3、查询参数"></a>3、查询参数</h2><p>使用axios提供的params选项<br>axios在运行时会把参数名和值，拼接到url？参数名&#x3D;值 </p>
+<h2 id="3、查询参数"><a href="#3、查询参数" class="headerlink" title="3、查询参数"></a>3、查询参数</h2><p>使用axios提供的params选项<br>axios在运行时会把参数名和值，拼接到url？参数名&#x3D;值<br>如：url&#x3D;<a target="_blank" rel="noopener" href="http://localhost:3000/cart">http://localhost:3000/cart</a><br>将会拼接成url&#x3D;<a target="_blank" rel="noopener" href="http://localhost:3000/cart%EF%BC%9F%E5%8F%82%E6%95%B0%E5%90%8D=%E5%80%BC">http://localhost:3000/cart？参数名=值</a> </p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">axios</span>(&#123;</span><br><span class="line"><span class="attr">url</span>:‘目标资源地址’，</span><br><span class="line"><span class="attr">params</span>:&#123;</span><br><span class="line">参数名：值</span><br><span class="line">&#125; </span><br><span class="line">&#125;).<span class="title function_">then</span>(result)=&gt;&#123;</span><br><span class="line"><span class="comment">//对服务器返回的数据做后续处理</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="4、常用请求方法"><a href="#4、常用请求方法" class="headerlink" title="4、常用请求方法"></a>4、常用请求方法</h2><p>请求方法：对服务器资源要执行的操作<br>method：请求方法,（GET可省略，默认的）<br>data：提交数据<br>语法：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">axios</span>(&#123;</span><br><span class="line"><span class="attr">url</span>:‘目标资源地址’，</span><br><span class="line"><span class="attr">method</span>:<span class="string">&#x27;请求方法&#x27;</span>,</span><br><span class="line"><span class="attr">data</span>:&#123;</span><br><span class="line">参数名：值</span><br><span class="line">&#125;</span><br><span class="line">&#125;).<span class="title function_">then</span>(result)=&gt;&#123;</span><br><span class="line"><span class="comment">//对服务器返回的数据做后续处理</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="4、常用请求方法"><a href="#4、常用请求方法" class="headerlink" title="4、常用请求方法"></a>4、常用请求方法</h2><p>请求方法：对服务器资源要执行的操作<br>method：请求方法,（GET可省略，默认的）<br>data：提交数据<br>两种写法：<br>语法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 写法1：</span></span><br><span class="line"><span class="title function_">axios</span>(&#123;</span><br><span class="line"><span class="attr">url</span>:‘目标资源地址’，</span><br><span class="line"><span class="attr">method</span>:<span class="string">&#x27;请求方法&#x27;</span>,</span><br><span class="line"><span class="attr">data</span>:&#123;</span><br><span class="line">参数名：值</span><br><span class="line">&#125;</span><br><span class="line">&#125;).<span class="title function_">then</span>(result)=&gt;&#123;</span><br><span class="line"><span class="comment">// 对服务器返回的数据做后续处理</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 写法2：axios.请求方法（）</span></span><br><span class="line">axios.<span class="title function_">put</span>(&#123;</span><br><span class="line"><span class="attr">url</span>:‘目标资源地址’，</span><br><span class="line"><span class="attr">data</span>:&#123;</span><br><span class="line">参数名：值</span><br><span class="line">&#125;</span><br><span class="line">&#125;).<span class="title function_">then</span>(result)=&gt;&#123;</span><br><span class="line"><span class="comment">// 对服务器返回的数据做后续处理</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
-<p>GET:获取数据<br>POST：提交数据<br>PUT ：修改数据（全部）<br>DELETE ：删除数据<br>PATCH：修改数据（部分）</p>
+<table>
+<thead>
+<tr>
+<th>请求方法</th>
+<th>作用</th>
+<th>写法1</th>
+<th>写法2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>get</td>
+<td>获取数据</td>
+<td>axios.get()</td>
+<td>method:get</td>
+</tr>
+<tr>
+<td>post</td>
+<td>提交数据，提交一条全新数据</td>
+<td>axios.post()</td>
+<td>method:post</td>
+</tr>
+<tr>
+<td>put</td>
+<td>修改数据，必须传完整对象，不传字段清空</td>
+<td>axios.put()</td>
+<td>method:put</td>
+</tr>
+<tr>
+<td>delete</td>
+<td>删除数据</td>
+<td>axios.delete()</td>
+<td>method:delete</td>
+</tr>
+<tr>
+<td>patch</td>
+<td>修改单个数据，其余字段保留</td>
+<td>axios.patch()</td>
+<td>method:patch</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>如put要修改用户数据中的头像，必须将整条用户数据都上传，不然只传头像，用户数据中的名字，年龄等数据就好清空<br>patch只需要提交头像就可以，数据会更改头像，保留其他字段</p>
+</blockquote>
+<p>1.get</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 方式1：参数拼在url</span></span><br><span class="line">axios.<span class="title function_">get</span>(<span class="string">&#x27;/api/user?name=test&amp;age=18&#x27;</span>)</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(res.<span class="property">data</span>) <span class="comment">// 后端返回数据</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(err)</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 方式2：params 传参（推荐）</span></span><br><span class="line">axios.<span class="title function_">get</span>(<span class="string">&#x27;/api/user&#x27;</span>, &#123;</span><br><span class="line">  <span class="attr">params</span>: &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;test&#x27;</span>,</span><br><span class="line">    <span class="attr">age</span>: <span class="number">18</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;).<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(res.<span class="property">data</span>))</span><br></pre></td></tr></table></figure>
+<p>2.post</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 表单/JSON 提交（默认JSON）</span></span><br><span class="line">axios.<span class="title function_">post</span>(<span class="string">&#x27;/api/login&#x27;</span>, &#123;</span><br><span class="line">  <span class="attr">username</span>: <span class="string">&#x27;admin&#x27;</span>,</span><br><span class="line">  <span class="attr">password</span>: <span class="string">&#x27;123456&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line">.<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(res.<span class="property">data</span>))</span><br><span class="line">.<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(err))</span><br></pre></td></tr></table></figure>
+<p>3.PUT &#x2F; DELETE</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// PUT 修改</span></span><br><span class="line">axios.<span class="title function_">put</span>(<span class="string">&#x27;/api/user/1&#x27;</span>, &#123; <span class="attr">name</span>: <span class="string">&#x27;新名字&#x27;</span> &#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// DELETE 删除</span></span><br><span class="line">axios.<span class="title function_">delete</span>(<span class="string">&#x27;/api/user/1&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>4.patch</p>
+<ol>
+<li>普通 PATCH（传 JSON 数据）<br>​<code>js // 语法：axios.patch(url, data, [config]) axios.patch(&#39;/api/user/1001&#39;, &#123;   nickname: &#39;新昵称&#39;,   age: 20 &#125;) .then(res =&gt; &#123;   console.log(res.data) &#125;) .catch(err =&gt; &#123;   console.error(&#39;请求失败&#39;, err) &#125;) ​</code></li>
+<li>async&#x2F;await 写法<br>​<code>js async function updateUser() &#123;   try &#123;   const res = await axios.patch(&#39;/api/user/1001&#39;, &#123;   phone: &#39;13800138000&#39;   &#125;)   console.log(res.data)   &#125; catch (err) &#123;   console.error(err)   &#125; &#125; ​</code></li>
+<li>带请求头、超时、参数配置<br>​&#96;&#96;&#96;js<br>  axios.patch(<br>  ‘&#x2F;api&#x2F;user&#x2F;1001’,<br>  { status: 1 }, &#x2F;&#x2F; 请求体 data<br>  {<br>  timeout: 5000,<br>  headers: {<br>  Authorization: ‘Bearer ‘ + localStorage.getItem(‘token’)<br>  },<br>  &#x2F;&#x2F; URL 拼接参数（非请求体）<br>  params: {<br>  type: ‘edit’<br>  }<br>  }<br>  )  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">5.并发请求（同时发多个接口）</span><br><span class="line">```js</span><br><span class="line">axios.all([</span><br><span class="line">  axios.get(&#x27;/api/1&#x27;),</span><br><span class="line">  axios.get(&#x27;/api/2&#x27;)</span><br><span class="line">]).then(axios.spread((res1, res2) =&gt; &#123;</span><br><span class="line">  console.log(res1.data, res2.data)</span><br><span class="line">&#125;))</span><br></pre></td></tr></table></figure>
+6.传递 FormData（文件 &#x2F; 表单）</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> formData = <span class="keyword">new</span> <span class="title class_">FormData</span>()</span><br><span class="line">formData.<span class="title function_">append</span>(<span class="string">&#x27;file&#x27;</span>, 上传的文件)</span><br><span class="line">formData.<span class="title function_">append</span>(<span class="string">&#x27;name&#x27;</span>, <span class="string">&#x27;测试&#x27;</span>)</span><br><span class="line"></span><br><span class="line">axios.<span class="title function_">post</span>(<span class="string">&#x27;/api/upload&#x27;</span>, formData, &#123;</span><br><span class="line">  <span class="attr">headers</span>: &#123;</span><br><span class="line">    <span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;multipart/form-data&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <h2 id="5、Http协议"><a href="#5、Http协议" class="headerlink" title="5、Http协议"></a>5、Http协议</h2><h3 id="1-请求报文"><a href="#1-请求报文" class="headerlink" title="1.请求报文"></a>1.请求报文</h3><p>请求报文：浏览器按照协议要求的格式，发送给服务器的内容<br>组成：请求行，请求头，空行，请求体<br>请求报文可以进行错误排除</p>
 <h3 id="2-响应报文"><a href="#2-响应报文" class="headerlink" title="2.响应报文"></a>2.响应报文</h3><p>服务器按照协议格式要求，返回给浏览器的内容<br>组成：响应行，响应头，空行，响应体<br>响应状态码：用来表明是否成功完成<br>1xx  信息<br>2xx  成功<br>3xx  重定向信息<br>4xx  客户端错误<br>5xx  服务端错误</p>
 <h2 id="6、接口文档"><a href="#6、接口文档" class="headerlink" title="6、接口文档"></a>6、接口文档</h2><p>定义：描述接口的文章<br>接口：使用AJAX和服务器通信时，使用的URL，请求方法，以及参数</p>
@@ -239,7 +294,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-06-08 09:36:16
+              2026-06-09 15:48:27
             </span>
             
                   <span class="post-categories">
