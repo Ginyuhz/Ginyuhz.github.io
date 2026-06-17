@@ -153,7 +153,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-06-10 15:22:09
+          2026-06-17 15:11:19
         </span>
         
               <span class="post-categories">
@@ -210,22 +210,52 @@
           
       </div>
       <div class="markdown-body">
-        <h2 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h2><p>​1.vue中取名为单个单词时会报错<br>在export default给name取个符合取名规范的名字，如小驼峰命名<br>2.ESLint依赖版本冲突<br>使用–legacy-peer-deps 忽略版本冲突</p>
+        <h2 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h2><p><strong>​1. vue中取名为单个单词时会报错</strong><br>在export default给name取个符合取名规范的名字，如小驼峰命名<br><strong>2. ESLint依赖版本冲突</strong><br>使用–legacy-peer-deps 忽略版本冲突<br><strong>3. 权限问题，无法在不是管理员权限下使用npm</strong><br>解决：将npm的全局路径及缓存路径修改到D盘，同时要修改环境变量path</p>
+<p>  <strong>1.先查看当前默认路径（确认C盘路径）</strong><br>  打开终端执行：<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config get prefix</span><br><span class="line">npm config ger cache</span><br></pre></td></tr></table></figure><br>  你会看到默认路径在  C:\Users\用户名\AppData\Roaming\npm  和  C:\Users\用户名\AppData\Roaming\npm-cache 。<br>    1.在D盘新建两个文件夹<br>    1.在D盘新建文件夹： D:\nodejs\npm_global （全局包存放）<br>    2.再新建： D:\nodejs\npm_cache （缓存文件存放）</p>
+<p>  <strong>2.终端执行两条命令修改配置</strong><br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置全局模块安装路径</span></span><br><span class="line">npm config <span class="built_in">set</span> prefix <span class="string">&quot;D:\nodejs\npm_global&quot;</span></span><br><span class="line"><span class="comment"># 设置缓存路径</span></span><br><span class="line">npm config <span class="built_in">set</span> cache <span class="string">&quot;D:\nodejs\npm_cache&quot;</span></span><br></pre></td></tr></table></figure></p>
+<p>  <strong>3.验证是否修改成功</strong><br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config get prefix</span><br><span class="line">npm config get cache</span><br></pre></td></tr></table></figure><br>  返回你设置的D盘路径就代表修改成功。</p>
+<p>  <strong>4.配置系统环境变量（必须做，否则全局命令用不了）</strong><br>    1. 右键「此电脑」→ 属性 → 高级系统设置 → 环境变量<br>    2. 在用户变量里找到  Path ，双击编辑<br>    3. 点击「新建」，填入路径：自己修改的路径如”D:\nodejs\npm_global”<br>    4. 一路点击确定保存。<br>    5.返回到环境变量，找到系统变量里的NODE_PATH，修改路径如<br>      将C\Program Files\nodejs\node_global\node_modules修改成D:\download-software\nodejs\npm_global\node_modules<br>    6.测试是否生效<br>      新开一个终端，全局安装任意包测试：<br>      npm install -g vue-cli<br>  <strong>5.补充说明</strong><br>    1. 之前C盘旧的缓存文件可以直接手动删除，释放C盘空间；<br>    2. <strong>已经全局安装过的工具</strong>（比如vite、pnpm）需要<strong>重新安装</strong>一次，才能在新路径正常调用；<br>    3.同时，c盘安装过的模块相关文件也还是存在，但是目前我还未确定该如何操作才能保证不好导致其他问题<br>    4. 后续所有  npm install -g xxx  全局安装的包都会存放在D盘，彻底解决C盘爆满、EPERM权限报错问题。<br>    5.不要手动添加node_modules文件夹，可能会导致路径权限问题</p>
 <h2 id="小知识点"><a href="#小知识点" class="headerlink" title="小知识点"></a>小知识点</h2><ol>
 <li>关键字：<br>编程语言本身提前定义好、自带特殊含义的单词，不能随便拿来当变量名&#x2F;函数名&#x2F;属性名<br>如：var、let、if、props等</li>
 </ol>
 <h2 id="一些缩写含义"><a href="#一些缩写含义" class="headerlink" title="一些缩写含义"></a>一些缩写含义</h2><p>​<strong>CLI</strong>：全称（Command-Line Interface）<strong>命令行界面</strong>，常称命令行工具，如git、npm、node、volta，都是通过命令行操作 </p>
 <h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>竖行选择：ctrl+按住滚轮&#x2F;先点击起点后shift+alt+鼠标左键<br>块注释：shift+alt+a<br>​ctrl+d表示：向后选中所有<br>英文！加回车或tab键可直接生成html骨架<br>Ctrl键加enter键可以直接到下一行<br>标签不需要自己打括号、自己会生成<br>输入.&#x2F;可以在当前路径寻找图片，vscode有提示功能</p>
 <h2 id="调试工具-谷歌浏览器"><a href="#调试工具-谷歌浏览器" class="headerlink" title="调试工具-谷歌浏览器"></a>调试工具-谷歌浏览器</h2><p>作用：检查、调试代码<br>如果是错误的属性，有黄色叹号<br>css属性前有多选框，如果勾选：属性生效；如果没有勾选：属性不生效；</p>
-<h2 id="VueCli自定义创建项目"><a href="#VueCli自定义创建项目" class="headerlink" title="VueCli自定义创建项目"></a>VueCli自定义创建项目</h2><p>1.安装脚手架<br>2.创建项目</p>
-<p>3.选择自定义</p>
-<p>选择Babel、Router、CSS、Linter<br>选择2.x   &#x2F;&#x2F;表示vue2<br>选择no（history需要后端配置）<br>选择less<br>ESLint+Standard config（无分号规范（标准化））<br>Lint on save（保存时进行校验）<br>In dedicated config file(将配置文件放置在单独的文件中)</p>
+<h2 id="VueCli自定义创建项目"><a href="#VueCli自定义创建项目" class="headerlink" title="VueCli自定义创建项目"></a>VueCli自定义创建项目</h2><p>1.安装脚手架<br>2.创建项目<br>3.选择自定义<br>  选择Babel、Router、CSS、Linter<br>  选择2.x   &#x2F;&#x2F;表示vue2<br>  选择no（history需要后端配置）<br>  选择less<br>  ESLint+Standard config（无分号规范（标准化））<br>  Lint on save（保存时进行校验）<br>  In dedicated config file(将配置文件放置在单独的文件中)</p>
 <h2 id="ESlint代码规范"><a href="#ESlint代码规范" class="headerlink" title="ESlint代码规范"></a>ESlint代码规范</h2><p>代码规范：一套写代码的约定规则。例如：“赋值符号左右是否需要空格”“一句结束是否要加；”<br>JavaScript Standard Style 规范说明 <a target="_blank" rel="noopener" href="https://standardjs.com/rules-zhcn.html">https://standardjs.com/rules-zhcn.html</a></p>
 <p>下面是这份规则中的一小部分：</p>
 <p>字符串使用单引号 ‘abc’<br>无分号 const name &#x3D; ‘zs’<br>关键字后加空格 if (name &#x3D; ‘ls’) { … }<br>函数名后加空格 function name (arg) { … }<br>坚持使用全等 &#x3D;&#x3D;&#x3D; 摒弃 &#x3D;&#x3D;</p>
 <p>代码规范错误解决方案</p>
 <p>1.手动修正<br>根据错误代码去[ESLint规则表]查找</p>
 <p>2.基于vscode插件ESLint高亮错误提示，并通过配置自动帮助我们修改错误</p>
+<h2 id="导入导出规范"><a href="#导入导出规范" class="headerlink" title="导入导出规范"></a>导入导出规范</h2><p>按需导入分两种情况，要不要大括号完全看导出方式</p>
+<ol>
+<li>具名导出（export const xxx）→ 按需导入必须加大括号</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">getPicCode</span> = (<span class="params"></span>) =&gt; &#123;&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">formatTime</span> = (<span class="params"></span>) =&gt; &#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>按需导入（大括号包裹，名字必须和导出名一致）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; getPicCode &#125; <span class="keyword">from</span> <span class="string">&#x27;./utils&#x27;</span></span><br><span class="line"><span class="comment">// 多个按需导入逗号分隔</span></span><br><span class="line"><span class="keyword">import</span> &#123; getPicCode, formatTime &#125; <span class="keyword">from</span> <span class="string">&#x27;./utils&#x27;</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>默认导出（export default）→ 导入不能加大括号</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> axios.<span class="title function_">create</span>(&#123;&#125;)</span><br></pre></td></tr></table></figure>
+<p>导入（自定义名字，无大括号）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> request <span class="keyword">from</span> <span class="string">&#x27;./request&#x27;</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>混合导入（默认+多个按需）</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> request, &#123; getPicCode &#125; <span class="keyword">from</span> <span class="string">&#x27;./xxx&#x27;</span></span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>特殊：Vue&#x2F;组件库按需导入组件（Element Plus、Ant Design Vue）</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 按需导入单个组件，具名导出，带大括号</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">ElInput</span>, <span class="title class_">ElButton</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;element-plus&#x27;</span></span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>总结</li>
+</ol>
+<ul>
+<li>从文件里挑选多个指定变量&#x2F;方法（具名导出）： {}  不能少</li>
+<li>文件只导出一个默认值（default）：绝对不能写  {}</li>
+</ul>
 
       </div>
       
@@ -236,7 +266,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-06-10 15:22:09
+              2026-06-17 15:11:19
             </span>
             
                   <span class="post-categories">
@@ -311,7 +341,7 @@
     <div class="title">目录</div>
     <div class="catalog-content">
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%A5%E9%94%99"><span class="toc-text">报错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-text">小知识点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E7%BC%A9%E5%86%99%E5%90%AB%E4%B9%89"><span class="toc-text">一些缩写含义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-text">快捷键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7-%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8"><span class="toc-text">调试工具-谷歌浏览器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VueCli%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="toc-text">VueCli自定义创建项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ESlint%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83"><span class="toc-text">ESlint代码规范</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%A5%E9%94%99"><span class="toc-text">报错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-text">小知识点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E7%BC%A9%E5%86%99%E5%90%AB%E4%B9%89"><span class="toc-text">一些缩写含义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-text">快捷键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7-%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8"><span class="toc-text">调试工具-谷歌浏览器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VueCli%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="toc-text">VueCli自定义创建项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ESlint%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83"><span class="toc-text">ESlint代码规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA%E8%A7%84%E8%8C%83"><span class="toc-text">导入导出规范</span></a></li></ol>
       
     </div>
   </div>

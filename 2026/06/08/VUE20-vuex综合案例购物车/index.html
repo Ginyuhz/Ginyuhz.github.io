@@ -153,7 +153,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-06-10 14:54:19
+          2026-06-12 16:05:03
         </span>
         
               <span class="post-categories">
@@ -205,12 +205,16 @@
 <p>仅用于开发、测试，禁止用于生产环境</p>
 </blockquote>
 <ol>
-<li>安装全局工具 json-server （全局工具仅需要安装一次）</li>
+<li>安装全局工具 json-server （全局工具仅需要安装一次）<br>  yarn global add json-server 或 npm i json-server  -g</li>
+<li>代码根目录新建一个 db 目录</li>
+<li>将资料 index.json 移入 db 目录</li>
+<li>进入 db 目录，执行命令，启动后端接口服务 (使用–watch 参数 可以实时监听 json 文件的修改)<br>   json-server  –watch  index.json</li>
 </ol>
-  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">      yarn global add json-server 或 npm i json-server  -g</span><br><span class="line">  ```   </span><br><span class="line">2. 代码根目录新建一个 db 目录</span><br><span class="line">3. 将资料 index.json 移入 db 目录</span><br><span class="line">4. 进入 db 目录，执行命令，启动后端接口服务 (使用--watch 参数 可以实时监听 json 文件的修改)</span><br></pre></td></tr></table></figure>
-<pre><code>  json-server  --watch  index.json
-</code></pre>
-  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">## 请求获取数据存入vuex，映射渲染</span><br><span class="line">安装axios--》准备actions和mutations--》调用action获取数据--》动态渲染</span><br><span class="line">1. 在加载前获取数据</span><br><span class="line">  在actions写获取数据方法</span><br><span class="line">  ```js app.vue</span><br><span class="line">  method: &#123;created () &#123;</span><br><span class="line">    this.$store.dispatch(&#x27;cart/getList&#x27;)</span><br><span class="line">  &#125;,&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="请求获取数据存入vuex，映射渲染"><a href="#请求获取数据存入vuex，映射渲染" class="headerlink" title="请求获取数据存入vuex，映射渲染"></a>请求获取数据存入vuex，映射渲染</h2><p>安装axios–》准备actions和mutations–》调用action获取数据–》动态渲染</p>
+<ol>
+<li>在加载前获取数据<br>  在actions写获取数据方法</li>
+</ol>
+  <figure class="highlight js"><figcaption><span>app.vue</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">method</span>: &#123;<span class="title function_">created</span> () &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">$store</span>.<span class="title function_">dispatch</span>(<span class="string">&#x27;cart/getList&#x27;</span>)</span><br><span class="line">&#125;,&#125;</span><br></pre></td></tr></table></figure>
   <figure class="highlight js"><figcaption><span>cart.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">actions</span>: &#123;</span><br><span class="line">  <span class="comment">// 请求方式：get</span></span><br><span class="line">  <span class="comment">// 请求地址：http://localhost:3000/cart</span></span><br><span class="line">  <span class="keyword">async</span> <span class="title function_">getList</span> (context) &#123;</span><br><span class="line">    <span class="keyword">const</span> res = <span class="keyword">await</span> axios.<span class="title function_">get</span>(<span class="string">&#x27;http://localhost:3000/cart&#x27;</span>)</span><br><span class="line">    context.<span class="title function_">commit</span>(<span class="string">&#x27;updateList&#x27;</span>, res.<span class="property">data</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ol start="2">
 <li>将数据渲染到页面<br>1.将获取到的数据存入state <figure class="highlight js"><figcaption><span>cart.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">mutations</span>: &#123;</span><br><span class="line">    <span class="title function_">updateList</span> (state, newList) &#123;</span><br><span class="line">      state.<span class="property">list</span> = newList</span><br><span class="line">    &#125;,&#125;</span><br></pre></td></tr></table></figure>
@@ -233,7 +237,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-06-10 14:54:19
+              2026-06-12 16:05:03
             </span>
             
                   <span class="post-categories">
@@ -284,7 +288,7 @@
     <div class="title">目录</div>
     <div class="catalog-content">
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97%E5%88%86%E6%9E%90"><span class="toc-text">功能模块分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E5%BB%BAvuex-cart%E6%A8%A1%E5%9D%97"><span class="toc-text">构建vuex-cart模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%90%8E%E7%AB%AF%E6%8E%A5%E5%8F%A3%E6%9C%8D%E5%8A%A1%E7%8E%AF%E5%A2%83-%E4%BA%86%E8%A7%A3"><span class="toc-text">准备后端接口服务环境(了解)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JSON-Server%EF%BC%9A%E8%BD%BB%E9%87%8FMock%E5%90%8E%E7%AB%AF%E5%B7%A5%E5%85%B7%EF%BC%8C%E5%9F%BA%E4%BA%8ENode-js-Express"><span class="toc-text">JSON Server：轻量Mock后端工具，基于Node.js+Express</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97%E5%88%86%E6%9E%90"><span class="toc-text">功能模块分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E5%BB%BAvuex-cart%E6%A8%A1%E5%9D%97"><span class="toc-text">构建vuex-cart模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%90%8E%E7%AB%AF%E6%8E%A5%E5%8F%A3%E6%9C%8D%E5%8A%A1%E7%8E%AF%E5%A2%83-%E4%BA%86%E8%A7%A3"><span class="toc-text">准备后端接口服务环境(了解)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JSON-Server%EF%BC%9A%E8%BD%BB%E9%87%8FMock%E5%90%8E%E7%AB%AF%E5%B7%A5%E5%85%B7%EF%BC%8C%E5%9F%BA%E4%BA%8ENode-js-Express"><span class="toc-text">JSON Server：轻量Mock后端工具，基于Node.js+Express</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE%E5%AD%98%E5%85%A5vuex%EF%BC%8C%E6%98%A0%E5%B0%84%E6%B8%B2%E6%9F%93"><span class="toc-text">请求获取数据存入vuex，映射渲染</span></a></li></ol>
       
     </div>
   </div>

@@ -153,7 +153,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-06-10 14:56:53
+          2026-06-17 22:38:19
         </span>
         
               <span class="post-categories">
@@ -232,6 +232,7 @@
 </ol>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 读取 state --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">&quot;item in $store.state.cart.list&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;item.id&quot;</span>&gt;</span></span><br><span class="line">    &#123;&#123; item.name &#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">&lt;!-- 读取 getters --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>总数：&#123;&#123; $store.getters[&#x27;cart/totalCount&#x27;] &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">&lt;!-- 点击调用 mutations（不推荐，仅演示语法） --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;$store.commit(&#x27;cart/addCount&#x27;, 1)&quot;</span>&gt;</span>+<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">&lt;!-- 无效，模板不识别 this --&gt;</span></span><br><span class="line">  &#123;&#123; this.$store.state.cart.list &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
 </ol>
+<h2 id="数据存放data和store"><a href="#数据存放data和store" class="headerlink" title="数据存放data和store"></a>数据存放data和store</h2><p>只在当前组件使用，销毁就没有放在data<br>多个组件共享、跨页面、刷新后要持久保存、全局状态放store</p>
 
       </div>
       
@@ -247,7 +248,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-06-10 14:56:53
+              2026-06-17 22:38:19
             </span>
             
                   <span class="post-categories">
@@ -298,7 +299,7 @@
     <div class="title">目录</div>
     <div class="catalog-content">
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%A6%E5%8F%B7-%E5%90%AB%E4%B9%89"><span class="toc-text">符号$含义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this-store"><span class="toc-text">this.$store</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this-store%E5%92%8C-store"><span class="toc-text">this.$store和$store</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%A6%E5%8F%B7-%E5%90%AB%E4%B9%89"><span class="toc-text">符号$含义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this-store"><span class="toc-text">this.$store</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this-store%E5%92%8C-store"><span class="toc-text">this.$store和$store</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%AD%98%E6%94%BEdata%E5%92%8Cstore"><span class="toc-text">数据存放data和store</span></a></li></ol>
       
     </div>
   </div>
