@@ -153,7 +153,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-06-08 23:49:39
+          2026-06-19 16:36:03
         </span>
         
               <span class="post-categories">
@@ -208,11 +208,12 @@
 <h2 id="3、内置构造函数"><a href="#3、内置构造函数" class="headerlink" title="3、内置构造函数"></a>3、内置构造函数</h2><p>js底层完成，将简单数据类型包装成复杂数据类型   </p>
 <h3 id="1-Object"><a href="#1-Object" class="headerlink" title="1.Object"></a>1.Object</h3><p>获得属性名：Object.keys(obj) &#x2F;&#x2F;返回数组<br>获得属性值：Object.values(obj)&#x2F;&#x2F;返回数组<br>对象的拷贝：Object.assign（oo，o）&#x2F;&#x2F;将o拷贝给oo</p>
 <h3 id="2-Array"><a href="#2-Array" class="headerlink" title="2.Array"></a>2.Array</h3><p>forEach，遍历数组，不返回数组<br>filter，筛选，返回新数组<br>map ，迭代，返回处理之后的新数组，和join一起拼接字符串<br>reduce ，累计器，经常用于求和</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">arr.reduce(functhion(prev,current)&#123;</span><br><span class="line">return prev + current </span><br><span class="line">&#125;)</span><br><span class="line">arr.reduce(functhion(上一次值,当前遍历数组元素)&#123;</span><br><span class="line">return prev + current </span><br><span class="line">&#125;,初始值)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">arr.<span class="title function_">reduce</span>(<span class="title function_">functhion</span>(<span class="params">prev,current</span>)&#123;</span><br><span class="line"><span class="keyword">return</span> prev + current </span><br><span class="line">&#125;)</span><br><span class="line">arr.<span class="title function_">reduce</span>(<span class="title function_">functhion</span>(<span class="params">上一次值,当前遍历数组元素</span>)&#123;</span><br><span class="line"><span class="keyword">return</span> prev + current </span><br><span class="line">&#125;,初始值)</span><br></pre></td></tr></table></figure>
 
 
 <p>1.如果没有起始值，则上一次值以数组的第一个数组元素的值<br>2，每一次循环，把返回值给下一次循环的上一次值<br>3.有起始值，则起始值作为上一次值<br>数组对象reduce要加初始值 </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//返回符合条件的数组元素</span><br><span class="line">arr.find(functhion(a)&#123;</span><br><span class="line">return a === b</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">//所有符合条件返回true，否则undefined</span><br><span class="line">arr.every(fuction(item)&#123;</span><br><span class="line">item &gt;= 10</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">//伪数组转换真数组from</span><br><span class="line">Array.from(伪数组)</span><br></pre></td></tr></table></figure>
+<p>find：返回符合条件的数组元素<br>every：<br>  所有符合条件返回true，否则undefined<br>  找到一个不符合条件的就直接停止循环，不再遍历后续数据<br>  不会修改原数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//返回符合条件的数组元素</span></span><br><span class="line">arr.<span class="title function_">find</span>(<span class="title function_">functhion</span>(<span class="params">a</span>)&#123;</span><br><span class="line"><span class="keyword">return</span> a === b</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 所有符合条件返回true，否则undefined</span></span><br><span class="line"><span class="comment">// 找到一个不符合条件的就直接停止循环，不再遍历后续数据</span></span><br><span class="line"><span class="comment">// 不会修改原数组</span></span><br><span class="line"><span class="comment">// 空数组返回true</span></span><br><span class="line">arr.<span class="title function_">every</span>(<span class="title function_">fuction</span>(<span class="params">item</span>)&#123;</span><br><span class="line">item &gt;= <span class="number">10</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//伪数组转换真数组from</span></span><br><span class="line"><span class="title class_">Array</span>.<span class="title function_">from</span>(伪数组)</span><br></pre></td></tr></table></figure>
 
 
 
@@ -236,7 +237,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-06-08 23:49:39
+              2026-06-19 16:36:03
             </span>
             
                   <span class="post-categories">

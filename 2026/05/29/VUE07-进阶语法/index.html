@@ -153,7 +153,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2026-06-10 14:55:59
+          2026-06-19 13:55:57
         </span>
         
               <span class="post-categories">
@@ -204,7 +204,7 @@
           
       </div>
       <div class="markdown-body">
-        <h2 id="1、v-model原理"><a href="#1、v-model原理" class="headerlink" title="1、v-model原理"></a>1、v-model原理</h2><h3 id="1-原理"><a href="#1-原理" class="headerlink" title="1.原理"></a>1.原理</h3><p>v-model本质上是语法糖，例如应用在数据框就是value属性和input数据的合写、复选框就是checked和change事件合写</p>
+        <h2 id="1、v-model原理"><a href="#1、v-model原理" class="headerlink" title="1、v-model原理"></a>1、v-model原理</h2><h3 id="1-原理"><a href="#1-原理" class="headerlink" title="1.原理"></a>1.原理</h3><p>v-model本质上是语法糖，例如应用在数据框就是value属性和input数据的合写、复选框就是checked和change事件合写<br>也就是子传父将参数传给父后，v-model中的事件将收到的参数，赋值给v-model的变量</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> ：<span class="attr">value</span>=<span class="string">“message”</span> @<span class="attr">input</span>=<span class="string">“message</span>=<span class="string">$event.target.vlaue”</span> <span class="attr">type</span>=<span class="string">&#x27;text&#x27;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">:checked</span>=<span class="string">&quot;checked&quot;</span> @<span class="attr">change</span>=<span class="string">“checked</span>=<span class="string">$event.target.checked”</span> <span class="attr">type</span>=<span class="string">&#x27;checkox&#x27;</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="2-作用"><a href="#2-作用" class="headerlink" title="2.作用"></a>2.作用</h3><p>提供数据的双向绑定<br>1.数据变，视图跟着变：value<br>2.视图变，数据跟着变@input</p>
 <ul>
@@ -267,7 +267,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2026-06-10 14:55:59
+              2026-06-19 13:55:57
             </span>
             
                   <span class="post-categories">
